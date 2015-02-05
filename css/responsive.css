@@ -1,0 +1,78 @@
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+div.site-width	{
+	width:80%;
+	margin:0 auto;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF FOUR  */
+.span-4-of-4 {
+	width: 100%;
+}
+.span-3-of-4 {
+	width: 74.6%;
+}
+.span-2-of-4 {
+	width: 49.2%;
+}
+.span-1-of-4 {
+	width: 23.8%;
+}
+@media only screen and (max-width: 900px) {
+.col {  margin: 1% 0 1% 0%; }
+.span-1-of-4, .span-2-of-4, .span-3-of-4, .span-4-of-4 { width: 100%; }
+div.site-width	{
+	width:70%;
+	margin:0 auto;
+}
+div.social-grid	{
+	position:relative;
+	float:left;
+	margin-right:2%;
+	color:white;
+	width:48%;
+	background:black;
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+.col {  margin: 1% 0 1% 0%; }
+.span-1-of-4, .span-2-of-4, .span-3-of-4, .span-4-of-4 { width: 100%; }
+div.site-width	{
+	width:70%;
+	margin:0 auto;
+}	
+}
+
+/*
+<div class="section group">
+	<div class="col span-1-of-4">
+	1 of 4
+	</div>
+	<div class="col span-1-of-4">
+	1 of 4
+	</div>
+	<div class="col span-1-of-4">
+	1 of 4
+	</div>
+	<div class="col span-1-of-4">
+	1 of 4
+	</div>
+</div>
+*/
