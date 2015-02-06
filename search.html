@@ -1,101 +1,89 @@
 <div ng-controller="SearchController as search" class="search">
-  <div class="form"></div>
-  <h3>Parameters</h3>
-  <table>
-    <thead>
-      <th>
-        Parameter
-      </th>
-      <th>
-        Value
-      </th>
-      <th>
-        Description
-      </th>
-    </thead>
-    <tr>
-      <td>
-        phrase
-      </td>
-      <td>
-        <input type="text" ng-model="request.phrase" />
-      </td>
-      <td>
-        Free-text search query
-      </td>
-    </tr>
-    <tr>
-      <td>
-        page_size
-      </td>
-      <td>
-        <input type="text" ng-model="request.page_size" />
-      </td>
-      <td>
-        Size of page
-      </td>
-    </tr>
-    <tr>
-      <td>
-        page
-      </td>
-      <td>
-        <input type="text" ng-model="request.page" />
-      </td>
-      <td>
-        Page number
-      </td>
-    </tr>
-    <tr>
-      <td>
-        sort_order
-      </td>
-      <td>
-        <select ng-model="request.sort_order" ng-options="sort for sort in sort_orders"></select>
-      </td>
-      <td>
-        Allows sorting of results
-      </td>
-    </tr>
-  </table>
-  <input type="button" value="search" ng-click="send(request)" />
-  <div class="request">
-    <h3>Request</h3>
-    <pre>{{ apirequest }}</pre>
-  </div>
-  <h3>Possible Responses</h3>
-  <div class="response_codes">
+  <div class="form">
+    <label ng-repeat="resource in resources">
+      <input type="radio" name="resource" ng-value="resource.path" ng-model="selected_resource.path" /> {{ resource.name }}
+    </label>
+    <h3>Parameters</h3>
     <table>
       <thead>
         <th>
-          Code
+          Parameter
         </th>
         <th>
-          Message
+          Value
+        </th>
+        <th>
+          Description
         </th>
       </thead>
-      <tr ng-repeat="response in status_codes">
+      <tr>
         <td>
-          {{ response.code }}
+          phrase
         </td>
         <td>
-          {{ response.message }}
+          <input type="text" ng-model="request.phrase" />
+        </td>
+        <td>
+          Free-text search query
+        </td>
+      </tr>
+      <tr>
+        <td>
+          page_size
+        </td>
+        <td>
+          <input type="text" ng-model="request.page_size" />
+        </td>
+        <td>
+          Size of page
+        </td>
+      </tr>
+      <tr>
+        <td>
+          page
+        </td>
+        <td>
+          <input type="text" ng-model="request.page" />
+        </td>
+        <td>
+          Page number
+        </td>
+      </tr>
+      <tr ng-show="request.sort_order">
+        <td>
+          sort_order
+        </td>
+        <td>
+          <select ng-model="request.sort_order" ng-options="sort for sort in sort_orders"></select>
+        </td>
+        <td>
+          Allows sorting of results
         </td>
       </tr>
     </table>
-  </div>
-  <h3>Response</h3><b>Status: {{ responsecode }}</b>
-  <div class="response">
-    <img ng-show="isLoading" src="images/loading.gif" />
-    <pre ng-hide="isLoading">{{ apiresponse | json }}</pre>
-  </div>
-  <h3>Formatted Response</h3>
-  <div class="formatted-response">
-    <div ng-repeat="image in apiresponse.images" ng-hide="isLoading" class="images">
-      <div class="item">
-        <img ng-src="{{ image.display_sizes[0].uri }}" />
-        <span>{{ image.title }}</span>
+    <input type="button" value="Search" ng-click="send()" />
+    <div class="request">
+      <h3>Request</h3>
+      <pre>{{ apirequest() }}</pre>
+    </div>
+    <h3>Response</h3><b>Status: {{ responsecode }}</b>
+    <div class="response">
+      <img ng-show="isLoading" src="images/loading.gif" />
+      <pre ng-hide="isLoading">{{ apiresponse | json }}</pre>
+    </div>
+    <h3>Formatted Response</h3>
+    <div class="formatted-response">
+      <div ng-repeat="image in apiresponse.images" ng-hide="isLoading" class="images">
+        <div class="item">
+          <img ng-src="{{ image.display_sizes[0].uri }}" />
+          <span>{{ image.title }}</span>
+        </div>
+      </div>
+      <div ng-repeat="video in apiresponse.videos" ng-hide="isLoading" class="images">
+        <div class="item">
+          <a href="{{ video.display_sizes[1].uri }}" target="_blank"><img ng-src="{{ video.display_sizes[0].uri }}"></a>
+          <span>{{ video.title }}</span>
+        </div>
       </div>
     </div>
   </div>
-</div>

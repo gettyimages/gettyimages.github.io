@@ -10,74 +10,46 @@
 
   app.controller('SearchController', ['$http', '$scope', function($http, $scope) {
 
+    $scope.api_uri = 'https://api.gettyimages.com/v3';
     $scope.request = {
       page_size: 15,
       page: 1,
-      phrase: 'dog',
+      phrase: '',
       fields: 'id,title,thumb',
       sort_order: 'best'
     };
 
     $scope.sort_orders = ['best', 'most_popular', 'newest'];
-    $scope.status_codes = [{
-      code: 200,
-      message: 'Success'
-    }, {
-      code: 400,
-      message: 'InvalidPage'
-    }, {
-      code: 400,
-      message: 'MalformedRequest'
-    }, {
-      code: 400,
-      message: 'InvalidParameterValue'
-    }, {
-      code: 400,
-      message: 'UnknownProviderUri'
-    }, {
-      code: 400,
-      message: 'IncorrectlyFormedUri'
-    }, {
-      code: 401,
-      message: 'AuthorizationTokenRequired'
-    }, {
-      code: 403,
-      message: 'UnauthorizedDisplaySize'
-    }, {
-      code: 403,
-      message: 'NoAccessToProductType'
-    }];
+    $scope.resources = [
+      {
+        name: "Search for Images",
+        path: "/search/images",
+      },{
+        name: "Search for Videos",
+        path: "/search/videos",
+      }];
 
-    $scope.send = function(request) {
+    $scope.selected_resource = { path: "/search/images" };
 
+    $scope.apirequest = function() {
+      if (!$scope.request.hasOwnProperty('sort_order')) {
+        $scope.request.sort_order = 'best';
+      }
+
+      return $scope.api_uri + $scope.selected_resource.path + '?' + serialize($scope.request);
+    }
+
+    $scope.send = function() {
       $scope.isLoading = true;
-
-      if (!request.page) {
-        delete request.page
-      }
-
-      if (!request.phrase) {
-        delete request.phrase;
-      }
-
-      if (!request.page_size) {
-        delete request.page_size;
-      }
-
-      if (!request.sort_order) {
-        delete request.sort_order;
-      }
-
       var req = {
         method: 'GET',
-        url: 'https://api.gettyimages.com/v3/search/images',
+        url: $scope.api_uri + $scope.selected_resource.path,
         headers: {
           'Api-Key': '7wjf4bsm2gpahzdm6yetrz2t'
         },
-        params: request
+        params: $scope.request
       };
 
-      $scope.apirequest = req.url + '?' + serialize(req.params);
       $http(req).success(function(data, status, headers, config) {
         $scope.isLoading = false;
         $scope.apiresponse = data;
@@ -89,15 +61,33 @@
       });
     };
 
-  }]);
+    var serialize = function(dictionary) {
+      if (!dictionary.page) {
+        delete dictionary.page
+      }
 
-  var serialize = function(dictionary) {
-    var query = []
-    for (key in dictionary) {
-      query.push(key + '=' + dictionary[key]);
+      if (!dictionary.phrase) {
+        delete dictionary.phrase;
+      }
+
+      if (!dictionary.page_size) {
+        delete dictionary.page_size;
+      }
+
+      if (!dictionary.sort_order) {
+        delete dictionary.sort_order;
+      }
+
+      if($scope.selected_resource.path === '/search/videos') {
+        delete dictionary.sort_order;
+      }
+
+      var query = []
+      for (key in dictionary) {
+        query.push(key + '=' + dictionary[key]);
+      }
+
+      return query.join('&');
     }
-
-    return query.join('&');
-  }
-
+  }]);
 })();
