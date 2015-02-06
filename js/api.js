@@ -12,28 +12,33 @@
 
     $scope.api_uri = 'https://api.gettyimages.com/v3';
     $scope.request = {
-      page_size: 15,
-      page: 1,
-      phrase: '',
-      fields: 'id,title,thumb',
+      phrase: 'dog',
+      fields: 'id,title,thumb,referral_destinations',
       sort_order: 'best'
     };
 
     $scope.sort_orders = ['best', 'most_popular', 'newest'];
-    $scope.resources = [
-      {
-        name: "Search for Images",
-        path: "/search/images",
-      },{
-        name: "Search for Videos",
-        path: "/search/videos",
-      }];
+    $scope.resources = [{
+      name: "Search for Images",
+      path: "/search/images",
+    }, {
+      name: "Search for Videos",
+      path: "/search/videos",
+    }];
 
-    $scope.selected_resource = { path: "/search/images" };
+    $scope.selected_resource = {
+      path: "/search/images"
+    };
 
     $scope.apirequest = function() {
-      if (!$scope.request.hasOwnProperty('sort_order')) {
-        $scope.request.sort_order = 'best';
+      if ($scope.selected_resource.path === '/search/images') {
+        $scope.request.fields = 'id,title,thumb,referral_destinations'
+        if (!$scope.request.hasOwnProperty('sort_order')) {
+          $scope.request.sort_order = 'best';
+        }
+      } else if ($scope.selected_resource.path === '/search/videos') {
+        delete $scope.request.sort_order;
+        $scope.request.fields = 'id,title,thumb'
       }
 
       return $scope.api_uri + $scope.selected_resource.path + '?' + serialize($scope.request);
@@ -62,23 +67,12 @@
     };
 
     var serialize = function(dictionary) {
-      if (!dictionary.page) {
-        delete dictionary.page
-      }
 
       if (!dictionary.phrase) {
         delete dictionary.phrase;
       }
 
-      if (!dictionary.page_size) {
-        delete dictionary.page_size;
-      }
-
       if (!dictionary.sort_order) {
-        delete dictionary.sort_order;
-      }
-
-      if($scope.selected_resource.path === '/search/videos') {
         delete dictionary.sort_order;
       }
 
