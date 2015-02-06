@@ -1,141 +1,146 @@
 <html>
+<!-- start head -->
 <head>
-<title>Getty Images API</title>
+<title>Getty Images API Solutions: Stock photo API and video API integration service</title>
 <script src="js/angular.min.js"></script>
 <script src="js/api.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-<!-- webfonts we can update these to whatever we want from Google --*font-family: 'Raleway', sans-serif; -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+ webfonts we can update these to whatever we want from Google --*font-family: 'Raleway', sans-serif; -->
 <link rel="stylesheet" href="css/main.css" />
 <link rel="stylesheet" href="css/search.css" />
 <link rel="stylesheet" href="css/responsive.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<!-- end head -->
 
+<!-- start body -->
 <body class="home" ng-app="api">
+
 <!-- Start Header -->
 <header>
-  <h3>header</h3>
-</header>
-<!-- End Header -->
-<section class="hero">
-  <h1>Getty Images API Solutions</h1>
-  <p class="hero-prop">Getty Images API Solutions deliver the world's most powerful images, integrating seamlessly across your content management systems, websites and blogs, social media applications and more.</p>	
-  <div class="section group"> </div>
-  <div class="site-width">
-    <div class="section group">
-      <div class="col span-1-of-4"> &nbsp; </div>
-      <div class="col span-1-of-4">
-        <button class="btn-black">Try Our Testing Tool</button>
+<div class="site-width">
+    <div class="slice group">
+      <div class="col length-1-of-4 logo"><img src="images/logo.jpg" alt="Connect"/></div>
+      <div class="col length-1-of-4">&nbsp;</div>
+      <div class="col length-2-of-4">
+      	<ul class="site-nav">
+<li class="site-nav-list-item"><a href="#">Docs</a></li>
+<li class="site-nav-list-item"><a href="#">Plugins</a></li>
+<li class="site-nav-list-item"><a href="#">Forum</a></li>
+<li class="site-nav-list-item"><a href="#">Sign-in</a></li>
+<li class="site-nav-list-item"><a href="#">Register</a></li>
       </div>
-      <div class="col span-1-of-4">
-        <button class="btn-black">Register</button>
-      </div>
-      <div class="col span-1-of-4"> &nbsp; </div>
     </div>
   </div>
-  <!-- end site width --> 
-  <!-- <search-demo></search-demo> Once enabled search will show --> 
-</section>
+  </header>
+<!-- End Header -->
+<!-- Start Section Hero -->
+<section class="hero">
+
+<!-- site width navigation and logo -->
+<div class="site-width push-down">
+  <h1 class="left">Getty Images API Solutions</h1>
+  <h2 class="left">Build applications using the world's most powerful imagery</h2>
+  <p class="left">Our RESTful APIs are supported with <a href="https://github.com/gettyimages/connect" class="hero-link">technical documentation</a>, <br/>
+  <a href="https://github.com/gettyimages/connect/tree/master/code-samples" class="hero-link">sample code</a> and <b>SDKs</b> so you can get up and running quickly.</p>
+  </div>
+<!-- end site width -->
+
+<!-- start site-width left aligned text -->  
+  <div class="site-width left">
+    <div class="slice group">
+      <div class="col length-4-of-4 hero-cta">
+      <form action="/connect/searchhost.html">
+        <button class="ghost-button">Try Our Testing Tool</button>
+        </form>
+      </div>
+  </div>
+ </div>
+ <!-- start site-width left aligned text -->
+ </section>
+ <!-- end section hero -->
+ 
+ <!-- Start Section Props -->
 <section class="props">
-<div class="site-width">
-<!-- start value props --> 
-<!-- slice 1 -->
-<div class="section group">
-  <div class="col span-2-of-4 fpo-prop-text">
-    <h2>Instant acces to the World's most powerful images.</h2>
-  </div>
-  <div class="col span-2-of-4 fpo-prop"> &nbsp; </div>
-</div>
-<!-- End slice 1 --> 
-<!--slice 2 -->
-<div class="section group">
-  <div class="col span-2-of-4 fpo-prop-text">
-    <h2>Integrate Our Powerful Search and Download Experience</h2>
-  </div>
-  <div class="col span-2-of-4 fpo-prop"> &nbsp; </div>
-</div>
-<!-- End slice 2 --> 
-<!-- Slice 3 -->
-<div class="section group">
-  <div class="col span-2-of-4 fpo-prop-text">
-    <h2>Embed Image to your site free</h2>
-  </div>
-  <div class="col span-2-of-4 fpo-prop"> &nbsp; </div>
-  <!-- End slice 3 --> 
+<div class="site-width center push-down">
+<!-- start value props text -->
+<h1 class="text-center">Access millions of images and videos</h1>
 </div>
 <!-- end value props -->
 <div class="social-slice">
-  <div class="section group">
-    <div class="col span-1-of-4 social-grid">
-      <p>Salesfoce</p>
-    </div>
-    <div class="col span-1-of-4 social-grid">
-      <p>SquareSpace</p>
-    </div>
-    <div class="col span-1-of-4 social-grid">
-      <p>WordPress</p>
-    </div>
-    <div class="col span-1-of-4 social-grid">
-      <p>Storify</p>
-    </div>
-    <div class="col span-4-of-4">
-      <h4 class="cross-promo-text">our api is used by some of the most innovative companies acorss a diverse set of industries.</h4>
-    </div>
-  </div>
-</div>
+  <div class="slice group">
 
+    <div class="col length-4-of-4">
+    <div class="site-width">
+      <h4 class="cross-promo-text">Get instant access to millions of images and videos featuring the most newsworthy events from around the world.</h4>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
-<section class="product-hero">
-<div class="site-width">
-<!-- start product props --> 
-<!-- slice 1 -->
-<div class="section group">
-  <div class="col span-2-of-4 product-prop-text">
-    <h2>Commercial Business Solutions</h2>
+
+<section class="product-desc">
+<div class="site-width center push-down">
+<!-- start value props -->
+<h1 class="text-center">Streamline your workflows</h1>
+</div>
+<!-- end value props -->
+<div class="social-slice">
+  <div class="slice group">
+
+    <div class="col length-4-of-4">
+    <div class="site-width">
+      <h4 class="cross-promo-text">Integrate our search and download experience in your content publishing tools.</h4>
+      </div>
+    </div>
   </div>
-  <div class="col span-2-of-4 product-prop"> &nbsp; </div>
 </div>
-<!-- End slice 1 --> 
-<!--slice 2 -->
-<div class="section group">
-  <div class="col span-2-of-4 product-prop-text">
-    <h2>Non-Commercial Solutions with embeddable images</h2>
-  </div>
-  <div class="col span-2-of-4 product-prop"> &nbsp; </div>
-</div>
-<!-- End slice 2 --> 
-<!--slice 2 -->
-<div class="section group">
-  <div class="col span-2-of-4 product-prop-text">
-    <h2>API Plugin Solutions</h2>
-  </div>
-  <div class="col span-2-of-4 product-prop"> &nbsp; </div>
-</div>
-<div class="span-4-of-4 product-cta">
-<button class="btn-black product-button">Try Our API Now</button>
-</div>
-<!-- End slice 2 -->
-</div>
-<!-- end product props -->
 </section>
-<section class="learn">
-<div class="span-4-of-4 learn-heading">
-<h4 class="learn-heading">Learn how our API's have helped imrprove these businesses</h4>
+
+<section class="embed">
+<div class="site-width center push-down">
+<h1 class="text-center">Embed images for free</h1>
 </div>
+<div class="social-slice">
+  <div class="slice group">
+
+    <div class="col length-4-of-4">
+    <div class="site-width">
+      <h4 class="cross-promo-text">Build more engaging websites with access to over 55 million embeddable images.</h4>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="download">
+<div class="site-width center push-down">
+<h1 class="text-center">Download our plugins</h1>
+</div>
+<div class="social-slice">
+  <div class="slice group">
+
+    <div class="col length-4-of-4">
+    <div class="site-width">
+      <h4 class="cross-promo-text">Download our plugins to search and use Getty Images photos and videos in your posts.</h4>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  
 <div class="site-width">
 <div class="learn-slice">
-  <div class="section group">
-    <div class="col span-1-of-4 social-grid">
+  <div class="slice group">
+    <div class="col length-1-of-3 social-grid salesforce">
       <p>AOL</p>
     </div>
-    <div class="col span-1-of-4 social-grid">
+    <div class="col length-1-of-3 social-grid squarespace">
       <p>Weebly</p>
     </div>
-    <div class="col span-1-of-4 social-grid">
+    <div class="col length-1-of-3 social-grid wordpress">
       <p>Zazzle</p>
-    </div>
-    <div class="col span-1-of-4 social-grid">
-      <p>Squarespace</p>
     </div>
   </div>
 </div>
@@ -143,16 +148,18 @@
 </section>
 
 <section class="support">
-<div class="site-width support-text">
+<div class="site-width support-text text-center">
 <h1>Have Questions?</h1>
-<p><a href="#">Contact Us</a> to learn more about the benefits of integrating our expansive content, powerful search technology and rich metadata into your publishing tools products and services.</p>
-<p>For technical questions about implementing the API, please visit our Developer Forum and FAQ.</p>	
+<p><a href="#" class="section-link">Contact Us</a> to learn more about the benefits of integrating our expansive content, powerful search technology and rich meta-data into your publishing tools, products and services.</p>
+<p>For technical questions, please visit our Developer Forum.</p>	
 </div>
 </section>
 
 <footer>
 <div class="site-width footer-content">
-<h3>footer</h3>
+<h3>Footer: Terms of Use, Privacy Policy, Link to https://twitter.com/GettyImagesAPI, Link to GI.com <br />
+  Copyright<br />
+  language links</h3>
 </footer>
 </body>
 </html>

@@ -1,14 +1,49 @@
 /*  SECTIONS  */
-.section {
+.slice {
 	clear: both;
 	padding: 0px;
 	margin: 0px;
 }
-div.site-width	{
+.site-width	{
+	width:60%;
+	margin:0 auto;
+}
+.site-width-alt	{
 	width:80%;
 	margin:0 auto;
 }
-
+.props	{
+	padding-top:50px;
+	background-image:url(../images/tiles/body/tile-1.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:1000px;
+}
+.product-desc	{
+	padding-top:50px;
+	background-image:url(../images/tiles/body/tile-2.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:1000px;
+}
+.embed	{
+	padding-top:50px;
+	background:url(../images/tiles/body/tile-3.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:1000px;
+}
+.download	{
+	padding-top:50px;
+	background-image:url(../images/tiles/body/tile-4.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:1000px;
+}
 /*  COLUMN SETUP  */
 .col {
 	display: block;
@@ -23,22 +58,44 @@ div.site-width	{
 .group:after { clear:both;}
 .group { zoom:1; /* For IE 6/7 */ }
 /*  GRID OF FOUR  */
-.span-4-of-4 {
+.length-4-of-4 {
 	width: 100%;
 }
-.span-3-of-4 {
+.length-3-of-4 {
 	width: 74.6%;
 }
-.span-2-of-4 {
+.length-2-of-4 {
 	width: 49.2%;
 }
-.span-1-of-4 {
+.length-1-of-4 {
 	width: 23.8%;
+}
+.length-1-of-3	{
+	width:32.2%;
+}
+section.hero div.site-width.push-down	{
+	padding-top:125px;
+}
+section.product-desc div.site-width.push-down	{
+	padding-top:400px;
+}
+section.embed div.site-width.push-down	{
+	padding-top:250px;
+}
+section.download div.site-width.push-down	{
+	padding-top:250px;
+}
+section.props .site-width.push-down	{
+	padding-top:250px;
 }
 @media only screen and (max-width: 900px) {
 .col {  margin: 1% 0 1% 0%; }
-.span-1-of-4, .span-2-of-4, .span-3-of-4, .span-4-of-4 { width: 100%; }
-div.site-width	{
+.length-1-of-4, .length-2-of-4, .length-3-of-4, .length-4-of-4, .length-1-of-3 { width: 100%; }
+.site-width	{
+	width:70%;
+	margin:0 auto;
+}
+.site-width-alt	{
 	width:70%;
 	margin:0 auto;
 }
@@ -46,32 +103,88 @@ div.social-grid	{
 	position:relative;
 	float:left;
 	margin-right:2%;
-	color:white;
+	color:black;
 	width:48%;
-	background:black;
+	background:white;
+}
+section.hero div.site-width.push-down	{
+	padding-top:170px;
+}
+section.product-desc div.site-width.push-down	{
+	padding-top:25px;
+}
+section.embed div.site-width.push-down	{
+	padding-top:25px;
+}
+section.download div.site-width.push-down	{
+	padding-top:25px;
+}
+section.props .site-width.push-down	{
+	padding-top:25px;
+}
+.props	{
+	padding-top:50px;
+	background-image:url(../images/tiles/body/tile-1.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:75px;
+}
+.product-desc	{
+	padding-top:50px;
+	background-image:url(../images/tiles/body/tile-2.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:75px;
+}
+.embed	{
+	padding-top:50px;
+	background:url(../images/tiles/body/tile-3.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:100px;
+}
+.download	{
+	padding-top:50px;
+	background-image:url(../images/tiles/body/tile-4.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:100px;
 }
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
 .col {  margin: 1% 0 1% 0%; }
-.span-1-of-4, .span-2-of-4, .span-3-of-4, .span-4-of-4 { width: 100%; }
-div.site-width	{
+.length-1-of-4, .length-2-of-4, .length-3-of-4, .length-4-of-4 { width: 100%; }
+.site-width	{
 	width:70%;
 	margin:0 auto;
+	max-width:1080px;
+	padding-left:10px;
+	padding-right:10px;
 }	
+section.download div.site-width.push-down	{
+	padding-top:25px;
+}	
+section.props .site-width.push-down	{
+	padding-top:25px;
+}
 }
 
 /*
-<div class="section group">
-	<div class="col span-1-of-4">
+<div class="slice group">
+	<div class="col length-1-of-4">
 	1 of 4
 	</div>
-	<div class="col span-1-of-4">
+	<div class="col length-1-of-4">
 	1 of 4
 	</div>
-	<div class="col span-1-of-4">
+	<div class="col length-1-of-4">
 	1 of 4
 	</div>
-	<div class="col span-1-of-4">
+	<div class="col length-1-of-4">
 	1 of 4
 	</div>
 </div>

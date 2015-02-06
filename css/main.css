@@ -3,6 +3,7 @@
 1.) Reset
 2.) Typography
 3.) Header
+4.) Content
 
 */
 
@@ -12,7 +13,7 @@
  
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Helvetica Neue';
   	-ms-text-size-adjust: 100%; /* 2 */
   	-webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -438,29 +439,36 @@ th {
 /*##################
  2.) Typography ###
 ###################*/
-hi, h2, h3, h4, h5	{
+h1, h2, h3, h4, h5, p	{
 	margin-bottom:20px;
+	color:white;
+}
+
+h1, h2, h3, h4, h5	{
+	font-style:light;
+	font-weight:200;
 }
 h1	{
-	font-size:37px;
+	font-size:39px;
 }
 h2	{
-	font-size:25px;
+	font-size:29px;
 }
 h3	{
-	font-size:19px;
+	font-size:25px;
 }
 h4	{
-	font-size:17px;
+	font-size:23px;
+	line-height:35px;
 }
 h5	{
-	font-size:15px;
+	font-size:19px;
 }
 p, span, button	{
-	font-size:13px;
+	font-size:15px;
+	line-height:20px;
+	font-weight:300;	
 }
-
-
 /*#############
  3.) Header ###
 ###############*/
@@ -468,8 +476,11 @@ header	{
 	background:#000000;
 	color:white;
 	text-align:center;
-	height:100px;
-	line-height:100px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+header p	{
+	color:white;
 }
 
 /*##############
@@ -485,19 +496,71 @@ header	{
   text-decoration: none;
   width:100%;
   min-width:150px;
+  max-width:300px;
+  background:#e7e7e7;
+}
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  width:100%;
+  min-width:150px;
+  max-width:300px;
+      /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.ghost-button:hover {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  width:100%;
+  min-width:150px;
+  max-width:300px;
+  background:white;
+  color:#A4A3A3;
+}
+.text-center	{
+	text-align:center;
+	}
+.left	{
+	text-align:left;
 }
 
 .btn-black:hover {
   background: #949494;
   text-decoration: none;
 }
-/*##############
+/*##############	
  4.) Content ###
 ################*/
 section.hero	{
-	background:#E7E7E7;
+	background:black;
 	padding-top:50px;
 	padding-bottom:50px;
+	background-image:url(../images/tiles/hero/tennis.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	min-height:514px;
+}
+.hero-cta	{
+	text-align:left;
 }
 section.product-hero	{
 	background:#e7e7e7;
@@ -505,7 +568,7 @@ section.product-hero	{
 	padding-bottom:50px;
 }
 section.support	{
-	background:#E7E7E7;
+	background:#280130;
 	padding-top:50px;
 	padding-bottom:50px;
 }
@@ -513,6 +576,9 @@ section.learn {
 	background:white;
 	padding-top:50px;
 	padding-bottom:50px;
+}
+section.hero div.site-width	{
+	text-align:center;
 }
 footer	{
 	background:black;
@@ -523,12 +589,43 @@ footer	{
 .footer-content	{
 	text-align:center;
 }
-.support-text	{
-	text-align:center;
-}
 section.hero h1	{
 	text-align:center;
 }
+section.hero h2	{
+	text-align:center;
+}
+section.hero h3	{
+	text-align:center;
+}
+section.hero h4	{
+	text-align:center;
+}
+section.hero h5	{
+	text-align:center;
+}
+section.hero p	{
+	text-align:center;
+}
+section.hero h1.left	{
+	text-align:left;
+}
+section.hero h2.left	{
+	text-align:left;
+}
+section.hero h3.left{
+	text-align:left;
+}
+section.hero h4.left{
+	text-align:left;
+}
+section.hero h5.left{
+	text-align:left;
+}
+section.hero p.left{
+	text-align:left;
+}
+
 section.hero p.hero-prop	{
 	text-align:center;
 	padding-left:50px;
@@ -563,21 +660,48 @@ section.hero p.hero-prop	{
 	padding-bottom:50px;
 }
 div.social-grid	{
-	color:white;
-	background:black;
+	color:black;
+	background:white;
 }
 .cross-promo-text	{
 	text-align:center;
 	margin-top:25px;
-	text-transform:uppercase;
 }
 .product-cta	{
 	text-align:center;
 	padding-top:50px;
 }
-.product-button		{
-	max-width:200px;
-}
 .learn-heading	{
 	text-align:center;
+}
+.site-nav li	{
+	display: inline;
+	list-style-type: none;
+}
+.site-nav-list-item	{
+	padding-left:20px;
+}
+.site-nav-list-item a	{
+	color:white;
+	text-decoration:none;
+	font-size:17px;
+}
+.logo	{
+	padding-top:7px;
+}
+.hero-link	{
+	color:white;
+}
+.section-link	{
+	color:white;
+}
+.hero-link:hover	{
+	color:grey;
+}
+div.col.length-1-of-4.logo img	{
+	float:left;
+}
+.search-heading	{
+	padding-top:50px;
+	color:black;
 }
