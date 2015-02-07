@@ -41,7 +41,7 @@
         $scope.request.fields = 'id,title,thumb'
       }
 
-      return $scope.api_uri + $scope.selected_resource.path + '?' + serialize($scope.request);
+      return 'GET ' + $scope.api_uri + $scope.selected_resource.path + '?' + serialize($scope.request);
     }
 
     $scope.send = function() {
