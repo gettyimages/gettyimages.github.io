@@ -42,13 +42,14 @@
       </table>
       <input type="submit" value="Search" />
     </form>
+    <span us-spinner="{radius:10, width:4, length: 10}" spinner-key="spinner-1" style="position: relative; top: 50%; left: 50%"></span>
+
     <div class="request">
       <h3>Request</h3>
       <pre>{{ apirequest() }}</pre>
     </div>
     <h3>Response</h3><b>Status: {{ responsecode }}</b>
     <div class="response">
-      <img ng-show="isLoading" src="images/loading.gif" />
       <pre ng-hide="isLoading">{{ apiresponse | json }}</pre>
     </div>
     <h3>Formatted Response</h3>

@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('api', []);
+  var app = angular.module('api', ['angularSpinner']);
 
   app.directive('searchDemo', function() {
     return {
@@ -8,7 +8,7 @@
     }
   });
 
-  app.controller('SearchController', ['$http', '$scope', function($http, $scope) {
+  app.controller('SearchController', ['$http', '$scope', 'usSpinnerService', function($http, $scope, usSpinnerService) {
 
     $scope.api_uri = 'https://api.gettyimages.com/v3';
     $scope.request = {
@@ -45,7 +45,7 @@
     }
 
     $scope.send = function() {
-      $scope.isLoading = true;
+      $scope.startSpin();
       var req = {
         method: 'GET',
         url: $scope.api_uri + $scope.selected_resource.path,
@@ -56,14 +56,23 @@
       };
 
       $http(req).success(function(data, status, headers, config) {
-        $scope.isLoading = false;
+        $scope.stopSpin();
         $scope.apiresponse = data;
         $scope.responsecode = status;
       }).error(function(data, status, headers, config) {
-        $scope.isLoading = false;
+        $scope.stopSpin();
         $scope.apiresponse = data;
         $scope.responsecode = status;
       });
+    };
+
+    $scope.startSpin = function() {
+        usSpinnerService.spin('spinner-1');
+        $scope.startcounter++;
+    };
+
+    $scope.stopSpin = function() {
+        usSpinnerService.stop('spinner-1');
     };
 
     var serialize = function(dictionary) {
