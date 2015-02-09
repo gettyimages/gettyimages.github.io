@@ -50,7 +50,7 @@
         method: 'GET',
         url: $scope.api_uri + $scope.selected_resource.path,
         headers: {
-          'Api-Key': '7wjf4bsm2gpahzdm6yetrz2t'
+          'Api-Key': '697wgfynhw53p7fzsw7dbder'
         },
         params: $scope.request
       };
