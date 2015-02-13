@@ -582,7 +582,7 @@ section.hero	{
   	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-size:cover;
-	min-height:700px;
+	min-height:900px;
 }
 .hero-cta	{
 	text-align:left;

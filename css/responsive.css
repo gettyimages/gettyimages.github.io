@@ -93,7 +93,7 @@ section.download div.site-width.push-down	{
 section.props .site-width.push-down	{
 	padding-top:50px;
 }
-@media only screen and (max-width: 533px) {
+@media only screen and (max-width: 800px) {
 .col {  margin: 1% 0 1% 0%; }
 .length-1-of-4, .length-2-of-4, .length-3-of-4, .length-4-of-4, .length-1-of-3 { width: 100%; }
 .site-width	{
@@ -113,7 +113,7 @@ div.social-grid	{
 	background:white;
 }
 section.hero div.site-width.push-down	{
-	padding-top:170px;
+	padding-top:50px;
 }
 section.product-desc div.site-width.push-down	{
 	padding-top:25px;
@@ -127,37 +127,61 @@ section.download div.site-width.push-down	{
 section.props .site-width.push-down	{
 	padding-top:0px;
 }
+section.hero	{
+	background:black;
+	padding-top:50px;
+	padding-bottom:50px;
+	background-image:url(../images/tiles/hero/tennis.jpg) ;
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size:cover;
+	min-height:100px;
+}
 .props	{
-	padding-top:5px;
+	padding-top:10px;
 	background-image:url(../images/tiles/body/tile-1.jpg);
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
+	background-size:cover;
 	min-height:75px;
 }
 .product-desc	{
-	padding-top:50px;
+	padding-top:10px;
 	background-image:url(../images/tiles/body/tile-2.jpg);
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
+	background-size:cover;
 	min-height:75px;
 }
 .embed	{
-	padding-top:50px;
+	padding-top:10px;
 	background:url(../images/tiles/body/tile-3.jpg);
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
+	background-size:cover;
 	min-height:100px;
 }
 .download	{
-	padding-top:50px;
+	padding-top:10px;
 	background-image:url(../images/tiles/body/tile-4.jpg);
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
+	background-size:cover;
 	min-height:100px;
+}
+section.support	{
+	padding-top:10px;
+	background-image:url(../images/tiles/body/tile-5.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size:cover;
+	min-height:300px;
 }
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
@@ -171,7 +195,7 @@ section.props .site-width.push-down	{
 	padding-right:10px;
 }	
 section.download div.site-width.push-down	{
-	padding-top:25px;
+	padding-top:0px;
 }	
 section.props .site-width.push-down	{
 	padding-top:0px;
