@@ -835,7 +835,10 @@ div.col.length-1-of-4.logo img	{
 .Fields ul .Password a { display: block;}
 #username, #password	{
 	height:63px;
-	width:300px;	
+	width:300px;
+	color:grey;
+	font-size:28px;
+	padding-left:20px;
 }
 input.login	{
 	height:63px;
