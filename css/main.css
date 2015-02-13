@@ -543,6 +543,7 @@ header p	{
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	font-size:17px;
 }
 .ghost-button:hover {
   display: inline-block;
@@ -556,7 +557,7 @@ header p	{
   min-width:150px;
   max-width:300px;
   background:white;
-  color:#73ecff;
+  color:#ccc;
 }
 .text-center	{
 	text-align:center;
