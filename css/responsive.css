@@ -18,7 +18,8 @@
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-	min-height:1000px;
+	min-height:900px;
+	background-size:cover;
 }
 .product-desc	{
 	padding-top:50px;
@@ -26,7 +27,8 @@
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-	min-height:1000px;
+	background-size:cover;
+	min-height:900px;
 }
 .embed	{
 	padding-top:50px;
@@ -34,7 +36,8 @@
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-	min-height:1000px;
+	background-size:cover;
+	min-height:900px;
 }
 .download	{
 	padding-top:50px;
@@ -42,8 +45,10 @@
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-	min-height:1000px;
+	background-size:cover;
+	min-height:900px;
 }
+
 /*  COLUMN SETUP  */
 .col {
 	display: block;
@@ -86,9 +91,9 @@ section.download div.site-width.push-down	{
 	padding-top:250px;
 }
 section.props .site-width.push-down	{
-	padding-top:250px;
+	padding-top:50px;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 533px) {
 .col {  margin: 1% 0 1% 0%; }
 .length-1-of-4, .length-2-of-4, .length-3-of-4, .length-4-of-4, .length-1-of-3 { width: 100%; }
 .site-width	{
@@ -120,10 +125,10 @@ section.download div.site-width.push-down	{
 	padding-top:25px;
 }
 section.props .site-width.push-down	{
-	padding-top:25px;
+	padding-top:0px;
 }
 .props	{
-	padding-top:50px;
+	padding-top:5px;
 	background-image:url(../images/tiles/body/tile-1.jpg);
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
@@ -169,7 +174,7 @@ section.download div.site-width.push-down	{
 	padding-top:25px;
 }	
 section.props .site-width.push-down	{
-	padding-top:25px;
+	padding-top:0px;
 }
 }
 

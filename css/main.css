@@ -13,15 +13,12 @@
  
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-	font-family: 'Helvetica Neue';
   	-ms-text-size-adjust: 100%; /* 2 */
   	-webkit-text-size-adjust: 100%; /* 2 */
 }
-
 /**
  * Remove default margin.
  */
-
 body {
   margin: 0;
 }
@@ -439,35 +436,60 @@ th {
 /*##################
  2.) Typography ###
 ###################*/
-h1, h2, h3, h4, h5, p	{
-	margin-bottom:20px;
+body	{
+	font: 13px/14px HelveticaNeueW01-55Roma;
 	color:white;
 }
-
-h1, h2, h3, h4, h5	{
-	font-style:light;
-	font-weight:200;
-}
 h1	{
-	font-size:39px;
+	font: 46px/48px HelveticaNeueW01-Thin;
 }
 h2	{
-	font-size:29px;
+	font: 32px/40px HelveticaNeueW01-Thin;
 }
 h3	{
-	font-size:25px;
+	font: 22px/26px HelveticaNeueW01-Thin;
 }
 h4	{
-	font-size:23px;
-	line-height:35px;
+	font: 20px/26px HelveticaNeueW01-55Roma;
 }
 h5	{
-	font-size:19px;
+	font: 16px/22px HelveticaNeueW01-Thin;
 }
-p, span, button	{
-	font-size:15px;
-	line-height:20px;
-	font-weight:300;	
+h6	{
+	font: 14px/18px HelveticaNeueW01-55Roma;
+}
+p, ul, li	{
+	font: 13px/17px HelveticaNeueW01-55Roma;
+}
+
+/* ##################################################################
+###classes need to overwrite HTML defaults for this pattern to work ###
+  ###################################################################
+*/
+	
+.oblique	{
+	font: italic 14px/18px HelveticaNeueW01-55Roma;
+}
+.bold	{
+	font-weight:bold;
+}
+.roman	{
+	font:HelveticaNeueW01-55Roma;
+}
+.thin	{
+	font:HelveticaNeueW01-Thin;
+}	
+.sh	{
+	font: 12px/18px HelveticaNeueW01-Thin;
+}
+.pb	{
+	font: bold 14px/18px HelveticaNeueW01-55Roma;
+}
+.sb	{
+	font: 11px/14px HelveticaNeueW01-55Roma;
+}
+.lc	{
+	font: 9px/12px HelveticaNeueW01-55Roma;
 }
 /*#############
  3.) Header ###
@@ -478,6 +500,9 @@ header	{
 	text-align:center;
 	padding-top:5px;
 	padding-bottom:5px;
+	position:fixed;
+	width:100%;
+	z-index:33;
 }
 header p	{
 	color:white;
@@ -524,7 +549,6 @@ header p	{
   display: inline-block;
   width: 200px;
   padding: 20px;
-  color: #fff;
   border: 2px solid #fff;
   text-align: center;
   outline: none;
@@ -533,7 +557,7 @@ header p	{
   min-width:150px;
   max-width:300px;
   background:white;
-  color:#A4A3A3;
+  color:#73ecff;
 }
 .text-center	{
 	text-align:center;
@@ -553,11 +577,12 @@ section.hero	{
 	background:black;
 	padding-top:50px;
 	padding-bottom:50px;
-	background-image:url(../images/tiles/hero/tennis.jpg);
+	background-image:url(../images/tiles/hero/tennis.jpg) ;
  	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-	min-height:514px;
+	background-size:cover;
+	min-height:700px;
 }
 .hero-cta	{
 	text-align:left;
@@ -568,9 +593,13 @@ section.product-hero	{
 	padding-bottom:50px;
 }
 section.support	{
-	background:#280130;
 	padding-top:50px;
-	padding-bottom:50px;
+	background-image:url(../images/tiles/body/tile-5.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size:cover;
+	min-height:400px;
 }
 section.learn {
 	background:white;
@@ -585,6 +614,7 @@ footer	{
 	color:white;
 	padding-top:50px;
 	padding-bottom:50px;
+	margin-top:-20px;
 }
 .footer-content	{
 	text-align:center;
@@ -674,20 +704,95 @@ div.social-grid	{
 .learn-heading	{
 	text-align:center;
 }
-.site-nav li	{
-	display: inline;
-	list-style-type: none;
+/* nav */
+.box-shadow-menu {
+  position: relative;
+  padding-left: 1.25em;
+  font-size:19px;
+  width:1px;
+  height:9px;
 }
-.site-nav-list-item	{
-	padding-left:20px;
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: white;
+  box-shadow: 
+    0 0.25em 0 0 white,
+    0 0.5em 0 0 white;
 }
-.site-nav-list-item a	{
-	color:white;
-	text-decoration:none;
-	font-size:17px;
+.site-nav	{
+	text-align:right;
+}
+.site-nav ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  background:#000000;
+  padding-left:10px;
+  position:absolute;
+  left:-10px;
+  top:20px;
+  padding-bottom:10px;
+}
+ul li {
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 0 0 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size:13px;
+}
+ul li:hover {
+  color: #fff;
+}
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100vw;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  background: transparent; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+ul li ul li:hover { background: transparent; color: #73ecff; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .logo	{
 	padding-top:7px;
+}
+.logo img	{
+	float:left;
 }
 .hero-link	{
 	color:white;
