@@ -844,6 +844,7 @@ input.login	{
 	height:63px;
 	width:200px;
 	background:#3DCC58;
+	border:1px solid #3DCC58;
 }
 a.ForgotPassword	{
 	text-align:right;
