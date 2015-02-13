@@ -1,54 +1,38 @@
 <html>
-<!-- start head -->
 <head>
-<title>Getty Images API Solutions: Stock photo API and video API integration service</title>
+<title>Try the Getty Images API</title>
 <script src="js/angular.min.js"></script>
+<script src="js/spin.min.js"></script>
+<script src="js/angular-spinner.min.js"></script>
 <script src="js/api.js"></script>
-<!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
- webfonts we can update these to whatever we want from Google --*font-family: 'Raleway', sans-serif; -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<!-- webfonts we can update these to whatever we want from Google --*font-family: 'Raleway', sans-serif; -->
 <link rel="stylesheet" href="css/main.css" />
 <link rel="stylesheet" href="css/search.css" />
 <link rel="stylesheet" href="css/responsive.css" />
-<style>
-@font-face{
-font-family:"HelveticaNeueW01-Thin";
-src:url("Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix");
-src:url("Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix") format("eot"),url("Fonts/50d35bbc-dfd4-48f1-af16-cf058f69421d.woff") format("woff"),url("Fonts/278bef59-6be1-4800-b5ac-1f769ab47430.ttf") format("truetype"),url("Fonts/2e309b1b-08b8-477f-bc9e-7067cf0af0b3.svg#2e309b1b-08b8-477f-bc9e-7067cf0af0b3") format("svg");
-}
-
-@font-face{
-font-family:"HelveticaNeueW01-55Roma";
-src:url("Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix");
-src:url("Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix") format("eot"),url("Fonts/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"),url("Fonts/b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"),url("Fonts/da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
-}
-</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<!-- end head -->
 
-<!-- start body -->
-<body class="home" ng-app="api">
-
+<body class="home dark-text" ng-app="api">
 <!-- Start Header -->
 <header>
 <div class="site-width">
     <div class="slice group">
-      <div class="col length-4-of-4 logo"><img src="images/logo.jpg" alt="Getty Images API"/>
-      <ul class="site-nav">
-  <li class="box-shadow-menu">
-      <ul>
-      <li class="nav-item">Docs</li>
-      <li class="nav-item">Forum</li>
-      <li class="nav-item">Sign In</li>
-      <li class="nav-item">Register</li>
-    </ul>
-  </li>
-</ul></div>
-      
+      <div class="col length-1-of-4 logo"><a href="/connect"><img src="images/logo.jpg" alt="Getty Images API"/></a></div>
+      <div class="col length-1-of-4">&nbsp;</div>
+      <div class="col length-2-of-4">
+      	<ul class="site-nav">
+<li class="site-nav-list-item"><a href="#">Docs</a></li>
+<li class="site-nav-list-item"><a href="#">Forum</a></li>
+<li class="site-nav-list-item"><a href="#">Sign in</a></li>
+<li class="site-nav-list-item"><a href="#">Register</a></li>
       </div>
     </div>
   </div>
   </header>
+
+<!-- End Header -->
+
 <!-- End Header -->
 <section class="site-width-alt">
   <h2 class="search-heading">Test our API search endpoint. Just enter a keyword or phrase and click Search.</h2>
