@@ -82,17 +82,33 @@ section.hero div.site-width.push-down	{
 	padding-top:125px;
 }
 section.product-desc div.site-width.push-down	{
-	padding-top:400px;
+	padding-top:50px;
 }
 section.embed div.site-width.push-down	{
-	padding-top:250px;
+	padding-top:50px;
 }
 section.download div.site-width.push-down	{
-	padding-top:250px;
+	padding-top:50px;
 }
 section.props .site-width.push-down	{
 	padding-top:50px;
 }
+@media only screen and (min-width: 1024px) {
+	section.support	{
+	min-height:400px;
+}
+}
+@media only screen and (min-width: 1200px) {
+	section.support	{
+	min-height:500px;
+}
+}
+@media only screen and (min-width: 1440px) {
+	section.support	{
+	min-height:600px;
+}
+}
+
 @media only screen and (max-width: 800px) {
 .col {  margin: 1% 0 1% 0%; }
 .length-1-of-4, .length-2-of-4, .length-3-of-4, .length-4-of-4, .length-1-of-3 { width: 100%; }
@@ -199,6 +215,15 @@ section.download div.site-width.push-down	{
 }	
 section.props .site-width.push-down	{
 	padding-top:0px;
+}
+section.support	{
+	padding-top:10px;
+	background-image:url(../images/tiles/body/tile-5.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size:cover;
+	min-height:300px;
 }
 }
 

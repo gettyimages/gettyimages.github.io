@@ -22,7 +22,6 @@ html {
 body {
   margin: 0;
 }
-
 /* HTML5 display definitions
    ========================================================================== */
 
@@ -599,7 +598,7 @@ section.support	{
   	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-size:cover;
-	min-height:400px;
+	min-height:300px;
 }
 section.learn {
 	background:white;
@@ -614,7 +613,7 @@ footer	{
 	color:white;
 	padding-top:50px;
 	padding-bottom:50px;
-	margin-top:-20px;
+	margin-top:-30px;
 }
 .footer-content	{
 	text-align:center;
@@ -810,3 +809,13 @@ div.col.length-1-of-4.logo img	{
 	padding-top:50px;
 	color:black;
 }
+.dark-text	{
+	color:#000;
+}
+.mashery-form	{
+	background:#142736;
+	padding-top:135px;
+	margin-top:-20px;
+	min-height:425px;
+}
+	
