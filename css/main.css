@@ -446,7 +446,7 @@ h2	{
 	font: 32px/40px HelveticaNeueW01-Thin;
 }
 h3	{
-	font: 22px/26px HelveticaNeueW01-Thin;
+	font: 22px/32px HelveticaNeueW01-Thin;
 }
 h4	{
 	font: 20px/26px HelveticaNeueW01-55Roma;
@@ -600,6 +600,7 @@ section.support	{
   	-o-background-size: cover;
 	background-size:cover;
 	min-height:300px;
+	padding-bottom:50px;
 }
 section.learn {
 	background:white;
@@ -816,7 +817,35 @@ div.col.length-1-of-4.logo img	{
 .mashery-form	{
 	background:#142736;
 	padding-top:135px;
-	margin-top:-20px;
 	min-height:425px;
 }
+.form-header {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1; /* inline-block hack for IE7 */
+    *display: inline; /* inline-block hack for IE7 */
+    
+    
+}
+
+.Fields { float: left;}
+
+.Fields ul li { float: left; margin-right: 10px;}
+
+.Fields ul .Password a { display: block;}
+#username, #password	{
+	height:63px;
+	width:300px;	
+}
+input.login	{
+	height:63px;
+	width:200px;
+	background:#3DCC58;
+}
+a.ForgotPassword	{
+	text-align:right;
+	color:grey;
+	padding-top:10px;
+}
+	
 	

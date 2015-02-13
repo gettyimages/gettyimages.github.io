@@ -12,6 +12,10 @@
 	width:80%;
 	margin:0 auto;
 }
+.site-width-support	{
+	width:50%;
+	margin-left:10%;
+}
 .props	{
 	padding-top:50px;
 	background-image:url(../images/tiles/body/tile-1.jpg);
@@ -79,7 +83,7 @@
 	width:32.2%;
 }
 section.hero div.site-width.push-down	{
-	padding-top:125px;
+	padding-top:100px;
 }
 section.product-desc div.site-width.push-down	{
 	padding-top:50px;
@@ -91,7 +95,7 @@ section.download div.site-width.push-down	{
 	padding-top:50px;
 }
 section.props .site-width.push-down	{
-	padding-top:50px;
+	padding-top:100px;
 }
 @media only screen and (min-width: 1024px) {
 	section.support	{
