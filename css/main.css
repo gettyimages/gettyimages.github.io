@@ -94,6 +94,7 @@ template {
 
 a {
   background-color: transparent;
+  text-decoration:none;
 }
 
 /**
@@ -472,6 +473,7 @@ p, ul, li	{
 	font: 13px/17px HelveticaNeueW01-55Roma;
 }
 
+
 /* ##################################################################
 ###classes need to overwrite HTML defaults for this pattern to work ###
   ###################################################################
@@ -568,7 +570,8 @@ header p	{
   min-width:150px;
   max-width:300px;
   background:white;
-  color:#ccc;
+  color: #000; /* Fallback for older browsers */
+    color: rgba(0, 0, 0, 0.5);
 }
 .text-center	{
 	text-align:center;

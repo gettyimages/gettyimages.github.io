@@ -4,40 +4,38 @@
 <title>Getty Images API Solutions: Stock photo API and video API integration service</title>
 <script src="js/angular.min.js"></script>
 <script src="js/api.js"></script>
-<!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
- webfonts we can update these to whatever we want from Google --*font-family: 'Raleway', sans-serif; -->
 <link rel="stylesheet" href="css/main.css" />
 <link rel="stylesheet" href="css/search.css" />
 <link rel="stylesheet" href="css/responsive.css" />
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <!-- end head -->
 
 <!-- start body -->
-<body class="home" ng-app="api">
+<body class="home">
 
-<!-- Start Header -->
+<!-- Start body Header -->
 <header>
+<!-- set innner site width -->
 <div class="site-width">
     <div class="slice group">
       <div class="col length-4-of-4 logo"><img src="images/logo.jpg" alt="Getty Images API"/>
       <ul class="site-nav">
   <li class="box-shadow-menu">
-      <ul>
+      <ul class="nav-items">
       <li class="nav-item">Docs</li>
       <li class="nav-item">Forum</li>
       <li class="nav-item">Sign In</li>
       <li class="nav-item">Register</li>
     </ul>
   </li>
-</ul></div>
-      
+</ul>
+		</div>
       </div>
     </div>
-  </div>
   </header>
 <!-- End Header -->
+
 <!-- Start Section Hero -->
 <section class="hero">
 
@@ -151,11 +149,11 @@
       <ul>  
         <li class = "UserName">
             <label for="username"></label>
-            <input id="username" class = "Value" type = "text" value="Username" />
+            <input id="username" class = "Value" type = "text" value="Username" onfocus="if (this.value=='Username') this.value='';" />
         </li>
         <li class = "Password">
             <label for="password"></label>
-            <input id="password" class = "Value" type = "text" value="Password" />
+            <input id="password" class = "Value" type = "text" value="Password" onfocus="if (this.value=='Password') this.value='';"/>
             <a class="ForgotPassword" href="#">Forgot Password?</a>
         </li>
         <li class = "Login">
