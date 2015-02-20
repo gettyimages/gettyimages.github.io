@@ -10,7 +10,7 @@
 /*############
  1.) Reset ###
 ##############*/
- 
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   	-ms-text-size-adjust: 100%; /* 2 */
@@ -438,14 +438,14 @@ th {
 ###################*/
 @font-face{
 font-family:"HelveticaNeueW01-Thin";
-src:url("../Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix");
-src:url("../Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix") format("eot"),url("../Fonts/50d35bbc-dfd4-48f1-af16-cf058f69421d.woff") format("woff"),url("../Fonts/278bef59-6be1-4800-b5ac-1f769ab47430.ttf") format("truetype"),url("../Fonts/2e309b1b-08b8-477f-bc9e-7067cf0af0b3.svg#2e309b1b-08b8-477f-bc9e-7067cf0af0b3") format("svg");
+src:url("../fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix");
+src:url("../fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix") format("eot"),url("../fonts/50d35bbc-dfd4-48f1-af16-cf058f69421d.woff") format("woff"),url("../fonts/278bef59-6be1-4800-b5ac-1f769ab47430.ttf") format("truetype"),url("../fonts/2e309b1b-08b8-477f-bc9e-7067cf0af0b3.svg#2e309b1b-08b8-477f-bc9e-7067cf0af0b3") format("svg");
 }
 
 @font-face{
 font-family:"HelveticaNeueW01-55Roma";
-src:url("../Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix");
-src:url("../Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix") format("eot"),url("../Fonts/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"),url("../Fonts/b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"),url("../fonts/da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+src:url("../fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix");
+src:url("../fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix") format("eot"),url("../fonts/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"),url("../fonts/b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"),url("../fonts/da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
 }
 @font-face {
   font-family: 'FontAwesome';
@@ -485,7 +485,7 @@ p, ul, li	{
 ###classes need to overwrite HTML defaults for this pattern to work ###
   ###################################################################
 */
-	
+
 .oblique	{
 	font: italic 14px/18px HelveticaNeueW01-55Roma;
 }
@@ -497,7 +497,7 @@ p, ul, li	{
 }
 .thin	{
 	font:HelveticaNeueW01-Thin;
-}	
+}
 .sh	{
 	font: 12px/18px HelveticaNeueW01-Thin;
 }
@@ -599,7 +599,7 @@ header p	{
   background: #949494;
   text-decoration: none;
 }
-/*##############	
+/*##############
  4.) Content ###
 ################*/
 section.hero	{
@@ -690,7 +690,7 @@ section.hero p.left{
 section.hero p.hero-prop	{
 	text-align:center;
 	padding-left:50px;
-	padding-right:50px;	
+	padding-right:50px;
 }
 .fpo-prop	{
 	background:#e7e7e7;
@@ -748,7 +748,7 @@ div.social-grid	{
   width: 1em;
   height: 0.15em;
   background: white;
-  box-shadow: 
+  box-shadow:
     0 0.25em 0 0 white,
     0 0.5em 0 0 white;
 }
@@ -789,8 +789,8 @@ div.col.length-1-of-4.logo img	{
     display: inline-block;
     zoom: 1; /* inline-block hack for IE7 */
     *display: inline; /* inline-block hack for IE7 */
-    
-    
+
+
 }
 
 .Fields { float: left;}
@@ -917,7 +917,7 @@ section.download div.site-width.push-down	{
 }
 section.props .site-width.push-down	{
 	padding-top:100px;
-}	
+}
 .site-nav-mobile	{
 	display:none;
 }
