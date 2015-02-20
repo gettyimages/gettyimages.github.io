@@ -445,7 +445,14 @@ src:url("../Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix") format("eot"
 @font-face{
 font-family:"HelveticaNeueW01-55Roma";
 src:url("../Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix");
-src:url("../Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix") format("eot"),url("../Fonts/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"),url("../Fonts/b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"),url("../Fonts/da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+src:url("../Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix") format("eot"),url("../Fonts/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"),url("../Fonts/b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"),url("../fonts/da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('..fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 body	{
 	font: 13px/14px HelveticaNeueW01-55Roma;
@@ -547,7 +554,8 @@ header p	{
   text-decoration: none;
   width:100%;
   min-width:150px;
-  max-width:300px;
+  max-width:217px;
+  min-height:59px;
       /* Fallback for web browsers that don't support RGBa */
     background-color: rgb(0, 0, 0);
     /* RGBa with 0.6 opacity */
@@ -568,10 +576,17 @@ header p	{
   text-decoration: none;
   width:100%;
   min-width:150px;
-  max-width:300px;
+  max-width:217px;
+  min-height:59px;
   background:white;
-  color: #000; /* Fallback for older browsers */
-    color: rgba(0, 0, 0, 0.5);
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(0, 0, 0);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#99000000)"
 }
 .text-center	{
 	text-align:center;
@@ -597,6 +612,7 @@ section.hero	{
   	-o-background-size: cover;
 	background-size:cover;
 	min-height:900px;
+	position:relative;
 }
 .hero-cta	{
 	text-align:left;
@@ -690,9 +706,6 @@ section.hero p.hero-prop	{
 .product-prop-text	{
 	height:auto;
 }
-.props	{
-	padding-top:50px;
-}
 .social-slice	{
 	padding-top:50px;
 	padding-bottom:50px;
@@ -747,12 +760,14 @@ div.social-grid	{
 }
 .hero-link	{
 	color:white;
+	font-family:"HelveticaNeueW01-55Roma";
 }
 .section-link	{
 	color:white;
+	font-family:"HelveticaNeueW01-55Roma";
 }
 .hero-link:hover	{
-	color:grey;
+	text-decoration:bold;
 }
 div.col.length-1-of-4.logo img	{
 	float:left;
@@ -826,6 +841,7 @@ a.ForgotPassword	{
   	-o-background-size: cover;
 	min-height:900px;
 	background-size:cover;
+	position:relative;
 }
 .product-desc	{
 	padding-top:50px;
@@ -835,6 +851,7 @@ a.ForgotPassword	{
   	-o-background-size: cover;
 	background-size:cover;
 	min-height:900px;
+	position:relative;
 }
 .embed	{
 	padding-top:50px;
@@ -844,6 +861,7 @@ a.ForgotPassword	{
   	-o-background-size: cover;
 	background-size:cover;
 	min-height:900px;
+	position:relative;
 }
 .download	{
 	padding-top:50px;
@@ -853,6 +871,7 @@ a.ForgotPassword	{
   	-o-background-size: cover;
 	background-size:cover;
 	min-height:900px;
+	position:relative;
 }
 
 /*  COLUMN SETUP  */
@@ -912,4 +931,44 @@ ul.site-nav-desktop li	{
 	display:inline;
 	padding-left:20px;
 	font-size:18px;
+}
+.bigArrow {
+  display: block;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  margin-left: -35px;
+  z-index: 32;
+  color: #fff;
+  font-size: 40px;
+}
+.bigArrow:focus,
+.bigArrow:hover {
+  border-color: #ea623d;
+}
+.bigArrow i {
+  position: relative;
+  margin-top: 15px;
+}
+.fa-angle-down:before {
+  content: "\f107";
+}
+.bigArrow i {
+  position: relative;
+  margin-top: 15px;
+}
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

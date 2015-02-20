@@ -1,6 +1,9 @@
 /*  SECTIONS  */
 
 @media only screen and (max-width: 1040px) {
+.bigArrow	{
+	display:none;
+}
 .site-nav-desktop	{
 	display:none;
 }
