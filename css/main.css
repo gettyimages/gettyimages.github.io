@@ -613,6 +613,7 @@ section.hero	{
 	background-size:cover;
 	min-height:900px;
 	position:relative;
+	background-attachment:fixed;
 }
 .hero-cta	{
 	text-align:left;
@@ -622,7 +623,7 @@ section.product-hero	{
 	padding-top:50px;
 	padding-bottom:50px;
 }
-section.support	{
+	{
 	padding-top:50px;
 	background-image:url(../images/tiles/body/tile-5.jpg);
  	-webkit-background-size: cover;
@@ -631,6 +632,24 @@ section.support	{
 	background-size:cover;
 	min-height:300px;
 	padding-bottom:50px;
+	background-attachment:fixed;
+}
+section.affiliates	{
+	padding-top:50px;
+	background:#FFFFFF;
+	min-height:100px;
+	padding-bottom:50px;
+	color:black;
+}
+.support	{
+	padding-top:50px;
+	background-image:url(../images/tiles/body/tile-5.jpg);
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size:cover;
+	min-height:400px;
+	background-attachment:fixed;
 }
 section.learn {
 	background:white;
@@ -767,7 +786,20 @@ div.social-grid	{
 	font-family:"HelveticaNeueW01-55Roma";
 }
 .hero-link:hover	{
-	text-decoration:bold;
+	color:white;
+	font-family:"HelveticaNeueW01-55Roma";
+}
+.section-link:hover	{
+	color:white;
+	font-family:"HelveticaNeueW01-55Roma";
+}
+.hero-link:visited	{
+	color:white;
+	font-family:"HelveticaNeueW01-55Roma";
+}
+.section-link:visited	{
+	color:white;
+	font-family:"HelveticaNeueW01-55Roma";
 }
 div.col.length-1-of-4.logo img	{
 	float:left;
@@ -842,6 +874,7 @@ a.ForgotPassword	{
 	min-height:900px;
 	background-size:cover;
 	position:relative;
+	background-attachment:fixed;
 }
 .product-desc	{
 	padding-top:50px;
@@ -852,6 +885,7 @@ a.ForgotPassword	{
 	background-size:cover;
 	min-height:900px;
 	position:relative;
+	background-attachment:fixed;
 }
 .embed	{
 	padding-top:50px;
@@ -862,6 +896,7 @@ a.ForgotPassword	{
 	background-size:cover;
 	min-height:900px;
 	position:relative;
+	background-attachment:fixed;
 }
 .download	{
 	padding-top:50px;
@@ -872,6 +907,7 @@ a.ForgotPassword	{
 	background-size:cover;
 	min-height:900px;
 	position:relative;
+	background-attachment:fixed;
 }
 
 /*  COLUMN SETUP  */
@@ -916,8 +952,11 @@ section.download div.site-width.push-down	{
 	padding-top:50px;
 }
 section.props .site-width.push-down	{
-	padding-top:100px;
+	padding-top:50px;
 }
+div.site-width-support.support-text.push-down	{
+	padding-top:50px;
+}	
 .site-nav-mobile	{
 	display:none;
 }

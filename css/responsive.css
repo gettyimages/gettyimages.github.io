@@ -1,6 +1,11 @@
 /*  SECTIONS  */
 
 @media only screen and (max-width: 1040px) {
+.site-width-support	{
+	width:70%;
+	margin:0px auto;
+	text-align:center;
+}
 .bigArrow	{
 	display:none;
 }
@@ -10,6 +15,7 @@
 .site-nav-mobile	{
 	display:block;
 	text-align:right;
+	margin-top:9px;
 }
 .site-nav-mobile ul {
   text-align: left;
@@ -90,21 +96,7 @@ div.social-grid	{
 	width:48%;
 	background:white;
 }
-section.hero div.site-width.push-down	{
-	padding-top:50px;
-}
-section.product-desc div.site-width.push-down	{
-	padding-top:25px;
-}
-section.embed div.site-width.push-down	{
-	padding-top:25px;
-}
-section.download div.site-width.push-down	{
-	padding-top:25px;
-}
-section.props .site-width.push-down	{
-	padding-top:0px;
-}
+
 section.hero	{
 	background:black;
 	padding-top:50px;
@@ -114,7 +106,7 @@ section.hero	{
   	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-size:cover;
-	min-height:100px;
+	min-height:300px;
 }
 .props	{
 	padding-top:10px;
@@ -141,7 +133,8 @@ section.hero	{
   	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-size:cover;
-	min-height:100px;
+	min-height:300px;
+	background-attachment:fixed;
 }
 .download	{
 	padding-top:10px;
@@ -150,9 +143,9 @@ section.hero	{
   	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-size:cover;
-	min-height:100px;
+	min-height:300px;
 }
-section.support	{
+.support	{
 	padding-top:10px;
 	background-image:url(../images/tiles/body/tile-5.jpg);
  	-webkit-background-size: cover;
@@ -160,6 +153,7 @@ section.support	{
   	-o-background-size: cover;
 	background-size:cover;
 	min-height:300px;
+	background-attachment:fixed;
 }
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
@@ -177,15 +171,6 @@ section.download div.site-width.push-down	{
 }	
 section.props .site-width.push-down	{
 	padding-top:0px;
-}
-section.support	{
-	padding-top:10px;
-	background-image:url(../images/tiles/body/tile-5.jpg);
- 	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-	background-size:cover;
-	min-height:300px;
 }
 }
 
