@@ -1,59 +1,55 @@
 <div ng-controller="SearchController as search" class="search">
-  <div class="form">
-    <form ng-submit="send()">
-      <label ng-repeat="resource in resources">
-        <input type="radio" name="resource" ng-value="resource.path" ng-model="selected_resource.path" /> {{ resource.name }}
-      </label>
-      <h3>Parameters</h3>
-      <table>
-        <thead>
-          <th>
-            Parameter
-          </th>
-          <th>
-            Value
-          </th>
-          <th>
-            Description
-          </th>
-        </thead>
-        <tr>
-          <td>
-            phrase
-          </td>
-          <td>
-            <input type="text" ng-model="request.phrase" />
-          </td>
-          <td>
-            Free-text search query
-          </td>
-        </tr>
-        <tr ng-show="request.sort_order">
-          <td>
-            sort_order
-          </td>
-          <td>
-            <select ng-model="request.sort_order" ng-options="sort for sort in sort_orders"></select>
-          </td>
-          <td>
-            Allows sorting of results
-          </td>
-        </tr>
-      </table>
-      <input type="submit" value="Search" />
-    </form>
+ <h3>Parameters</h3>
+
+  
+  <div class="form border-bottom">
+    <form class="border-bottom" ng-submit="send()">
+      <div>
+        <label class="select-label"  ng-repeat="resource in resources">
+        <input  type="radio" name="resource" ng-value="resource.path" ng-model="selected_resource.path" /> {{ resource.name }}
+        </label>
+
+      </div>
+      <section class="slice group">
+      <div class="col length-2-of-4">
+        <div class="form-group">
+        <label class="label-block" for="phrase">Phrase</label>
+        <input type="text" ng-model="request.phrase" />
+        </div>
+      
+       <div class="form-group">
+        <label class="label-block" for="Sort-order" ng-show="request.sort_order">Sort-order</label>
+        <select ng-model="request.sort_order" ng-options="sort for sort in sort_orders"></select>
+        <input class="btn btn-default" type="submit" value="Search" />
+      </div>
+      </div>
+            
+        <div class="col length-2-of-4"></div>
+  
+    
+
+      </section>
+      </form>
     <span us-spinner="{radius:10, width:4, length: 10}" spinner-key="spinner-1" style="position: relative; top: 50%; left: 50%"></span>
 
-    <div class="request">
+    <div class="request border-bottom">
       <h3>Request</h3>
       <pre>@{{ apirequest() }}</pre>
     </div>
-    <h3>Response</h3><b>Status: {{ responsecode }}</b>
+
+<section class="slice group">
+  <div class="col length-2-of-4">
+    <h3>Response</h3>
+   <!--  <span class="status"> Status: {{ responsecode }}</span>  -->
     <div class="response">
+
       <pre ng-hide="isLoading">{{ apiresponse | json }}</pre>
     </div>
+  </div>
+
+  <div class="col length-2-of-4">
     <h3>Formatted Response</h3>
-    <div class="formatted-response">
+    <div class="formatted-response response">
       <div ng-repeat="image in apiresponse.images" ng-hide="isLoading" class="images">
         <div class="item">
           <a href="{{image.referral_destinations[0].uri}}" target="_blank">
@@ -72,3 +68,6 @@
       </div>
     </div>
   </div>
+
+  </div>
+</div>

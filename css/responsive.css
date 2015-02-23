@@ -31,6 +31,7 @@
   left:-10px;
   top:20px;
   padding-bottom:10px;
+
 }
 ul li {
   display: inline-block;
@@ -96,17 +97,20 @@ div.social-grid	{
 	width:48%;
 	background:white;
 }
-
 section.hero	{
-	background:black;
-	padding-top:50px;
-	padding-bottom:50px;
-	background-image:url(../images/tiles/hero/tennis.jpg) ;
- 	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-	background-size:cover;
 	min-height:300px;
+}
+div.length-1-of-3.text-center img	{
+	padding-bottom:20px;
+}
+section.affiliates	{
+	padding-top:50px;
+	background:#FFFFFF;
+	min-height:250px;
+	color:black;
+}
+footer div.site-width div.col.length-1-of-4.right	{
+	text-align:left;
 }
 .props	{
 	padding-top:10px;
@@ -172,6 +176,9 @@ section.download div.site-width.push-down	{
 section.props .site-width.push-down	{
 	padding-top:0px;
 }
+}
+.btn-default {
+    width: 100%;
 }
 
 /*

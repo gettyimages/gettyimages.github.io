@@ -15,48 +15,76 @@
 </head>
 
 <body class="home dark-text" ng-app="api">
-<!-- Start Header -->
+<!-- Start body Header -->
 <header>
-<div class="slice group">
+<!-- set innner site width -->
 <div class="site-width">
-      <div class="col length-4-of-4 logo"><img src="/images/logo.jpg" alt="Getty Images API"/>
-      <ul class="site-nav">
+    <div class="slice group">
+      <div class="col length-4-of-4 logo"><a href="http://developer.gettyimages.com/"><img src="/images/logo.jpg" alt="Getty Images API"/></a>
+<!-- destop nav --> 
+      <ul class="nav-items site-nav-desktop">
+      <li class="nav-item"><a href="https://github.com/gettyimages/gettyimages-api">Docs</a></li>
+      <li class="nav-item"><a href="http://developer.gettyimages.com/forum">Forum</a></li>
+      <li class="nav-item"><a href="https://developer.gettyimages.com/apps/mykeys">Sign In</a></li>
+      <li class="nav-item"><a href="https://developer.gettyimages.com/member/register">Register</a></li>
+    </ul>
+<!-- end desktop nav -->
+<!-- start mobile nav -->
+      <ul class="site-nav-mobile">
   <li class="box-shadow-menu">
-      <ul>
-      <li class="nav-item">Docs</li>
-      <li class="nav-item">Forum</li>
-      <li class="nav-item">Sign In</li>
-      <li class="nav-item">Register</li>
+      <ul class="nav-items">
+        <li class="nav-item"><a href="https://github.com/gettyimages/gettyimages-api">Docs</a></li>
+        <li class="nav-item"><a href="http://developer.gettyimages.com/forum">Forum</a></li>
+        <li class="nav-item"><a href="https://developer.gettyimages.com/apps/mykeys">Sign In</a></li>
+        <li class="nav-item"><a href="https://developer.gettyimages.com/member/register">Register</a></li>
     </ul>
   </li>
-</ul></div>
-
+</ul>
+<!-- end mobile nav -->
+    </div>
       </div>
     </div>
-  </div>
   </header>
-
 <!-- End Header -->
 
-<!-- End Header -->
+
 <div class="slice group">
-<section class="site-width-alt">
-  <h2 class="search-heading">Test our API search endpoint. Just enter a keyword or phrase and click Search.</h2>
-  <p class="search-heading">By using this search test, you certify that you have read and have agreed to the <a href="http://gettyimages.github.io/terms.html">API Terms of Use</a>.</p>
-  <section class="search-footer site-width-alt left">
-  <table style="width:75%">
-    <tr>
-        <td>Ready to test more endpoints? Register for an API key, and get started now.</td>
-        <td>Would you like access to additional content? Get in touch with us today to discuss licensing terms.</td>
-    </tr>
-    <tr>
-        <td><a href="https://developer.gettyimages.com/member/register">Register now</a></td>
-        <td><a href="https://developer.gettyimages.com/contact">Contact us</a></td>
-    </tr>
-</table>
-</section>
-<br/>
-  <search-demo></search-demo></section>
+  <section class="site-width-alt search-hero">
+    <h2 class="search-heading" >Test our API search endpoint</h2>
+    <h3> Just enter a keyword or phrase and click Search.</h3>
+    <p>By using this search test, you certify that you have read and have agreed to the 
+      <a class="light" href="http://gettyimages.github.io/terms.html">API Terms of Use</a>.</p>
+  </section>
+
+
+<!--SEARCH FUNCTIONALITY-->
+
+  <section class="site-width-alt"> <search-demo></search-demo> </section>
+
+
+<!--CTA SECTION-->
+
+  <section class="call-to-action site-width-alt">
+    <div class="col length-2-of-4">
+      <h4>Ready to test more endpoints? </br>
+        Register for an API key, and get started now.</h4>
+      <a class="btn-full-width" href="https://developer.gettyimages.com/member/register">Register now</a>
+    </div>
+
+    <div class="col length-2-of-4">
+      <h4>Would you like access to additional content? </br> 
+        Get in touch with us today to discuss licensing terms.</h4>
+      <a class="btn-full-width" href="https://developer.gettyimages.com/contact">Contact us</a>
+    </div>
+  </section>
+
   </div>
+
+  <footer class="search">
+    <div class="site-width footer-content">
+    <a href="http://www.gettyimages.com/"><img src="images/getty-logo.jpg" width="125" height="27" alt=""></a>
+    </div>
+  </footer>
+
 </body>
 </html>

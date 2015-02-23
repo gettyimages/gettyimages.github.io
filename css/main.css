@@ -300,6 +300,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
+  border:none;
 }
 
 /**
@@ -468,7 +469,7 @@ h3	{
 	font: 22px/32px HelveticaNeueW01-Thin;
 }
 h4	{
-	font: 20px/26px HelveticaNeueW01-55Roma;
+	font: 20px/26px HelveticaNeueW01-Thin;
 }
 h5	{
 	font: 16px/22px HelveticaNeueW01-Thin;
@@ -480,6 +481,8 @@ p, ul, li	{
 	font: 13px/17px HelveticaNeueW01-55Roma;
 }
 
+h2,h3,h4,h5,h6 {letter-spacing: .02em;
+}
 
 /* ##################################################################
 ###classes need to overwrite HTML defaults for this pattern to work ###
@@ -594,6 +597,13 @@ header p	{
 .left	{
 	text-align:left;
 }
+.right	{
+	text-align:right;
+}
+span.copyright	{
+	white-space:nowrap;
+	color:#a7a7a7;
+}
 
 .btn-black:hover {
   background: #949494;
@@ -638,7 +648,6 @@ section.affiliates	{
 	padding-top:50px;
 	background:#FFFFFF;
 	min-height:100px;
-	padding-bottom:50px;
 	color:black;
 }
 .support	{
@@ -659,15 +668,36 @@ section.learn {
 section.hero div.site-width	{
 	text-align:center;
 }
+section.search-hero  {
+  padding-bottom:50px;
+  border-bottom: 1px solid #ccc;
+}
+section.call-to-action {
+  padding-bottom: 50px;
+}
+
 footer	{
 	background:black;
 	color:white;
 	padding-top:50px;
-	padding-bottom:50px;
+	padding-bottom:200px;
 	margin-top:-30px;
 }
-.footer-content	{
-	text-align:center;
+.footer-list	{
+	padding-left: 20px;
+	white-space:nowrap;
+}
+.nav-item a	{
+	color:white;
+}
+.nav-item a:hover	{
+	color:white;
+}
+span.footer-links a	{
+	color:white;
+}
+span footer-links a:hover	{
+	color:white;
 }
 section.hero h1	{
 	text-align:center;
@@ -805,11 +835,16 @@ div.col.length-1-of-4.logo img	{
 	float:left;
 }
 .search-heading	{
-	margin-top:100px;
-	color:black;
+  margin-top:185px;
+	color:#333;
+  font-size:40px;
+  letter-spacing: 0.08ems;
 }
 .dark-text	{
 	color:#000;
+}
+.grey-text {
+  color:#ccc;
 }
 .mashery-form	{
 	background:#142736;
@@ -910,6 +945,13 @@ a.ForgotPassword	{
 	background-attachment:fixed;
 }
 
+
+a.light {
+  color:#777;
+  font-weight:bold;
+}	
+a.light:hover {color:#333;}
+
 /*  COLUMN SETUP  */
 .col {
 	display: block;
@@ -917,6 +959,55 @@ a.ForgotPassword	{
 	margin: 1% 0 1% 1.6%;
 }
 .col:first-child { margin-left: 0; }
+hr { border:1px solid #777;}
+
+.btn-full-width {
+  width:100%;
+  display:block;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  color: #ffffff;
+  background: #333;
+  padding: 20px 0px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: .08em;
+}
+
+.btn-full-width:hover {
+  background: #444;
+}
+
+.btn {
+  display: block;
+  padding: 6px 65px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.42857143;
+  letter-spacing: .02em;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: #333;
+  margin-top:20px;
+  width:265px;
+}
+
+.btn-default:hover {
+  background: #444;
+}
 
 /*  GROUPING  */
 .group:before,
