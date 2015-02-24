@@ -12,7 +12,7 @@
 
     $scope.api_uri = 'https://api.gettyimages.com/v3';
     $scope.request = {
-      phrase: 'dog',
+      phrase: 'puppies',
       fields: 'id,title,thumb,referral_destinations',
       sort_order: 'best'
     };
