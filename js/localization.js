@@ -1,5 +1,5 @@
 (function() {
-  var supportedLanguages = ['de', 'es', 'fr', 'it', 'ja', 'nl', 'pt', 'sv', 'en', 'pseudo'];
+  var supportedLanguages = ['de', 'es', 'fr', 'it', 'ja', 'nl', 'pt', 'sv', 'en'];
   var lang = 'en';
   var preferredLang = navigator.languages.filter(function(l) {
     return supportedLanguages.indexOf(l.substring(0, 2)) != -1;
