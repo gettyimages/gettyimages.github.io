@@ -1,0 +1,1 @@
+$(function(){$(document).on("click",".left-nav > li",function(){$(this).find("ul").toggle()})});
