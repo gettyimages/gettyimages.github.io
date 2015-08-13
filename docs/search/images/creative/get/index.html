@@ -121,21 +121,19 @@
 			<div class="col-md-9">
 
 				
-				<h2 id="search-for-creative-images">Search For Creative Images</h2>
-<p>The SearchForImages call returns image metadata for all images matching a specified search query.</p>
-<p><a target="_blank" class="btn btn-primary" href="https://api.gettyimages.com/swagger/ui/index.html#!/Search/Search_GetEditorialImagesByPhrase">Experiment with this API</a></p>
-<p>Long running searches will time out after 30 seconds. You can check the status of this endpoint on our <a href="http://developer.gettyimages.com/forum">developer forum</a>.</p>
-<h3 id="search-queries-and-filters">Search queries and filters</h3>
-<p>Editorial image search partitions a search into a query and an optional set of filters. At least one query parameter must be provided. </p>
-<h3 id="search-pagination">Search pagination</h3>
-<p>Clients can control the subset of matching images returned in a response. This
-feature supports pagination scenarios. The subset, or &quot;page&quot; of images returned is
-specified by the client with an index: <code>page</code>, and offset: <code>page_size</code>.</p>
-<h3 id="request-ex-">Request ex:</h3>
-<pre><code>GET https://api.gettyimages.com:443/v3/search/images/editorial?phrase=&lt;query&gt;&amp;page=&lt;page number&gt;&amp;page_size&lt;page size&gt;
-</code></pre><h3 id="request-header-">Request header:</h3>
+				<p><a target="_blank" class="btn btn-primary pull-right" href="https://api.gettyimages.com/swagger/ui/index.html#!/Search/Search_GetEditorialImagesByPhrase">Experiment with this API</a></p>
+<h1 id="search-for-creative-images">Search For Creative Images</h1>
+<p>Use this endpoint to search our contemporary stock photos, illustrations and archival images by phrase, collection, event or license type. See the <a href="#filters">Filters</a> section for more search options.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an api key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information. 
+There are several <a href="https://github.com/gettyimages/gettyimages-api#sdks">SDKs</a> available for popular programming languages to help you get started.</p>
+<p>Use the following endpoint to search for creative images:</p>
+<pre><code>GET https://api.gettyimages.com:443/v3/search/images/creative?phrase=&lt;query term&gt;
+</code></pre><p>Add your api key to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
-</code></pre><h3 id="response-ex-">Response ex:</h3>
+</code></pre><p>It would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/v3/search/images?phrase=&lt;query term&gt;
+</code></pre><p>The response body should look like this:    </p>
 <pre><code>{
   &quot;result_count&quot;: 1,
   &quot;images&quot;: [
@@ -161,41 +159,10 @@ specified by the client with an index: <code>page</code>, and offset: <code>page
       &quot;title&quot;: &quot;&lt;image title&gt;&quot;
     }
   ]
-}
-</code></pre><h3 id="changing-the-response-data">Changing the Response Data</h3>
-<p>TODO Need copy describing the <code>fields</code> parameter. Should mention <code>field_sets</code>.</p>
-<h3 id="request-ex-">Request ex:</h3>
-<pre><code>GET https://api.gettyimages.com:443/v3/search/images/editorial?fields=allowed_use,id,thumb,title&amp;phrase=&lt;query&gt;
-</code></pre><h3 id="request-header-">Request header:</h3>
-<pre><code>Api-Key: &lt;your api key&gt;
-</code></pre><h3 id="response-ex-">Response ex:</h3>
-<pre><code>{
-  &quot;result_count&quot;: 1,
-  &quot;images&quot;: [
-    {
-      &quot;id&quot;: &quot;&lt;image id&gt;&quot;,
-      &quot;allowed_use&quot;: {
-        &quot;how_can_i_use_it&quot;: &quot;Available for |Editorial uses|. |Learn more|&quot;,
-        &quot;release_info&quot;: &quot;Not released&quot;,
-        &quot;usage_restrictions&quot;: [
-          &quot;&lt;usage restriction&gt;&quot;
-        ]
-      },
-      &quot;display_sizes&quot;: [
-        {
-          &quot;is_watermarked&quot;: false,
-          &quot;name&quot;: &quot;thumb&quot;,
-          &quot;uri&quot;: &quot;&lt;image url&gt;&quot;
-        }
-      ],
-      &quot;title&quot;: &quot;&lt;image title&gt;&quot;
-    }
-  ]
-}
+}    
 </code></pre>
 				
-				<h3 id="http-headers">Http Headers</h3>
-<p>TODO - need description copy</p>
+				<h3 id="http-request-headers">Http Request Headers</h3>
 
 				<table class="table table-striped">
 					<tr>
@@ -228,7 +195,7 @@ specified by the client with an index: <code>page</code>, and offset: <code>page
 				</table>
 				
 				<h3 id="sorting-and-pagination">Sorting and Pagination</h3>
-<p>TODO - need description copy</p>
+<p>Clients can control the subset of matching images returned in a response. This feature supports pagination scenarios. The subset, or &quot;page&quot; of images returned is specified by the client with an index: <code>page</code>, and offset: <code>page_size</code>.</p>
 
 				<table class="table table-striped">
 					<tr>
@@ -264,14 +231,14 @@ specified by the client with an index: <code>page</code>, and offset: <code>page
 				</table>
 
 				<h3 id="fields">Fields</h3>
-<p>TODO - need description copy</p>
-<p><em>You&#39;ll need a Resource Owner Grant token to include the <code>largest_downloads</code> or <code>mid_res_comp</code> in your response.</em></p>
+<p>The fields parameter is used to change the shape of the response returned from a search query.</p>
+<p><strong>You&#39;ll need a Resource Owner Grant token to include the <code>largest_downloads</code> or <code>mid_res_comp</code> in your response.</strong></p>
 
 				<table class="table table-striped">
 					<tr>
 						<td>allowed_use</td>
 						<td>
-							
+							Communicates licensing information to customers who make one-off image purchases. Most API customers access images through their agreements and do not need to consult this field.
 						</td>
 					</tr>
 					<tr>
@@ -283,73 +250,77 @@ specified by the client with an index: <code>page</code>, and offset: <code>page
 					<tr>
 						<td>artist</td>
 						<td>
-							
+							Identifies the creator of the asset.
 						</td>
 					</tr>
 					<tr>
 						<td>asset_family</td>
 						<td>
-							
+							Specifies the asset family filter to apply to the search results. The possible values are: 
+							<span class="label label-default">Creative</span>
+							<span class="label label-default">Editorial</span>
 						</td>
 					</tr>
 					<tr>
 						<td>call_for_image</td>
 						<td>
-							
+							Indicates that you must call your Getty Images sales rep to obtain access to high res files for this image. This image is not available for online download.
 						</td>
 					</tr>
 					<tr>
 						<td>caption</td>
 						<td>
-							
+							A brief description of the asset.
 						</td>
 					</tr>
 					<tr>
 						<td>collection_code</td>
 						<td>
-							
+							A three-letter code identifying the collection.
 						</td>
 					</tr>
 					<tr>
 						<td>collection_id</td>
 						<td>
-							
+							Identifies the collection to which the asset belongs.
 						</td>
 					</tr>
 					<tr>
 						<td>collection_name</td>
 						<td>
-							
+							Identifies the name of the collection to which the asset belongs.
 						</td>
 					</tr>
 					<tr>
 						<td>color_type</td>
 						<td>
-							
+							Indicates if the asset is color, or black and white. The possible values are:
+							<span class="label label-default">Color</span>
+							<span class="label label-default">Black/White</span>
 						</td>
 					</tr>
 					<tr>
 						<td>comp</td>
 						<td>
-							
+							Large display size; sized for layout composition. Comp images are larger than preview and thumbnail, but not full sized, averaging about 600 pixels on the longest side.
 						</td>
 					</tr>
 					<tr>
 						<td>copyright</td>
 						<td>
-							
+							Identifies asset copyright.
 						</td>
 					</tr>
 					<tr>
 						<td>date_created</td>
 						<td>
-							
+							Identifies the creation date of the asset.
 						</td>
 					</tr>
 					<tr>
 						<td>detail_set</td>
 						<td>
-							
+							A collection of metadata fields commonly used for displaying information in a search results based experience.
 						</td>
 					</tr>
 					<tr>
@@ -361,43 +332,68 @@ specified by the client with an index: <code>page</code>, and offset: <code>page
 					<tr>
 						<td>graphical_style</td>
 						<td>
-							
+							Indicates the graphic style of the asset. The possible values are:
+							<span class="label label-default">Photograph</span>
+							<span class="label label-default">Illustration</span>
 						</td>
 					</tr>
 					<tr>
 						<td>id</td>
 						<td>
-							
+							A unique numerical string that identifies the asset.
 						</td>
 					</tr>
 					<tr>
 						<td>keywords</td>
 						<td>
-							
+							Identifies the type of keyword. The possible values are:
+							<span class="label label-default">Unknown</span>
+							<span class="label label-default">Specific people</span>
+							<span class="label label-default">Ethnicity</span>
+							<span class="label label-default">Age</span>
+							<span class="label label-default">Gender</span>
+							<span class="label label-default">Number of people</span>
+							<span class="label label-default">Concept</span>
+							<span class="label label-default">Location</span>
+							<span class="label label-default">Viewpoint</span>
+							<span class="label label-default">Image technique</span>
+							<span class="label label-default">Composition</span>
+							<span class="label label-default">Color</span>
+							<span class="label label-default">Additional info</span>
+							<span class="label label-default">Candidate term</span>
+							<span class="label label-default">Fashion phrases</span>
+							<span class="label label-default">Entertainment</span>
 						</td>
 					</tr>
 					<tr>
 						<td>largest_downloads</td>
 						<td>
-							
+							Returns hypermedia download links to the largest size.
 						</td>
 					</tr>
 					<tr>
 						<td>license_model</td>
 						<td>
-							
+							Identifies a licensing model for the asset. The possible values are:
+							<span class="label label-default">RoyaltyFree</span>
+							<span class="label label-default">RightsManaged</span>
 						</td>
 					</tr>
 					<tr>
 						<td>max_dimensions</td>
 						<td>
-							
+							Pixel dimensions of the largest available file.
 						</td>
 					</tr>
 					<tr>
 						<td>orientation</td>
 						<td>
-							
+							Specifies orientation of assets returned in search results. The possible values are:
+							<span class="label label-default">Horizontal</span>
+							<span class="label label-default">Vertical</span>
+							<span class="label label-default">PanoramicHorizontal</span>
+							<span class="label label-default">PanoramicVertical</span>
+							<span class="label label-default">Square</span>
 						</td>
 					</tr>
 					<tr>
@@ -409,13 +405,18 @@ specified by the client with an index: <code>page</code>, and offset: <code>page
 					<tr>
 						<td>preview</td>
 						<td>
-							
+							Medium display size; sized for popup previews. Preview images are larger than thumbnail but smaller than comp, and are about 270 px on the longest side.
 						</td>
 					</tr>
 					<tr>
 						<td>product_types</td>
 						<td>
-							
+							Identifies a customer’s product offering that authorizes access to an asset. The possible values are:
+							<span class="label label-default">easyaccess</span>
+							<span class="label label-default">editorialsubscription</span>
+							<span class="label label-default">premiumaccess</span>
+							<span class="label label-default">royaltyfreesubscription</span>
+							<span class="label label-default">imagepack</span>
 						</td>
 					</tr>
 					<tr>
@@ -427,44 +428,97 @@ specified by the client with an index: <code>page</code>, and offset: <code>page
 					<tr>
 						<td>referral_destinations</td>
 						<td>
-							
+							Contains a ReferralDestination entry for each of the sites on which the asset can be found.
 						</td>
 					</tr>
 					<tr>
 						<td>summary_set</td>
 						<td>
-							
+							A collection of metadata fields commonly used for displaying information in a search results based experience.
 						</td>
 					</tr>
 					<tr>
 						<td>thumb</td>
 						<td>
-							
+							Smallest display size; sized for a results grid. Thumbnail images are smaller than preview and comp, and have a dimension of 170 pixels on the longest side.
 						</td>
 					</tr>
 					<tr>
 						<td>title</td>
 						<td>
-							
+							Indicates the title of the asset.
 						</td>
 					</tr>
 					<tr>
 						<td>uri_oembed</td>
 						<td>
-							
+							Identifies a URI that can be used to get oEmbed data for the asset. Please note that this will only be populated for embeddable assets. See our oEmbed documentation for more information.
 						</td>
 					</tr>
 				</table>
 				
 				<h3 id="fieldsets">Fieldsets</h3>
-<p>TODO - need description copy</p>
 
 				<table class="table table-striped">
+					<tr>
+						<td>summary_set<td>
+						<td>
+							
+								<span class="label label-default">asset_family</span>
+								<span class="label label-default">caption</span>
+								<span class="label label-default">collection_id</span>
+								<span class="label label-default">collection_code</span>
+								<span class="label label-default">license_model</span>
+								<span class="label label-default">max_dimensions</span>
+								<span class="label label-default">thumb</span>
+								<span class="label label-default">title</span>
+						</td>
+					</tr>
+					<tr>
+						<td>display_set<td>
+						<td>
+							
+								<span class="label label-default">preview</span>
+								<span class="label label-default">comp</span>
+								<span class="label label-default">thumb</span>
+								<span class="label label-default">high_res_comp</span>
+								<span class="label label-default">mid_res_comp</span>
+						</td>
+					</tr>
+					<tr>
+						<td>detail_set<td>
+						<td>
+							
+								<span class="label label-default">allowed_use</span>
+								<span class="label label-default">artist</span>
+								<span class="label label-default">call_for_image</span>
+								<span class="label label-default">caption</span>
+								<span class="label label-default">collection_id</span>
+								<span class="label label-default">collection_code</span>
+								<span class="label label-default">collection_name</span>
+								<span class="label label-default">copyright</span>
+								<span class="label label-default">date_created</span>
+								<span class="label label-default">editorial_segments</span>
+								<span class="label label-default">event_ids</span>
+								<span class="label label-default">graphical_style</span>
+								<span class="label label-default">asset_family</span>
+								<span class="label label-default">license_model</span>
+								<span class="label label-default">max_dimensions</span>
+								<span class="label label-default">orientation</span>
+								<span class="label label-default">referral_destinations</span>
+								<span class="label label-default">title</span>
+								<span class="label label-default">preview</span>
+								<span class="label label-default">product_types</span>
+								<span class="label label-default">quality_rank</span>
+								<span class="label label-default">thumb</span>
+								<span class="label label-default">comp</span>
+						</td>
+					</tr>
 				</table>
 
 				<h3 id="filters">Filters</h3>
-<p>TODO - need description copy</p>
-<p><em>You&#39;ll need a Resource Owner Grant token to filter by <code>product_types</code>.</em></p>
+<p>Creative image search partitions a search into a query and an optional set of filters. At least one query parameter must be provided. </p>
+<p><strong>You&#39;ll need a Resource Owner Grant token to filter by <code>product_types</code>.</strong></p>
 
 				<table class="table table-striped">
 					<tr>
@@ -717,60 +771,76 @@ specified by the client with an index: <code>page</code>, and offset: <code>page
 				</table>
 				
 				<h3 id="errors">Errors</h3>
-<p>TODO - need description copy</p>
 
 				<table class="table table-striped">
 					<tr>
 						<td>400</td>
 						<td>InvalidParameterValue</td>
-						<td></td>
+						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
 					</tr>
 					<tr>
 						<td>400</td>
 						<td>UnknownProviderUri</td>
-						<td></td>
+						<td>Received when an unknown provider uri is passed to <code>entity_uris</code>.</td>
 					</tr>
 					<tr>
 						<td>400</td>
 						<td>IncorrectlyFormedUri</td>
-						<td></td>
+						<td>Received when an incorrectly formatted provider uri is passed to <code>entity_uris</code>.</td>
 					</tr>
 					<tr>
 						<td>400</td>
 						<td>MalformedRequest</td>
-						<td></td>
+						<td>Received when a potentially malicious input string is received from the client as part of the request data.</td>
 					</tr>
 					<tr>
 						<td>400</td>
 						<td>InvalidPage</td>
-						<td></td>
+						<td>Received if <code>page</code> is less than zero or greater than the number of pages in the search results.</td>
 					</tr>
 					<tr>
 						<td>400</td>
 						<td>InvalidPageSize</td>
-						<td></td>
+						<td>Received if <code>page_size</code> is greater than 100.</td>
 					</tr>
 					<tr>
 						<td>401</td>
 						<td>AuthorizationTokenRequired</td>
-						<td></td>
+						<td>Received when <code>largest_download</code> is added to the <code>fields</code> query string parameter and the <code>Authorization</code> header is missing or contains an invalid token.</td>
 					</tr>
 					<tr>
 						<td>403</td>
 						<td>UnauthorizedDisplaySize</td>
-						<td></td>
+						<td>Received when <code>mid_res_comp</code> or <code>high_res_comp</code> is requested but not authorized for the given authorization token.</td>
 					</tr>
 					<tr>
 						<td>403</td>
 						<td>NoAccessToProductType</td>
-						<td></td>
+						<td>Received when <code>product_types</code> is requested but not authorized for the given authorization token.</td>
 					</tr>
 				</table>
 
 				<h3 id="media-links">Media Links</h3>
-<p>TODO - need description copy</p>
 
 				<table class="table table-striped">
+					<tr>
+						<td>largest_download.uri</td>
+						<td>
+							Contains the uri to access the largest available download for an asset. 
+						</td>
+					</tr>
+					<tr>
+						<td>display_size.uri</td>
+						<td>
+							Contains the uri to access this asset's display size. 
+						</td>
+					</tr>
+					<tr>
+						<td>referral_destination.uri</td>
+						<td>
+							Contains the uri to access this asset's metadata. 
+						</td>
+					</tr>
 				</table>				
 				
 
