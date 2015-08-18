@@ -1,0 +1,438 @@
+<html>
+<head>
+	<title>Get metadata for multiple events</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/js/jquery.slicknav.js"></script>
+</head>
+<body class="home dark-text">
+		
+<header>
+  <div class="site-width">
+    <div class="slice group">
+      <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
+        <ul class="nav-items site-nav-desktop">
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+        <ul id=menu class=site-nav-mobile>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container-fluid">
+
+		<div class="row-fluid">
+
+			<div class="col-md-3 left-doc-nav">
+				<ul class="nav nav-pills nav-stacked left-nav">
+	<li>
+		/Search
+		<ul style="display: none;">
+			<li data-path="/search/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/search/events/get">
+					/search/events
+				</a>
+			</li>
+			<li data-path="/search/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/search/images/get">
+					/search/images
+				</a>
+			</li>
+			<li data-path="/search/images/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/search/images/creative/get">
+					/search/images/creative
+				</a>
+			</li>
+			<li data-path="/search/images/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/search/images/editorial/get">
+					/search/images/editorial
+				</a>
+			</li>
+			<li data-path="/search/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/search/videos/get">
+					/search/videos
+				</a>
+			</li>
+			<li data-path="/search/videos/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/search/videos/creative/get">
+					/search/videos/creative
+				</a>
+			</li>
+			<li data-path="/search/videos/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/search/videos/editorial/get">
+					/search/videos/editorial
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Images
+		<ul style="display: none;">
+			<li data-path="/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/images/get">
+					/images
+				</a>
+			</li>
+			<li data-path="/images/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/images/id/get">
+					/images/id
+				</a>
+			</li>
+			<li data-path="/images/id/similar/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/images/id/similar/get">
+					/images/id/similar
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Videos
+		<ul style="display: none;">
+			<li data-path="/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/videos/get">
+					/videos
+				</a>
+			</li>
+			<li data-path="/videos/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/videos/id/get">
+					/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Downloads
+		<ul style="display: none;">
+			<li data-path="/downloads/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/downloads/get">
+					/downloads
+				</a>
+			</li>
+			<li data-path="/downloads/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/docs/downloads/id/post">
+					/downloads/id
+				</a>
+			</li>
+			<li data-path="/downloads/images/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/docs/downloads/images/id/post">
+					/downloads/images/id
+				</a>
+			</li>
+			<li data-path="/downloads/videos/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/docs/downloads/videos/id/post">
+					/downloads/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Collections
+		<ul style="display: none;">
+			<li data-path="/collections/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/collections/get">
+					/collections
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Countries
+		<ul style="display: none;">
+			<li data-path="/countries/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/countries/get">
+					/countries
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Events
+		<ul style="display: none;">
+			<li data-path="/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/events/get">
+					/events
+				</a>
+			</li>
+			<li data-path="/events/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/events/id/get">
+					/events/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Products
+		<ul style="display: none;">
+			<li data-path="/products/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/products/get">
+					/products
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Purchases
+		<ul style="display: none;">
+			<li data-path="/purchased-images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/purchased-images/get">
+					/purchased-images
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/AssetRegistration
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/docs/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/Usage
+		<ul style="display: none;">
+			<li data-path="/usage-batches/id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/docs/usage-batches/id/put">
+					/usage-batches/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		/AssetChanges
+		<ul style="display: none;">
+			<li data-path="/asset-changes/change-sets/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/docs/asset-changes/change-sets/put">
+					/asset-changes/change-sets
+				</a>
+			</li>
+			<li data-path="/asset-changes/change-sets/change-set-id/delete">
+				<span class="label label-default">DELETE</span> 
+				<a href="/docs/asset-changes/change-sets/change-set-id/delete">
+					/asset-changes/change-sets/change-set-id
+				</a>
+			</li>
+			<li data-path="/asset-changes/channels/get">
+				<span class="label label-default">GET</span> 
+				<a href="/docs/asset-changes/channels/get">
+					/asset-changes/channels
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>				
+
+			</div>
+		
+			<div class="col-md-9 docs-content">
+
+				
+				<a target="_blank" class="btn btn-primary pull-right btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Events/Events_GetBatch">Experiment with this API</a>
+				
+				<p>Events GetBatch</p>
+
+				
+				<h3 id="http-headers">Http Headers</h3>
+<p>TODO - need description copy</p>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>Api-Key</td>
+						<td>string</td>
+						<td>
+							Api-Key
+							Required. 
+							
+						</td>
+					</tr>
+					<tr>
+						<td>Accept-Language</td>
+						<td>string</td>
+						<td>
+							Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
+							 
+							
+						</td>
+					</tr>
+					<tr>
+						<td>Authorization</td>
+						<td>string</td>
+						<td>
+							Authorization token optional. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
+							 
+							
+						</td>
+					</tr>
+				</table>
+				
+				<h3 id="sorting-and-pagination">Sorting and Pagination</h3>
+<p>TODO - need description copy</p>
+
+				
+
+				<h3 id="fields">Fields</h3>
+<p>TODO - need description copy</p>
+<p><em>You&#39;ll need a Resource Owner Grant token to include the <code>largest_downloads</code> or <code>mid_res_comp</code> in your response.</em></p>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>id</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>child_event_count</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>editorial_segments</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>hero_image</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>image_count</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>location</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>name</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>start_date</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>type</td>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				
+				<h3 id="fieldsets">Fieldsets</h3>
+<p>TODO - need description copy</p>
+
+				
+
+				<h3 id="filters">Filters</h3>
+<p>TODO - need description copy</p>
+<p><em>You&#39;ll need a Resource Owner Grant token to filter by <code>product_types</code>.</em></p>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>ids</td>
+						<td>array</td>
+						<td>
+							A comma separated list of event ids. 
+							 
+							
+						</td>
+					</tr>
+				</table>
+				
+				<h3 id="errors">Errors</h3>
+<p>TODO - need description copy</p>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>400</td>
+						<td>MalformedRequest</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>InvalidParameterValue</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>404</td>
+						<td>EventNotFound</td>
+						<td></td>
+					</tr>
+				</table>
+
+				<h3 id="media-links">Media Links</h3>
+<p>TODO - need description copy</p>
+
+				
+				
+
+			</div>
+		</div>
+
+	</div>
+   <script type="text/javascript">
+       $(function () {
+            $("[data-path='/events/get']").addClass("active").parent().show();
+			$('#menu').slicknav();
+       })
+   </script>
+</body>
+
+</html>
