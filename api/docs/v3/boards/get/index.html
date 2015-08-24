@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Search | Getty Images API v3 Documentation</title>
+	<title>Get List of Boards | Getty Images API v3 Documentation</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/docs.css">
@@ -291,55 +291,117 @@
 
 			</div>
 		
-			<div class="col-md-9 docs-content category-content">
+			<div class="col-md-9 docs-content">
 				<ul class="breadcrumb">
 					<li><a href="/api/">API Docs</a></li>
 					<li><a href="/api/docs/v3/">v3</a></li>
-					<li><a href="/api/docs/v3/search/">Search</a></li>
+					<li><a href="/api/docs/v3/boards/">Boards</a></li>
+					<li><a href="/api/docs/v3/boards/get">All Boards</a></li>
 				</ul>
 				
-				<h1 id="search">Search</h1>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><a href="/api/docs/v3/search/events/get">/search/events</a></td>
-<td>Search for events</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="/api/docs/v3/search/images/creative/get">/search/images/creative</a></td>
-<td>Search for creative images</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="/api/docs/v3/search/images/editorial/get">/search/images/editorial</a></td>
-<td>Search for editorial images</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="/api/docs/v3/search/videos/get">/search/videos</a></td>
-<td>Search for both creative and editorial videos</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="/api/docs/v3/search/videos/creative/get">/search/videos/creative</a></td>
-<td>Search for creative videos</td>
-</tr>
-<tr>
-<td>GET</td>
-<td><a href="/api/docs/v3/search/videos/editorial/get">/search/videos/editorial</a></td>
-<td>Search for editorial videos</td>
-</tr>
-</tbody>
-</table>
+				
+
+				<div class="alert alert-warning">
+					<img src="/images/icons/alert.png">
+					This endpoint is currently in <strong>BETA</strong>. 
+				</div>
+				
+				<a target="_blank" class="btn btn-primary pull-right btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_GetAllBoards">Experiment with this API</a>
+				
+				<h1 id="boards-get-all-boards">Boards - Get All Boards</h1>
+<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to retrieve all Boards available for a set of user credentials.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
+<p>Use the following endpoint to list available boards:</p>
+<pre><code>GET https://api.gettyimages.com/3.0/boards
+</code></pre><p>Add API key and the Resource Owner Grant token to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+Authorization: Bearer &lt;your secure access token&gt;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/3.0/boards
+</code></pre><p>Your response will look similar to:</p>
+<pre><code>{  
+   &quot;boards&quot;:[  
+      {  
+         &quot;id&quot;:&quot;&lt;board id&gt;&quot;,
+         &quot;date_created&quot;:&quot;2015-03-06T22:59:25.52Z&quot;,
+         &quot;description&quot;:&quot;Experiment in crowd-sourcing an image board...&quot;,
+         &quot;hero_asset&quot;:{  
+            &quot;id&quot;:&quot;551984113&quot;,
+            &quot;date_added&quot;:&quot;2015-08-24T16:31:18.4274193Z&quot;,
+            &quot;display_sizes&quot;:[  
+               {  
+                  &quot;name&quot;:&quot;thumb&quot;,
+                  &quot;uri&quot;:&quot;&lt;resource uri&gt;&quot;
+               },
+               {  
+                  &quot;name&quot;:&quot;comp&quot;,
+                  &quot;uri&quot;:&quot;&lt;resource uri&gt;&quot;
+               }
+            ],
+            &quot;asset_type&quot;:&quot;image&quot;
+         },
+         &quot;date_last_updated&quot;:&quot;2015-08-24T16:31:18.427Z&quot;,
+         &quot;name&quot;:&quot;Weird or Funny Stock Photos&quot;,
+         &quot;asset_count&quot;:99
+      },
+      ...
+    }
+}
+</code></pre>
+				
+				<h3 id="http-headers">Http Headers</h3>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>Api-Key</td>
+						<td>string</td>
+						<td>
+							Api-Key
+							Required. 
+							
+						</td>
+					</tr>
+					<tr>
+						<td>Authorization</td>
+						<td>string</td>
+						<td>
+							Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
+							Required. 
+							
+						</td>
+					</tr>
+					<tr>
+						<td>Accept-Language</td>
+						<td>string</td>
+						<td>
+							Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
+							 
+							
+						</td>
+					</tr>
+				</table>
+				
+				
+				
+
+				
+				
+				
+				
+				
+
+				
+				
+				
+				
+				
+
+				
+				
+				
+				
 
 			</div>
 		</div>
@@ -347,7 +409,7 @@
 	</div>
    <script type="text/javascript">
        $(function () {
-            $("[data-path='/api/docs/v3/search']").find("ul").show();
+            $("[data-path='/boards/get']").addClass("active").parent().show();
 			$('#menu').slicknav();
        })
    </script>
