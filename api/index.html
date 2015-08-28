@@ -20,13 +20,13 @@
     <div class="slice group">
       <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
         <ul class="nav-items site-nav-desktop">
-          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
         </ul>
         <ul id=menu class=site-nav-mobile>
-          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
@@ -242,17 +242,6 @@
 			</li>
 		</ul>
 	</li>
-	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
-		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
-		<ul style="display: none;">
-			<li data-path="/asset-registrations/post">
-				<span class="label label-default">POST</span> 
-				<a href="/api/docs/v3/asset-registrations/post">
-					/asset-registrations
-				</a>
-			</li>
-		</ul>
-	</li>
 	<li class="nav-usage" data-path="/api/docs/v3/usage">
 		<a href="/api/docs/v3/usage">/Usage</a>
 		<ul style="display: none;">
@@ -287,18 +276,34 @@
 			</li>
 		</ul>
 	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
 </ul>				
 
 			</div>
 		
 			<div class="col-md-9 docs-content category-content">
 				<ul class="breadcrumb">
-					<li><a href="/api/">API Docs</a></li>
+					<li><a href="/api/">API</a></li>
 				</ul>
 				
 				<h1 id="getty-images-api-documentation">Getty Images API Documentation</h1>
-<p>Our set of APIs enable seamless integration of Getty Images&#39; expansive content, powerful search and rich metadata directly into your internal workflows, products and services. With Connect&#39;s API solutions, you can fully control, customize and scale as you grow.</p>
-<p>The Connect API uses JSON over HTTP POST to allow you to build applications capable of search and download on Getty Images using an active download agreement.</p>
+<p>Seamlessly integrate Getty Images&#39; expansive digital content, powerful search technology, and rich metadata into your publishing tools, products and services!</p>
+<ul>
+<li><a href="https://api.gettyimages.com/swagger/ui/index.html#!/Search" target="_blank">Search</a> for images from our extensive creative and editorial catalogs.</li>
+<li>Get <a href="https://api.gettyimages.com/swagger/ui/index.html#!/Images" target="_blank">image metadata</a>.</li>
+<li><a href="https://api.gettyimages.com/swagger/ui/index.html#!/Downloads" target="_blank">Download</a> files using your Getty Images products (e.g., Editorial subscriptions, Easy Access, Thinkstock Subscriptions, and Image Packs).</li>
+</ul>
+<p>The Getty Images API uses JSON over HTTP POST to allow you to build applications capable of search and download on Getty Images using an active download agreement.</p>
 <p><a class="btn btn-primary btn-experiment" href="/api/docs/v3" style="max-width: 300px;">View the v3 Documentation</a></p>
 
 			</div>

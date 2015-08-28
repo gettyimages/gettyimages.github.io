@@ -1,0 +1,850 @@
+<html>
+<head>
+	<title></title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/js/jquery.slicknav.js"></script>
+	<script src="/js/s_code.js"></script>
+	<script src="/js/analytics.js"></script>	
+	<script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+		
+<header>
+  <div class="site-width">
+    <div class="slice group">
+      <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
+        <ul class="nav-items site-nav-desktop">
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+        <ul id=menu class=site-nav-mobile>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container-fluid">
+
+		<div class="row-fluid">
+
+			<div class="col-md-3 left-doc-nav">
+				<ul class="nav nav-pills nav-stacked left-nav">
+	<li class="nav-search" data-path="/api/docs/v3/search">
+		<a href="/api/docs/v3/search">/Search</a>
+		<ul style="display: none;">
+			<li data-path="/search/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/events/get">
+					/search/events
+				</a>
+			</li>
+			<li data-path="/search/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/get">
+					/search/images
+				</a>
+			</li>
+			<li data-path="/search/images/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/creative/get">
+					/search/images/creative
+				</a>
+			</li>
+			<li data-path="/search/images/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/editorial/get">
+					/search/images/editorial
+				</a>
+			</li>
+			<li data-path="/search/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/get">
+					/search/videos
+				</a>
+			</li>
+			<li data-path="/search/videos/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/creative/get">
+					/search/videos/creative
+				</a>
+			</li>
+			<li data-path="/search/videos/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/editorial/get">
+					/search/videos/editorial
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-images" data-path="/api/docs/v3/images">
+		<a href="/api/docs/v3/images">/Images</a>
+		<ul style="display: none;">
+			<li data-path="/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/get">
+					/images
+				</a>
+			</li>
+			<li data-path="/images/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/get">
+					/images/id
+				</a>
+			</li>
+			<li data-path="/images/id/similar/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/similar/get">
+					/images/id/similar
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-videos" data-path="/api/docs/v3/videos">
+		<a href="/api/docs/v3/videos">/Videos</a>
+		<ul style="display: none;">
+			<li data-path="/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/get">
+					/videos
+				</a>
+			</li>
+			<li data-path="/videos/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/id/get">
+					/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-downloads" data-path="/api/docs/v3/downloads">
+		<a href="/api/docs/v3/downloads">/Downloads</a>
+		<ul style="display: none;">
+			<li data-path="/downloads/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/downloads/get">
+					/downloads
+				</a>
+			</li>
+			<li data-path="/downloads/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/id/post">
+					/downloads/id
+				</a>
+			</li>
+			<li data-path="/downloads/images/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/images/id/post">
+					/downloads/images/id
+				</a>
+			</li>
+			<li data-path="/downloads/videos/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/videos/id/post">
+					/downloads/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-boards" data-path="/api/docs/v3/boards">
+		<a href="/api/docs/v3/boards">/Boards</a>
+		<ul style="display: none;">
+			<li data-path="/boards/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/get">
+					/boards
+				</a>
+			</li>
+			<li data-path="/boards/board_id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/board_id/get">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/assets/asset_id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/boards/board_id/assets/asset_id/put">
+					/boards/board_id/assets/asset_id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-collections" data-path="/api/docs/v3/collections">
+		<a href="/api/docs/v3/collections">/Collections</a>
+		<ul style="display: none;">
+			<li data-path="/collections/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/collections/get">
+					/collections
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-countries" data-path="/api/docs/v3/countries">
+		<a href="/api/docs/v3/countries">/Countries</a>
+		<ul style="display: none;">
+			<li data-path="/countries/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/countries/get">
+					/countries
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-events" data-path="/api/docs/v3/events">
+		<a href="/api/docs/v3/events">/Events</a>
+		<ul style="display: none;">
+			<li data-path="/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/get">
+					/events
+				</a>
+			</li>
+			<li data-path="/events/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/id/get">
+					/events/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-products" data-path="/api/docs/v3/products">
+		<a href="/api/docs/v3/products">/Products</a>
+		<ul style="display: none;">
+			<li data-path="/products/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/products/get">
+					/products
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-purchases" data-path="/api/docs/v3/purchases">
+		<a href="/api/docs/v3/purchases">/Purchases</a>
+		<ul style="display: none;">
+			<li data-path="/purchased-images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/purchased-images/get">
+					/purchased-images
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-usage" data-path="/api/docs/v3/usage">
+		<a href="/api/docs/v3/usage">/Usage</a>
+		<ul style="display: none;">
+			<li data-path="/usage-batches/id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/usage-batches/id/put">
+					/usage-batches/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetchanges" data-path="/api/docs/v3/assetchanges">
+		<a href="/api/docs/v3/assetchanges">/AssetChanges</a>
+		<ul style="display: none;">
+			<li data-path="/asset-changes/change-sets/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/put">
+					/asset-changes/change-sets
+				</a>
+			</li>
+			<li data-path="/asset-changes/change-sets/change-set-id/delete">
+				<span class="label label-default">DELETE</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/change-set-id/delete">
+					/asset-changes/change-sets/change-set-id
+				</a>
+			</li>
+			<li data-path="/asset-changes/channels/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/asset-changes/channels/get">
+					/asset-changes/channels
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>				
+
+			</div>
+		
+			<div class="col-md-9 docs-content category-content">
+				
+				<h2 id="getimagedetails">GetImageDetails</h2>
+<p>The GetImageDetails call returns the detailed image metadata for all specified images.</p>
+<h3 id="getimagedetails-vs-searchforimages-api-docs-v2-endpoints-search-searchforimages-html-">GetImageDetails vs. <a href="/api/docs/v2/endpoints/search/searchforimages.html">SearchForImages</a></h3>
+<p>You may wonder why <a href="/api/docs/v2/endpoints/search/searchforimages.html">SearchForImages</a> returns only a subset of the image 
+metadata available from GetImageDetails. The differences in the two calls are 
+intended to support the most common user workflow. <a href="/api/docs/v2/endpoints/search/searchforimages.html">SearchForImages</a> supports 
+finding an image that matches the selected criteria. GetImageDetails assumes you 
+have found some possible matches via <a href="/api/docs/v2/endpoints/search/searchforimages.html">SearchForImages</a>, but you want to know 
+more about a particular image to help you decide whether to download it.</p>
+<h3 id="image-sizes">Image Sizes</h3>
+<p>Due to a wide variety of available image resolutions, the images are grouped into a 
+handful of size categories for simplicity. This operation returns size information 
+about each image, including a sizekey which you can use used when requesting 
+authorization to download the image.</p>
+<h3 id="endpoint">Endpoint</h3>
+<p>Use the following endpoint to access this operation:</p>
+<pre><code>http://connect.gettyimages.com/v1/search/GetImageDetails
+</code></pre><h3 id="request">Request</h3>
+<p>The GetImageDetails JSON request has this form:</p>
+<pre><code>{
+  &quot;RequestHeader&quot;: {
+    &quot;Token&quot;: &quot;&quot;,
+    &quot;Detail&quot;: &quot;&quot;,
+    &quot;CoordinationId&quot;: &quot;&quot;
+  },
+  &quot;GetImageDetailsRequestBody&quot;: {
+    &quot;ImageIds&quot;: [
+      &quot;&quot;
+    ],
+    &quot;Language&quot;: &quot;&quot;
+  }
+}
+</code></pre><h4 id="requestheader-fields">RequestHeader Fields</h4>
+<p>The RequestHeader specifies metadata about the request.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Use</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Token</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Required</td>
+<td style="text-align:left">Specify the secure authentication token provided by <a href="/api/docs/v2/endpoints/session/createsession.html">CreateSession</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left">Detail</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Optional</td>
+<td style="text-align:left">Specify the detail level for the GetImageDetails response.</td>
+</tr>
+<tr>
+<td style="text-align:left">CoordinationId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Optional</td>
+<td style="text-align:left">Specify a value to echo in the response to track requests and their associated responses.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="getimagedetailsrequestbody-fields">GetImageDetailsRequestBody Fields</h4>
+<p>The GetImageDetailsRequestBody contains the request arguments.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Use</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ImageId</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Required</td>
+<td style="text-align:left">Specifies the Id entry of an event for which you want details in the result. Limited to 90 ImageId entries.</td>
+</tr>
+<tr>
+<td style="text-align:left">ImageId entry</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Required</td>
+<td style="text-align:left">Adds an ImageId entry for each image for which details are in the results.</td>
+</tr>
+<tr>
+<td style="text-align:left">Language</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Optional</td>
+<td style="text-align:left">Specifies an IETF RFC 5646 compliant language tag to determine the language used for localizable strings returned in the response. Defaults to “en-US” if no value provided.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>The GetImageDetails JSON response has this form:</p>
+<pre><code>{
+  &quot;ResponseHeader&quot;: {
+    &quot;Status&quot;: &quot;&quot;,
+    &quot;StatusList&quot;: [
+      {
+        &quot;Type&quot;: &quot;&quot;,
+        &quot;Code&quot;: &quot;&quot;,
+        &quot;Message&quot;: &quot;&quot;
+      }
+    ],
+    &quot;CoordinationId&quot;: &quot;&quot;
+  },
+  &quot;GetImageDetailsResult&quot;: {
+    &quot;Images&quot;: [
+      {
+        &quot;ApplicableProductOfferings&quot;: [
+          &quot;&quot;
+        ],
+        &quot;Artist&quot;: &quot;&quot;,
+        &quot;ArtistTitle&quot;: &quot;&quot;,
+        &quot;Caption&quot;: &quot;&quot;,
+        &quot;City&quot;: &quot;&quot;,
+        &quot;CollectionId&quot;: &quot;&quot;,
+        &quot;CollectionName&quot;: &quot;&quot;,
+        &quot;ColorType&quot;: &quot;&quot;,
+        &quot;Copyright&quot;: &quot;&quot;,
+        &quot;Country&quot;: &quot;&quot;,
+        &quot;CreditLine&quot;: &quot;&quot;,
+        &quot;DateCreated&quot;: &quot;\/Date(1297286970531-0800)\/&quot;,
+        &quot;DateSubmitted&quot;: &quot;\/Date(1297286970531-0800)\/&quot;,
+        &quot;EditorialSegments&quot;: [
+          &quot;&quot;
+        ],
+        &quot;EditorialSourceId&quot;: &quot;&quot;,
+        &quot;EditorialSourceName&quot;: &quot;&quot;,
+        &quot;EventId&quot;: int,
+        &quot;EventIds&quot;: [
+          int
+        ],
+        &quot;GraphicStyle&quot;: &quot;&quot;,
+        &quot;ImageFamily&quot;: &quot;&quot;,
+        &quot;ImageId&quot;: &quot;&quot;,
+        &quot;Keywords&quot;: [
+          {
+            &quot;Id&quot;: &quot;&quot;,
+            &quot;Text&quot;: &quot;&quot;
+          }
+        ],
+        &quot;LicensingModel&quot;: &quot;&quot;,
+        &quot;QualityRank&quot;: int,
+        &quot;ReferralDestinations&quot;: [
+              {
+              &quot;SiteName&quot;: &quot;&quot;,
+               &quot;Url&quot;: &quot;&quot;
+              }
+        ],
+        &quot;ReleaseMessage&quot;,
+        &quot;Restrictions&quot;: [
+          &quot;&quot;
+        ],
+        &quot;SizesDownloadableImages&quot;: [
+          {
+            &quot;FileSizeInBytes&quot;: int,
+            &quot;InchesHeight&quot;: double,
+            &quot;InchesWidth&quot;: double,
+            &quot;MimeType&quot;: &quot;&quot;,
+            &quot;PixelHeight&quot;: int,
+            &quot;PixelWidth&quot;: int,
+            &quot;ResolutionDpi&quot;: int,
+            &quot;SizeKey&quot;: &quot;&quot;,
+            &quot;SizeName&quot;: &quot;&quot;
+          }
+        ],
+        &quot;StateProvince&quot;: &quot;&quot;,
+        &quot;Title&quot;: &quot;&quot;,
+        &quot;UrlComp&quot;: &quot;&quot;,
+        &quot;UrlPreview&quot;: &quot;&quot;,
+        &quot;UrlThumb&quot;: &quot;&quot;,
+        &quot;UrlWatermarkComp&quot;: &quot;&quot;,
+        &quot;UrlWatermarkPreview&quot;: &quot;&quot;
+        &quot;UrlHiResComp&quot;: &quot;&quot;
+        &quot;UrlWatermarkHiResComp&quot;: &quot;&quot;
+      }
+    ]
+  }
+}
+</code></pre><h4 id="responseheader-fields">ResponseHeader Fields</h4>
+<p>The ResponseHeader contains metadata about the operation execution and response.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Status</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the overall operation processing status notification. Possible values are: <br>• Success <br>• Error <br>• Warning</td>
+</tr>
+<tr>
+<td style="text-align:left">StatusList</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains a <em>Status</em> entry for each detailed processing status notification.</td>
+</tr>
+<tr>
+<td style="text-align:left">Status <em>entry</em></td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">Contains the details of a status notification</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Status</em>.Type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the type, or severity, of the status notification. Possible values are: <br>• Information <br>• Warning <br>• Error</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Status</em>.Code</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the category of the status notification. See <a href="/api/docs/v2/appendix/statuscodes.html">StatusCodes</a> for an explanations of the codes.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Status</em>.Message</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Provides a human readable explanation of the status.</td>
+</tr>
+<tr>
+<td style="text-align:left">CoordinationId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the CoordinationId value provided in the triggering request.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="getimagedetailsresult-fields">GetImageDetailsResult Fields</h4>
+<p>The GetImageDetailsResult contains these fields.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Images</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains an image entry for each matching image found.</td>
+</tr>
+<tr>
+<td style="text-align:left">Image <em>entry</em></td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">Contains details of the specific matching image.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.ApplicableProductOfferings</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains an ApplicableProductOffering entry for each of the customer’s product offerings that authorize access to the image. If empty, the customer is not authorized to access the image. <br><strong>Note:</strong> Also check the AuthorizationConstraints collection for possible image specific limitations to the authorization.</td>
+</tr>
+<tr>
+<td style="text-align:left">ApplicableProductOffering <em>entry</em></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates a customer’s product offering that authorizes access to the image. Possible values are: <br>• EasyAccess <br>• EditorialSubscription <br>• PremiumAccess <br>• RoyaltyFreeSubscription <br>• Imagepack</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.Artist</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the image creator.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.Caption</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Describes the image.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.City</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the city where the image was created.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.CollectionID</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies a collection to which the image belongs.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.CollectionName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the name of the collection to which the image belongs.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.ColorType</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates where the image is color or black and white. Possible values are: <br>• color <br>• black/white</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.Copyright</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates copyright of the image.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.Country</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the country where the image was created.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.CreditLine</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the credit line of the image.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.DateCreated</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the date the image was created. Date is in the format described at <a href="http://weblogs.asp.net/bleroy/archive/2008/01/18/dates-and-json.aspx">http://weblogs.asp.net/bleroy/archive/2008/01/18/dates-and-json.aspx</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.DateSubmitted</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the date the image was created. Date is in the format described at <a href="http://weblogs.asp.net/bleroy/archive/2008/01/18/dates-and-json.aspx">http://weblogs.asp.net/bleroy/archive/2008/01/18/dates-and-json.aspx</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.EditorialSegments</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains an EditorialSegment entry for each editorial category to which the image belongs, if the image is in the editorial image family.</td>
+</tr>
+<tr>
+<td style="text-align:left">EditorialSegment <em>entry</em></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the editorial category to which the image belongs, if the image is in the editorial image family. Possible values are: <br>• News <br>• Sport <br>• Entertainment <br>• Contour <br>• Travel <br>• Publicity <br>• Royalty <br>• Archival</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.EditorialSourceId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the source of the image, if the image is in the editorial image family.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.EditorialSourceName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">The source name of the image, if the image is in the editorial image family.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.EventId</td>
+<td style="text-align:left">Integer</td>
+<td style="text-align:left">DEPRECATED: The primary EventId associated with the image. Please use EventIds instead.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.EventIds</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains an EventId entry for each event associated with the image. All editorial image family images have event Ids. Some creative image family images may have event Ids.</td>
+</tr>
+<tr>
+<td style="text-align:left">EventID <em>entry</em></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Specifies the Id of an event associated with the image. All editorial image family images have EventIds. Some creative image family images have EventIds.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.GraphicStyle</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the graphic style of the image. Possible values are: <br>• Photograph <br>• Illustration</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.ImageFamily</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the image family classification. Possible values are: <br>• Creative <br>• Editorial</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.ImageId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the image.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.Keywords</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains a keyword entry for each keyword related to the image.</td>
+</tr>
+<tr>
+<td style="text-align:left">Keyword <em>entry</em></td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">Contains keyword details.</td>
+</tr>
+<tr>
+<td style="text-align:left">Keyword.Id</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the keyword.</td>
+</tr>
+<tr>
+<td style="text-align:left">Keyword.Text</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Provides localized text of the keyword.</td>
+</tr>
+<tr>
+<td style="text-align:left">Keyword.Type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the type of keyword. Possible values are: <br>• Unknown <br>• Specific people <br>• Ethnicity <br>• Age <br>• Gender <br>• Number of People <br>• Concept <br>• Location <br>• Viewpoint <br>• Image technique <br>• Composition <br>• Color <br>• Additional Info <br>• Candidate Term <br>• Fashion Phrases <br>• Entertainment</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.LicensingModel</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies a licensing model for the image. Possible values are: <br>• RoyaltyFree <br>• RightsManaged</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.QualityRank</td>
+<td style="text-align:left">Integer</td>
+<td style="text-align:left">Assigned to editorial images to rank their relevance to the event they belong to. This number has no relevance for creative images even though it does appear in the metadata. Possible values are: <br>• 1  -  most  relevant <br>• 2 - tells story from a wider perspective <br>• 3 - stock/repeats/less important</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.ReferralDestinations</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains a ReferralDestination entry for each of the sites on which the image can be found.</td>
+</tr>
+<tr>
+<td style="text-align:left">SiteName <em>entry</em></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the name of the website on which the image can be found. Possible values are: <br>• gettyimages <br>• thinkstock <br>• jupiterimages <br>• photos</td>
+</tr>
+<tr>
+<td style="text-align:left">Url <em>entry</em></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the specific URL for the page on which the images can be found.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.ReleaseMessage</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Provides a localized message indicating the release or commercial use status of the image.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.Restrictions</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains a Restriction entry for each image usage restriction, if any.</td>
+</tr>
+<tr>
+<td style="text-align:left">Restriction <em>entry</em></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates a usage restriction.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.SizesDownloadableImages</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains an ImageSize entry for each downloadable image size. This collection is empty if there are no associated product offerings for the current user.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.Title</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the image title given by the artist.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.FileSizeInBytes</td>
+<td style="text-align:left">Integer</td>
+<td style="text-align:left">Indicates the image file size in bytes.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.InchesHeight</td>
+<td style="text-align:left">Double</td>
+<td style="text-align:left">Indicates the image height in inches when the image is rendered at the indicated ResolutionDpi.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.MimeType</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the mime-type of the image.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.InchesWidth</td>
+<td style="text-align:left">Double</td>
+<td style="text-align:left">Indicates the image width in inches when the image is rendered at the indicated ResolutionDpi.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.PixelHeight</td>
+<td style="text-align:left">Integer</td>
+<td style="text-align:left">Indicates the image pixel height.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.PixelWidth</td>
+<td style="text-align:left">Integer</td>
+<td style="text-align:left">Indicates the image pixel width.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.ResolutionDpi</td>
+<td style="text-align:left">Integer</td>
+<td style="text-align:left">Indicates the image DPI for the assumed target presentation format such as print vs. web.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.SizeKey</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Provides the key values to specify the image size to authorize for download. Used when calling GetImageDownloadAuthorizations.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ImageSize</em>.SizeName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Provides the human-readable name for an RF Creative image size. Only for price-per-image customers requesting the &quot;IncludeSizeName&quot; detail level.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.StateProvince</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the state or province where the image was created.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.Title</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the image title.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.UrlComp</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the URL of the image, sized for layout composition. Comp images are larger than preview and thumbnail but not full sized.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.UrlPreview</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the URL of the image, sized for pop-up previews. Preview images are larger than thumbnail but smaller than comp.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.UrlThumb</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the URL of the image, sized for a results grid. Thumbnail images are smaller than preview and comp.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.UrlWatermarkComp</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the URL of the image, sized for layout composition, with a Getty Images watermark. Comp images are larger than preview and thumbnail, but not full-sized.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.UrlWatermarkPreview</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the URL of the image, sized for pop-up previews, with a Getty Images watermark.  Preview images are larger than thumbnail, but smaller than comp.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.UrlHiResComp</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the URL of the image, sized for layout composition.  Hi res comp images are full-sized.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Image</em>.UrlWatermarkHiResComp</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the URL of the image, sized for layout composition, with a Getty Images watermark.  Hi res comp images are full-sized.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workflow-example">Workflow Example</h3>
+<ol>
+<li>Call <a href="/api/docs/v2/endpoints/session/createsession.html">CreateSession</a> with system and user credentials to create an authentication token.</li>
+<li>Call <a href="/api/docs/v2/endpoints/search/searchforimages.html">SearchForImages</a> to find images.</li>
+<li>Call GetImageDetails, providing ImageIds from search results, to retrieve image details for the specified images.</li>
+</ol>
+
+			</div>
+		</div>
+
+	</div>
+   <script type="text/javascript">
+       $(function () {
+            $("[data-path='/api/docs/v2/endpoints/search']").find("ul").show();
+			$('#menu').slicknav();
+       })
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,532 @@
+<html>
+<head>
+	<title>OAuth2 | Getty Images API v3 Documentation</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/js/jquery.slicknav.js"></script>
+	<script src="/js/s_code.js"></script>
+	<script src="/js/analytics.js"></script>	
+	<script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+		
+<header>
+  <div class="site-width">
+    <div class="slice group">
+      <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
+        <ul class="nav-items site-nav-desktop">
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+        <ul id=menu class=site-nav-mobile>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container-fluid">
+
+		<div class="row-fluid">
+
+			<div class="col-md-3 left-doc-nav">
+				<ul class="nav nav-pills nav-stacked left-nav">
+	<li class="nav-search" data-path="/api/docs/v3/search">
+		<a href="/api/docs/v3/search">/Search</a>
+		<ul style="display: none;">
+			<li data-path="/search/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/events/get">
+					/search/events
+				</a>
+			</li>
+			<li data-path="/search/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/get">
+					/search/images
+				</a>
+			</li>
+			<li data-path="/search/images/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/creative/get">
+					/search/images/creative
+				</a>
+			</li>
+			<li data-path="/search/images/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/editorial/get">
+					/search/images/editorial
+				</a>
+			</li>
+			<li data-path="/search/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/get">
+					/search/videos
+				</a>
+			</li>
+			<li data-path="/search/videos/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/creative/get">
+					/search/videos/creative
+				</a>
+			</li>
+			<li data-path="/search/videos/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/editorial/get">
+					/search/videos/editorial
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-images" data-path="/api/docs/v3/images">
+		<a href="/api/docs/v3/images">/Images</a>
+		<ul style="display: none;">
+			<li data-path="/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/get">
+					/images
+				</a>
+			</li>
+			<li data-path="/images/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/get">
+					/images/id
+				</a>
+			</li>
+			<li data-path="/images/id/similar/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/similar/get">
+					/images/id/similar
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-videos" data-path="/api/docs/v3/videos">
+		<a href="/api/docs/v3/videos">/Videos</a>
+		<ul style="display: none;">
+			<li data-path="/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/get">
+					/videos
+				</a>
+			</li>
+			<li data-path="/videos/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/id/get">
+					/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-downloads" data-path="/api/docs/v3/downloads">
+		<a href="/api/docs/v3/downloads">/Downloads</a>
+		<ul style="display: none;">
+			<li data-path="/downloads/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/downloads/get">
+					/downloads
+				</a>
+			</li>
+			<li data-path="/downloads/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/id/post">
+					/downloads/id
+				</a>
+			</li>
+			<li data-path="/downloads/images/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/images/id/post">
+					/downloads/images/id
+				</a>
+			</li>
+			<li data-path="/downloads/videos/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/videos/id/post">
+					/downloads/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-boards" data-path="/api/docs/v3/boards">
+		<a href="/api/docs/v3/boards">/Boards</a>
+		<ul style="display: none;">
+			<li data-path="/boards/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/get">
+					/boards
+				</a>
+			</li>
+			<li data-path="/boards/board_id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/board_id/get">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/assets/asset_id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/boards/board_id/assets/asset_id/put">
+					/boards/board_id/assets/asset_id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-collections" data-path="/api/docs/v3/collections">
+		<a href="/api/docs/v3/collections">/Collections</a>
+		<ul style="display: none;">
+			<li data-path="/collections/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/collections/get">
+					/collections
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-countries" data-path="/api/docs/v3/countries">
+		<a href="/api/docs/v3/countries">/Countries</a>
+		<ul style="display: none;">
+			<li data-path="/countries/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/countries/get">
+					/countries
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-events" data-path="/api/docs/v3/events">
+		<a href="/api/docs/v3/events">/Events</a>
+		<ul style="display: none;">
+			<li data-path="/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/get">
+					/events
+				</a>
+			</li>
+			<li data-path="/events/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/id/get">
+					/events/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-products" data-path="/api/docs/v3/products">
+		<a href="/api/docs/v3/products">/Products</a>
+		<ul style="display: none;">
+			<li data-path="/products/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/products/get">
+					/products
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-purchases" data-path="/api/docs/v3/purchases">
+		<a href="/api/docs/v3/purchases">/Purchases</a>
+		<ul style="display: none;">
+			<li data-path="/purchased-images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/purchased-images/get">
+					/purchased-images
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-usage" data-path="/api/docs/v3/usage">
+		<a href="/api/docs/v3/usage">/Usage</a>
+		<ul style="display: none;">
+			<li data-path="/usage-batches/id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/usage-batches/id/put">
+					/usage-batches/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetchanges" data-path="/api/docs/v3/assetchanges">
+		<a href="/api/docs/v3/assetchanges">/AssetChanges</a>
+		<ul style="display: none;">
+			<li data-path="/asset-changes/change-sets/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/put">
+					/asset-changes/change-sets
+				</a>
+			</li>
+			<li data-path="/asset-changes/change-sets/change-set-id/delete">
+				<span class="label label-default">DELETE</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/change-set-id/delete">
+					/asset-changes/change-sets/change-set-id
+				</a>
+			</li>
+			<li data-path="/asset-changes/channels/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/asset-changes/channels/get">
+					/asset-changes/channels
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>				
+
+			</div>
+		
+			<div class="col-md-9 docs-content category-content">
+				<ul class="breadcrumb">
+					<li><a href="/api/">API</a></li>
+					<li><a href="/api/docs/">API Docs</a></li>
+					<li><a href="/api/docs/v3/">v3</a></li>
+					<li><a href="/api/docs/v3/oauth2.html">OAuth2</a></li>
+				</ul>
+				
+				<h1 id="authentication-using-oauth-2-0">Authentication Using OAuth 2.0</h1>
+<h2 id="what-is-oauth-">What is OAuth?</h2>
+<p>OAuth is an open security protocol designed to protect system and user credentials in client applications. Prior to implementing OAuth, the API required client applications to provide both client and user credentials. The Getty Images API authenticated the credentials and then granted access to the API and user functionality such as search, download, and lightbox management. OAuth allows users to authorize a client application to access user functionality without requiring the client application to directly handle the user’s credentials. Thus OAuth improves security by reducing the exposure of end user credentials.</p>
+<h2 id="do-i-need-getty-images-user-credentials-">Do I Need Getty Images User Credentials?</h2>
+<p>If you have been working with one of our account managers on a business-to-business licensing agreement, you are more than likely using the [Resource Owner and Password flow] (<a href="https://github.com/gettyimages/gettyimages-api/blob/master/oauth2.md#resource-owner-flow">https://github.com/gettyimages/gettyimages-api/blob/master/oauth2.md#resource-owner-flow</a>). Note that you must specify GettyImages.com or Thinkstock.com user credentials in the call to retrieve access tokens. If you are unsure about these credentials, please contact your account manager.</p>
+<h2 id="did-you-get-your-key-via-online-registration-">Did You Get Your Key via Online Registration?</h2>
+<p>If you registered to get your key on our [portal] (<a href="https://developer.gettyimages.com/member/register">https://developer.gettyimages.com/member/register</a>), note that your key is automatically configured to use the Client Credentials flow. To get an access token to establish your session, follow the steps in the [Client Credentials flow] (<a href="https://github.com/gettyimages/gettyimages-api/blob/master/oauth2.md#client-credentials-flow">https://github.com/gettyimages/gettyimages-api/blob/master/oauth2.md#client-credentials-flow</a>) section below. Once you are ready to commercialize your application, we will work with you to determine which OAuth2 flow is most appropriate for your application&#39;s use cases.</p>
+<h2 id="important-terminology">Important Terminology</h2>
+<p>Before we dive into the details of the OAuth 2.0 authorization workflows, let’s make sure we’re using a common vocabulary:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Term</th>
+<th style="text-align:left">Definition</th>
+<th style="text-align:left">Example (if applicable)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Resource Owner</td>
+<td style="text-align:left">The end user who has access to a set of resources.</td>
+<td style="text-align:left">A Getty Images or Thinkstock end user.</td>
+</tr>
+<tr>
+<td style="text-align:left">Protected Resource</td>
+<td style="text-align:left">Resource, stored on or provided by a server, that requires authorization to access it.</td>
+<td style="text-align:left">Images, videos, lightboxes</td>
+</tr>
+<tr>
+<td style="text-align:left">Authorization Server</td>
+<td style="text-align:left">Entity that protects resources and validates credentials before authorizing a client application to take any action on behalf of an end user (such as search, lightbox, or download).</td>
+<td style="text-align:left">Getty Images’ OAuth server</td>
+</tr>
+<tr>
+<td style="text-align:left">Client Application</td>
+<td style="text-align:left">Application using the Getty Images API.</td>
+<td style="text-align:left">Getty Images API client</td>
+</tr>
+<tr>
+<td style="text-align:left">Client Credentials</td>
+<td style="text-align:left">API key and secret for the client application.</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Access Token</td>
+<td style="text-align:left">Token provided by the authorization server to the client application to authorize access to resources.</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Token Revocation</td>
+<td style="text-align:left">Means of revoking an access token. Getty Images or a user can revoke an access token if suspicious activity is detected.</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Client Type</td>
+<td style="text-align:left">A client type is assigned to a client application based on their ability to authenticate securely with the authorization server.</td>
+<td style="text-align:left">Public or confidential (see <a href="http://tools.ietf.org/html/rfc6749#section-2.1">OAuth2 RFC</a> for more info)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="authorization-grant-flows">Authorization Grant Flows</h2>
+<p>Summarized below are the four authorization grant flows in OAuth 2.0.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Authorization Grant</th>
+<th style="text-align:left">Client Environment</th>
+<th style="text-align:left">Entities Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Implicit Grant</td>
+<td style="text-align:left">Client-side application, where the application cannot secure the API secret</td>
+<td style="text-align:left">API key, User ID and password</td>
+</tr>
+<tr>
+<td style="text-align:left">Resource Owner Password Credentials</td>
+<td style="text-align:left">Resource owner has high degree of trust with the client application.</td>
+<td style="text-align:left">API key and secret, User ID and password</td>
+</tr>
+<tr>
+<td style="text-align:left">Client Credentials</td>
+<td style="text-align:left">Client application is also the resource owner.</td>
+<td style="text-align:left">API key and secret</td>
+</tr>
+<tr>
+<td style="text-align:left">Authorization Code*</td>
+<td style="text-align:left">Hosted web application, where client credentials are stored on the web server</td>
+<td style="text-align:left">API key and secret, User ID and password</td>
+</tr>
+</tbody>
+</table>
+<p>* The Getty Images API currently supports Implicit Grant, Resource Owner Password Credentials, and Client Credentials flows.  Authorization Code flow support may be added at a later time.</p>
+<h3 id="implicit-grant-flow">Implicit Grant Flow</h3>
+<h4 id="summary">Summary</h4>
+<p><a href="http://tools.ietf.org/html/rfc6749#section-4.2">http://tools.ietf.org/html/rfc6749#section-4.2</a><br>Getty Images requires this flow for 3rd party client applications. In this flow, the user authorizes the application to access their protected resources using the Getty Images authorization server. Developers follow these steps to get an access token for their application:</p>
+<ol>
+<li><p>Client application calls the Auth endpoint (e.g., <a href="https://api.gettyimages.com/oauth2/auth/">https://api.gettyimages.com/oauth2/auth/</a>) and passes in the following information:</p>
+<ul>
+<li>API key / client ID</li>
+<li>redirect uri that has been registered with the Getty Images API (parameters may be added that are not registered)</li>
+<li>response type of &quot;token&quot;</li>
+<li>state (optional)</li>
+</ul>
+</li>
+<li><p>Client application redirects to our sign-in page, whose location is provided in the response to step 1.</p>
+</li>
+<li><p>End user signs in with their Getty Images or Thinkstock credentials, and clicks Authorize.</p>
+</li>
+<li><p>The API verifies the client and user credentials and then redirects to the client application with a long-lived access token.</p>
+</li>
+</ol>
+<h5 id="example-request-">Example request:</h5>
+<pre><code>    GET https://api.gettyimages.com/oauth2/auth/?response_type=token&amp;client_id=s6BhdRkqt3&amp;state=xyz&amp;redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
+</code></pre><h5 id="example-response-">Example response:</h5>
+<pre><code>    HTTP/1.1 302 Found
+    Location: https://client.example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA&amp;state=xyz&amp;token_type=bearer
+</code></pre><h4 id="token-expiration-and-revocation">Token Expiration and Revocation</h4>
+<p>Some resources accept longer-lived access tokens, depending on the sensitivity of the resource. For instance, search functionality accepts long-lived tokens (i.e., one year), whereas download functionality is protected by a shorter access token lifetime (i.e., one week).</p>
+<p>Once an access token is no longer valid (has expired) for a given resource, a new access token must be retrieved to access that resource. The Implicit Grant flow does not support access token refresh. New access tokens must be retrieved via the Implicit Grant flow.</p>
+<p>Access tokens can also be revoked when the user changes their password. Revoked tokens cannot be used for any API access.</p>
+<h3 id="resource-owner-flow">Resource Owner Flow</h3>
+<h4 id="summary">Summary</h4>
+<p><a href="http://tools.ietf.org/html/rfc6749#section-4.3">http://tools.ietf.org/html/rfc6749#section-4.3</a><br>The resource owner flow is only for Getty Images and Getty Images partner applications. This grant type is suitable for clients capable of obtaining the resource owner&#39;s credentials. It is also used to migrate existing clients using direct authentication schemes such as HTTP Basic or Digest authentication to OAuth by converting the stored credentials to an access token.</p>
+<ol>
+<li><p>Client application calls the token endpoint and includes the following information in the request:</p>
+<ul>
+<li>grant type of &quot;password&quot;</li>
+<li>username</li>
+<li>password</li>
+<li>client ID / API key</li>
+<li>client secret</li>
+</ul>
+</li>
+<li><p>Client receives the following information as a response:</p>
+<ul>
+<li>access token</li>
+<li>refresh token</li>
+<li>expiration value (in seconds)</li>
+<li>token type of &quot;bearer&quot;</li>
+</ul>
+</li>
+</ol>
+<p>Notes:</p>
+<ul>
+<li>The access token is good for 30 minutes</li>
+<li>The refresh token is good for one year and can be used to retrieve another 30-minute access token by calling the token endpoint with a grant type of &#39;refresh_token&#39;.</li>
+</ul>
+<h5 id="example-request-">Example request:</h5>
+<pre><code>    POST /token HTTPS/1.1
+    Host: api.gettyimages.com/oauth2/token/
+    Content-Type: application/x-www-form-urlencoded
+
+    client_id=TestClientId&amp;client_secret=TestSecret&amp;grant_type=password&amp;username=johndoe&amp;password=A3ddj3w
+</code></pre><h5 id="example-response-">Example response:</h5>
+<pre><code>    HTTPS/1.1 200 OK
+    Content-Type: application/json;charset=UTF-8
+    Cache-Control: no-store
+    Pragma: no-cache
+
+    {
+            &quot;access_token&quot;:&quot;2YotnFZFEjr1zCsicMWpAA&quot;,
+            &quot;token_type&quot;:&quot;Bearer&quot;,
+            &quot;expires_in&quot;:1800,
+            &quot;refresh_token&quot;:&quot;tGzv3JOkF0XG5Qx2TlKWIA&quot;
+    }
+</code></pre><h5 id="example-refresh-request-">Example refresh request:</h5>
+<pre><code>    POST /token HTTPS/1.1
+    Host: api.gettyimages.com/oauth2/token/
+    Content-Type: application/x-www-form-urlencoded
+
+    grant_type=refresh_token&amp;client_id=TestClientId&amp;client_secret=TestSecret&amp;refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
+</code></pre><h4 id="token-expiration-and-revocation">Token Expiration and Revocation</h4>
+<p>The resource owner flow grants a 30-minute access token. If the client application needs to access content for the user longer that 30 minutes, it can use the refresh token to get a new access token that will also be valid for 30 minutes. The refresh token is valid for one year and can be used as many times as needed within that one year to get a new access token. The refresh token cannot be used for API access.</p>
+<p>Refresh tokens can be revoked when the user changes their password. Revoked tokens cannot be used for any API access.</p>
+<h3 id="client-credentials-flow">Client Credentials Flow</h3>
+<h4 id="summary">Summary</h4>
+<p><a href="http://tools.ietf.org/html/rfc6749#section-4.4">http://tools.ietf.org/html/rfc6749#section-4.4</a><br>Client Credentials flow is for client applications that will not have individual users. An application token is created and limits the client application to operations that do not need user credentials. A Sandbox application (for trial development and without a licensing agreement) can only use Client Credential flow.</p>
+<ol>
+<li><p>Client application calls the token endpoint with the following information in the request:</p>
+<ul>
+<li>grant type of &quot;client_credentials&quot;</li>
+<li>client ID / API key</li>
+<li>client secret</li>
+</ul>
+</li>
+<li><p>Client receives the following information as a response:</p>
+<ul>
+<li>access token</li>
+<li>expiration value (in seconds)</li>
+<li>token type of &#39;bearer&#39;</li>
+</ul>
+</li>
+</ol>
+<p>Note: The access token is good for 30 minutes</p>
+<h5 id="example-request-">Example request:</h5>
+<pre><code>    POST /token HTTPS/1.1
+    Host: api.gettyimages.com/oauth2/token/
+    Content-Type: application/x-www-form-urlencoded
+
+    client_id=TestClientId&amp;client_secret=TestSecret&amp;grant_type=client_credentials
+</code></pre><h5 id="example-response-">Example response:</h5>
+<pre><code>    HTTPS/1.1 200 OK
+    Content-Type: application/json;charset=UTF-8
+    Cache-Control: no-store
+    Pragma: no-cache
+
+    {
+            &quot;access_token&quot;:&quot;2YotnFZFEjr1zCsicMWpAA&quot;,
+            &quot;token_type&quot;:&quot;Bearer&quot;,
+            &quot;expires_in&quot;:1800,
+    }
+</code></pre><h4 id="token-expiration-and-revocation">Token Expiration and Revocation</h4>
+<p>The client credential flow grants a 30 minute access token.  Once the token has expired, a call for a new access token is required.</p>
+<h2 id="references">References</h2>
+<p>OAuth2 Specification - <a href="http://tools.ietf.org/html/rfc6749">http://tools.ietf.org/html/rfc6749</a></p>
+
+			</div>
+		</div>
+
+	</div>
+   <script type="text/javascript">
+       $(function () {
+            $("[data-path='/api/docs/v3']").find("ul").show();
+			$('#menu').slicknav();
+       })
+   </script>
+</body>
+
+</html>

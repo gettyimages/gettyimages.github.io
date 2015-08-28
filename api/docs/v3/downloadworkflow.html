@@ -1,0 +1,374 @@
+<html>
+<head>
+	<title>V3 Download Workflow | Getty Images API v3 Documentation</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/js/jquery.slicknav.js"></script>
+	<script src="/js/s_code.js"></script>
+	<script src="/js/analytics.js"></script>	
+	<script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+		
+<header>
+  <div class="site-width">
+    <div class="slice group">
+      <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
+        <ul class="nav-items site-nav-desktop">
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+        <ul id=menu class=site-nav-mobile>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container-fluid">
+
+		<div class="row-fluid">
+
+			<div class="col-md-3 left-doc-nav">
+				<ul class="nav nav-pills nav-stacked left-nav">
+	<li class="nav-search" data-path="/api/docs/v3/search">
+		<a href="/api/docs/v3/search">/Search</a>
+		<ul style="display: none;">
+			<li data-path="/search/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/events/get">
+					/search/events
+				</a>
+			</li>
+			<li data-path="/search/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/get">
+					/search/images
+				</a>
+			</li>
+			<li data-path="/search/images/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/creative/get">
+					/search/images/creative
+				</a>
+			</li>
+			<li data-path="/search/images/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/editorial/get">
+					/search/images/editorial
+				</a>
+			</li>
+			<li data-path="/search/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/get">
+					/search/videos
+				</a>
+			</li>
+			<li data-path="/search/videos/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/creative/get">
+					/search/videos/creative
+				</a>
+			</li>
+			<li data-path="/search/videos/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/editorial/get">
+					/search/videos/editorial
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-images" data-path="/api/docs/v3/images">
+		<a href="/api/docs/v3/images">/Images</a>
+		<ul style="display: none;">
+			<li data-path="/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/get">
+					/images
+				</a>
+			</li>
+			<li data-path="/images/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/get">
+					/images/id
+				</a>
+			</li>
+			<li data-path="/images/id/similar/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/similar/get">
+					/images/id/similar
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-videos" data-path="/api/docs/v3/videos">
+		<a href="/api/docs/v3/videos">/Videos</a>
+		<ul style="display: none;">
+			<li data-path="/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/get">
+					/videos
+				</a>
+			</li>
+			<li data-path="/videos/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/id/get">
+					/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-downloads" data-path="/api/docs/v3/downloads">
+		<a href="/api/docs/v3/downloads">/Downloads</a>
+		<ul style="display: none;">
+			<li data-path="/downloads/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/downloads/get">
+					/downloads
+				</a>
+			</li>
+			<li data-path="/downloads/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/id/post">
+					/downloads/id
+				</a>
+			</li>
+			<li data-path="/downloads/images/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/images/id/post">
+					/downloads/images/id
+				</a>
+			</li>
+			<li data-path="/downloads/videos/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/videos/id/post">
+					/downloads/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-boards" data-path="/api/docs/v3/boards">
+		<a href="/api/docs/v3/boards">/Boards</a>
+		<ul style="display: none;">
+			<li data-path="/boards/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/get">
+					/boards
+				</a>
+			</li>
+			<li data-path="/boards/board_id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/board_id/get">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/assets/asset_id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/boards/board_id/assets/asset_id/put">
+					/boards/board_id/assets/asset_id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-collections" data-path="/api/docs/v3/collections">
+		<a href="/api/docs/v3/collections">/Collections</a>
+		<ul style="display: none;">
+			<li data-path="/collections/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/collections/get">
+					/collections
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-countries" data-path="/api/docs/v3/countries">
+		<a href="/api/docs/v3/countries">/Countries</a>
+		<ul style="display: none;">
+			<li data-path="/countries/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/countries/get">
+					/countries
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-events" data-path="/api/docs/v3/events">
+		<a href="/api/docs/v3/events">/Events</a>
+		<ul style="display: none;">
+			<li data-path="/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/get">
+					/events
+				</a>
+			</li>
+			<li data-path="/events/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/id/get">
+					/events/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-products" data-path="/api/docs/v3/products">
+		<a href="/api/docs/v3/products">/Products</a>
+		<ul style="display: none;">
+			<li data-path="/products/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/products/get">
+					/products
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-purchases" data-path="/api/docs/v3/purchases">
+		<a href="/api/docs/v3/purchases">/Purchases</a>
+		<ul style="display: none;">
+			<li data-path="/purchased-images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/purchased-images/get">
+					/purchased-images
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-usage" data-path="/api/docs/v3/usage">
+		<a href="/api/docs/v3/usage">/Usage</a>
+		<ul style="display: none;">
+			<li data-path="/usage-batches/id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/usage-batches/id/put">
+					/usage-batches/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetchanges" data-path="/api/docs/v3/assetchanges">
+		<a href="/api/docs/v3/assetchanges">/AssetChanges</a>
+		<ul style="display: none;">
+			<li data-path="/asset-changes/change-sets/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/put">
+					/asset-changes/change-sets
+				</a>
+			</li>
+			<li data-path="/asset-changes/change-sets/change-set-id/delete">
+				<span class="label label-default">DELETE</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/change-set-id/delete">
+					/asset-changes/change-sets/change-set-id
+				</a>
+			</li>
+			<li data-path="/asset-changes/channels/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/asset-changes/channels/get">
+					/asset-changes/channels
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>				
+
+			</div>
+		
+			<div class="col-md-9 docs-content category-content">
+				<ul class="breadcrumb">
+					<li><a href="/api/">API</a></li>
+					<li><a href="/api/docs/">API Docs</a></li>
+					<li><a href="/api/docs/v3/">v3</a></li>
+					<li><a href="/api/docs/v3/downloadworkflow.html">Download Workflow</a></li>
+				</ul>
+				
+				<h1 id="downloading-image-by-asset-id-found-in-search-results">Downloading Image by Asset Id found in Search Results</h1>
+<h2 id="sections">Sections</h2>
+<ol>
+<li><a href="#workflow-steps">cURL based example</a></li>
+<li><a href="#postman-collections">Postman collections</a></li>
+</ol>
+<h2 id="workflow-steps">Workflow Steps</h2>
+<ol>
+<li><a href="#get-access-token">Get an access token from Getty Images OAuth endpoint</a></li>
+<li><a href="#search-for-images-w-largest-downloads-field-specified">Use access token to search for images with largest download returned</a></li>
+<li><a href="#download-the-image-using-its-asset-id-and-product-type">Download an image from the results</a></li>
+</ol>
+<h3 id="get-access-token">Get Access Token</h3>
+<p>In order to get download links from search you will need to use a <a href="OAuth-Workflow#resource-owner-flow">Resource Owner Request</a> as used in the example below</p>
+<p>Alternatively, a token retrieved via a <a href="OAuth-Workflow#client-credentials-flow">Client Credentials Request</a> with a Sandboxed Api-Key, will also allow for downloading of a static image for testing purposes. NOTE: This static test image is not the actual asset image.</p>
+<h4 id="request">Request</h4>
+<pre><code>curl -X POST -H &quot;Content-Type: application/x-www-form-urlencoded&quot; -d &#39;grant_type=password&amp;client_id=exampleApiKey&amp;client_secret=exampleSecret&amp;username=someUsername&amp;password=WithSomePassword&#39; https://api.gettyimages.com/oauth2/token
+</code></pre><h4 id="response">Response</h4>
+<pre><code>{
+  &quot;access_token&quot;: &quot;123456&quot;,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_in&quot;: &quot;1800&quot;
+}
+</code></pre><h3 id="search-for-images-with-largest-downloads-field-specified">Search For Images with Largest Downloads field specified</h3>
+<h4 id="request">Request</h4>
+<pre><code>curl -X GET -H &quot;Authorization: Bearer 123456&quot; -H &quot;Api-Key: exampleApiKey&quot;  https://api.gettyimages.com/v3/search/images?phrase=Kitties&amp;fields=largest_downloads
+</code></pre><h4 id="response">Response</h4>
+<pre><code>{
+  &quot;result_count&quot;: 3662,
+  &quot;images&quot;: [{
+    &quot;id&quot;: &quot;83454804&quot;,
+    &quot;largest_downloads&quot;: [{
+      &quot;product_type&quot;: &quot;easyaccess&quot;,
+      &quot;uri&quot;: &quot;https://api.gettyimages.com/v3/downloads/images/83454804&quot;
+      }]
+  },{
+    &quot;id&quot;: &quot;103131833&quot;,
+    &quot;largest_downloads&quot;: [{
+      &quot;product_type&quot;: &quot;editorialsubscription&quot;,
+      &quot;uri&quot;: &quot;https://api.gettyimages.com/v3/downloads/images/103131833&quot;
+      }]
+    }]
+  }
+}
+</code></pre><h3 id="download-the-image-using-its-asset-id-and-product-type">Download the image using its asset id and product type</h3>
+<p>The largest_downloads array for each image in the response above gives a URI to be used to download the image, as well as the product  for which you are authorized to download.  To download the image file, create a POST request to the URI and indicate the product_type as a query string parameter as in the example below.  The default response to that request is to return the URI where you can download the actual image.  If you also set an auto_download parameter to �true�, this will execute a 302 redirect which automatically downloads the image file.</p>
+<h4 id="request">Request</h4>
+<pre><code>curl -X POST -H &quot;Api-Key: exampleApiKey&quot; -H &quot;Authorization: Bearer 123456&quot; -d &#39;&#39; https://api.gettyimages.com/v3/downloads/images/83454804?auto_download=false&amp;product_type=easyaccess
+</code></pre><h4 id="response">Response</h4>
+<pre><code>{
+  &quot;uri&quot;: &quot;https://delivery.gettyimages.com/xa/83454804.jpg?.....&quot;
+}
+</code></pre><h3 id="postman-collections">Postman Collections</h3>
+<p>If you prefer to use <a href="https://www.getpostman.com/">Postman</a>, we have created collections that can be reused to execute the workflow outlined above.</p>
+<ol>
+<li><a href="https://raw.githubusercontent.com/gettyimages/gettyimages-api-postman/master/OAuthCollection.json">OAuth Collection</a></li>
+<li><a href="https://raw.githubusercontent.com/gettyimages/gettyimages-api-postman/master/SearchCollection.json">Search Collection</a></li>
+<li><a href="https://raw.githubusercontent.com/gettyimages/gettyimages-api-postman/master/DownloadCollections.json">Download Collection</a></li>
+</ol>
+
+			</div>
+		</div>
+
+	</div>
+   <script type="text/javascript">
+       $(function () {
+            $("[data-path='/api/docs/v3']").find("ul").show();
+			$('#menu').slicknav();
+       })
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,696 @@
+<html>
+<head>
+	<title>API Documentation v3 API Overview | Getty Images API v3 Documentation</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/js/jquery.slicknav.js"></script>
+	<script src="/js/s_code.js"></script>
+	<script src="/js/analytics.js"></script>	
+	<script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+		
+<header>
+  <div class="site-width">
+    <div class="slice group">
+      <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
+        <ul class="nav-items site-nav-desktop">
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+        <ul id=menu class=site-nav-mobile>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container-fluid">
+
+		<div class="row-fluid">
+
+			<div class="col-md-3 left-doc-nav">
+				<ul class="nav nav-pills nav-stacked left-nav">
+	<li class="nav-search" data-path="/api/docs/v3/search">
+		<a href="/api/docs/v3/search">/Search</a>
+		<ul style="display: none;">
+			<li data-path="/search/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/events/get">
+					/search/events
+				</a>
+			</li>
+			<li data-path="/search/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/get">
+					/search/images
+				</a>
+			</li>
+			<li data-path="/search/images/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/creative/get">
+					/search/images/creative
+				</a>
+			</li>
+			<li data-path="/search/images/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/editorial/get">
+					/search/images/editorial
+				</a>
+			</li>
+			<li data-path="/search/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/get">
+					/search/videos
+				</a>
+			</li>
+			<li data-path="/search/videos/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/creative/get">
+					/search/videos/creative
+				</a>
+			</li>
+			<li data-path="/search/videos/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/editorial/get">
+					/search/videos/editorial
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-images" data-path="/api/docs/v3/images">
+		<a href="/api/docs/v3/images">/Images</a>
+		<ul style="display: none;">
+			<li data-path="/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/get">
+					/images
+				</a>
+			</li>
+			<li data-path="/images/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/get">
+					/images/id
+				</a>
+			</li>
+			<li data-path="/images/id/similar/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/similar/get">
+					/images/id/similar
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-videos" data-path="/api/docs/v3/videos">
+		<a href="/api/docs/v3/videos">/Videos</a>
+		<ul style="display: none;">
+			<li data-path="/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/get">
+					/videos
+				</a>
+			</li>
+			<li data-path="/videos/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/id/get">
+					/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-downloads" data-path="/api/docs/v3/downloads">
+		<a href="/api/docs/v3/downloads">/Downloads</a>
+		<ul style="display: none;">
+			<li data-path="/downloads/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/downloads/get">
+					/downloads
+				</a>
+			</li>
+			<li data-path="/downloads/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/id/post">
+					/downloads/id
+				</a>
+			</li>
+			<li data-path="/downloads/images/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/images/id/post">
+					/downloads/images/id
+				</a>
+			</li>
+			<li data-path="/downloads/videos/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/videos/id/post">
+					/downloads/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-boards" data-path="/api/docs/v3/boards">
+		<a href="/api/docs/v3/boards">/Boards</a>
+		<ul style="display: none;">
+			<li data-path="/boards/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/get">
+					/boards
+				</a>
+			</li>
+			<li data-path="/boards/board_id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/board_id/get">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/assets/asset_id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/boards/board_id/assets/asset_id/put">
+					/boards/board_id/assets/asset_id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-collections" data-path="/api/docs/v3/collections">
+		<a href="/api/docs/v3/collections">/Collections</a>
+		<ul style="display: none;">
+			<li data-path="/collections/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/collections/get">
+					/collections
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-countries" data-path="/api/docs/v3/countries">
+		<a href="/api/docs/v3/countries">/Countries</a>
+		<ul style="display: none;">
+			<li data-path="/countries/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/countries/get">
+					/countries
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-events" data-path="/api/docs/v3/events">
+		<a href="/api/docs/v3/events">/Events</a>
+		<ul style="display: none;">
+			<li data-path="/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/get">
+					/events
+				</a>
+			</li>
+			<li data-path="/events/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/id/get">
+					/events/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-products" data-path="/api/docs/v3/products">
+		<a href="/api/docs/v3/products">/Products</a>
+		<ul style="display: none;">
+			<li data-path="/products/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/products/get">
+					/products
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-purchases" data-path="/api/docs/v3/purchases">
+		<a href="/api/docs/v3/purchases">/Purchases</a>
+		<ul style="display: none;">
+			<li data-path="/purchased-images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/purchased-images/get">
+					/purchased-images
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-usage" data-path="/api/docs/v3/usage">
+		<a href="/api/docs/v3/usage">/Usage</a>
+		<ul style="display: none;">
+			<li data-path="/usage-batches/id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/usage-batches/id/put">
+					/usage-batches/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetchanges" data-path="/api/docs/v3/assetchanges">
+		<a href="/api/docs/v3/assetchanges">/AssetChanges</a>
+		<ul style="display: none;">
+			<li data-path="/asset-changes/change-sets/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/put">
+					/asset-changes/change-sets
+				</a>
+			</li>
+			<li data-path="/asset-changes/change-sets/change-set-id/delete">
+				<span class="label label-default">DELETE</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/change-set-id/delete">
+					/asset-changes/change-sets/change-set-id
+				</a>
+			</li>
+			<li data-path="/asset-changes/channels/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/asset-changes/channels/get">
+					/asset-changes/channels
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>				
+
+			</div>
+		
+			<div class="col-md-9 docs-content category-content">
+				<ul class="breadcrumb">
+					<li><a href="/api/">API</a></li>
+					<li><a href="/api/docs/">API Docs</a></li>
+					<li><a href="/api/docs/v3/">v3</a></li>
+					<li><a href="/api/docs/v3/api-overview.html">API Overview</a></li>
+				</ul>
+				
+				<h1 id="api-overview">API Overview</h1>
+<ul>
+<li><a href="#current-version">Current Version</a></li>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#authorization">Authorization</a></li>
+<li><a href="#request-throttling">Request Throttling</a></li>
+<li><a href="#schema">Schema</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#http-verbs">HTTP Verbs</a></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#hypermedia">Hypermedia</a></li>
+<li><a href="#http-redirects">HTTP Redirects</a></li>
+<li><a href="#errors">Errors</a></li>
+<li><a href="#pagination">Pagination</a></li>
+<li><a href="#cross-origin-resource-sharing">Cross Origin Resource Sharing</a></li>
+<li><a href="#localization">Localization</a></li>
+<li><a href="#oembed">oEmbed</a></li>
+</ul>
+<h2 id="current-version">Current Version</h2>
+<p>The Getty Images API is currently at version 3. Use the following base URI to access version 3 endpoints.</p>
+<pre><code>https://api.gettyimages.com/v3/
+</code></pre><h2 id="authentication">Authentication</h2>
+<p>The Getty Images API requires all requests include an Api-Key to authenticate the client. Pass the Api-Key via the custom <code>Api-Key</code> HTTP Header.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800&quot;
+</code></pre><h2 id="authorization">Authorization</h2>
+<p>The Getty Images API allows, and in some cases requires, requests to include an access token to authorize elevated client privileges. Pass the access token via the standard <code>Authorization</code> HTTP header as type <code>Bearer</code>.</p>
+<pre><code>curl -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; -H &quot;Authorization: Bearer {access_token}&quot; https://api.gettyimages.com/v3/downloads/83454811 -d &quot;&#39;&quot; -L -o sample.jpg
+</code></pre><p>Acquire an access token using one of the Getty Images API <a href="oauth2.md#authorization-grant-flows">OAuth2 grants</a>. This example uses the OAuth2 <a href="oauth2.md#client-credentials-flow">client credentials flow</a>.</p>
+<pre><code>curl -d &#39;grant_type=client_credentials&amp;client_id=j878g39yx378pa77djthzzpn&amp;client_secret=hZJS5A3GJpJvcGhaXwev3kwmq3DgtfcQmEuGbGruQBfsz&#39; &quot;https://api.gettyimages.com/oauth2/token&quot;
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 123
+
+{&quot;access_token&quot;: &quot;{token_string}&quot;, &quot;token_type&quot;: &quot;Bearer&quot;, &quot;expires_in&quot;: &quot;1800&quot;}
+</code></pre><p>If elevated client privilege is required but missing, the API returns an authorization challenge in the response.</p>
+<pre><code>HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Bearer realm=&quot;Download&quot;,error=&quot;invalid_token&quot;,error_description=&quot;The access token is missing&quot;
+</code></pre><h2 id="request-throttling">Request Throttling</h2>
+<p>The Getty Images API throttles client requests based on limits associated with the client&#39;s Api-Key. These limits can be viewed on your <a href="https://api.gettyimages.com/apps/mykeys" target="_blank">account page</a>. Click the <strong>View Report</strong> link on your key to get the current status of an Api-Key&#39;s limits.</p>
+<p>There are two throttling limits and each has its own error message.</p>
+<ul>
+<li><p>Calls per second limit</p>
+<pre><code>  HTTP/1.1 403 Forbidden
+  X-Error-Detail: Account Over Queries Per Second Limit
+
+  {&quot;message&quot;: &quot;Account Over Queries Per Second Limit&quot;}
+</code></pre></li>
+<li><p>Calls per day limit</p>
+<pre><code>  HTTP/1.1 403 Forbidden
+  X-Error-Detail: Account Over Rate Limit
+
+  {&quot;message&quot;: &quot;Account Over Rate Limit&quot;}
+</code></pre></li>
+</ul>
+<h2 id="schema">Schema</h2>
+<p>All API access is over HTTPS. All data is sent and received as JSON.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/search/images?phrase=books&quot;
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: origin, accept, content-type
+Access-Control-Allow-Methods: options, post
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 1728000
+Cache-Control: no-cache,no-cache
+Content-Language: en-US
+Content-Type: application/json; charset=utf-8
+Date: Wed, 16 Jul 2014 17:43:01 GMT
+Expires: -1
+Pragma: no-cache
+Server: Mashery Proxy
+X-Mashery-Responder: prod-j-worker-us-west-1b-19.mashery.com
+Content-Length: 29728
+Connection: keep-alive
+
+{&quot;result_count&quot;: 867845, &quot;images&quot;: [ /* snipped */ ]}
+</code></pre><p>The Getty Images API returns UTC date/time values in <a href="http://www.w3.org/TR/NOTE-datetime" target="_blank">ISO 8601</a> format.</p>
+<pre><code>YYYY-MM-DDTHH:MM:SSZ
+</code></pre><h3 id="summary-detail-and-custom-representations">Summary, Detail, and Custom Representations</h3>
+<p>Some fields are computationally expensive for the API to provide or require additional access privileges; and therefore, are not returned by default. Clients can specify additional fields be returned for a resource using the <code>fields</code> querystring parameter.</p>
+<p>The default set of fields returned are the <code>summary_set</code>. Both of the following produce the same response.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800
+curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=summary_set
+</code></pre><p>The API provides a <code>detail_set</code> specifier that will include additional fields.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=detail_set
+</code></pre><p>Alternately, clients can pass a comma delimited list of the specific fields they are interested in.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=id,title&quot;
+</code></pre><p>Some fields are in neither <code>summary_set</code> nor <code>detail_set</code> and must be explicitly specified.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=download_sizes&quot;
+</code></pre><p>Some fields require additional access priviledges and must be explicitly specified. In these cases clients must also provide an <a href="#authorization">access token</a>.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; -H &quot;Authorization: Bearer {access_token}&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=downloads&quot;
+</code></pre><h4 id="download-sizes">Download Sizes</h4>
+<p>Authorizing download of an image is computationally expensive. Therefore, clients that wish to receive details of available download sizes for images must explicitly specify that they want this information via the <code>fields</code> querystring parameter. The following tables show the available and allowed <code>fields</code> arguments for the endpoints that can return sizes and/or links to the downloadable image.</p>
+<table>
+<thead>
+<tr>
+<th><code>fields</code> argument</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>downloads</code></td>
+<td>returns downloadable sizes with hypermedia download links</td>
+</tr>
+<tr>
+<td><code>download_sizes</code></td>
+<td>returns downloadable sizes without hypermedia download links</td>
+</tr>
+<tr>
+<td><code>largest_downloads</code></td>
+<td>returns hypermedia download links to the largest size</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>endpoints</th>
+<th><code>download_sizes</code></th>
+<th><code>downloads</code></th>
+<th><code>largest_downloads</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v3/search/images</code></td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td><code>v3/search/images/creative</code></td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td><code>v3/search/images/editorial</code></td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td><code>v3/images</code></td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p>Note that clients using the <code>download_sizes</code> or <code>largest_downloads</code> arguments must also provide an <a href="#authorization">access token</a>.</p>
+<h4 id="display-sizes">Display Sizes</h4>
+<p>Display sizes can be retrieved by passing any of the following arguments in the <code>fields</code> parameter.</p>
+<table>
+<thead>
+<tr>
+<th><code>fields</code> argument</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>display_set</code></td>
+<td>all display sizes</td>
+</tr>
+<tr>
+<td><code>high_res_comp</code></td>
+<td>largest display size</td>
+</tr>
+<tr>
+<td><code>comp</code></td>
+<td>large display size</td>
+</tr>
+<tr>
+<td><code>preview</code></td>
+<td>medium display size</td>
+</tr>
+<tr>
+<td><code>thumb</code></td>
+<td>smallest display size</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resources">Resources</h2>
+<p>The Getty Images API provides a RESTful API centered around resources, identified by a URI, that can be acted upon by the standard <a href="#http-verbs">HTTP verbs</a>. Descriptions of the Getty Images API resources are provided on our <a href="https://api.gettyimages.com/swagger" target="_blank">interactive documentation page</a>.</p>
+<h2 id="http-verbs">HTTP Verbs</h2>
+<p>The Getty Images API strives to use appropriate HTTP verbs to perform actions on our <a href="#resources">resources</a>.</p>
+<table>
+<thead>
+<tr>
+<th>verb</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>use to retrieve a resources or collection</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>use to create a resource or perform a custom action</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>use to store an entity under a specific resource</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><em>unsupported at this time</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters</h2>
+<p>Some API endpoints take parameters specified as a segment in the path.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800&quot;
+</code></pre><p>Additional options can be specified as HTTP querystring parameters.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/search/images?phrase=books&quot;
+</code></pre><p>Some resources allow filtering on their representations using the <code>fields</code> querystring parameter.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=id,title&quot;
+</code></pre><p>In the last example the response will contain only the fields <code>id</code> and <code>title</code>.</p>
+<h2 id="hypermedia">Hypermedia</h2>
+<p>All resources may have one or more URI properties linking to other resources. These provide explicit URIs to additional resources, saving API clients from the need to construct the URIs on their own.</p>
+<p>Here&#39;s an example of a search result providing a URI for downloading the image&#39;s largest size.</p>
+<pre><code class="lang-json">&quot;images&quot;: [
+    {
+      &quot;id&quot;: &quot;3231670&quot;,
+      &quot;largest_downloads&quot;: [
+        {
+          &quot;media_type&quot;: &quot;image/jpeg&quot;,
+          &quot;bytes&quot;: 2226077,
+          &quot;downloads&quot;: [
+            {
+              &quot;product_type&quot;: &quot;premiumaccess&quot;,
+              &quot;uri&quot;: &quot;https://api.gettyimages.com/v3/downloads/3231670&quot;
+            }
+          ],
+          &quot;height&quot;: 3000,
+          &quot;width&quot;: 1607
+        }
+      ]
+    }
+  ]
+</code></pre>
+<p>A POST to the provided URI with a valid Api-Key and access token will download the image.</p>
+<h2 id="http-redirects">HTTP Redirects</h2>
+<p>The Getty Images API uses HTTP redirection where appropriate. Clients should assume that any request may result in a redirection and be prepared to follow the redirect. Redirect responses will have a <code>Location</code> header field which contains the URI of the resource to which the client should repeat the requests. The API currently uses <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3" target="_blank"><code>302 Found</code></a> and <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.4" target="_blank"><code>303 See Other</code></a> for redirects.</p>
+<h2 id="errors">Errors</h2>
+<p>There are the most common errors a client may receive when calling the API.</p>
+<ol>
+<li><p>Sending misspelled or improperly formatted request bodies or querystring parameters will result in a <code>400 Bad Request</code> response.</p>
+<pre><code class="lang-http"> HTTP/1.1 400 Bad Request
+ Content-Type: application/json; charset=utf-8
+
+ {
+     &quot;message&quot;: &quot;Invalid Request. Possible required parameter missing.&quot;
+ }
+</code></pre>
+</li>
+<li><p>Omitting, misspelling, or sending invalid Api-Key will result in a <code>403 Forbidden: Account Inactive</code> response.</p>
+<pre><code class="lang-http"> HTTP/1.1 403 Forbidden
+ Content-Type: application/json; charset=utf-8
+
+ {
+     &quot;message&quot;: &quot;Account Inactive&quot;
+ }
+</code></pre>
+</li>
+<li><p>Submitting invalid image <code>id</code>&#39;s will result in a <code>404 Not Found</code> response.</p>
+<pre><code class="lang-http"> HTTP/1.1 404 Not Found
+ Content-Type: application/json; charset=utf-8
+
+ {
+     &quot;code&quot;: &quot;ImageNotFound&quot;,
+     &quot;message&quot;: &quot;Image not found: 452O76944&quot;
+ }
+</code></pre>
+</li>
+<li><p>Exceeding your Api-Key&#39;s <a href="#request-throttling">call per second throttle limit</a> will result in a <code>403 Forbidden: Account Over Queries Per Second Limit</code> response.</p>
+<pre><code class="lang-http"> HTTP/1.1 403 Forbidden
+ X-Error-Detail:  Account Over Queries Per Second Limit
+ Content-Type: application/json; charset=utf-8
+
+ {
+     &quot;message&quot;: &quot;Account Over Queries Per Second Limit&quot;
+ }
+</code></pre>
+</li>
+<li><p>Exceeding your Api-Key&#39;s <a href="#request-throttling">call per day throttle limit</a> will result in a <code>403 Forbidden: Account Over Rate Limit</code> response.</p>
+<pre><code class="lang-http"> HTTP/1.1 403 Forbidden
+ X-Error-Detail:  Account Over Rate Limit
+ Content-Type: application/json; charset=utf-8
+
+ {
+     &quot;message&quot;: &quot;Account Over Rate Limit&quot;
+ }
+</code></pre>
+</li>
+</ol>
+<h2 id="pagination">Pagination</h2>
+<p>Many Getty Images API endpoints provide support for pagination of results. Pagination can be controlled by using the <code>page</code> and <code>page_size</code> querystring parameters. Default values will be used if none are provided.</p>
+<ul>
+<li>The <code>page</code> parameter defaults to 1.</li>
+<li>Search results default to a <code>page_size</code> of 30 items per <code>page</code>. Valid values are: 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 25, 30, 50, 60, 75, 100.</li>
+</ul>
+<p>This example demonstrates requesting the first page, containing 20 items, of search results.</p>
+<pre><code>curl -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/search/images?phrase=dogs&amp;page=1&amp;page_size=20&quot;
+</code></pre><h2 id="cross-origin-resource-sharing">Cross Origin Resource Sharing</h2>
+<p>We support cross origin resource sharing (<a href="http://www.w3.org/TR/cors/">CORS</a>). All endpoints (except <code>/oauth2/token</code> and <code>/oauth2/auth</code>) return the following header.</p>
+<pre><code>Access-Control-Allow-Origin: *
+</code></pre><h2 id="localization">Localization</h2>
+<p>Many Connect endpoints provide support for localization of certain request or response fields using the <code>Accept-Language</code> HTTP header. This header value defaults to <code>en-US</code> if</p>
+<ul>
+<li>the client omits the <code>Accept-Language</code> HTTP header,</li>
+<li>the client omits a locale, or</li>
+<li>the client specifies an unsupported locale.</li>
+</ul>
+<p>This example will return country names in French.</p>
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; -H &quot;Accept-Language:fr&quot; https://api.gettyimages.com/v3/countries
+</code></pre><h2 id="oembed">oEmbed</h2>
+<h4 id="what-is-oembed-">What is oEmbed?</h4>
+<p>oEmbed is a format for allowing an embedded representation of a URL on third party sites. The simple API allows a website to display embedded content (such as photos or videos) when a user posts a link to that resource, without having to parse the resource directly.</p>
+<p>Full documentation and various client libraries for the oEmbed specification can be found here: <a href="http://oembed.com">http://oembed.com</a></p>
+<h4 id="endpoint">Endpoint</h4>
+<p>Use the following endpoints to access this operation:</p>
+<pre><code>http://embed.gettyimages.com/oembed
+</code></pre><h4 id="request">Request</h4>
+<p>The oEmbed request is a GET with the following required parameter. Note: URL encode query string parameters.</p>
+<pre><code>url: http://gty.im/[asset-id]
+</code></pre><p>In addition, you should use the optional caller parameter, providing descriptive value identifying your application.</p>
+<pre><code>caller: example.com
+</code></pre><p>The oEmbed request returns JSON. If the <em>optional</em> &quot;format&quot; parameter is used it must contain the value &quot;json&quot;. Other formats are not supported and using another value such as &quot;xml&quot; will result in a 501 (Not Implemented) error.</p>
+<p>Example request:</p>
+<pre><code>http://embed.gettyimages.com/oembed?url=http%3a%2f%2fgty.im%2f74917285&amp;caller=example.com
+</code></pre><h4 id="response">Response</h4>
+<p>The oEmbed JSON response has this form, per the oEmbed specification:</p>
+<pre><code class="lang-json">    {
+      &quot;type&quot;: string,
+      &quot;version&quot;: string,
+      &quot;title&quot;: string,
+      &quot;caption&quot;: string,
+      &quot;photographer&quot;: string,
+      &quot;collection&quot;: string,
+      &quot;html&quot;: string,
+      &quot;width&quot;: int,
+      &quot;height&quot;: int,
+      &quot;thumbnail_url&quot;: string,
+      &quot;thumbnail_height&quot;: int,
+      &quot;thumbnail_width&quot;: int,
+      &quot;terms_of_use_url&quot;: string
+    }
+</code></pre>
+<p>Example response:</p>
+<pre><code class="lang-json">    {
+        &quot;type&quot;: &quot;rich&quot;,
+        &quot;version&quot;: &quot;1.0&quot;,
+        &quot;height&quot;: 643,
+        &quot;width&quot;: 395,
+        &quot;html&quot;: &quot;\u003cdiv style=\&quot;background-color:#fff;display:inline-block;font-family:&#39;Helvetica Neue&#39;,Arial,sans-serif;color:#a7a7a7;font-size:11px;width:100%;max-width:395px;min-width:300px;\&quot;\u003e\u003cdiv style=\&quot;overflow:hidden;position:relative;height:0;padding:150.379747% 0 49px 0;width:100%;\&quot;\u003e\u003ciframe src=\&quot;//localhost:3000/embed/74917285?et=GCDFoeg3T3xB1L6jmY5dDQ\u0026sig=mXFz-gxQc_lIp2nmITlHtjjKIvYL1UD6e5yjuPDQ9FU=\&quot; width=\&quot;395\&quot; height=\&quot;643\&quot; scrolling=\&quot;no\&quot; frameborder=\&quot;0\&quot; style=\&quot;display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;\&quot;\u003e\u003c/iframe\u003e\u003c/div\u003e\u003cp style=\&quot;margin:0;\&quot;\u003e\u003c/p\u003e\u003cdiv style=\&quot;padding:0;margin:4px 0 0 10px;text-align:left;\&quot;\u003e\u003ca href=\&quot;http://www.gettyimages.com/detail/74917285\&quot; target=\&quot;_blank\&quot; style=\&quot;color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;\&quot;\u003e#74917285\u003c/a\u003e / \u003ca href=\&quot;http://www.gettyimages.com\&quot; target=\&quot;_blank\&quot; style=\&quot;color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;\&quot;\u003egettyimages.com\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e&quot;,
+        &quot;title&quot;: &quot;Model Released Basketball&quot;,
+        &quot;caption&quot;: &quot;Model Released: Two young men outdoors, one man holding basketball, portrait (Photo by Black 100/Getty Images)&quot;,
+        &quot;photographer&quot;: &quot;Black 100&quot;,
+        &quot;collection&quot;: &quot;Allsport Concepts&quot;,
+        &quot;thumbnail_url&quot;: &quot;http://delivery.candidate-gettyimages.com/xt/74917285.jpg?v=1\u0026g=fs2|0|editorial3|17|285\u0026s=1&quot;,
+        &quot;thumbnail_height&quot;: &quot;170&quot;,
+        &quot;thumbnail_width&quot;: &quot;113&quot;,
+        &quot;terms_of_use_url&quot;: &quot;http://www.gettyimages.com/Corporate/Terms.aspx&quot;
+    }
+</code></pre>
+<h4 id="workflow-example-oembed">Workflow example: oEmbed</h4>
+<ol>
+<li>Find embeddable images on www.gettyimages.com (see embed.gettyimages.com for more information)</li>
+<li>Call oEmbed using the asset id of the embeddable image that you wish to use.</li>
+</ol>
+<h4 id="workflow-example-getty-images-api-client-using-oembed">Workflow example: Getty Images API client using oEmbed</h4>
+<ol>
+<li>Call CreateSession or OAuth with system/key and user credentials to create an authentication token.</li>
+<li>Call SearchForImages to find images specifying the search is for embeddable images only, by adding the Filter property EmbedContentOnly (boolean) within the SearchForImagesRequestBody.</li>
+<li>Call oEmbed with each of the asset ids of the embeddable images that you wish to use.</li>
+</ol>
+
+			</div>
+		</div>
+
+	</div>
+   <script type="text/javascript">
+       $(function () {
+            $("[data-path='/api/docs/v3']").find("ul").show();
+			$('#menu').slicknav();
+       })
+   </script>
+</body>
+
+</html>

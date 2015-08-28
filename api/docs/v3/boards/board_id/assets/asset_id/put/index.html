@@ -20,13 +20,13 @@
     <div class="slice group">
       <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
         <ul class="nav-items site-nav-desktop">
-          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
         </ul>
         <ul id=menu class=site-nav-mobile>
-          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
@@ -242,17 +242,6 @@
 			</li>
 		</ul>
 	</li>
-	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
-		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
-		<ul style="display: none;">
-			<li data-path="/asset-registrations/post">
-				<span class="label label-default">POST</span> 
-				<a href="/api/docs/v3/asset-registrations/post">
-					/asset-registrations
-				</a>
-			</li>
-		</ul>
-	</li>
 	<li class="nav-usage" data-path="/api/docs/v3/usage">
 		<a href="/api/docs/v3/usage">/Usage</a>
 		<ul style="display: none;">
@@ -287,13 +276,25 @@
 			</li>
 		</ul>
 	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
 </ul>				
 
 			</div>
 		
 			<div class="col-md-9 docs-content">
 				<ul class="breadcrumb">
-					<li><a href="/api/">API Docs</a></li>
+					<li><a href="/api/">API</a></li>
+					<li><a href="/api/docs/">API Docs</a></li>
 					<li><a href="/api/docs/v3/">v3</a></li>
 					<li><a href="/api/docs/v3/boards/">Boards</a></li>
 					<li><a href="/api/docs/v3/boards/board_id/assets/asset_id/put">Add Asset to Board</a></li>
@@ -306,7 +307,7 @@
 					This endpoint is currently in <strong>BETA</strong>. 
 				</div>
 				
-				<a target="_blank" class="btn btn-primary pull-right btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_AddAssets">Experiment with this API</a>
+				<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_AddAsset">Experiment with this API</a>
 				
 				<h1 id="boards-add-asset-to-board">Boards - Add Asset to Board</h1>
 <p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to add an asset to a board.</p>
@@ -314,7 +315,7 @@
 <p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
 <p>Use the following endpoint to add an asset to a specific board:</p>
 <pre><code>PUT https://api.gettyimages.com/3.0/boards/{board_id}/assets/{asset_id}
-</code></pre><p><strong>You can use the <a href="/api/docs/v3/boards/get/#quickstart">Get All Boards Quickstart</a> to get a test _board<em>id</em> and the <a href="/api/docs/v3/search/images/creative/get/#quickstart">Creative Image Search Quickstart</a> to get an _asset<em>id</em>.</strong></p>
+</code></pre><p><strong>You can use the <a href="/api/docs/v3/boards/get/#quickstart">Get All Boards Quickstart</a> to get a test <em>board_id</em> and the <a href="/api/docs/v3/search/images/creative/get/#quickstart">Creative Image Search Quickstart</a> to get an <em>asset_id</em>.</strong></p>
 <p>Add API key and the Resource Owner Grant token to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
 Authorization: Bearer &lt;your secure access token&gt;
@@ -370,6 +371,15 @@ Authorization: Bearer &lt;your secure access token&gt;
 				
 				<table class="table table-striped">
 					<tr>
+						<td>asset_to_add</td>
+						<td>AssetToAdd</td>
+						<td>
+							<b>*** HIDDEN IN PROD ***</b> Additional information for the asset on this board. 
+							Required. 
+							
+						</td>
+					</tr>
+					<tr>
 						<td>asset_id</td>
 						<td>string</td>
 						<td>
@@ -389,8 +399,31 @@ Authorization: Bearer &lt;your secure access token&gt;
 					</tr>
 				</table>
 				
+				<h3 id="http-response-codes">Http Response Codes</h3>
+
 				
-				
+				<table class="table table-striped">
+					<tr>
+						<td>201</td>
+						<td>success</td>
+						<td>Returned when the request has been successfully created.</td>
+					</tr>
+					<tr>
+						<td>401</td>
+						<td>user_token_required</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>403</td>
+						<td>asset not found</td>
+						<td>Returned when an <code>asset_id</code> is not found.</td>
+					</tr>
+					<tr>
+						<td>404</td>
+						<td>board not found</td>
+						<td>Returned when a <code>board_id</code> is not found.</td>
+					</tr>
+				</table>
 
 				
 				

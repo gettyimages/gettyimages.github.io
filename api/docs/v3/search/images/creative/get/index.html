@@ -20,13 +20,13 @@
     <div class="slice group">
       <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
         <ul class="nav-items site-nav-desktop">
-          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
         </ul>
         <ul id=menu class=site-nav-mobile>
-          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
@@ -242,17 +242,6 @@
 			</li>
 		</ul>
 	</li>
-	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
-		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
-		<ul style="display: none;">
-			<li data-path="/asset-registrations/post">
-				<span class="label label-default">POST</span> 
-				<a href="/api/docs/v3/asset-registrations/post">
-					/asset-registrations
-				</a>
-			</li>
-		</ul>
-	</li>
 	<li class="nav-usage" data-path="/api/docs/v3/usage">
 		<a href="/api/docs/v3/usage">/Usage</a>
 		<ul style="display: none;">
@@ -287,13 +276,25 @@
 			</li>
 		</ul>
 	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
 </ul>				
 
 			</div>
 		
 			<div class="col-md-9 docs-content">
 				<ul class="breadcrumb">
-					<li><a href="/api/">API Docs</a></li>
+					<li><a href="/api/">API</a></li>
+					<li><a href="/api/docs/">API Docs</a></li>
 					<li><a href="/api/docs/v3/">v3</a></li>
 					<li><a href="/api/docs/v3/search/">Search</a></li>
 					<li><a href="/api/docs/v3/search/images/creative/get/">Search for Creative Images</a></li>
@@ -302,13 +303,13 @@
 				
 
 				
-				<a target="_blank" class="btn btn-primary pull-right btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Search/Search_GetCreativeImagesByPhrase">Experiment with this API</a>
+				<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Search/Search_GetCreativeImagesByPhrase">Experiment with this API</a>
 				
 				<h1 id="search-for-creative-images">Search For Creative Images</h1>
 <p>Use this endpoint to search our contemporary stock photos, illustrations and archival images.</p>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
-There are several <a href="https://github.com/gettyimages/gettyimages-api#sdks">SDKs</a> available for popular programming languages to help you get started.</p>
+There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
 <p>Use the following endpoint to search for creative images:</p>
 <pre><code>GET https://api.gettyimages.com:443/v3/search/images/creative?phrase=&lt;query term&gt;
 </code></pre><p>Add your API key to the request header:</p>
@@ -320,7 +321,7 @@ There are several <a href="https://github.com/gettyimages/gettyimages-api#sdks">
   &quot;result_count&quot;: 1,
   &quot;images&quot;: [
     {
-      &quot;id&quot;: &quot;&lt;image id}&quot;,
+      &quot;id&quot;: &quot;&lt;image id&gt;}&quot;,
       &quot;asset_family&quot;: &quot;creative&quot;,
       &quot;caption&quot;: &quot;&lt;image description&gt;&quot;,
       &quot;collection_code&quot;: &quot;&lt;collection code&gt;&quot;,
@@ -529,13 +530,13 @@ To include your API token in the search request, add it to the headers as a Bear
 					<tr>
 						<td>id</td>
 						<td>
-							A unique numerical string that identifies the asset.
+							A unique alphanumeric string that identifies the asset.
 						</td>
 					</tr>
 					<tr>
 						<td>keywords</td>
 						<td>
-							Identifies the type of keyword. The possible values are:
+							Identifies the keyword and the type of keyword. The possible values are:
 							<span class="label label-default">Unknown</span>
 							<span class="label label-default">Specific people</span>
 							<span class="label label-default">Ethnicity</span>
@@ -557,7 +558,7 @@ To include your API token in the search request, add it to the headers as a Bear
 					<tr>
 						<td>largest_downloads</td>
 						<td>
-							Returns hypermedia download links to the largest size.
+							Returns hypermedia download links to the largest available size.
 						</td>
 					</tr>
 					<tr>
@@ -611,7 +612,7 @@ To include your API token in the search request, add it to the headers as a Bear
 					<tr>
 						<td>quality_rank</td>
 						<td>
-							Indicates the image quality. Possible values are 0 - 4.
+							This number has no relevance for creative images even though it does appear in the metadata.
 						</td>
 					</tr>
 					<tr>
@@ -1017,7 +1018,7 @@ To include your API token in the search request, add it to the headers as a Bear
 				
 				<table class="table table-striped">
 					<tr>
-						<td>largest_download.uri</td>
+						<td>largest_downloads.uri</td>
 						<td>
 							Contains the uri to access the largest available download for an asset. 
 						</td>
@@ -1025,13 +1026,13 @@ To include your API token in the search request, add it to the headers as a Bear
 					<tr>
 						<td>display_size.uri</td>
 						<td>
-							Contains the uri to access this asset's display size. 
+							Contains the uri to access this asset at the specified display size. 
 						</td>
 					</tr>
 					<tr>
 						<td>referral_destination.uri</td>
 						<td>
-							Contains the uri to access this asset's metadata. 
+							Contains the uri to access this asset's asset detail page on the specified website. 
 						</td>
 					</tr>
 				</table>		

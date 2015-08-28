@@ -1,0 +1,475 @@
+<html>
+<head>
+	<title></title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/js/jquery.slicknav.js"></script>
+	<script src="/js/s_code.js"></script>
+	<script src="/js/analytics.js"></script>	
+	<script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+		
+<header>
+  <div class="site-width">
+    <div class="slice group">
+      <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
+        <ul class="nav-items site-nav-desktop">
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+        <ul id=menu class=site-nav-mobile>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="container-fluid">
+
+		<div class="row-fluid">
+
+			<div class="col-md-3 left-doc-nav">
+				<ul class="nav nav-pills nav-stacked left-nav">
+	<li class="nav-search" data-path="/api/docs/v3/search">
+		<a href="/api/docs/v3/search">/Search</a>
+		<ul style="display: none;">
+			<li data-path="/search/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/events/get">
+					/search/events
+				</a>
+			</li>
+			<li data-path="/search/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/get">
+					/search/images
+				</a>
+			</li>
+			<li data-path="/search/images/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/creative/get">
+					/search/images/creative
+				</a>
+			</li>
+			<li data-path="/search/images/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/images/editorial/get">
+					/search/images/editorial
+				</a>
+			</li>
+			<li data-path="/search/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/get">
+					/search/videos
+				</a>
+			</li>
+			<li data-path="/search/videos/creative/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/creative/get">
+					/search/videos/creative
+				</a>
+			</li>
+			<li data-path="/search/videos/editorial/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/search/videos/editorial/get">
+					/search/videos/editorial
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-images" data-path="/api/docs/v3/images">
+		<a href="/api/docs/v3/images">/Images</a>
+		<ul style="display: none;">
+			<li data-path="/images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/get">
+					/images
+				</a>
+			</li>
+			<li data-path="/images/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/get">
+					/images/id
+				</a>
+			</li>
+			<li data-path="/images/id/similar/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/images/id/similar/get">
+					/images/id/similar
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-videos" data-path="/api/docs/v3/videos">
+		<a href="/api/docs/v3/videos">/Videos</a>
+		<ul style="display: none;">
+			<li data-path="/videos/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/get">
+					/videos
+				</a>
+			</li>
+			<li data-path="/videos/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/videos/id/get">
+					/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-downloads" data-path="/api/docs/v3/downloads">
+		<a href="/api/docs/v3/downloads">/Downloads</a>
+		<ul style="display: none;">
+			<li data-path="/downloads/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/downloads/get">
+					/downloads
+				</a>
+			</li>
+			<li data-path="/downloads/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/id/post">
+					/downloads/id
+				</a>
+			</li>
+			<li data-path="/downloads/images/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/images/id/post">
+					/downloads/images/id
+				</a>
+			</li>
+			<li data-path="/downloads/videos/id/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/downloads/videos/id/post">
+					/downloads/videos/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-boards" data-path="/api/docs/v3/boards">
+		<a href="/api/docs/v3/boards">/Boards</a>
+		<ul style="display: none;">
+			<li data-path="/boards/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/get">
+					/boards
+				</a>
+			</li>
+			<li data-path="/boards/board_id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/boards/board_id/get">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/assets/asset_id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/boards/board_id/assets/asset_id/put">
+					/boards/board_id/assets/asset_id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-collections" data-path="/api/docs/v3/collections">
+		<a href="/api/docs/v3/collections">/Collections</a>
+		<ul style="display: none;">
+			<li data-path="/collections/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/collections/get">
+					/collections
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-countries" data-path="/api/docs/v3/countries">
+		<a href="/api/docs/v3/countries">/Countries</a>
+		<ul style="display: none;">
+			<li data-path="/countries/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/countries/get">
+					/countries
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-events" data-path="/api/docs/v3/events">
+		<a href="/api/docs/v3/events">/Events</a>
+		<ul style="display: none;">
+			<li data-path="/events/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/get">
+					/events
+				</a>
+			</li>
+			<li data-path="/events/id/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/events/id/get">
+					/events/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-products" data-path="/api/docs/v3/products">
+		<a href="/api/docs/v3/products">/Products</a>
+		<ul style="display: none;">
+			<li data-path="/products/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/products/get">
+					/products
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-purchases" data-path="/api/docs/v3/purchases">
+		<a href="/api/docs/v3/purchases">/Purchases</a>
+		<ul style="display: none;">
+			<li data-path="/purchased-images/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/purchased-images/get">
+					/purchased-images
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-usage" data-path="/api/docs/v3/usage">
+		<a href="/api/docs/v3/usage">/Usage</a>
+		<ul style="display: none;">
+			<li data-path="/usage-batches/id/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/usage-batches/id/put">
+					/usage-batches/id
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetchanges" data-path="/api/docs/v3/assetchanges">
+		<a href="/api/docs/v3/assetchanges">/AssetChanges</a>
+		<ul style="display: none;">
+			<li data-path="/asset-changes/change-sets/put">
+				<span class="label label-default">PUT</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/put">
+					/asset-changes/change-sets
+				</a>
+			</li>
+			<li data-path="/asset-changes/change-sets/change-set-id/delete">
+				<span class="label label-default">DELETE</span> 
+				<a href="/api/docs/v3/asset-changes/change-sets/change-set-id/delete">
+					/asset-changes/change-sets/change-set-id
+				</a>
+			</li>
+			<li data-path="/asset-changes/channels/get">
+				<span class="label label-default">GET</span> 
+				<a href="/api/docs/v3/asset-changes/channels/get">
+					/asset-changes/channels
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>				
+
+			</div>
+		
+			<div class="col-md-9 docs-content category-content">
+				
+				<h2 id="getcollections">GetCollections</h2>
+<p>At Getty Images, collections contain a set of images. The GetCollections request returns a list of collections that are configured for the authenticated user or application.</p>
+<h3 id="endpoint">Endpoint</h3>
+<p>Use the following endpoint to access this operation:</p>
+<pre><code>http://connect.gettyimages.com/v1/data/GetCollections
+</code></pre><h3 id="request">Request</h3>
+<p>The GetCollections JSON request has this format:</p>
+<pre><code>{
+  &quot;RequestHeader&quot;: {
+    &quot;Token&quot;: &quot;&quot;,
+    &quot;CoordinationId&quot;: &quot;&quot;
+  }
+}
+</code></pre><h4 id="requestheader-fields">RequestHeader Fields</h4>
+<p>The RequestHeader specifies metadata about the request.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Use</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Token</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Required</td>
+<td style="text-align:left">Specify the authentication token provided by <a href="../oauth2">OAuth</a> or <a href="/api/docs/v2/endpoints/session/createsession.html">CreateSession</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left">CoordinationId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Optional</td>
+<td style="text-align:left">Specify a value to echo in the response to track requests and their associated responses.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>The GetCollections JSON response has this format:</p>
+<pre><code>{
+  &quot;ResponseHeader&quot;: {
+    &quot;Status&quot;: &quot;&quot;,
+    &quot;StatusList&quot;: [
+      {
+        &quot;Type&quot;: &quot;&quot;,
+        &quot;Code&quot;: &quot;&quot;,
+        &quot;Message&quot;: &quot;&quot;
+      }
+    ],
+    &quot;CoordinationId&quot;: &quot;&quot;
+  },
+  &quot;GetCollectionsResult&quot;: {
+    &quot;Collections&quot;: [
+      {
+        &quot;CollectionName&quot;: &quot;&quot;,
+        &quot;ImageFamily&quot;: &quot;&quot;,
+        &quot;LicenseModel&quot;: &quot;&quot;,
+        &quot;CollectionId&quot;: int,
+        &quot;ApplicableProductOfferings&quot;: [&quot;&quot;]
+      }
+    ]
+  }
+}
+</code></pre><h4 id="responseheader-fields">ResponseHeader Fields</h4>
+<p>The ResponseHeader contains metadata about the operation execution and response.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Status</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the overall operation processing status notification. Possible values are: <br>• Success <br>• Error <br>• Warning</td>
+</tr>
+<tr>
+<td style="text-align:left">StatusList</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains a <em>Status</em> entry for each detailed processing status notification.</td>
+</tr>
+<tr>
+<td style="text-align:left">Status <em>entry</em></td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">Contains the details of a status notification</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Status</em>.Type</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the type, or severity, of the status notification. Possible values are: <br>• Information <br>• Warning <br>• Error</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Status</em>.Code</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Identifies the category of the status notification. See <a href="/api/docs/v2/appendix/statuscodes.html">StatusCodes</a> for explanations of the codes.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Status</em>.Message</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Provides a human readable explanation of the status.</td>
+</tr>
+<tr>
+<td style="text-align:left">CoordinationId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Indicates the CoordinationId value provided in the triggering request.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="getcollectionsresult-fields">GetCollectionsResult Fields</h4>
+<p>The GetCollectionsResult contains the response data.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Collections</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains a list of <em>Collection</em> results for the query.</td>
+</tr>
+<tr>
+<td style="text-align:left">Collection <em>entry</em></td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">The Collection object that contains the name, image family, licence type, id, and product offerings of the collection.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Collection</em>.CollectionName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Contains the name of the collection.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Collection</em>.ImageFamily</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Contains the image family of the collection. Example: &quot;Creative&quot;.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Collection</em>.LicenseModel</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Contains the abbreviation of the license model for the collection. Example: &quot;RF&quot;.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Collection</em>.CollectionId</td>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">Contains id of the collection. Example: 100.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>Collection</em>.ApplicableProductOfferings</td>
+<td style="text-align:left">Collection</td>
+<td style="text-align:left">Contains a list of product offerings to which the collection belongs. Possible values are: <br>• PremiumAccess <br>• EasyAccess <br>• EditorialSubscription <br>• RoyaltyFreeSubscription <br>• ImagePack</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workflow-example">Workflow Example</h3>
+<ol>
+<li>Call <a href="../oauth2">OAuth</a> or <a href="/api/docs/v2/endpoints/session/createsession.html">CreateSession</a> to create an authentication token.</li>
+<li>Call GetCollections to returns a list of collections that are configured for the authenticated user or application.</li>
+</ol>
+
+			</div>
+		</div>
+
+	</div>
+   <script type="text/javascript">
+       $(function () {
+            $("[data-path='/api/docs/v2/endpoints/data']").find("ul").show();
+			$('#menu').slicknav();
+       })
+   </script>
+</body>
+
+</html>

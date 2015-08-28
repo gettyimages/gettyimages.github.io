@@ -20,13 +20,13 @@
     <div class="slice group">
       <div class="col length-4-of-4 logo"><a href="/en/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a>
         <ul class="nav-items site-nav-desktop">
-          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
           <li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=/en/getting-started.html>Getting Started</a></li>
         </ul>
         <ul id=menu class=site-nav-mobile>
-          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=https://github.com/gettyimages/gettyimages-api>Docs</a></li>
+          <li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=/api/docs>Docs</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a></li>
           <li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=/en/getting-started.html>Getting Started</a></li>
@@ -242,17 +242,6 @@
 			</li>
 		</ul>
 	</li>
-	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
-		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
-		<ul style="display: none;">
-			<li data-path="/asset-registrations/post">
-				<span class="label label-default">POST</span> 
-				<a href="/api/docs/v3/asset-registrations/post">
-					/asset-registrations
-				</a>
-			</li>
-		</ul>
-	</li>
 	<li class="nav-usage" data-path="/api/docs/v3/usage">
 		<a href="/api/docs/v3/usage">/Usage</a>
 		<ul style="display: none;">
@@ -287,13 +276,25 @@
 			</li>
 		</ul>
 	</li>
+	<li class="nav-assetregistration" data-path="/api/docs/v3/assetregistration">
+		<a href="/api/docs/v3/assetregistration">/AssetRegistration</a>
+		<ul style="display: none;">
+			<li data-path="/asset-registrations/post">
+				<span class="label label-default">POST</span> 
+				<a href="/api/docs/v3/asset-registrations/post">
+					/asset-registrations
+				</a>
+			</li>
+		</ul>
+	</li>
 </ul>				
 
 			</div>
 		
 			<div class="col-md-9 docs-content">
 				<ul class="breadcrumb">
-					<li><a href="/api/">API Docs</a></li>
+					<li><a href="/api/">API</a></li>
+					<li><a href="/api/docs/">API Docs</a></li>
 					<li><a href="/api/docs/v3/">v3</a></li>
 					<li><a href="/api/docs/v3/boards/">Boards</a></li>
 					<li><a href="/api/docs/v3/boards/board_id/get">Get Single Board</a></li>
@@ -306,7 +307,7 @@
 					This endpoint is currently in <strong>BETA</strong>. 
 				</div>
 				
-				<a target="_blank" class="btn btn-primary pull-right btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_GetBoard">Experiment with this API</a>
+				<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_GetBoard">Experiment with this API</a>
 				
 				<h1 id="boards-get-board">Boards - Get Board</h1>
 <p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to retrieve a Board by a specific id. </p>
@@ -411,7 +412,8 @@ Authorization: Bearer &lt;your secure access token&gt;
 					</tr>
 				</table>
 				
-				
+				<h3 id="querystring-parameters">Querystring Parameters</h3>
+
 				
 
 				
@@ -420,8 +422,7 @@ Authorization: Bearer &lt;your secure access token&gt;
 				
 				
 
-				<h3 id="filters">Filters</h3>
-
+				
 				
 				<table class="table table-striped">
 					<tr>
@@ -435,8 +436,26 @@ Authorization: Bearer &lt;your secure access token&gt;
 					</tr>
 				</table>
 				
+				<h3 id="http-response-codes">Http Response Codes</h3>
+
 				
-				
+				<table class="table table-striped">
+					<tr>
+						<td>200</td>
+						<td>success</td>
+						<td>Returned when the request has been successfully processed.</td>
+					</tr>
+					<tr>
+						<td>401</td>
+						<td>user_token_required</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>404</td>
+						<td>board not found</td>
+						<td>Returned when a <code>board_id</code> is not found.</td>
+					</tr>
+				</table>
 
 				
 				
