@@ -412,9 +412,9 @@
 <li><p>The API verifies the client and user credentials and then redirects to the client application with a long-lived access token.</p>
 </li>
 </ol>
-<h5 id="example-request-">Example request:</h5>
+<p>#####Example request:</p>
 <pre><code>    GET https://api.gettyimages.com/oauth2/auth/?response_type=token&amp;client_id=s6BhdRkqt3&amp;state=xyz&amp;redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
-</code></pre><h5 id="example-response-">Example response:</h5>
+</code></pre><p>#####Example response:</p>
 <pre><code>    HTTP/1.1 302 Found
     Location: https://client.example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA&amp;state=xyz&amp;token_type=bearer
 </code></pre><h4 id="token-expiration-and-revocation">Token Expiration and Revocation</h4>
@@ -448,13 +448,13 @@
 <li>The access token is good for 30 minutes</li>
 <li>The refresh token is good for one year and can be used to retrieve another 30-minute access token by calling the token endpoint with a grant type of &#39;refresh_token&#39;.</li>
 </ul>
-<h5 id="example-request-">Example request:</h5>
+<p>#####Example request:</p>
 <pre><code>    POST /token HTTPS/1.1
     Host: api.gettyimages.com/oauth2/token/
     Content-Type: application/x-www-form-urlencoded
 
     client_id=TestClientId&amp;client_secret=TestSecret&amp;grant_type=password&amp;username=johndoe&amp;password=A3ddj3w
-</code></pre><h5 id="example-response-">Example response:</h5>
+</code></pre><p>#####Example response:</p>
 <pre><code>    HTTPS/1.1 200 OK
     Content-Type: application/json;charset=UTF-8
     Cache-Control: no-store
@@ -466,7 +466,7 @@
             &quot;expires_in&quot;:1800,
             &quot;refresh_token&quot;:&quot;tGzv3JOkF0XG5Qx2TlKWIA&quot;
     }
-</code></pre><h5 id="example-refresh-request-">Example refresh request:</h5>
+</code></pre><p>#####Example refresh request:</p>
 <pre><code>    POST /token HTTPS/1.1
     Host: api.gettyimages.com/oauth2/token/
     Content-Type: application/x-www-form-urlencoded
@@ -495,13 +495,13 @@
 </li>
 </ol>
 <p>Note: The access token is good for 30 minutes</p>
-<h5 id="example-request-">Example request:</h5>
+<p>#####Example request:</p>
 <pre><code>    POST /token HTTPS/1.1
     Host: api.gettyimages.com/oauth2/token/
     Content-Type: application/x-www-form-urlencoded
 
     client_id=TestClientId&amp;client_secret=TestSecret&amp;grant_type=client_credentials
-</code></pre><h5 id="example-response-">Example response:</h5>
+</code></pre><p>#####Example response:</p>
 <pre><code>    HTTPS/1.1 200 OK
     Content-Type: application/json;charset=UTF-8
     Cache-Control: no-store

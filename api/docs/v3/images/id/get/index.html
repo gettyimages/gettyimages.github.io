@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Get Metadata for Image | Getty Images API v3 Documentation</title>
+	<title>Get Metadata for Single Image | Getty Images API v3 Documentation</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/docs.css">
@@ -297,13 +297,510 @@
 					<li><a href="/api/docs/">API Docs</a></li>
 					<li><a href="/api/docs/v3/">v3</a></li>
 					<li><a href="/api/docs/v3/images/">Images Metadata</a></li>
-					<li><a href="/api/docs/v3/images/id/get/">Get Metadata for Image</a></li>
+					<li><a href="/api/docs/v3/images/id/get/">Get Metadata for Single Image</a></li>
 				</ul>
 				
 				
-				<div class="alert alert-warning">
-					Documentation for this endpoint is coming soon.
-				</div>				
+
+				
+				<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Images/Images_Get">Experiment with this API</a>
+				
+				<h1 id="get-metadata-for-single-image">Get Metadata for Single Image</h1>
+<p>This endpoint returns the detailed image metadata for a specified image. Due to a wide variety of available image resolutions, the images are grouped into a handful of size categories for simplicity. </p>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
+There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
+<p>Use the following endpoint to retrieve metadata for a single image:</p>
+<pre><code>GET https://api.gettyimages.com/3.0/image?id=&lt;asset id&gt;
+</code></pre><p>Add your API key to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/3.0/images?ids=&lt;asset id&gt;
+</code></pre><p>Your response will look like this:    </p>
+<pre><code>{
+  &quot;images&quot;: [
+    {
+      &quot;id&quot;: &quot;&lt;asset id&gt;&quot;,
+      &quot;artist&quot;: &quot;GK Hart/Vikki Hart&quot;,
+      &quot;asset_family&quot;: &quot;creative&quot;,
+      &quot;caption&quot;: null,
+      &quot;collection_code&quot;: &quot;PDI&quot;,
+      &quot;collection_id&quot;: 2,
+      &quot;collection_name&quot;: &quot;Photodisc&quot;,
+      &quot;license_model&quot;: &quot;royaltyfree&quot;,
+      &quot;max_dimensions&quot;: {
+        &quot;height&quot;: 4094,
+        &quot;width&quot;: 4094
+      },
+      &quot;title&quot;: &quot;Kitten&quot;
+    }
+  ],
+  &quot;images_not_found&quot;: [
+
+  ]
+}
+</code></pre>
+				
+				<h3 id="http-headers">Http Headers</h3>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>Api-Key</td>
+						<td>string</td>
+						<td>
+							Api-Key
+							Required. 
+							
+						</td>
+					</tr>
+					<tr>
+						<td>Accept-Language</td>
+						<td>string</td>
+						<td>
+							Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
+							 
+							
+						</td>
+					</tr>
+					<tr>
+						<td>Authorization</td>
+						<td>string</td>
+						<td>
+							Authorization token optional. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
+							 
+							
+						</td>
+					</tr>
+				</table>
+				
+				
+				
+
+				<h3 id="fields">Fields</h3>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>allowed_use</td>
+						<td>
+							Communicates licensing information to customers who make one-off image purchases. Most API customers access images through their agreements and do not need to consult this field.
+						</td>
+					</tr>
+					<tr>
+						<td>alternative_ids</td>
+						<td>
+							Identifies the synonym ids for the asset.
+						</td>
+					</tr>
+					<tr>
+						<td>artist</td>
+						<td>
+							Identifies the creator of the asset.
+						</td>
+					</tr>
+					<tr>
+						<td>artist_title</td>
+						<td>
+							Indicates the image title given by the artist.
+						</td>
+					</tr>
+					<tr>
+						<td>asset_family</td>
+						<td>
+							Specifies the asset family filter to apply to the search results. The possible values are: 
+							<span class="label label-default">Creative</span>
+							<span class="label label-default">Editorial</span>
+						</td>
+					</tr>
+					<tr>
+						<td>call_for_image</td>
+						<td>
+							Indicates that you must call your Getty Images sales rep to obtain access to high res files for this image. This image is not available for online download.
+						</td>
+					</tr>
+					<tr>
+						<td>caption</td>
+						<td>
+							A brief description of the asset.
+						</td>
+					</tr>
+					<tr>
+						<td>city</td>
+						<td>
+							Indicates the city where the image was created.
+						</td>
+					</tr>
+					<tr>
+						<td>collection_code</td>
+						<td>
+							A three-letter code identifying the collection.
+						</td>
+					</tr>
+					<tr>
+						<td>collection_id</td>
+						<td>
+							Identifies the collection to which the asset belongs.
+						</td>
+					</tr>
+					<tr>
+						<td>collection_name</td>
+						<td>
+							Identifies the name of the collection to which the asset belongs.
+						</td>
+					</tr>
+					<tr>
+						<td>color_type</td>
+						<td>
+							Indicates if the asset is color, or black and white. The possible values are:
+							<span class="label label-default">Color</span>
+							<span class="label label-default">Black/White</span>
+						</td>
+					</tr>
+					<tr>
+						<td>comp</td>
+						<td>
+							Large display size; sized for layout composition. Comp images are larger than preview and thumbnail, but not full sized, averaging about 600 pixels on the longest side.
+						</td>
+					</tr>
+					<tr>
+						<td>copyright</td>
+						<td>
+							Identifies asset copyright.
+						</td>
+					</tr>
+					<tr>
+						<td>country</td>
+						<td>
+							Indicates the country where the image was created.
+						</td>
+					</tr>
+					<tr>
+						<td>credit_line</td>
+						<td>
+							Indicates the credit line of the image.
+						</td>
+					</tr>
+					<tr>
+						<td>date_created</td>
+						<td>
+							Identifies the creation date of the asset.
+						</td>
+					</tr>
+					<tr>
+						<td>date_submitted</td>
+						<td>
+							dentifies the date the image was created. 
+						</td>
+					</tr>
+					<tr>
+						<td>detail_set</td>
+						<td>
+							A collection of metadata fields commonly used for displaying information in a search results based experience.
+						</td>
+					</tr>
+					<tr>
+						<td>display_set</td>
+						<td>
+							A collection of metadata fields that includes detailed information about each asset.
+						</td>
+					</tr>
+					<tr>
+						<td>download_sizes</td>
+						<td>
+							Contains an array of downloadable image sizes available for the current user.
+						</td>
+					</tr>
+					<tr>
+						<td>downloads</td>
+						<td>
+							Adds an element under download_sizes that contains a uri to download as asset.
+						</td>
+					</tr>
+					<tr>
+						<td>editorial_segments</td>
+						<td>
+							Indicates the editorial category to which the asset belongs, if the image is in the editorial image family. Possible values are: 
+							<span class="label label-default">News</span>
+							<span class="label label-default">Sports</span>
+							<span class="label label-default">Entertainment</span>
+							<span class="label label-default">Fashion</span>
+							<span class="label label-default">Celebrity portraiture</span>
+							<span class="label label-default">Royals</span>
+							<span class="label label-default">Premium photojournalism</span>
+							<span class="label label-default">Video</span>
+						</td>
+					</tr>
+					<tr>
+						<td>event_ids</td>
+						<td>
+							Specifies the ID of an event associated with the asset. Only relevant for Editorial images.
+						</td>
+					</tr>
+					<tr>
+						<td>graphical_style</td>
+						<td>
+							Indicates the graphic style of the asset. The possible values are:
+							<span class="label label-default">Photograph</span>
+							<span class="label label-default">Illustration</span>
+						</td>
+					</tr>
+					<tr>
+						<td>id</td>
+						<td>
+							A unique alphanumeric string that identifies the asset.
+						</td>
+					</tr>
+					<tr>
+						<td>keywords</td>
+						<td>
+							Identifies the keyword and the type of keyword. The possible values are:
+							<span class="label label-default">Unknown</span>
+							<span class="label label-default">Specific people</span>
+							<span class="label label-default">Ethnicity</span>
+							<span class="label label-default">Age</span>
+							<span class="label label-default">Gender</span>
+							<span class="label label-default">Number of people</span>
+							<span class="label label-default">Concept</span>
+							<span class="label label-default">Location</span>
+							<span class="label label-default">Viewpoint</span>
+							<span class="label label-default">Image technique</span>
+							<span class="label label-default">Composition</span>
+							<span class="label label-default">Color</span>
+							<span class="label label-default">Additional info</span>
+							<span class="label label-default">Candidate term</span>
+							<span class="label label-default">Fashion phrases</span>
+							<span class="label label-default">Entertainment</span>
+						</td>
+					</tr>
+					<tr>
+						<td>largest_downloads</td>
+						<td>
+							Returns download uris to the largest available size.
+						</td>
+					</tr>
+					<tr>
+						<td>license_model</td>
+						<td>
+							Identifies a licensing model for the asset. The possible values are:
+							<span class="label label-default">RoyaltyFree</span>
+							<span class="label label-default">RightsManaged</span>
+						</td>
+					</tr>
+					<tr>
+						<td>links</td>
+						<td>
+							Contains hypermedia links for the specified asset ids.
+						</td>
+					</tr>
+					<tr>
+						<td>max_dimensions</td>
+						<td>
+							Pixel dimensions of the largest available file.
+						</td>
+					</tr>
+					<tr>
+						<td>orientation</td>
+						<td>
+							Specifies orientation of assets returned in search results. The possible values are:
+							<span class="label label-default">Horizontal</span>
+							<span class="label label-default">Vertical</span>
+							<span class="label label-default">PanoramicHorizontal</span>
+							<span class="label label-default">PanoramicVertical</span>
+							<span class="label label-default">Square</span>
+						</td>
+					</tr>
+					<tr>
+						<td>people</td>
+						<td>
+							Specifies the names of people in assets returned in search results.
+						</td>
+					</tr>
+					<tr>
+						<td>prestige</td>
+						<td>
+							Indicates if an asset is a prestige image.
+						</td>
+					</tr>
+					<tr>
+						<td>preview</td>
+						<td>
+							Medium display size; sized for popup previews. Preview images are larger than thumbnail but smaller than comp, and are about 270 px on the longest side.
+						</td>
+					</tr>
+					<tr>
+						<td>product_types</td>
+						<td>
+							Identifies a customer’s product offering that authorizes access to an asset. The possible values are:
+							<span class="label label-default">easyaccess</span>
+							<span class="label label-default">editorialsubscription</span>
+							<span class="label label-default">premiumaccess</span>
+							<span class="label label-default">royaltyfreesubscription</span>
+							<span class="label label-default">imagepack</span>
+						</td>
+					</tr>
+					<tr>
+						<td>quality_rank</td>
+						<td>
+							Indicates the image quality. Possible values are 0 - 4.
+						</td>
+					</tr>
+					<tr>
+						<td>referral_destinations</td>
+						<td>
+							Contains a ReferralDestination entry for each of the sites on which the asset can be found.
+						</td>
+					</tr>
+					<tr>
+						<td>state_province</td>
+						<td>
+							Indicates the state or province where the image was created.
+						</td>
+					</tr>
+					<tr>
+						<td>summary_set</td>
+						<td>
+							A collection of metadata fields commonly used for displaying information in a search results based experience.
+						</td>
+					</tr>
+					<tr>
+						<td>thumb</td>
+						<td>
+							Smallest display size; sized for a results grid. Thumbnail images are smaller than preview and comp, and have a dimension of 170 pixels on the longest side.
+						</td>
+					</tr>
+					<tr>
+						<td>title</td>
+						<td>
+							Indicates the title of the asset.
+						</td>
+					</tr>
+					<tr>
+						<td>uri_oembed</td>
+						<td>
+							Identifies a URI that can be used to get oEmbed data for the asset. Please note that this will only be populated for embeddable assets. See our oEmbed documentation for more information.
+						</td>
+					</tr>
+				</table>
+				
+				<h3 id="fieldsets">Fieldsets</h3>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>detail_set<td>
+						<td>
+							
+								<span class="label label-default">allowed_use</span>
+								<span class="label label-default">artist</span>
+								<span class="label label-default">call_for_image</span>
+								<span class="label label-default">caption</span>
+								<span class="label label-default">collection_id</span>
+								<span class="label label-default">collection_code</span>
+								<span class="label label-default">collection_name</span>
+								<span class="label label-default">copyright</span>
+								<span class="label label-default">date_created</span>
+								<span class="label label-default">editorial_segments</span>
+								<span class="label label-default">event_ids</span>
+								<span class="label label-default">graphical_style</span>
+								<span class="label label-default">asset_family</span>
+								<span class="label label-default">license_model</span>
+								<span class="label label-default">max_dimensions</span>
+								<span class="label label-default">orientation</span>
+								<span class="label label-default">referral_destinations</span>
+								<span class="label label-default">title</span>
+								<span class="label label-default">preview</span>
+								<span class="label label-default">product_types</span>
+								<span class="label label-default">quality_rank</span>
+								<span class="label label-default">thumb</span>
+								<span class="label label-default">comp</span>
+						</td>
+					</tr>
+					<tr>
+						<td>display_set<td>
+						<td>
+							
+								<span class="label label-default">preview</span>
+								<span class="label label-default">comp</span>
+								<span class="label label-default">thumb</span>
+								<span class="label label-default">high_res_comp</span>
+						</td>
+					</tr>
+					<tr>
+						<td>summary_set<td>
+						<td>
+							
+								<span class="label label-default">asset_family</span>
+								<span class="label label-default">caption</span>
+								<span class="label label-default">collection_id</span>
+								<span class="label label-default">collection_code</span>
+								<span class="label label-default">license_model</span>
+								<span class="label label-default">max_dimensions</span>
+								<span class="label label-default">thumb</span>
+								<span class="label label-default">title</span>
+						</td>
+					</tr>
+				</table>
+
+				<h3 id="filters">Filters</h3>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>id</td>
+						<td>string</td>
+						<td>
+							An image id. For more than one image please use the /v3/images endpoint. 
+							Required. 
+							
+						</td>
+					</tr>
+				</table>
+				
+				<h3 id="http-response-codes">Http Response Codes</h3>
+
+				
+				<table class="table table-striped">
+					<tr>
+						<td>400</td>
+						<td>InvalidPageSize</td>
+						<td>Received if <code>page_size</code> is greater than 100.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>InvalidPage</td>
+						<td>Received if <code>page</code> is less than zero or greater than the number of pages in the search results.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>InvalidParameterValue</td>
+						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>MalformedRequest</td>
+						<td>Received when a potentially malicious input string is received from the client as part of the request data.</td>
+					</tr>
+					<tr>
+						<td>401</td>
+						<td>AuthorizationTokenRequired</td>
+						<td>Received when <code>largest_download</code> is added to the <code>fields</code> query string parameter and the <code>Authorization</code> header is missing or contains an invalid token.</td>
+					</tr>
+					<tr>
+						<td>403</td>
+						<td>UnauthorizedDisplaySize</td>
+						<td>Received when <code>high_res_comp</code> is requested but not authorized for the given authorization token.</td>
+					</tr>
+					<tr>
+						<td>404</td>
+						<td>ImageNotFound</td>
+						<td></td>
+					</tr>
+				</table>
+
+				
+				
+				
 				
 
 			</div>
