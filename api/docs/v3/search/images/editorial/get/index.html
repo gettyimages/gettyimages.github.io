@@ -1028,13 +1028,23 @@ To include your API token in the search request, add it to the headers as a Bear
 				<table class="table table-striped">
 					<tr>
 						<td>400</td>
-						<td>InvalidParameterValue</td>
-						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
+						<td>InvalidPageSize</td>
+						<td>Received if <code>page_size</code> is greater than 100.</td>
 					</tr>
 					<tr>
 						<td>400</td>
 						<td>UnknownProviderUri</td>
 						<td>Received when an unknown provider uri is passed to <code>entity_uris</code>.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>InvalidPage</td>
+						<td>Received if <code>page</code> is less than zero or greater than the number of pages in the search results.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>InvalidParameterValue</td>
+						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
 					</tr>
 					<tr>
 						<td>400</td>
@@ -1045,16 +1055,6 @@ To include your API token in the search request, add it to the headers as a Bear
 						<td>400</td>
 						<td>MalformedRequest</td>
 						<td>Received when a potentially malicious input string is received from the client as part of the request data.</td>
-					</tr>
-					<tr>
-						<td>400</td>
-						<td>InvalidPage</td>
-						<td>Received if <code>page</code> is less than zero or greater than the number of pages in the search results.</td>
-					</tr>
-					<tr>
-						<td>400</td>
-						<td>InvalidPageSize</td>
-						<td>Received if <code>page_size</code> is greater than 100.</td>
 					</tr>
 					<tr>
 						<td>401</td>

@@ -734,13 +734,8 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 				<table class="table table-striped">
 					<tr>
 						<td>400</td>
-						<td>InvalidPageSize</td>
-						<td>Received if <code>page_size</code> is greater than 100.</td>
-					</tr>
-					<tr>
-						<td>400</td>
-						<td>InvalidPage</td>
-						<td>Received if <code>page</code> is less than zero or greater than the number of pages in the search results.</td>
+						<td>ImageIdMustBeSpecified</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>400</td>
@@ -751,6 +746,16 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 						<td>400</td>
 						<td>MalformedRequest</td>
 						<td>Received when a potentially malicious input string is received from the client as part of the request data.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>InvalidPage</td>
+						<td>Received if <code>page</code> is less than zero or greater than the number of pages in the search results.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>InvalidPageSize</td>
+						<td>Received if <code>page_size</code> is greater than 100.</td>
 					</tr>
 					<tr>
 						<td>401</td>
