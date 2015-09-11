@@ -1028,13 +1028,8 @@ To include your API token in the search request, add it to the headers as a Bear
 				<table class="table table-striped">
 					<tr>
 						<td>400</td>
-						<td>InvalidPageSize</td>
-						<td>Received if <code>page_size</code> is greater than 100.</td>
-					</tr>
-					<tr>
-						<td>400</td>
-						<td>UnknownProviderUri</td>
-						<td>Received when an unknown provider uri is passed to <code>entity_uris</code>.</td>
+						<td>InvalidParameterValue</td>
+						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
 					</tr>
 					<tr>
 						<td>400</td>
@@ -1043,8 +1038,13 @@ To include your API token in the search request, add it to the headers as a Bear
 					</tr>
 					<tr>
 						<td>400</td>
-						<td>InvalidParameterValue</td>
-						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
+						<td>InvalidPageSize</td>
+						<td>Received if <code>page_size</code> is greater than 100.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>UnknownProviderUri</td>
+						<td>Received when an unknown provider uri is passed to <code>entity_uris</code>.</td>
 					</tr>
 					<tr>
 						<td>400</td>
