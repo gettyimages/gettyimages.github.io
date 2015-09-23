@@ -1022,11 +1022,6 @@ To include your API token in the search request, add it to the headers as a Bear
 				<table class="table table-striped">
 					<tr>
 						<td>400</td>
-						<td>InvalidParameterValue</td>
-						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
-					</tr>
-					<tr>
-						<td>400</td>
 						<td>InvalidPage</td>
 						<td>Received if <code>page</code> is less than zero or greater than the number of pages in the search results.</td>
 					</tr>
@@ -1044,6 +1039,11 @@ To include your API token in the search request, add it to the headers as a Bear
 						<td>400</td>
 						<td>IncorrectlyFormedUri</td>
 						<td>Received when an incorrectly formatted provider uri is passed to <code>entity_uris</code>.</td>
+					</tr>
+					<tr>
+						<td>400</td>
+						<td>InvalidParameterValue</td>
+						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
 					</tr>
 					<tr>
 						<td>400</td>

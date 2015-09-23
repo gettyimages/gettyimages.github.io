@@ -305,11 +305,11 @@
 <p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
 There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
 <p>Use the following endpoint to search for similar images:</p>
-<pre><code>GET https://api.gettyimages.com/3.0/images/&lt;asset id&gt;/similar
+<pre><code>GET https://api.gettyimages.com/v3/images/&lt;asset id&gt;/similar
 </code></pre><p>Add your API key to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
 </code></pre><p>Your request would look like this using curl:</p>
-<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/3.0/images/&lt;asset id&gt;/similar
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/v3/images/&lt;asset id&gt;/similar
 </code></pre><p>Your response will look like this:    </p>
 <pre><code>{
   &quot;result_count&quot;: 973,
@@ -728,11 +728,6 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 				<table class="table table-striped">
 					<tr>
 						<td>400</td>
-						<td>ImageIdMustBeSpecified</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>400</td>
 						<td>InvalidParameterValue</td>
 						<td>Received when an invalid querystring parameter is passed or an unknown value is specified for an enumerated type.</td>
 					</tr>
@@ -743,13 +738,18 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 					</tr>
 					<tr>
 						<td>400</td>
+						<td>InvalidPageSize</td>
+						<td>Received if <code>page_size</code> is greater than 100.</td>
+					</tr>
+					<tr>
+						<td>400</td>
 						<td>InvalidPage</td>
 						<td>Received if <code>page</code> is less than zero or greater than the number of pages in the search results.</td>
 					</tr>
 					<tr>
 						<td>400</td>
-						<td>InvalidPageSize</td>
-						<td>Received if <code>page_size</code> is greater than 100.</td>
+						<td>ImageIdMustBeSpecified</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td>401</td>
