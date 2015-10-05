@@ -1,20 +1,20 @@
 <html>
-<head>
-	<title>Download a Video | Getty Images API v3 Documentation</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/slicknav.css">
-    <link rel="stylesheet" href="/css/docs.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="/js/jquery.slicknav.js"></script>
-	<script src="/js/s_code.js"></script>
-	<script src="/js/analytics.js"></script>	
-	<script src="/js/docs.js"></script>
-</head>
-<body class="home dark-text">
-		
+	<head>
+		<title>Download a Video | Getty Images API v3 Documentation</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="/css/slicknav.css">
+	    <link rel="stylesheet" href="/css/docs.css">
+	    <link rel="stylesheet" href="/css/main.css">
+	    <link rel="stylesheet" href="/css/responsive.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="/js/jquery.slicknav.js"></script>
+		<script src="/js/s_code.js"></script>
+		<script src="/js/analytics.js"></script>
+		<script src="/js/docs.js"></script>
+	</head>
+	<body class="home dark-text">
+			
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,13 +35,10 @@
     </div>
   </div>
 </header>
-
-    <div class="container-fluid">
-
-		<div class="row-fluid">
-
-			<div class="col-md-3 left-doc-nav">
-				<ul class="nav nav-pills nav-stacked left-nav">
+	    <div class="container-fluid">
+			<div class="row-fluid">
+				<div class="col-md-3 left-doc-nav">
+					<ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -283,137 +280,116 @@
 	</li>
 </ul>
 
-			</div>
-		
-			<div class="col-md-9 docs-content">
-				<ul class="breadcrumb">
-					<li><a href="/api/">API</a></li>
-					<li><a href="/api/docs/">API Docs</a></li>
-					<li><a href="/api/docs/v3/">v3</a></li>
-					<li><a href="/api/docs/v3/downloads/">Downloads</a></li>
-					<li><a href="/api/docs/v3/downloads/videos/id/post/">Download a Video</a></li>
-				</ul>
-				
-				
-
-				
-				<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Downloads/Downloads_PostVideoDownloads">Experiment with this API</a>
-				
-				<h1 id="download-a-video">Download a Video</h1>
+				</div>
+				<div class="col-md-9 docs-content">
+					<ul class="breadcrumb">
+						<li><a href="/api/">API</a></li>
+						<li><a href="/api/docs/">API Docs</a></li>
+						<li><a href="/api/docs/v3/">v3</a></li>
+						<li><a href="/api/docs/v3/downloads/">Downloads</a></li>
+						<li><a href="/api/docs/v3/downloads/videos/id/post/">Download a Video</a></li>
+					</ul>
+						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Downloads/Downloads_PostVideoDownloads">Experiment with this API</a>
+						<h1 id="download-a-video">Download a Video</h1>
 <p>Use this endpoint to generate download URLs and related data for videos you are authorized to download.</p>
 <p>Most product offerings have enforced periodic download limits such as monthly, weekly, and daily. When this operation executes, the count of allowed downloads is decremented by one for the product offering. Once the download limit is reached for a given product offering, no further downloads may be requested for that product offering until the next download period.</p>
 <p>The download limit for a given download period is covered in your product agreement established with Getty Images.</p>
 
-				
-				<h3 id="http-headers">Http Headers</h3>
+						<h3 id="request-headers">Request Headers</h3>
 
-				
-				<table class="table table-striped">
-					<tr>
-						<td>Api-Key</td>
-						<td>string</td>
-						<td>
-							Api-Key
-							Required. 
-							
-						</td>
-					</tr>
-					<tr>
-						<td>Authorization</td>
-						<td>string</td>
-						<td>
-							Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
-							Required. 
-							
-						</td>
-					</tr>
-				</table>
-				
-				
-				
+							<table class="table table-striped">
+									<tr>
+										<td>Api-Key</td>
+										<td>string</td>
+										<td>
+											Provide your API key.
+											Required.
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Authorization</td>
+										<td>string</td>
+										<td>
+											Provide access token in the format of 'Bearer: {token}'.
+											Required.
+											
+										</td>
+									</tr>
+							</table>
+							<h3 id="uri-path-parameters">URI Path Parameters</h3>
 
-				
-				
-				
-				
-				
+							<table class="table table-striped">
+									<tr>
+										<td>id</td>
+										<td>string</td>
+										<td>
+											Id of video to download.
+											Required.
+										</td>
+									</tr>
+							</table>
+							<h3 id="query-string-parameters">Query String Parameters</h3>
 
-				<h3 id="querystring-parameters">Querystring Parameters</h3>
-
-				
-				<table class="table table-striped">
-					<tr>
-						<td>id</td>
-						<td>string</td>
-						<td>
-							Id of video to download. 
-							Required. 
-							
-						</td>
-					</tr>
-					<tr>
-						<td>auto_download</td>
-						<td>boolean</td>
-						<td>
-							Specifies whether to auto-download the video. If true is specified, a 303 SeeOther status is returned with a
+							<table class="table table-striped">
+								<tr>
+									<td>auto_download</td>
+									<td>boolean</td>
+									<td>
+										Specifies whether to auto-download the video. If true is specified, a 303 SeeOther status is returned with a
                     Location header set to the location of the video.
-                    If false is specified, the download URI will be returned in the response message. 
-							 
-							
-						</td>
-					</tr>
-					<tr>
-						<td>size</td>
-						<td>string</td>
-						<td>
-							Specifies the size to be downloaded. 
-							 
-							
-						</td>
-					</tr>
-				</table>
-				
-				<h3 id="http-response-codes">Http Response Codes</h3>
+                    If false is specified, the download URI will be returned in the response message.
+										
+										
+									</td>
+								</tr>
+								<tr>
+									<td>size</td>
+									<td>string</td>
+									<td>
+										Specifies the size to be downloaded.
+										
+										
+									</td>
+								</tr>
+							</table>
+							<h3 id="response-body-fields">Response Body Fields</h3>
 
-				
-				<table class="table table-striped">
-					<tr>
-						<td>401</td>
-						<td>NoAgreement</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>401</td>
-						<td>AuthorizationTokenRequired</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>401</td>
-						<td>NoDownloadAuthorization</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>404</td>
-						<td>VideoNotFound</td>
-						<td></td>
-					</tr>
-				</table>
+								<h4></h4>
+								<table class="table table-striped">
+								</table>
+							<h3 id="response-status-codes">Response Status Codes</h3>
 
-				
-				
-				
-				
-
+							<table class="table table-striped">
+								<tr>
+									<td>401</td>
+									<td>NoDownloadAuthorization</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>NoAgreement</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>AuthorizationTokenRequired</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>404</td>
+									<td>VideoNotFound</td>
+									<td></td>
+								</tr>
+							</table>
+				</div>
 			</div>
 		</div>
-
-	</div>
-   <script type="text/javascript">
-       $(function () {
-            $("[data-path='/downloads/videos/id/post']").addClass("active").parent().show();
-			$('#menu').slicknav();
-       })
-   </script>
-</body>
-
+	   <script type="text/javascript">
+	       $(function () {
+	            $("[data-path='/downloads/videos/id/post']").addClass("active").parent().show();
+				$('#menu').slicknav();
+	       })
+	   </script>
+	</body>
 </html>

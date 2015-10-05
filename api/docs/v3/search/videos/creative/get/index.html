@@ -1,20 +1,20 @@
 <html>
-<head>
-	<title>Search for Creative Videos | Getty Images API v3 Documentation</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/slicknav.css">
-    <link rel="stylesheet" href="/css/docs.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="/js/jquery.slicknav.js"></script>
-	<script src="/js/s_code.js"></script>
-	<script src="/js/analytics.js"></script>	
-	<script src="/js/docs.js"></script>
-</head>
-<body class="home dark-text">
-		
+	<head>
+		<title>Search for Creative Videos | Getty Images API v3 Documentation</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="/css/slicknav.css">
+	    <link rel="stylesheet" href="/css/docs.css">
+	    <link rel="stylesheet" href="/css/main.css">
+	    <link rel="stylesheet" href="/css/responsive.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="/js/jquery.slicknav.js"></script>
+		<script src="/js/s_code.js"></script>
+		<script src="/js/analytics.js"></script>
+		<script src="/js/docs.js"></script>
+	</head>
+	<body class="home dark-text">
+			
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,13 +35,10 @@
     </div>
   </div>
 </header>
-
-    <div class="container-fluid">
-
-		<div class="row-fluid">
-
-			<div class="col-md-3 left-doc-nav">
-				<ul class="nav nav-pills nav-stacked left-nav">
+	    <div class="container-fluid">
+			<div class="row-fluid">
+				<div class="col-md-3 left-doc-nav">
+					<ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -283,33 +280,487 @@
 	</li>
 </ul>
 
-			</div>
-		
-			<div class="col-md-9 docs-content">
-				<ul class="breadcrumb">
-					<li><a href="/api/">API</a></li>
-					<li><a href="/api/docs/">API Docs</a></li>
-					<li><a href="/api/docs/v3/">v3</a></li>
-					<li><a href="/api/docs/v3/search/">Search</a></li>
-					<li><a href="/api/docs/v3/search/videos/creative/get/">Search for Creative Videos</a></li>
-				</ul>
-				
-				
-				<div class="alert alert-warning">
-					Documentation for this endpoint is coming soon.
-				</div>				
-				
+				</div>
+				<div class="col-md-9 docs-content">
+					<ul class="breadcrumb">
+						<li><a href="/api/">API</a></li>
+						<li><a href="/api/docs/">API Docs</a></li>
+						<li><a href="/api/docs/v3/">v3</a></li>
+						<li><a href="/api/docs/v3/search/">Search</a></li>
+						<li><a href="/api/docs/v3/search/videos/creative/get/">Search for Creative Videos</a></li>
+					</ul>
+						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Search/Search_GetCreativeVideosByPhrase">Experiment with this API</a>
+						<p>Get Creative Videos</p>
 
+						<h3 id="request-headers">Request Headers</h3>
+
+							<table class="table table-striped">
+									<tr>
+										<td>Api-Key</td>
+										<td>string</td>
+										<td>
+											Provide your API key.
+											Required.
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Accept-Language</td>
+										<td>string</td>
+										<td>
+											Specifies the language of result values.
+											
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Authorization</td>
+										<td>string</td>
+										<td>
+											Provide access token in the format of 'Bearer: {token}'.
+											
+											
+										</td>
+									</tr>
+							</table>
+							<h3 id="query-string-parameters">Query String Parameters</h3>
+
+							<table class="table table-striped">
+								<tr>
+									<td>age_of_people</td>
+									<td>array</td>
+									<td>
+										Allows for filtering based on age of individuals in a video
+										
+										 Possible values: 
+										<span class="label label-default">newborn</span>
+										<span class="label label-default">baby</span>
+										<span class="label label-default">child</span>
+										<span class="label label-default">teenager</span>
+										<span class="label label-default">young_adult</span>
+										<span class="label label-default">adult</span>
+										<span class="label label-default">adults_only</span>
+										<span class="label label-default">mature_adult</span>
+										<span class="label label-default">senior_adult</span>
+										<span class="label label-default">0-1_months</span>
+										<span class="label label-default">2-5_months</span>
+										<span class="label label-default">6-11_months</span>
+										<span class="label label-default">12-17_months</span>
+										<span class="label label-default">18-23_months</span>
+										<span class="label label-default">2-3_years</span>
+										<span class="label label-default">4-5_years</span>
+										<span class="label label-default">6-7_years</span>
+										<span class="label label-default">8-9_years</span>
+										<span class="label label-default">10-11_years</span>
+										<span class="label label-default">12-13_years</span>
+										<span class="label label-default">14-15_years</span>
+										<span class="label label-default">16-17_years</span>
+										<span class="label label-default">18-19_years</span>
+										<span class="label label-default">20-24_years</span>
+										<span class="label label-default">20-29_years</span>
+										<span class="label label-default">25-29_years</span>
+										<span class="label label-default">30-34_years</span>
+										<span class="label label-default">30-39_years</span>
+										<span class="label label-default">35-39_years</span>
+										<span class="label label-default">40-44_years</span>
+										<span class="label label-default">40-49_years</span>
+										<span class="label label-default">45-49_years</span>
+										<span class="label label-default">50-54_years</span>
+										<span class="label label-default">50-59_years</span>
+										<span class="label label-default">55-59_years</span>
+										<span class="label label-default">60-64_years</span>
+										<span class="label label-default">60-69_years</span>
+										<span class="label label-default">65-69_years</span>
+										<span class="label label-default">70-79_years</span>
+										<span class="label label-default">80-89_years</span>
+										<span class="label label-default">90_plus_years</span>
+										<span class="label label-default">100_over</span>
+									</td>
+								</tr>
+								<tr>
+									<td>collection_codes</td>
+									<td>array</td>
+									<td>
+										Allows filtering by collection code.
+										
+										
+									</td>
+								</tr>
+								<tr>
+									<td>collections_filter_type</td>
+									<td>string</td>
+									<td>
+										Allows searching based on included or excluded collections.
+										
+										 Possible values: 
+										<span class="label label-default">include</span>
+										<span class="label label-default">exclude</span>
+									</td>
+								</tr>
+								<tr>
+									<td>exclude_nudity</td>
+									<td>boolean</td>
+									<td>
+										Exclude images tagged as containing nudity. The default is false.
+										
+										
+									</td>
+								</tr>
+								<tr>
+									<td>fields</td>
+									<td>array</td>
+									<td>
+										Comma separated list of fields. Allows restricting which fields are returned. If no fields are selected, the summary_set of fields are returned.
+										
+										 Possible values: 
+										<span class="label label-default">allowed_use</span>
+										<span class="label label-default">artist</span>
+										<span class="label label-default">asset_family</span>
+										<span class="label label-default">caption</span>
+										<span class="label label-default">clip_length</span>
+										<span class="label label-default">collection_code</span>
+										<span class="label label-default">collection_id</span>
+										<span class="label label-default">collection_name</span>
+										<span class="label label-default">color_type</span>
+										<span class="label label-default">comp</span>
+										<span class="label label-default">copyright</span>
+										<span class="label label-default">date_created</span>
+										<span class="label label-default">detail_set</span>
+										<span class="label label-default">display_set</span>
+										<span class="label label-default">era</span>
+										<span class="label label-default">id</span>
+										<span class="label label-default">largest_downloads</span>
+										<span class="label label-default">license_model</span>
+										<span class="label label-default">mastered_to</span>
+										<span class="label label-default">originally_shot_on</span>
+										<span class="label label-default">preview</span>
+										<span class="label label-default">product_types</span>
+										<span class="label label-default">shot_speed</span>
+										<span class="label label-default">source</span>
+										<span class="label label-default">summary_set</span>
+										<span class="label label-default">thumb</span>
+										<span class="label label-default">title</span>
+									</td>
+								</tr>
+								<tr>
+									<td>format_available</td>
+									<td>string</td>
+									<td>
+										Allows filtering by the digital video format available on a film asset, i.e. Standard Definition, High Definition, or 4k Ultra High Definition
+										
+										 Possible values: 
+										<span class="label label-default">sd</span>
+										<span class="label label-default">hd</span>
+										<span class="label label-default">4k</span>
+									</td>
+								</tr>
+								<tr>
+									<td>license_models</td>
+									<td>array</td>
+									<td>
+										Identifies a licensing model for the image.
+										
+										 Possible values: 
+										<span class="label label-default">rightsready</span>
+										<span class="label label-default">royaltyfree</span>
+									</td>
+								</tr>
+								<tr>
+									<td>phrase</td>
+									<td>string</td>
+									<td>
+										Free-text search query.
+										
+										
+									</td>
+								</tr>
+								<tr>
+									<td>product_types</td>
+									<td>array</td>
+									<td>
+										Allows filtering by a list of product types.
+										
+										 Possible values: 
+										<span class="label label-default">easyaccess</span>
+										<span class="label label-default">editorialsubscription</span>
+										<span class="label label-default">imagepack</span>
+										<span class="label label-default">premiumaccess</span>
+										<span class="label label-default">royaltyfreesubscription</span>
+									</td>
+								</tr>
+							</table>
+							<h3 id="sorting-and-pagination">Sorting and Pagination</h3>
+
+							<table class="table table-striped">
+								<tr>
+									<td>page</td>
+									<td>integer</td>
+									<td>
+										Page number.
+										
+										
+									</td>
+								</tr>
+								<tr>
+									<td>page_size</td>
+									<td>integer</td>
+									<td>
+										Size of page.
+										
+										
+									</td>
+								</tr>
+								<tr>
+									<td>sort_order</td>
+									<td>string</td>
+									<td>
+										Allows sorting of results.
+										
+										 Possible values: 
+										<span class="label label-default">best_match</span>
+										<span class="label label-default">newest</span>
+									</td>
+								</tr>
+							</table>
+							<h3 id="response-body-fields">Response Body Fields</h3>
+
+								<h4>creative_video_search_results</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">result_count</td>
+										<td width="20%">integer </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">videos</td>
+										<td width="20%">array [video_search_item] </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+								<h4>video_search_item</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">id</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">allowed_use</td>
+										<td width="20%"> </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">artist</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">asset_family</td>
+										<td width="20%">string </td>
+										<td width="60%">Indicates the asset family classification. Possible values are: creative, editorial</td>
+									</tr>
+									<tr>
+										<td width="20%">caption</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">clip_length</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">collection_id</td>
+										<td width="20%">integer </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">collection_code</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">collection_name</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">color_type</td>
+										<td width="20%">string </td>
+										<td width="60%">Indicates whether the image is color or black and white. Possible values are color, black_and_white, and null</td>
+									</tr>
+									<tr>
+										<td width="20%">copyright</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">date_created</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">display_sizes</td>
+										<td width="20%">array [display_size] </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">era</td>
+										<td width="20%">string </td>
+										<td width="60%">The era of the video. Possible values are: archival, contemporary, and null</td>
+									</tr>
+									<tr>
+										<td width="20%">largest_downloads</td>
+										<td width="20%">array [download] </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">license_model</td>
+										<td width="20%">string </td>
+										<td width="60%">Identifies a licensing model for the image. Possible values are: royaltyfree, rightsready</td>
+									</tr>
+									<tr>
+										<td width="20%">mastered_to</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">originally_shot_on</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">product_types</td>
+										<td width="20%">array [string] </td>
+										<td width="60%">License agreements for the video. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription</td>
+									</tr>
+									<tr>
+										<td width="20%">shot_speed</td>
+										<td width="20%">string </td>
+										<td width="60%">The speed the video was shot. Possible values are: real_time, slow_motion, time_lapse, and null</td>
+									</tr>
+									<tr>
+										<td width="20%">source</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">title</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+								<h4>allowed_use</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">how_can_i_use_it</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">release_info</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">usage_restrictions</td>
+										<td width="20%">array [string] </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+								<h4>display_size</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">is_watermarked</td>
+										<td width="20%">boolean </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">name</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">uri</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+								<h4>download</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">product_id</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">product_type</td>
+										<td width="20%">string </td>
+										<td width="60%">License agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox</td>
+									</tr>
+									<tr>
+										<td width="20%">uri</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+							<h3 id="response-status-codes">Response Status Codes</h3>
+
+							<table class="table table-striped">
+								<tr>
+									<td>400</td>
+									<td>InvalidParameterValue</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>400</td>
+									<td>InvalidPage</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>400</td>
+									<td>InvalidPageSize</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>400</td>
+									<td>UnknownProviderUri</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>400</td>
+									<td>IncorrectlyFormedUri</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>400</td>
+									<td>MalformedRequest</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>AuthorizationTokenRequired</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>403</td>
+									<td>UnauthorizedDisplaySize</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>403</td>
+									<td>NoAccessToProductType</td>
+									<td></td>
+								</tr>
+							</table>
+				</div>
 			</div>
 		</div>
-
-	</div>
-   <script type="text/javascript">
-       $(function () {
-            $("[data-path='/search/videos/creative/get']").addClass("active").parent().show();
-			$('#menu').slicknav();
-       })
-   </script>
-</body>
-
+	   <script type="text/javascript">
+	       $(function () {
+	            $("[data-path='/search/videos/creative/get']").addClass("active").parent().show();
+				$('#menu').slicknav();
+	       })
+	   </script>
+	</body>
 </html>

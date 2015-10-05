@@ -1,20 +1,20 @@
 <html>
-<head>
-	<title>Get Metadata for Single Event | Getty Images API v3 Documentation</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/slicknav.css">
-    <link rel="stylesheet" href="/css/docs.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="/js/jquery.slicknav.js"></script>
-	<script src="/js/s_code.js"></script>
-	<script src="/js/analytics.js"></script>	
-	<script src="/js/docs.js"></script>
-</head>
-<body class="home dark-text">
-		
+	<head>
+		<title>Get Metadata for Single Event | Getty Images API v3 Documentation</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="/css/slicknav.css">
+	    <link rel="stylesheet" href="/css/docs.css">
+	    <link rel="stylesheet" href="/css/main.css">
+	    <link rel="stylesheet" href="/css/responsive.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="/js/jquery.slicknav.js"></script>
+		<script src="/js/s_code.js"></script>
+		<script src="/js/analytics.js"></script>
+		<script src="/js/docs.js"></script>
+	</head>
+	<body class="home dark-text">
+			
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,13 +35,10 @@
     </div>
   </div>
 </header>
-
-    <div class="container-fluid">
-
-		<div class="row-fluid">
-
-			<div class="col-md-3 left-doc-nav">
-				<ul class="nav nav-pills nav-stacked left-nav">
+	    <div class="container-fluid">
+			<div class="row-fluid">
+				<div class="col-md-3 left-doc-nav">
+					<ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -283,33 +280,209 @@
 	</li>
 </ul>
 
-			</div>
-		
-			<div class="col-md-9 docs-content">
-				<ul class="breadcrumb">
-					<li><a href="/api/">API</a></li>
-					<li><a href="/api/docs/">API Docs</a></li>
-					<li><a href="/api/docs/v3/">v3</a></li>
-					<li><a href="/api/docs/v3/events/">Events Metadata</a></li>
-					<li><a href="/api/docs/v3/events/id/get/">Get Metadata for Single Event</a></li>
-				</ul>
-				
-				
-				<div class="alert alert-warning">
-					Documentation for this endpoint is coming soon.
-				</div>				
-				
+				</div>
+				<div class="col-md-9 docs-content">
+					<ul class="breadcrumb">
+						<li><a href="/api/">API</a></li>
+						<li><a href="/api/docs/">API Docs</a></li>
+						<li><a href="/api/docs/v3/">v3</a></li>
+						<li><a href="/api/docs/v3/events/">Events Metadata</a></li>
+						<li><a href="/api/docs/v3/events/id/get/">Get Metadata for Single Event</a></li>
+					</ul>
+						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Events/Events_Get">Experiment with this API</a>
+						<h1 id="get-metadata-for-single-event">Get Metadata for Single Event</h1>
 
+						<h3 id="request-headers">Request Headers</h3>
+
+							<table class="table table-striped">
+									<tr>
+										<td>Api-Key</td>
+										<td>string</td>
+										<td>
+											Provide your API key.
+											Required.
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Accept-Language</td>
+										<td>string</td>
+										<td>
+											Specifies the language of result values.
+											
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Authorization</td>
+										<td>string</td>
+										<td>
+											Provide access token in the format of 'Bearer: {token}'.
+											
+											
+										</td>
+									</tr>
+							</table>
+							<h3 id="uri-path-parameters">URI Path Parameters</h3>
+
+							<table class="table table-striped">
+									<tr>
+										<td>id</td>
+										<td>integer</td>
+										<td>
+											An event id.
+											Required.
+										</td>
+									</tr>
+							</table>
+							<h3 id="query-string-parameters">Query String Parameters</h3>
+
+							<table class="table table-striped">
+								<tr>
+									<td>fields</td>
+									<td>array</td>
+									<td>
+										A comma separated list of fields to return in the response.
+										
+										 Possible values: 
+										<span class="label label-default">id</span>
+										<span class="label label-default">child_event_count</span>
+										<span class="label label-default">editorial_segments</span>
+										<span class="label label-default">hero_image</span>
+										<span class="label label-default">image_count</span>
+										<span class="label label-default">location</span>
+										<span class="label label-default">name</span>
+										<span class="label label-default">start_date</span>
+										<span class="label label-default">type</span>
+									</td>
+								</tr>
+							</table>
+							<h3 id="response-body-fields">Response Body Fields</h3>
+
+								<h4>event</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">id</td>
+										<td width="20%">integer </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">child_event_count</td>
+										<td width="20%">integer </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">editorial_segments</td>
+										<td width="20%">array [string] </td>
+										<td width="60%">List of editorial segments for the image. Possible values are archival, entertainment, news, publicity, royalty, sport</td>
+									</tr>
+									<tr>
+										<td width="20%">hero_image</td>
+										<td width="20%"> </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">image_count</td>
+										<td width="20%">integer </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">location</td>
+										<td width="20%"> </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">name</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">start_date</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+								<h4>hero_image</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">id</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">display_sizes</td>
+										<td width="20%">array [hero_display_size] </td>
+										<td width="60%">Specifies the list of available display sizes.</td>
+									</tr>
+								</table>
+								<h4>hero_display_size</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">name</td>
+										<td width="20%">string </td>
+										<td width="60%">Identifies the name of the display size.</td>
+									</tr>
+									<tr>
+										<td width="20%">is_watermarked</td>
+										<td width="20%">boolean </td>
+										<td width="60%">Indicates whether the image is watermarked.</td>
+									</tr>
+									<tr>
+										<td width="20%">uri</td>
+										<td width="20%">string </td>
+										<td width="60%">GET this URI to retrieve the display size image.</td>
+									</tr>
+								</table>
+								<h4>location</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">city</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">country</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">state_province</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">venue</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+							<h3 id="response-status-codes">Response Status Codes</h3>
+
+							<table class="table table-striped">
+								<tr>
+									<td>400</td>
+									<td>InvalidParameterValue</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>400</td>
+									<td>MalformedRequest</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>404</td>
+									<td>EventNotFound</td>
+									<td></td>
+								</tr>
+							</table>
+				</div>
 			</div>
 		</div>
-
-	</div>
-   <script type="text/javascript">
-       $(function () {
-            $("[data-path='/events/id/get']").addClass("active").parent().show();
-			$('#menu').slicknav();
-       })
-   </script>
-</body>
-
+	   <script type="text/javascript">
+	       $(function () {
+	            $("[data-path='/events/id/get']").addClass("active").parent().show();
+				$('#menu').slicknav();
+	       })
+	   </script>
+	</body>
 </html>

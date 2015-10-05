@@ -1,20 +1,20 @@
 <html>
-<head>
-	<title>Get Country Codes and Names  | Getty Images API v3 Documentation</title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/slicknav.css">
-    <link rel="stylesheet" href="/css/docs.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="/js/jquery.slicknav.js"></script>
-	<script src="/js/s_code.js"></script>
-	<script src="/js/analytics.js"></script>	
-	<script src="/js/docs.js"></script>
-</head>
-<body class="home dark-text">
-		
+	<head>
+		<title>Get Country Codes and Names  | Getty Images API v3 Documentation</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="/css/slicknav.css">
+	    <link rel="stylesheet" href="/css/docs.css">
+	    <link rel="stylesheet" href="/css/main.css">
+	    <link rel="stylesheet" href="/css/responsive.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="/js/jquery.slicknav.js"></script>
+		<script src="/js/s_code.js"></script>
+		<script src="/js/analytics.js"></script>
+		<script src="/js/docs.js"></script>
+	</head>
+	<body class="home dark-text">
+			
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,13 +35,10 @@
     </div>
   </div>
 </header>
-
-    <div class="container-fluid">
-
-		<div class="row-fluid">
-
-			<div class="col-md-3 left-doc-nav">
-				<ul class="nav nav-pills nav-stacked left-nav">
+	    <div class="container-fluid">
+			<div class="row-fluid">
+				<div class="col-md-3 left-doc-nav">
+					<ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -283,33 +280,85 @@
 	</li>
 </ul>
 
-			</div>
-		
-			<div class="col-md-9 docs-content">
-				<ul class="breadcrumb">
-					<li><a href="/api/">API</a></li>
-					<li><a href="/api/docs/">API Docs</a></li>
-					<li><a href="/api/docs/v3/">v3</a></li>
-					<li><a href="/api/docs/v3/countries/">Countries</a></li>
-					<li><a href="/api/docs/v3/countries/get/">Get Country Codes and Names</a></li>
-				</ul>
-				
-				
-				<div class="alert alert-warning">
-					Documentation for this endpoint is coming soon.
-				</div>				
-				
+				</div>
+				<div class="col-md-9 docs-content">
+					<ul class="breadcrumb">
+						<li><a href="/api/">API</a></li>
+						<li><a href="/api/docs/">API Docs</a></li>
+						<li><a href="/api/docs/v3/">v3</a></li>
+						<li><a href="/api/docs/v3/countries/">Countries</a></li>
+						<li><a href="/api/docs/v3/countries/get/">Get Country Codes and Names</a></li>
+					</ul>
+						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Countries/Countries_GetCountries">Experiment with this API</a>
+						<p>GetCountries</p>
 
+						<h3 id="request-headers">Request Headers</h3>
+
+							<table class="table table-striped">
+									<tr>
+										<td>Api-Key</td>
+										<td>string</td>
+										<td>
+											Provide your API key.
+											Required.
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Accept-Language</td>
+										<td>string</td>
+										<td>
+											Specifies the language of result values.
+											
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Authorization</td>
+										<td>string</td>
+										<td>
+											Provide access token in the format of 'Bearer: {token}'.
+											
+											
+										</td>
+									</tr>
+							</table>
+							<h3 id="response-body-fields">Response Body Fields</h3>
+
+								<h4>countries</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">countries</td>
+										<td width="20%">array [country] </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+								<h4>country</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">iso_alpha_2</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">iso_alpha_3</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">name</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+				</div>
 			</div>
 		</div>
-
-	</div>
-   <script type="text/javascript">
-       $(function () {
-            $("[data-path='/countries/get']").addClass("active").parent().show();
-			$('#menu').slicknav();
-       })
-   </script>
-</body>
-
+	   <script type="text/javascript">
+	       $(function () {
+	            $("[data-path='/countries/get']").addClass("active").parent().show();
+				$('#menu').slicknav();
+	       })
+	   </script>
+	</body>
 </html>
