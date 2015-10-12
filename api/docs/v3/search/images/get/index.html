@@ -496,7 +496,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>date_from</td>
 									<td>string</td>
 									<td>
-										Filters to events that start on or after this date. Use ISO 8601 format (e.g., 1999-12-31).
+										Return only events that start on or after this date. Use ISO 8601 format (e.g., 1999-12-31).
 										
 										
 									</td>
@@ -505,7 +505,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>date_to</td>
 									<td>string</td>
 									<td>
-										Filters to events that start on or before this date. Use ISO 8601 format (e.g., 1999-12-31).
+										Return only events that start on or before this date. Use ISO 8601 format (e.g., 1999-12-31).
 										
 										
 									</td>
@@ -523,7 +523,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>ethnicity</td>
 									<td>array</td>
 									<td>
-										Filters search results based on the ethnicity of individuals in an image.
+										Filter search results based on the ethnicity of individuals in an image.
 										
 										 Possible values: 
 										<span class="label label-default">black</span>
@@ -544,7 +544,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>event_ids</td>
 									<td>array</td>
 									<td>
-										Allows for searching based on specific events
+										Filter based on specific events
 										
 										
 									</td>
@@ -562,7 +562,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>fields</td>
 									<td>array</td>
 									<td>
-										Comma separated list of fields. Allows restricting which fields are returned. If no fields are selected, the summary_set of fields are returned.
+										Restrict the set of fields that are returned. Specify using a comma separated list of fields. If no fields are selected, the summary_set of fields are returned.
 										
 										 Possible values: 
 										<span class="label label-default">allowed_use</span>
@@ -605,7 +605,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>file_types</td>
 									<td>array</td>
 									<td>
-										Identifies a file type for the image.
+										Return only images having a specific file type.
 										
 										 Possible values: 
 										<span class="label label-default">eps</span>
@@ -618,7 +618,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>graphical_styles</td>
 									<td>array</td>
 									<td>
-										Identifies a graphical style for the image.
+										Filter based on graphical style of the image.
 										
 										 Possible values: 
 										<span class="label label-default">fine_art</span>
@@ -630,7 +630,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>keyword_ids</td>
 									<td>array</td>
 									<td>
-										Comma separated-list of keyword IDs.  If specified, returns images containing the requested keyword(s).  If keyword IDs and phrase are both specified, returns only those images matching the query phrase which also contain the requested keyword(s).
+										Return only images tagged with specific keyword(s). Specify using a comma-separated list of keyword Ids. If keyword Ids and phrase are both specified, only those images matching the query phrase which also contain the requested keyword(s) are returned.
 										
 										
 									</td>
@@ -639,7 +639,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>license_models</td>
 									<td>array</td>
 									<td>
-										Identifies a licensing model for the image.
+										Return only images allowing a specific licensing model.
 										
 										 Possible values: 
 										<span class="label label-default">rightsmanaged</span>
@@ -650,7 +650,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>number_of_people</td>
 									<td>array</td>
 									<td>
-										Allows for filtering based on the number of people in the image
+										Filter based on the number of people in the image.
 										
 										 Possible values: 
 										<span class="label label-default">none</span>
@@ -663,7 +663,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>orientations</td>
 									<td>array</td>
 									<td>
-										Choose images based on their aspect ratios.
+										Return only images with selected aspect ratios.
 										
 										 Possible values: 
 										<span class="label label-default">Horizontal</span>
@@ -677,7 +677,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>phrase</td>
 									<td>string</td>
 									<td>
-										Free-text search query.
+										Search images using a search phrase.
 										
 										
 									</td>
@@ -686,7 +686,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>prestige_content_only</td>
 									<td>boolean</td>
 									<td>
-										Restrict search results to prestige images.  The default is false.
+										Restrict search results to prestige images. The default is false.
 										
 										
 									</td>
@@ -695,7 +695,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>product_types</td>
 									<td>array</td>
 									<td>
-										Allows filtering by a list of product types.
+										Filter images to those having product types from the selected list.
 										
 										 Possible values: 
 										<span class="label label-default">easyaccess</span>
@@ -709,7 +709,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>specific_people</td>
 									<td>array</td>
 									<td>
-										Allows for filtering based on specific people keywords.
+										Return only images associated with specific people (using a comma-delimited list).
 										
 										
 									</td>
@@ -722,7 +722,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>page</td>
 									<td>integer</td>
 									<td>
-										Page number.
+										Request results starting at a page number (default is 1).
 										
 										
 									</td>
@@ -731,7 +731,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>page_size</td>
 									<td>integer</td>
 									<td>
-										Size of page.
+										Request number of images to return in each page.
 										
 										
 									</td>
@@ -740,7 +740,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>sort_order</td>
 									<td>string</td>
 									<td>
-										Allows sorting of results.
+										Select sort order of results.
 										
 										 Possible values: 
 										<span class="label label-default">best_match</span>
@@ -814,7 +814,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">color_type</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates whether the image is color or black and white. Possible values are color, black_and_white, and null</td>
+										<td width="60%">Specifies if it is color or black and white. Possible values are color, black_and_white, and null</td>
 									</tr>
 									<tr>
 										<td width="20%">copyright</td>
@@ -834,7 +834,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">editorial_segments</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">List of editorial segments for the image. Possible values are archival, entertainment, news, publicity, royalty, sport</td>
+										<td width="60%">List of editorial segments. Possible values are archival, entertainment, news, publicity, royalty, sport</td>
 									</tr>
 									<tr>
 										<td width="20%">event_ids</td>
@@ -917,17 +917,17 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">how_can_i_use_it</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies how the asset can be used.</td>
 									</tr>
 									<tr>
 										<td width="20%">release_info</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the release status.</td>
 									</tr>
 									<tr>
 										<td width="20%">usage_restrictions</td>
 										<td width="20%">array [string] </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies asset usage restriction.</td>
 									</tr>
 								</table>
 								<h4>KeyValuePair[String,String]</h4>
@@ -948,17 +948,17 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">is_watermarked</td>
 										<td width="20%">boolean </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates if the asset is watermarked</td>
 									</tr>
 									<tr>
 										<td width="20%">name</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the name of the display size</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifiest the asset URI</td>
 									</tr>
 								</table>
 								<h4>keyword</h4>
@@ -1007,12 +1007,12 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">height</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates the height in pixels.</td>
 									</tr>
 									<tr>
 										<td width="20%">width</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates the width in pixels.</td>
 									</tr>
 								</table>
 								<h4>referral_destination</h4>
@@ -1020,12 +1020,12 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">site_name</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">TBD.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Identifies a URI that can be used to get oEmbed data for the image, if embeddable.</td>
 									</tr>
 								</table>
 							<h3 id="response-status-codes">Response Status Codes</h3>

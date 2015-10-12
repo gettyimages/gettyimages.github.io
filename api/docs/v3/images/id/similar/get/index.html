@@ -379,8 +379,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<td>fields</td>
 									<td>array</td>
 									<td>
-										Comma separated list of fields. Allows restricting which fields are returned. If no fields are
-                selected, the summary_set of fields are returned.
+										Specifies fields to return. Defaults to 'summary_set'.
 										
 										 Possible values: 
 										<span class="label label-default">allowed_use</span>
@@ -427,7 +426,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<td>page</td>
 									<td>integer</td>
 									<td>
-										Page number.
+										Identifies page to return. Default is 1.
 										
 										
 									</td>
@@ -436,7 +435,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<td>page_size</td>
 									<td>integer</td>
 									<td>
-										Size of page.
+										Specifies page size. Default is 30, maximum page_size is 100.
 										
 										
 									</td>

@@ -330,7 +330,7 @@
 									<td>age_of_people</td>
 									<td>array</td>
 									<td>
-										Allows for filtering based on age of individuals in a video
+										Provides filtering according to the age of individuals in a video.
 										
 										 Possible values: 
 										<span class="label label-default">newborn</span>
@@ -381,7 +381,7 @@
 									<td>collection_codes</td>
 									<td>array</td>
 									<td>
-										Allows filtering by collection code.
+										Provides filtering by collection code.
 										
 										
 									</td>
@@ -390,7 +390,7 @@
 									<td>collections_filter_type</td>
 									<td>string</td>
 									<td>
-										Allows searching based on included or excluded collections.
+										Provides searching based on specified collection(s).
 										
 										 Possible values: 
 										<span class="label label-default">include</span>
@@ -401,7 +401,7 @@
 									<td>exclude_nudity</td>
 									<td>boolean</td>
 									<td>
-										Exclude images tagged as containing nudity. The default is false.
+										Excludes images containing nudity. The default is false.
 										
 										
 									</td>
@@ -410,7 +410,7 @@
 									<td>fields</td>
 									<td>array</td>
 									<td>
-										Comma separated list of fields. Allows restricting which fields are returned. If no fields are selected, the summary_set of fields are returned.
+										Specifies fields to return. Defaults to 'summary_set'.
 										
 										 Possible values: 
 										<span class="label label-default">allowed_use</span>
@@ -447,7 +447,7 @@
 									<td>format_available</td>
 									<td>string</td>
 									<td>
-										Allows filtering by the digital video format available on a film asset, i.e. Standard Definition, High Definition, or 4k Ultra High Definition
+										Filters according to the digital video format available on a film asset.
 										
 										 Possible values: 
 										<span class="label label-default">sd</span>
@@ -459,7 +459,7 @@
 									<td>license_models</td>
 									<td>array</td>
 									<td>
-										Identifies a licensing model for the image.
+										Specifies the image licensing model(s).
 										
 										 Possible values: 
 										<span class="label label-default">rightsready</span>
@@ -479,7 +479,7 @@
 									<td>product_types</td>
 									<td>array</td>
 									<td>
-										Allows filtering by a list of product types.
+										Provides filtering by a list of product types.
 										
 										 Possible values: 
 										<span class="label label-default">easyaccess</span>
@@ -493,7 +493,7 @@
 									<td>specific_people</td>
 									<td>array</td>
 									<td>
-										Allows filtering by specific peoples' names.
+										Provides filtering by specific peoples' names.
 										
 										
 									</td>
@@ -506,7 +506,7 @@
 									<td>page</td>
 									<td>integer</td>
 									<td>
-										Page number.
+										Identifies page to return. Default is 1.
 										
 										
 									</td>
@@ -515,7 +515,7 @@
 									<td>page_size</td>
 									<td>integer</td>
 									<td>
-										Size of page.
+										Specifies page size. Default is 30, maximum page_size is 100.
 										
 										
 									</td>
@@ -599,7 +599,7 @@
 									<tr>
 										<td width="20%">color_type</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates whether the image is color or black and white. Possible values are color, black_and_white, and null</td>
+										<td width="60%">Specifies if it is color or black and white. Possible values are color, black_and_white, and null</td>
 									</tr>
 									<tr>
 										<td width="20%">copyright</td>
@@ -629,7 +629,7 @@
 									<tr>
 										<td width="20%">license_model</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies a licensing model for the image. Possible values are: royaltyfree, rightsready</td>
+										<td width="60%">Identifies a licensing model for the video. Possible values are: royaltyfree, rightsready</td>
 									</tr>
 									<tr>
 										<td width="20%">mastered_to</td>
@@ -667,17 +667,17 @@
 									<tr>
 										<td width="20%">how_can_i_use_it</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies how the asset can be used.</td>
 									</tr>
 									<tr>
 										<td width="20%">release_info</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the release status.</td>
 									</tr>
 									<tr>
 										<td width="20%">usage_restrictions</td>
 										<td width="20%">array [string] </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies asset usage restriction.</td>
 									</tr>
 								</table>
 								<h4>display_size</h4>
@@ -685,17 +685,17 @@
 									<tr>
 										<td width="20%">is_watermarked</td>
 										<td width="20%">boolean </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates if the asset is watermarked</td>
 									</tr>
 									<tr>
 										<td width="20%">name</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the name of the display size</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifiest the asset URI</td>
 									</tr>
 								</table>
 								<h4>download</h4>
