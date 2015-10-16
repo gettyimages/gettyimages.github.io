@@ -290,8 +290,36 @@
 						<li><a href="/api/docs/v3/usage/../usage-batches/id/put/">Report Usage of Assets</a></li>
 					</ul>
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Usage/Usage_Put">Experiment with this API</a>
-						<p>Usage Put</p>
-
+						<h1 id="report-usage">Report Usage</h1>
+<p>Use this endpoint to report the usages of a set of assets. The count of assets submitted in a single batch to this endpoint is limited to 1000. Note that all asset Ids specified must be valid or the operation will fail causing no usages to be recorded. In this case, you will need to remove the invalid asset Ids from the query request and re-submit the query.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
+<p>Use the following endpoint to submit usages:</p>
+<pre><code>PUT https://api.gettyimages.com:443/v3/usage-batches/&lt;batchid&gt;
+</code></pre><p>Add your API key and the Resource Owner Grant access token to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+Authorization: Bearer &lt;your secure access token&gt;
+</code></pre><p>Your request would look like this using cUrl:</p>
+<pre><code>curl -X PUT -H &quot;Authorization: Bearer &lt;access token&gt;&quot; -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Content-Type: application/json&quot; -d &#39;{
+  &quot;asset_usages&quot;: [
+    {
+      &quot;asset_id&quot;: &quot;&lt;asset id&gt;&quot;,
+      &quot;quantity&quot;: &lt;usage quantity&gt;,
+      &quot;usage_date&quot;: &quot;&lt;date of use&gt;&quot;
+    }
+  ]
+}&#39; &#39;https://api.gettyimages.com:443/v3/usage-batches/&lt;unique batch id&gt;&#39;
+</code></pre><p>Note that date of use can be in any unambiguous date format.</p>
+<p>The response body for a success response of 201 will look like the following example:    </p>
+<pre><code>{
+  &quot;total_asset_usages_processed&quot;: &lt;usage quantity&gt;
+}
+</code></pre><p>An error response body for a code of 400 will look like the following example:</p>
+<pre><code>{
+  &quot;ErrorCode&quot;: &quot;Invalid Request&quot;,
+  &quot;ErrorMessage&quot;: &quot;Error in the application.&quot;
+}
+</code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
 							<table class="table table-striped">
@@ -337,10 +365,31 @@
 							</table>
 							<h3 id="request-body-fields">Request Body Fields</h3>
 
-							<h3 id="response-body-fields">Response Body Fields</h3>
-
-								<h4></h4>
+								<h4>report_usage_batch_request</h4>
 								<table class="table table-striped">
+									<tr>
+										<td width="20%">asset_usages</td>
+										<td width="20%">array [asset_usage] </td>
+										<td width="60%">Identifies the list of asset usage combinations.</td>
+									</tr>
+								</table>
+								<h4>asset_usage</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">asset_id</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the Id of the asset that was used.</td>
+									</tr>
+									<tr>
+										<td width="20%">quantity</td>
+										<td width="20%">integer </td>
+										<td width="60%">Specifies the number of times the asset was used.</td>
+									</tr>
+									<tr>
+										<td width="20%">usage_date</td>
+										<td width="20%">string </td>
+										<td width="60%">Identifies the date the asset was used.</td>
+									</tr>
 								</table>
 				</div>
 			</div>

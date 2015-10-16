@@ -290,8 +290,16 @@
 						<li><a href="/api/docs/v3/assetchanges/../asset-changes/channels/get/">Get Partner Asset Change Channels</a></li>
 					</ul>
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/AssetChanges/AssetChanges_GetPartnerChannel">Experiment with this API</a>
-						<p>GetPartnerChannel</p>
-
+						<h1 id="get-partner-channels">Get Partner Channels</h1>
+<p>Retrieves a list of channel data.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
+<p>Use the following endpoint to get channels:</p>
+<pre><code>GET https://api.gettyimages.com:443/v3/asset-changes/channels
+</code></pre><p>Add your API key and the Resource Owner Grant access token to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+Authorization: Bearer &lt;your secure access token&gt;
+</code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
 							<table class="table table-striped">
@@ -323,11 +331,6 @@
 										</td>
 									</tr>
 							</table>
-							<h3 id="response-body-fields">Response Body Fields</h3>
-
-								<h4></h4>
-								<table class="table table-striped">
-								</table>
 				</div>
 			</div>
 		</div>

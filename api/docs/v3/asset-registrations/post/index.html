@@ -290,7 +290,22 @@
 						<li><a href="/api/docs/v3/assetregistration/../asset-registrations/post/">Register Assets Stored in Customer System</a></li>
 					</ul>
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/AssetRegistration/AssetRegistration_Register">Experiment with this API</a>
-						<p>AssetRegistration_Register</p>
+						<h1 id="register-assets">Register Assets</h1>
+<p>Registers a list of assets that a customer has stored in their system.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
+<p>Use the following endpoint to register assets:</p>
+<pre><code>POST https://api.gettyimages.com:443/v3/asset-registrations
+</code></pre><p>Add your API key and the Resource Owner Grant access token to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+Authorization: Bearer &lt;your secure access token&gt;
+</code></pre><p>Your request would look like this using cUrl:</p>
+<p>curl -X POST -H &quot;Authorization: Bearer <access token>&quot; -H &quot;Api-Key: <your api key>&quot; -H &quot;Content-Type: application/json&quot; -d &#39;{
+  &quot;asset_ids&quot;: [
+    &quot;<asset id>&quot;
+  ]
+}&#39; &#39;<a href="https://api.gettyimages.com:443/v3/asset-registrations">https://api.gettyimages.com:443/v3/asset-registrations</a>&#39;</p>
+<p>In the event of a successful query (response code 200) there will be nothing in the response body.</p>
 
 						<h3 id="request-headers">Request Headers</h3>
 
@@ -325,10 +340,13 @@
 							</table>
 							<h3 id="request-body-fields">Request Body Fields</h3>
 
-							<h3 id="response-body-fields">Response Body Fields</h3>
-
-								<h4></h4>
+								<h4>RegisterAssetsRequest</h4>
 								<table class="table table-striped">
+									<tr>
+										<td width="20%">asset_ids</td>
+										<td width="20%">array [string] </td>
+										<td width="60%"></td>
+									</tr>
 								</table>
 				</div>
 			</div>
