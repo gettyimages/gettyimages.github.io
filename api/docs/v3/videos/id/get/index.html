@@ -289,9 +289,384 @@
 						<li><a href="/api/docs/v3/videos/">Videos Metadata</a></li>
 						<li><a href="/api/docs/v3/videos/id/get/">Get Metadata for Single Video</a></li>
 					</ul>
-						<div class="alert alert-warning">
-							Documentation for this endpoint is coming soon.
-						</div>
+						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Videos/Videos_Get">Experiment with this API</a>
+						<h1 id="get-metadata-for-single-video">Get Metadata for Single Video</h1>
+
+						<h3 id="request-headers">Request Headers</h3>
+
+							<table class="table table-striped">
+									<tr>
+										<td>Api-Key</td>
+										<td>string</td>
+										<td>
+											Provide your API key.
+											Required.
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Accept-Language</td>
+										<td>string</td>
+										<td>
+											Specifies the language of result values.
+											
+											
+										</td>
+									</tr>
+									<tr>
+										<td>Authorization</td>
+										<td>string</td>
+										<td>
+											Provide access token in the format of 'Bearer: {token}'.
+											
+											
+										</td>
+									</tr>
+							</table>
+							<h3 id="uri-path-parameters">URI Path Parameters</h3>
+
+							<table class="table table-striped">
+									<tr>
+										<td>id</td>
+										<td>string</td>
+										<td>
+											A video id. For more than one video please use the /v3/video endpoint.
+											Required.
+										</td>
+									</tr>
+							</table>
+							<h3 id="query-string-parameters">Query String Parameters</h3>
+
+							<table class="table table-striped">
+								<tr>
+									<td>fields</td>
+									<td>array</td>
+									<td>
+										comma delimited list of fields to retrive for the video
+										
+										 Possible values: 
+										<span class="label label-default">id</span>
+										<span class="label label-default">allowed_use</span>
+										<span class="label label-default">artist</span>
+										<span class="label label-default">asset_family</span>
+										<span class="label label-default">caption</span>
+										<span class="label label-default">clip_length</span>
+										<span class="label label-default">collection_code</span>
+										<span class="label label-default">collection_id</span>
+										<span class="label label-default">collection_name</span>
+										<span class="label label-default">color_type</span>
+										<span class="label label-default">copyright</span>
+										<span class="label label-default">comp</span>
+										<span class="label label-default">date_created</span>
+										<span class="label label-default">detail_set</span>
+										<span class="label label-default">display_set</span>
+										<span class="label label-default">download_sizes</span>
+										<span class="label label-default">downloads</span>
+										<span class="label label-default">era</span>
+										<span class="label label-default">editorial_segments</span>
+										<span class="label label-default">keywords</span>
+										<span class="label label-default">license_model</span>
+										<span class="label label-default">mastered_to</span>
+										<span class="label label-default">originally_shot_on</span>
+										<span class="label label-default">preview</span>
+										<span class="label label-default">product_types</span>
+										<span class="label label-default">shot_speed</span>
+										<span class="label label-default">source</span>
+										<span class="label label-default">summary_set</span>
+										<span class="label label-default">thumb</span>
+										<span class="label label-default">title</span>
+									</td>
+								</tr>
+							</table>
+							<h3 id="response-body-fields">Response Body Fields</h3>
+
+								<h4>video_detail</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">id</td>
+										<td width="20%">string </td>
+										<td width="60%">Identifies the video</td>
+									</tr>
+									<tr>
+										<td width="20%">allowed_use</td>
+										<td width="20%"> </td>
+										<td width="60%">Specifies how a customer is allowed to use this video</td>
+									</tr>
+									<tr>
+										<td width="20%">artist</td>
+										<td width="20%">string </td>
+										<td width="60%">Identifies the artist</td>
+									</tr>
+									<tr>
+										<td width="20%">asset_family</td>
+										<td width="20%">string </td>
+										<td width="60%">Indicates the asset family classification. Possible values are: creative, editorial</td>
+									</tr>
+									<tr>
+										<td width="20%">caption</td>
+										<td width="20%">string </td>
+										<td width="60%">Describes the video</td>
+									</tr>
+									<tr>
+										<td width="20%">clip_length</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the length of the film clip (e.g., &quot;00:00:12:08&quot;)</td>
+									</tr>
+									<tr>
+										<td width="20%">collection_id</td>
+										<td width="20%">integer </td>
+										<td width="60%">Identifies the collection which this video belongs to</td>
+									</tr>
+									<tr>
+										<td width="20%">collection_code</td>
+										<td width="20%">string </td>
+										<td width="60%">Identifies the collection code which this video belongs to</td>
+									</tr>
+									<tr>
+										<td width="20%">collection_name</td>
+										<td width="20%">string </td>
+										<td width="60%">Identifies the collection name which this video belongs to</td>
+									</tr>
+									<tr>
+										<td width="20%">color_type</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies if it is color or black and white. Possible values are color, black_and_white, and null</td>
+									</tr>
+									<tr>
+										<td width="20%">copyright</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the copyright</td>
+									</tr>
+									<tr>
+										<td width="20%">date_created</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the date the video was created in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00)</td>
+									</tr>
+									<tr>
+										<td width="20%">display_sizes</td>
+										<td width="20%">array [display_size] </td>
+										<td width="60%">List of display size information</td>
+									</tr>
+									<tr>
+										<td width="20%">download_sizes</td>
+										<td width="20%">array [download_size] </td>
+										<td width="60%">List of available download size information</td>
+									</tr>
+									<tr>
+										<td width="20%">editorial_segments</td>
+										<td width="20%">array [string] </td>
+										<td width="60%">List of editorial segments. Possible values are archival, entertainment, news, publicity, royalty, sport</td>
+									</tr>
+									<tr>
+										<td width="20%">era</td>
+										<td width="20%">string </td>
+										<td width="60%">The era of the video. Possible values are: archival, contemporary, and null</td>
+									</tr>
+									<tr>
+										<td width="20%">keywords</td>
+										<td width="20%">array [keywords] </td>
+										<td width="60%">Contains a keyword entry for each keyword related to the image.</td>
+									</tr>
+									<tr>
+										<td width="20%">license_model</td>
+										<td width="20%">string </td>
+										<td width="60%">Identifies a licensing model for the video. Possible values are: royaltyfree, rightsready</td>
+									</tr>
+									<tr>
+										<td width="20%">mastered_to</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies video format of the master</td>
+									</tr>
+									<tr>
+										<td width="20%">originally_shot_on</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies where this video was originally shot on</td>
+									</tr>
+									<tr>
+										<td width="20%">product_types</td>
+										<td width="20%">array [string] </td>
+										<td width="60%">License agreements for the video. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription</td>
+									</tr>
+									<tr>
+										<td width="20%">shot_speed</td>
+										<td width="20%">string </td>
+										<td width="60%">The speed the video was shot. Possible values are: real_time, slow_motion, time_lapse, and null</td>
+									</tr>
+									<tr>
+										<td width="20%">source</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">title</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the title of this video</td>
+									</tr>
+								</table>
+								<h4>allowed_use</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">how_can_i_use_it</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies how the asset can be used.</td>
+									</tr>
+									<tr>
+										<td width="20%">release_info</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the release status.</td>
+									</tr>
+									<tr>
+										<td width="20%">usage_restrictions</td>
+										<td width="20%">array [string] </td>
+										<td width="60%">Specifies asset usage restriction.</td>
+									</tr>
+								</table>
+								<h4>display_size</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">is_watermarked</td>
+										<td width="20%">boolean </td>
+										<td width="60%">Indicates if the asset is watermarked</td>
+									</tr>
+									<tr>
+										<td width="20%">name</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the name of the display size</td>
+									</tr>
+									<tr>
+										<td width="20%">uri</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifiest the asset URI</td>
+									</tr>
+								</table>
+								<h4>download_size</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">bit_depth</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the bit depth of the video</td>
+									</tr>
+									<tr>
+										<td width="20%">broadcast_video_standard</td>
+										<td width="20%">string </td>
+										<td width="60%">Indicates broadcast video standard of the video (e.g., NTSC, PAL)</td>
+									</tr>
+									<tr>
+										<td width="20%">compression</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies video compression</td>
+									</tr>
+									<tr>
+										<td width="20%">content_type</td>
+										<td width="20%">string </td>
+										<td width="60%">Indicates content type of the video (e.g., &quot;video/mp4&quot;)</td>
+									</tr>
+									<tr>
+										<td width="20%">description</td>
+										<td width="20%">string </td>
+										<td width="60%">Description of video</td>
+									</tr>
+									<tr>
+										<td width="20%">format</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the video format (e.g., SD, HD, 4K, Multimedia, or Web)</td>
+									</tr>
+									<tr>
+										<td width="20%">frame_rate</td>
+										<td width="20%">number </td>
+										<td width="60%">Specifies the video frame rate (e.g., 24, 25, 29.97)</td>
+									</tr>
+									<tr>
+										<td width="20%">frame_size</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the video frame size (e.g., &quot;640x360&quot;)</td>
+									</tr>
+									<tr>
+										<td width="20%">height</td>
+										<td width="20%">number </td>
+										<td width="60%">Specifies the height in pixels</td>
+									</tr>
+									<tr>
+										<td width="20%">interlaced</td>
+										<td width="20%">boolean </td>
+										<td width="60%">Indicates whether the video is interlaced</td>
+									</tr>
+									<tr>
+										<td width="20%">name</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the name of the video size</td>
+									</tr>
+									<tr>
+										<td width="20%">width</td>
+										<td width="20%">integer </td>
+										<td width="60%">Specifies the width</td>
+									</tr>
+									<tr>
+										<td width="20%">downloads</td>
+										<td width="20%">array [download] </td>
+										<td width="60%">List of video download information</td>
+									</tr>
+								</table>
+								<h4>download</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">uri</td>
+										<td width="20%">string </td>
+										<td width="60%">Specifies the URI for initiating download</td>
+									</tr>
+								</table>
+								<h4>keywords</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">keyword_id</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">text</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">type</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">relevance</td>
+										<td width="20%">integer </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+							<h3 id="response-status-codes">Response Status Codes</h3>
+
+							<table class="table table-striped">
+								<tr>
+									<td>400</td>
+									<td>InvalidParameterValue</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>400</td>
+									<td>MalformedRequest</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>AuthorizationTokenRequired</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>403</td>
+									<td>UnauthorizedDisplaySize</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>404</td>
+									<td>VideosNotFound</td>
+									<td></td>
+								</tr>
+							</table>
 				</div>
 			</div>
 		</div>

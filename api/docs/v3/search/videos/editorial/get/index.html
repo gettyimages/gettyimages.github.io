@@ -439,6 +439,7 @@
 										<span class="label label-default">editorial_segments</span>
 										<span class="label label-default">era</span>
 										<span class="label label-default">id</span>
+										<span class="label label-default">keywords</span>
 										<span class="label label-default">largest_downloads</span>
 										<span class="label label-default">license_model</span>
 										<span class="label label-default">mastered_to</span>
@@ -462,6 +463,15 @@
 										<span class="label label-default">sd</span>
 										<span class="label label-default">hd</span>
 										<span class="label label-default">4k</span>
+									</td>
+								</tr>
+								<tr>
+									<td>keyword_ids</td>
+									<td>array</td>
+									<td>
+										Return only images tagged with specific keyword(s). Specify using a comma-separated list of keyword Ids. If keyword Ids and phrase are both specified, only those images matching the query phrase which also contain the requested keyword(s) are returned.
+										
+										
 									</td>
 								</tr>
 								<tr>
@@ -620,6 +630,11 @@
 										<td width="60%">The era of the video. Possible values are: archival, contemporary, and null</td>
 									</tr>
 									<tr>
+										<td width="20%">keywords</td>
+										<td width="20%">array [keywords] </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
 										<td width="20%">largest_downloads</td>
 										<td width="20%">array [download] </td>
 										<td width="60%"></td>
@@ -694,6 +709,29 @@
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
 										<td width="60%">Specifiest the asset URI</td>
+									</tr>
+								</table>
+								<h4>keywords</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">keyword_id</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">text</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">type</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">relevance</td>
+										<td width="20%">integer </td>
+										<td width="60%"></td>
 									</tr>
 								</table>
 								<h4>download</h4>
