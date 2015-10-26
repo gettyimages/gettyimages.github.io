@@ -469,7 +469,7 @@
 									<td>license_models</td>
 									<td>array</td>
 									<td>
-										Specifies the image licensing model(s).
+										Specifies the video licensing model(s).
 										
 										 Possible values: 
 										<span class="label label-default">rightsready</span>
@@ -551,7 +551,7 @@
 									<tr>
 										<td width="20%">result_count</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates the count of matching videos returned.</td>
 									</tr>
 									<tr>
 										<td width="20%">videos</td>
@@ -564,17 +564,17 @@
 									<tr>
 										<td width="20%">id</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the unique identifier of the asset.</td>
 									</tr>
 									<tr>
 										<td width="20%">allowed_use</td>
 										<td width="20%"> </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies how customers are allowed to use the video.</td>
 									</tr>
 									<tr>
 										<td width="20%">artist</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies video creator.</td>
 									</tr>
 									<tr>
 										<td width="20%">asset_family</td>
@@ -584,47 +584,47 @@
 									<tr>
 										<td width="20%">caption</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Describes the video in detail.</td>
 									</tr>
 									<tr>
 										<td width="20%">clip_length</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies Length of the film clip (Example: &quot;00:00:12:08&quot;).</td>
 									</tr>
 									<tr>
 										<td width="20%">collection_id</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the id of the collection to which the video belongs.</td>
 									</tr>
 									<tr>
 										<td width="20%">collection_code</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the code of the collection to which the video belongs.</td>
 									</tr>
 									<tr>
 										<td width="20%">collection_name</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the name of the collection to which the video belongs.</td>
 									</tr>
 									<tr>
 										<td width="20%">color_type</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies if it is color or black and white. Possible values are color, black_and_white, and null</td>
+										<td width="60%">Specifies whether the image is color or black and white. Possible values are color, black_and_white, and null</td>
 									</tr>
 									<tr>
 										<td width="20%">copyright</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies copyright of the video.</td>
 									</tr>
 									<tr>
 										<td width="20%">date_created</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the date the video was created, in ISO 8601 format (e.g., 1999-12-31).</td>
 									</tr>
 									<tr>
 										<td width="20%">display_sizes</td>
 										<td width="20%">array [display_size] </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the sizes available for display.</td>
 									</tr>
 									<tr>
 										<td width="20%">era</td>
@@ -634,12 +634,12 @@
 									<tr>
 										<td width="20%">keywords</td>
 										<td width="20%">array [keywords] </td>
-										<td width="60%"></td>
+										<td width="60%">List of keyword entries associated with image/asset.</td>
 									</tr>
 									<tr>
 										<td width="20%">largest_downloads</td>
 										<td width="20%">array [download] </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the largest authorized download size for the current token context.</td>
 									</tr>
 									<tr>
 										<td width="20%">license_model</td>
@@ -649,12 +649,12 @@
 									<tr>
 										<td width="20%">mastered_to</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies mastered to media.</td>
 									</tr>
 									<tr>
 										<td width="20%">originally_shot_on</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies film stock originally shot on.</td>
 									</tr>
 									<tr>
 										<td width="20%">product_types</td>
@@ -664,17 +664,17 @@
 									<tr>
 										<td width="20%">shot_speed</td>
 										<td width="20%">string </td>
-										<td width="60%">The speed the video was shot. Possible values are: real_time, slow_motion, time_lapse, and null</td>
+										<td width="60%">The speed the at which the video was shot. Possible values are: real_time, slow_motion, time_lapse, and null</td>
 									</tr>
 									<tr>
 										<td width="20%">source</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies editorial source.</td>
 									</tr>
 									<tr>
 										<td width="20%">title</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the title given by the artist.</td>
 									</tr>
 								</table>
 								<h4>allowed_use</h4>
@@ -700,17 +700,17 @@
 									<tr>
 										<td width="20%">is_watermarked</td>
 										<td width="20%">boolean </td>
-										<td width="60%">Indicates if the asset is watermarked</td>
+										<td width="60%">Specifies whether the asset is watermarked.</td>
 									</tr>
 									<tr>
 										<td width="20%">name</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the name of the display size</td>
+										<td width="60%">Specifies the name of the asset display size.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifiest the asset URI</td>
+										<td width="60%">Specifies the URI for the asset.</td>
 									</tr>
 								</table>
 								<h4>keywords</h4>
@@ -718,22 +718,22 @@
 									<tr>
 										<td width="20%">keyword_id</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Identifies the keyword</td>
 									</tr>
 									<tr>
 										<td width="20%">text</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Provides localized text of the keyword</td>
 									</tr>
 									<tr>
 										<td width="20%">type</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the keyword type</td>
 									</tr>
 									<tr>
 										<td width="20%">relevance</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
 									</tr>
 								</table>
 								<h4>download</h4>
@@ -741,7 +741,7 @@
 									<tr>
 										<td width="20%">product_id</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Identifies a given product based on a company agreement. Applies only to royaltyfreesubscription and imagepack</td>
 									</tr>
 									<tr>
 										<td width="20%">product_type</td>
@@ -751,7 +751,7 @@
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates the download URI.</td>
 									</tr>
 								</table>
 							<h3 id="response-status-codes">Response Status Codes</h3>

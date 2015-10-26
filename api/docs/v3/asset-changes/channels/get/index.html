@@ -331,6 +331,39 @@ Authorization: Bearer &lt;your secure access token&gt;
 										</td>
 									</tr>
 							</table>
+							<h3 id="response-body-fields">Response Body Fields</h3>
+
+								<h4>PartnerChannelList</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">Channels</td>
+										<td width="20%">array [PartnerChannel] </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+								<h4>PartnerChannel</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">AssetFamily</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">ChannelId</td>
+										<td width="20%">integer </td>
+										<td width="60%">The id to the channel of content</td>
+									</tr>
+									<tr>
+										<td width="20%">ChannelType</td>
+										<td width="20%">string </td>
+										<td width="60%">Contains the channel type (i.e. &quot;New,&quot; &quot;Updated&quot; or &quot;Deleted&quot;)</td>
+									</tr>
+									<tr>
+										<td width="20%">StartDate</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
 				</div>
 			</div>
 		</div>

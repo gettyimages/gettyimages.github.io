@@ -370,7 +370,7 @@ Authorization: Bearer &lt;your secure access token&gt;
 									<tr>
 										<td width="20%">asset_usages</td>
 										<td width="20%">array [asset_usage] </td>
-										<td width="60%">Identifies the list of asset usage combinations.</td>
+										<td width="60%">Identifies the list of asset id, usage count and date of usage combinations to record.</td>
 									</tr>
 								</table>
 								<h4>asset_usage</h4>
@@ -389,6 +389,21 @@ Authorization: Bearer &lt;your secure access token&gt;
 										<td width="20%">usage_date</td>
 										<td width="20%">string </td>
 										<td width="60%">Identifies the date the asset was used.</td>
+									</tr>
+								</table>
+							<h3 id="response-body-fields">Response Body Fields</h3>
+
+								<h4>report_usage_batch_response</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">invalid_assets</td>
+										<td width="20%">array [string] </td>
+										<td width="60%">Identifies a list of asset ids submitted that did not match known Getty asset ids.</td>
+									</tr>
+									<tr>
+										<td width="20%">total_asset_usages_processed</td>
+										<td width="20%">integer </td>
+										<td width="60%">Specifies the number of asset usage records that were successfully recorded.</td>
 									</tr>
 								</table>
 				</div>

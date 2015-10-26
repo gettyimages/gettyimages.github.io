@@ -556,7 +556,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>exclude_nudity</td>
 									<td>boolean</td>
 									<td>
-										Exclude images tagged as containing nudity. The default is false.
+										Excludes images containing nudity. The default is false.
 										
 										
 									</td>
@@ -565,7 +565,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<td>fields</td>
 									<td>array</td>
 									<td>
-										Restrict the set of fields that are returned. Specify using a comma separated list of fields. If no fields are selected, the summary_set of fields are returned.
+										Specifies fields to return. Defaults to 'summary_set'.
 										
 										 Possible values: 
 										<span class="label label-default">allowed_use</span>
@@ -751,17 +751,17 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">allowed_use</td>
 										<td width="20%"> </td>
-										<td width="60%"></td>
+										<td width="60%">Lists the allowed terms of use for an image</td>
 									</tr>
 									<tr>
 										<td width="20%">alternative_ids</td>
 										<td width="20%">array [KeyValuePair[String,String]] </td>
-										<td width="60%"></td>
+										<td width="60%">Lists all of the alternative ids for the asset.</td>
 									</tr>
 									<tr>
 										<td width="20%">artist</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Identifies the artist for the asset.</td>
 									</tr>
 									<tr>
 										<td width="20%">asset_family</td>
@@ -771,87 +771,87 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">call_for_image</td>
 										<td width="20%">boolean </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates whether a customer needs to call Getty Images in order to license this image</td>
 									</tr>
 									<tr>
 										<td width="20%">caption</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Gives a brief description of the image</td>
 									</tr>
 									<tr>
 										<td width="20%">collection_code</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Code that identifies the collection to which the image belongs</td>
 									</tr>
 									<tr>
 										<td width="20%">collection_id</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Numerical id that identifies the collection to which the image belongs</td>
 									</tr>
 									<tr>
 										<td width="20%">collection_name</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Name of the collection to which the image belongs</td>
 									</tr>
 									<tr>
 										<td width="20%">color_type</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies if it is color or black and white. Possible values are color, black_and_white, and null</td>
+										<td width="60%">Specifies whether the image is color or black and white. Possible values are color, black_and_white, and null</td>
 									</tr>
 									<tr>
 										<td width="20%">copyright</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Gives the copyright of the image</td>
 									</tr>
 									<tr>
 										<td width="20%">date_created</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates the date the image was created, in ISO 8601 format (e.g., 1999-12-31)</td>
 									</tr>
 									<tr>
 										<td width="20%">display_sizes</td>
 										<td width="20%">array [display_size] </td>
-										<td width="60%"></td>
+										<td width="60%">Lists the display sizes available for this image</td>
 									</tr>
 									<tr>
 										<td width="20%">editorial_segments</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">List of editorial segments. Possible values are archival, entertainment, news, publicity, royalty, sport</td>
+										<td width="60%">List of editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport</td>
 									</tr>
 									<tr>
 										<td width="20%">event_ids</td>
 										<td width="20%">array [integer] </td>
-										<td width="60%"></td>
+										<td width="60%">Lists the events that are relevant for this image</td>
 									</tr>
 									<tr>
 										<td width="20%">graphical_style</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Identifies the graphical style for the image. Possible values are Photography, Fine Art, and Illustration</td>
 									</tr>
 									<tr>
 										<td width="20%">id</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Unique identifier for the image</td>
 									</tr>
 									<tr>
 										<td width="20%">keywords</td>
 										<td width="20%">array [keywords] </td>
-										<td width="60%"></td>
+										<td width="60%">Lists the keywords that are associated with this image</td>
 									</tr>
 									<tr>
 										<td width="20%">largest_downloads</td>
 										<td width="20%">array [download] </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the URI that can be used to download the largest size for the asset</td>
 									</tr>
 									<tr>
 										<td width="20%">license_model</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies a licensing model for the image. Possible values are: royaltyfree, rightsmanaged</td>
+										<td width="60%">Identifies the licensing model for the image. Possible values are: royaltyfree, rightsmanaged</td>
 									</tr>
 									<tr>
 										<td width="20%">max_dimensions</td>
 										<td width="20%"> </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the maximum height and width of any size for this image</td>
 									</tr>
 									<tr>
 										<td width="20%">orientation</td>
@@ -861,22 +861,22 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">people</td>
 										<td width="20%">array [string] </td>
-										<td width="60%"></td>
+										<td width="60%">List of people appearing in the image</td>
 									</tr>
 									<tr>
 										<td width="20%">product_types</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">License agreements for the image. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription</td>
+										<td width="60%">List product types for the image. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription</td>
 									</tr>
 									<tr>
 										<td width="20%">quality_rank</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the quality ranking of the image</td>
 									</tr>
 									<tr>
 										<td width="20%">referral_destinations</td>
 										<td width="20%">array [referral_destination] </td>
-										<td width="60%"></td>
+										<td width="60%">Lists the referral destinations for Getty Images assets</td>
 									</tr>
 									<tr>
 										<td width="20%">title</td>
@@ -925,17 +925,17 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">is_watermarked</td>
 										<td width="20%">boolean </td>
-										<td width="60%">Indicates if the asset is watermarked</td>
+										<td width="60%">Specifies whether the asset is watermarked.</td>
 									</tr>
 									<tr>
 										<td width="20%">name</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the name of the display size</td>
+										<td width="60%">Specifies the name of the asset display size.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifiest the asset URI</td>
+										<td width="60%">Specifies the URI for the asset.</td>
 									</tr>
 								</table>
 								<h4>keywords</h4>
@@ -943,22 +943,22 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">keyword_id</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Identifies the keyword</td>
 									</tr>
 									<tr>
 										<td width="20%">text</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Provides localized text of the keyword</td>
 									</tr>
 									<tr>
 										<td width="20%">type</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the keyword type</td>
 									</tr>
 									<tr>
 										<td width="20%">relevance</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
 									</tr>
 								</table>
 								<h4>download</h4>
@@ -966,7 +966,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">product_id</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Identifies a given product based on a company agreement. Applies only to royaltyfreesubscription and imagepack</td>
 									</tr>
 									<tr>
 										<td width="20%">product_type</td>
@@ -976,7 +976,7 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates the download URI.</td>
 									</tr>
 								</table>
 								<h4>max_dimensions</h4>
@@ -984,12 +984,12 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">height</td>
 										<td width="20%">integer </td>
-										<td width="60%">Indicates the height in pixels.</td>
+										<td width="60%">Specifies the height in pixels.</td>
 									</tr>
 									<tr>
 										<td width="20%">width</td>
 										<td width="20%">integer </td>
-										<td width="60%">Indicates the width in pixels.</td>
+										<td width="60%">Specifies the width in pixels.</td>
 									</tr>
 								</table>
 								<h4>referral_destination</h4>
@@ -997,12 +997,12 @@ To include your API token in the search request, add it to the headers as a Bear
 									<tr>
 										<td width="20%">site_name</td>
 										<td width="20%">string </td>
-										<td width="60%">TBD.</td>
+										<td width="60%">Specifies asset domain name.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies a URI that can be used to get oEmbed data for the image, if embeddable.</td>
+										<td width="60%">Indicates the resource URI.</td>
 									</tr>
 								</table>
 							<h3 id="response-status-codes">Response Status Codes</h3>

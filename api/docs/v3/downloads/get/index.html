@@ -382,12 +382,12 @@
 									<tr>
 										<td width="20%">result_count</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates the count of matching assets returned.</td>
 									</tr>
 									<tr>
 										<td width="20%">downloads</td>
 										<td width="20%">array [download] </td>
-										<td width="60%"></td>
+										<td width="60%">Provides a collection of download items.</td>
 									</tr>
 								</table>
 								<h4>download</h4>
@@ -395,12 +395,12 @@
 									<tr>
 										<td width="20%">date_downloaded</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the date the asset was downloaded, in ISO 8601 format (e.g., 1999-12-31).</td>
 									</tr>
 									<tr>
 										<td width="20%">id</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the unique identifier of the asset.</td>
 									</tr>
 									<tr>
 										<td width="20%">product_type</td>
@@ -410,15 +410,48 @@
 									<tr>
 										<td width="20%">thumb_uri</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates the thumbnail download URI.</td>
+									</tr>
+									<tr>
+										<td width="20%">download_details</td>
+										<td width="20%"> </td>
+										<td width="60%">Customer stored details associated with this download.</td>
+									</tr>
+								</table>
+								<h4>DownloadData</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">download_notes</td>
+										<td width="20%">string </td>
+										<td width="60%">Associated note saved by customer for downloaded image.</td>
+									</tr>
+									<tr>
+										<td width="20%">project_code</td>
+										<td width="20%">string </td>
+										<td width="60%">Associated project code saved by customer for downloaded image.</td>
 									</tr>
 								</table>
 							<h3 id="response-status-codes">Response Status Codes</h3>
 
 							<table class="table table-striped">
 								<tr>
+									<td>200</td>
+									<td>Success</td>
+									<td></td>
+								</tr>
+								<tr>
 									<td>400</td>
 									<td>InvalidRequest</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>401</td>
+									<td>AuthorizationTokenRequired</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>403</td>
+									<td>Account Inactive</td>
 									<td></td>
 								</tr>
 							</table>

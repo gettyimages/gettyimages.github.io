@@ -338,9 +338,7 @@ Authorization: Bearer &lt;your secure access token&gt;
 									<td>channel_id</td>
 									<td>integer</td>
 									<td>
-										Specify the channel of content for the GetAssetChanges request. 
-             Each channel contains changed assets based on criteria such as asset family,
-             changed asset metadata, or the type of change to the asset (i.e. new, deleted, updated)
+										Specifies the id of the channel for the asset data. Valid channel ids can be found in the results of the Get Partner Channel query.
 										Required.
 										
 									</td>
@@ -349,12 +347,55 @@ Authorization: Bearer &lt;your secure access token&gt;
 									<td>batch_size</td>
 									<td>integer</td>
 									<td>
-										Number of assets to return in the response. Default is 10; maximum is 500.
+										Specifies the number of assets to return. The default is 10; maximum is 500.
 										
 										
 									</td>
 								</tr>
 							</table>
+							<h3 id="response-body-fields">Response Body Fields</h3>
+
+								<h4>AssetChanges</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">ChangeSetId</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">ChangedAssetList</td>
+										<td width="20%">array [ChangedAssetDetail] </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
+								<h4>ChangedAssetDetail</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">AssetChangedUtcDateTime</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">AssetLifecycle</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">AssetType</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">Id</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+									<tr>
+										<td width="20%">Uri</td>
+										<td width="20%">string </td>
+										<td width="60%"></td>
+									</tr>
+								</table>
 							<h3 id="response-status-codes">Response Status Codes</h3>
 
 							<table class="table table-striped">
@@ -365,7 +406,7 @@ Authorization: Bearer &lt;your secure access token&gt;
 								</tr>
 								<tr>
 									<td>404</td>
-									<td>The requested channel does not exist</td>
+									<td>The channel you specified does not exist</td>
 									<td></td>
 								</tr>
 							</table>
