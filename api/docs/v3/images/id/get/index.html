@@ -431,12 +431,12 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">images</td>
 										<td width="20%">array [image_detail] </td>
-										<td width="60%"></td>
+										<td width="60%">List of image identifiers found.</td>
 									</tr>
 									<tr>
 										<td width="20%">images_not_found</td>
 										<td width="20%">array [string] </td>
-										<td width="60%"></td>
+										<td width="60%">List of image identifiers not found.</td>
 									</tr>
 								</table>
 								<h4>image_detail</h4>
@@ -449,7 +449,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">alternative_ids</td>
 										<td width="20%">array [KeyValuePair[String,String]] </td>
-										<td width="60%">Specifies list all alternative ids for asset id.</td>
+										<td width="60%">Lists all of the alternative ids for the asset.</td>
 									</tr>
 									<tr>
 										<td width="20%">artist</td>
@@ -464,22 +464,22 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">asset_family</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates the asset family classification. Possible values are: creative, editorial</td>
+										<td width="60%">Indicates the asset family classification. Possible values are: creative, editorial.</td>
 									</tr>
 									<tr>
 										<td width="20%">call_for_image</td>
 										<td width="20%">boolean </td>
-										<td width="60%">Specifies if customers need to call Getty Images in order to license this image</td>
+										<td width="60%">Indicates whether a customer needs to call Getty Images in order to license this image.</td>
 									</tr>
 									<tr>
 										<td width="20%">caption</td>
 										<td width="20%">string </td>
-										<td width="60%">Describes the image in detail.</td>
+										<td width="60%">Gives a brief description of the image.</td>
 									</tr>
 									<tr>
 										<td width="20%">city</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the city where the image was created.</td>
+										<td width="60%">Specifies the city name.</td>
 									</tr>
 									<tr>
 										<td width="20%">collection_code</td>
@@ -499,12 +499,12 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">color_type</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies whether the image is color or black and white. Possible values are color, black_and_white, and null</td>
+										<td width="60%">Specifies whether the image or video is color or black and white. Possible values are color, black_and_white, and null.</td>
 									</tr>
 									<tr>
 										<td width="20%">copyright</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies copyright of the image.</td>
+										<td width="60%">Specifies the copyright of the image.</td>
 									</tr>
 									<tr>
 										<td width="20%">country</td>
@@ -514,62 +514,62 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">credit_line</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the credit line of the image.</td>
+										<td width="60%">Specifies the line of copy acknowledging the source or origin of the image.</td>
 									</tr>
 									<tr>
 										<td width="20%">date_created</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the date the image was created, in ISO 8601 format (e.g., 1999-12-31).</td>
+										<td width="60%">Specifies the date the image was created, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
 									</tr>
 									<tr>
 										<td width="20%">date_submitted</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the date the image was submitted, in ISO 8601 format (e.g., 1999-12-31).</td>
+										<td width="60%">Specifies the date the image was submitted, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
 									</tr>
 									<tr>
 										<td width="20%">display_sizes</td>
 										<td width="20%">array [display_size] </td>
-										<td width="60%">Specifies the sizes available for display.</td>
+										<td width="60%">Lists the display sizes available for this image.</td>
 									</tr>
 									<tr>
 										<td width="20%">download_sizes</td>
 										<td width="20%">array [download_size] </td>
-										<td width="60%">Lists the sizes available for download.</td>
+										<td width="60%">Lists the available download size information.</td>
 									</tr>
 									<tr>
 										<td width="20%">editorial_segments</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">List of editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport</td>
+										<td width="60%">Lists the editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport.</td>
 									</tr>
 									<tr>
 										<td width="20%">event_ids</td>
 										<td width="20%">array [integer] </td>
-										<td width="60%">List of event Ids for the image.</td>
+										<td width="60%">Lists the events that are relevant for this image.</td>
 									</tr>
 									<tr>
 										<td width="20%">graphical_style</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the graphical style for the image.</td>
+										<td width="60%">Specifies the graphical style for the image. Possible values are Photography, Fine Art, and Illustration.</td>
 									</tr>
 									<tr>
 										<td width="20%">id</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the unique identifier of the asset.</td>
+										<td width="60%">Specifies the unique identifier for the image.</td>
 									</tr>
 									<tr>
 										<td width="20%">keywords</td>
 										<td width="20%">array [keywords] </td>
-										<td width="60%">List of keyword entries associated with image/asset.</td>
+										<td width="60%">Lists the keywords that are associated with this image.</td>
 									</tr>
 									<tr>
 										<td width="20%">largest_downloads</td>
 										<td width="20%">array [download_size] </td>
-										<td width="60%">Specifies the largest authorized download size for the current token context.</td>
+										<td width="60%">Lists the available largest download sizes.</td>
 									</tr>
 									<tr>
 										<td width="20%">license_model</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies a licensing model for the image. Possible values are: royaltyfree, rightsmanaged</td>
+										<td width="60%">Specifies the licensing model for the image. Possible values are: royaltyfree, rightsmanaged.</td>
 									</tr>
 									<tr>
 										<td width="20%">links</td>
@@ -579,37 +579,37 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">max_dimensions</td>
 										<td width="20%"> </td>
-										<td width="60%">Specifies the dimensions of the largest available size.</td>
+										<td width="60%">Specifies the maximum height and width of any size for this image.</td>
 									</tr>
 									<tr>
 										<td width="20%">orientation</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates orientation of the image. Possible values are: Horizontal, PanoramicHorizontal, PanoramicVertical, Square, Vertical, and null</td>
+										<td width="60%">Specifies the orientation of the image. Possible values are: Horizontal, PanoramicHorizontal, PanoramicVertical, Square, Vertical, and null.</td>
 									</tr>
 									<tr>
 										<td width="20%">people</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">List of people in the image.</td>
+										<td width="60%">List of people appearing in the image.</td>
 									</tr>
 									<tr>
 										<td width="20%">prestige</td>
 										<td width="20%">boolean </td>
-										<td width="60%">Specifies if imagery is Prestige curated.</td>
+										<td width="60%">Specifies the image is in the curated Prestige collection.</td>
 									</tr>
 									<tr>
 										<td width="20%">product_types</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">List product types for the image. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription</td>
+										<td width="60%">Lists the product types for the image. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription.</td>
 									</tr>
 									<tr>
 										<td width="20%">quality_rank</td>
 										<td width="20%">integer </td>
-										<td width="60%">Assigned to editorial images to rank their relevance to the event they belong to. This number has no relevance for creative images even though it does appear in the metadata. Possible values are: 1 - most relevant, 2 - tells story from a wider perspective, 3 - stock/repeats/less important.</td>
+										<td width="60%">Specifies the quality ranking of the image.</td>
 									</tr>
 									<tr>
 										<td width="20%">referral_destinations</td>
 										<td width="20%">array [referral_destination] </td>
-										<td width="60%">Specifies a URI to refer for this Getty Images property</td>
+										<td width="60%">Specifies the referral destination for Getty Images assets.</td>
 									</tr>
 									<tr>
 										<td width="20%">state_province</td>
@@ -619,12 +619,12 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">title</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the title given by the artist.</td>
+										<td width="60%">Specifies the image title.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri_oembed</td>
 										<td width="20%">string </td>
-										<td width="60%">GET this URI to retrieve the display image, if embeddable.</td>
+										<td width="60%">Specifies the URI that can be used to get oEmbed data for the image, if embeddable.</td>
 									</tr>
 								</table>
 								<h4>allowed_use</h4>
@@ -642,7 +642,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">usage_restrictions</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">Specifies asset usage restriction.</td>
+										<td width="60%">Specifies the asset usage restriction.</td>
 									</tr>
 								</table>
 								<h4>KeyValuePair[String,String]</h4>
@@ -696,22 +696,22 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">downloads</td>
 										<td width="20%">array [download] </td>
-										<td width="60%">Indicates a list of download information.</td>
+										<td width="60%">Lists the sizes available for download.</td>
 									</tr>
 									<tr>
 										<td width="20%">height</td>
 										<td width="20%">integer </td>
-										<td width="60%">Indicates the height in pixels.</td>
+										<td width="60%">Specifies the height in pixels.</td>
 									</tr>
 									<tr>
 										<td width="20%">media_type</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates file type expressed as internet media content type.</td>
+										<td width="60%">Specifies the file type expressed as internet media content type.</td>
 									</tr>
 									<tr>
 										<td width="20%">width</td>
 										<td width="20%">integer </td>
-										<td width="60%">Indicates the width in pixels.</td>
+										<td width="60%">Specifies the width in pixels.</td>
 									</tr>
 								</table>
 								<h4>download</h4>
@@ -719,17 +719,17 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">product_id</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates the instance Id of the product.</td>
+										<td width="60%">Specifies the instance Id of the product.</td>
 									</tr>
 									<tr>
 										<td width="20%">product_type</td>
 										<td width="20%">string </td>
-										<td width="60%">License agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox</td>
+										<td width="60%">Specifies the license agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%">GET this URI to retrieve the display image.</td>
+										<td width="60%">POST this URI to download the image.</td>
 									</tr>
 								</table>
 								<h4>keywords</h4>
@@ -737,22 +737,22 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">keyword_id</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies the keyword</td>
+										<td width="60%">Specifies the unique identifier for the keyword.</td>
 									</tr>
 									<tr>
 										<td width="20%">text</td>
 										<td width="20%">string </td>
-										<td width="60%">Provides localized text of the keyword</td>
+										<td width="60%">Provides localized text of the keyword.</td>
 									</tr>
 									<tr>
 										<td width="20%">type</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies the keyword type</td>
+										<td width="60%">Specifies the keyword type.</td>
 									</tr>
 									<tr>
 										<td width="20%">relevance</td>
 										<td width="20%">integer </td>
-										<td width="60%">Relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
+										<td width="60%">Specifies the relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
 									</tr>
 								</table>
 								<h4>download_size</h4>
@@ -765,22 +765,22 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">downloads</td>
 										<td width="20%">array [download] </td>
-										<td width="60%">Indicates a list of download information.</td>
+										<td width="60%">Lists the sizes available for download.</td>
 									</tr>
 									<tr>
 										<td width="20%">height</td>
 										<td width="20%">integer </td>
-										<td width="60%">Indicates the height in pixels.</td>
+										<td width="60%">Specifies the height in pixels.</td>
 									</tr>
 									<tr>
 										<td width="20%">media_type</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates file type expressed as internet media content type.</td>
+										<td width="60%">Specifies the file type expressed as internet media content type.</td>
 									</tr>
 									<tr>
 										<td width="20%">width</td>
 										<td width="20%">integer </td>
-										<td width="60%">Indicates the width in pixels.</td>
+										<td width="60%">Specifies the width in pixels.</td>
 									</tr>
 								</table>
 								<h4>download</h4>
@@ -788,17 +788,17 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">product_id</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates the instance Id of the product.</td>
+										<td width="60%">Specifies the instance Id of the product.</td>
 									</tr>
 									<tr>
 										<td width="20%">product_type</td>
 										<td width="20%">string </td>
-										<td width="60%">License agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox</td>
+										<td width="60%">Specifies the license agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%">GET this URI to retrieve the display image.</td>
+										<td width="60%">POST this URI to download the image.</td>
 									</tr>
 								</table>
 								<h4>link</h4>
@@ -806,12 +806,12 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">rel</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies relationship type for associated URI.</td>
+										<td width="60%">Specifies the link&#x27;s relationship to the asset.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%">GET this URI to retrieve a list of related assets.</td>
+										<td width="60%">Specifies the resource URI.</td>
 									</tr>
 								</table>
 								<h4>max_dimensions</h4>
@@ -832,12 +832,12 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 									<tr>
 										<td width="20%">site_name</td>
 										<td width="20%">string </td>
-										<td width="60%">Specifies asset domain name.</td>
+										<td width="60%">Specifies the asset domain name.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates the resource URI.</td>
+										<td width="60%">Specifies the resource URI.</td>
 									</tr>
 								</table>
 							<h3 id="response-status-codes">Response Status Codes</h3>

@@ -361,55 +361,55 @@
 									<tr>
 										<td width="20%">events</td>
 										<td width="20%">array [event] </td>
-										<td width="60%"></td>
+										<td width="60%">Lists the event ids matching the search criteria.</td>
 									</tr>
 									<tr>
 										<td width="20%">events_not_found</td>
 										<td width="20%">array [integer] </td>
-										<td width="60%"></td>
+										<td width="60%">Lists the event ids which were not found.</td>
 									</tr>
 								</table>
 								<h4>event</h4>
 								<table class="table table-striped">
 									<tr>
-										<td width="20%">id</td>
-										<td width="20%">integer </td>
-										<td width="60%">Identifies the event.</td>
-									</tr>
-									<tr>
 										<td width="20%">child_event_count</td>
 										<td width="20%">integer </td>
-										<td width="60%">Indicates the count of child events.</td>
+										<td width="60%">Specifies the count of children events associated with this event.</td>
 									</tr>
 									<tr>
 										<td width="20%">editorial_segments</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">List of editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport</td>
+										<td width="60%">Lists the editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport.</td>
 									</tr>
 									<tr>
 										<td width="20%">hero_image</td>
 										<td width="20%"> </td>
-										<td width="60%">Identifies the image which best represents the event.</td>
+										<td width="60%">Spcifies the image that best captures the event.</td>
+									</tr>
+									<tr>
+										<td width="20%">id</td>
+										<td width="20%">integer </td>
+										<td width="60%">Specifies the unique identifier for the event.</td>
 									</tr>
 									<tr>
 										<td width="20%">image_count</td>
 										<td width="20%">integer </td>
-										<td width="60%">Indicates the number of images related to the event.</td>
+										<td width="60%">Specifies the count of images associated with event.</td>
 									</tr>
 									<tr>
 										<td width="20%">location</td>
 										<td width="20%"> </td>
-										<td width="60%">Indicates the geographic location where the event took place.</td>
+										<td width="60%">Specifies the location where the event took place.</td>
 									</tr>
 									<tr>
 										<td width="20%">name</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates the name of the event.</td>
+										<td width="60%">Specifies the name of the event.</td>
 									</tr>
 									<tr>
 										<td width="20%">start_date</td>
 										<td width="20%">string </td>
-										<td width="60%">Indicates the date the event started.</td>
+										<td width="60%">Specifies the start date of event, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
 									</tr>
 								</table>
 								<h4>hero_image</h4>
@@ -417,12 +417,12 @@
 									<tr>
 										<td width="20%">id</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies the image.</td>
+										<td width="60%">Specifies the image id of the image that best captures the associated group of images.</td>
 									</tr>
 									<tr>
 										<td width="20%">display_sizes</td>
 										<td width="20%">array [hero_display_size] </td>
-										<td width="60%">Specifies the list of available display sizes.</td>
+										<td width="60%">Lists the display sizes available for this image.</td>
 									</tr>
 								</table>
 								<h4>hero_display_size</h4>
@@ -430,12 +430,12 @@
 									<tr>
 										<td width="20%">name</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies the name of the display size.</td>
+										<td width="60%">Specifies the name of the display size.</td>
 									</tr>
 									<tr>
 										<td width="20%">is_watermarked</td>
 										<td width="20%">boolean </td>
-										<td width="60%">Indicates whether the image is watermarked.</td>
+										<td width="60%">Specifies whether the image is watermarked.</td>
 									</tr>
 									<tr>
 										<td width="20%">uri</td>
@@ -448,22 +448,22 @@
 									<tr>
 										<td width="20%">city</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies the city where the event took place.</td>
+										<td width="60%">Specifies the city where the event took place.</td>
 									</tr>
 									<tr>
 										<td width="20%">country</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies the country where the event took place.</td>
+										<td width="60%">Specifies the country where the event took place.</td>
 									</tr>
 									<tr>
 										<td width="20%">state_province</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies the state or province where the event took place.</td>
+										<td width="60%">Specifies the state or province where the event took place.</td>
 									</tr>
 									<tr>
 										<td width="20%">venue</td>
 										<td width="20%">string </td>
-										<td width="60%">Identifies the venue where the event took place.</td>
+										<td width="60%">Specifies the venue where the event took place.</td>
 									</tr>
 								</table>
 							<h3 id="response-status-codes">Response Status Codes</h3>

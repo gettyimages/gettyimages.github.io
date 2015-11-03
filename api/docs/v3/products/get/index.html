@@ -356,7 +356,7 @@
 									<tr>
 										<td width="20%">products</td>
 										<td width="20%">array [product] </td>
-										<td width="60%"></td>
+										<td width="60%">List of available Getty Images products.</td>
 									</tr>
 								</table>
 								<h4>product</h4>
@@ -364,75 +364,98 @@
 									<tr>
 										<td width="20%">application_website</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">URI of application website.</td>
 									</tr>
 									<tr>
 										<td width="20%">download_limit</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the download limit for product or package.</td>
 									</tr>
 									<tr>
 										<td width="20%">download_limit_duration</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the end date of current download limit.</td>
 									</tr>
 									<tr>
 										<td width="20%">download_limit_reset_utc_date</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the date when download limit will reset, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
 									</tr>
 									<tr>
 										<td width="20%">downloads_remaining</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the remaining available downloads.</td>
 									</tr>
 									<tr>
 										<td width="20%">expiration_utc_date</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the expiration date, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
 									</tr>
 									<tr>
 										<td width="20%">id</td>
 										<td width="20%">integer </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the unique identifier for the product.</td>
 									</tr>
 									<tr>
 										<td width="20%">name</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the name of Getty Images product.</td>
 									</tr>
 									<tr>
 										<td width="20%">status</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies if product status is active or inactive.</td>
 									</tr>
 									<tr>
 										<td width="20%">type</td>
 										<td width="20%">string </td>
-										<td width="60%"></td>
+										<td width="60%">List of product types available. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription.</td>
+									</tr>
+									<tr>
+										<td width="20%">download_requirements</td>
+										<td width="20%"> </td>
+										<td width="60%">Specifies the download requirements a company can apply on its users.</td>
 									</tr>
 									<tr>
 										<td width="20%">premium_access_download_requirements</td>
 										<td width="20%"> </td>
-										<td width="60%"></td>
+										<td width="60%">Specifies the download requirements a company can apply on its users.</td>
 									</tr>
 								</table>
-								<h4>premium_access_download_requirements</h4>
+								<h4>download_requirements</h4>
 								<table class="table table-striped">
 									<tr>
 										<td width="20%">is_note_required</td>
 										<td width="20%">boolean </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates if users must enter a note on download.</td>
 									</tr>
 									<tr>
 										<td width="20%">is_project_code_required</td>
 										<td width="20%">boolean </td>
-										<td width="60%"></td>
+										<td width="60%">Indicates if users must enter a product code on download.</td>
 									</tr>
 									<tr>
 										<td width="20%">project_codes</td>
 										<td width="20%">array [string] </td>
-										<td width="60%">Only users who have been set up with a project code by Getty Images Sales need to use this field.</td>
+										<td width="60%">Only users who have been set up with a project code by Getty Sales need to use this field.</td>
+									</tr>
+								</table>
+								<h4>download_requirements</h4>
+								<table class="table table-striped">
+									<tr>
+										<td width="20%">is_note_required</td>
+										<td width="20%">boolean </td>
+										<td width="60%">Indicates if users must enter a note on download.</td>
+									</tr>
+									<tr>
+										<td width="20%">is_project_code_required</td>
+										<td width="20%">boolean </td>
+										<td width="60%">Indicates if users must enter a product code on download.</td>
+									</tr>
+									<tr>
+										<td width="20%">project_codes</td>
+										<td width="20%">array [string] </td>
+										<td width="60%">Only users who have been set up with a project code by Getty Sales need to use this field.</td>
 									</tr>
 								</table>
 							<h3 id="response-status-codes">Response Status Codes</h3>
