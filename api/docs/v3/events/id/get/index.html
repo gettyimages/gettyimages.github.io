@@ -291,7 +291,47 @@
 					</ul>
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Events/Events_Get">Experiment with this API</a>
 						<h1 id="get-metadata-for-single-event">Get Metadata for Single Event</h1>
-
+<p>This endpoint returns the detailed event metadata for a specified event. Getty Images news, sports and entertainment photographers and videographers cover editorially relevant events occurring around the world.  All images or video clips produced in association with an event, are assigned the same EventID. EventIDs are part of the meta-data returned in SearchForImages Results. Only content produced under a Getty Images brand name (Getty Images News, Getty Images Sports, Getty Images Entertainment, Film Magic, Wire Image) will be consistently assigned an EventID. The Event framework may also be used to group similar content, such as &quot;Hats from the Royal Wedding&quot; or &quot;Odd-ballOffbeat images of the week&quot;. </p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
+There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
+<p>Use the following endpoint to retrieve metadata for multiple events:</p>
+<pre><code>GET https://api.gettyimages.com/v3/events/&lt; event id&gt;
+</code></pre><p>Add your API key to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/v3/events/&lt;event id&gt;
+</code></pre><p>Your response will look like this:    </p>
+<pre><code>{
+        &quot;child_event_count&quot;: 0,
+        &quot;editorial_segments&quot;: [&quot;&quot;],
+        &quot;hero_image&quot;: {
+            &quot;id&quot;: &quot;&quot;,
+            &quot;display_sizes&quot;: [{
+                &quot;name&quot;: &quot;&quot;,
+                &quot;is_watermarked&quot;: false,
+                &quot;uri&quot;: &quot;&quot;
+            }]
+        },
+        &quot;id&quot;: 0,
+        &quot;image_count&quot;: 0,
+        &quot;location&quot;: {
+            &quot;city&quot;: &quot;&quot;,
+            &quot;country&quot;: &quot;&quot;,
+            &quot;state_province&quot;: &quot;&quot;,
+            &quot;venue&quot;: &quot;&quot;
+        },
+        &quot;name&quot;: &quot;&quot;,
+        &quot;start_date&quot;: &quot;&quot;
+}
+</code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
 							<table class="table table-striped">

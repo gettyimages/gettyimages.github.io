@@ -292,6 +292,15 @@
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Images/Images_GetSimilarImages">Experiment with this API</a>
 						<h1 id="search-for-similar-images">Search for Similar Images</h1>
 <p>This endpoint will search our asset database for images similar to the specified asset id. Due to a wide variety of available image resolutions, the images are grouped into a handful of size categories for simplicity. </p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#uri-path-parameters">URI Path Parameters</a></li>
+<li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#sorting-and-pagination">Sorting and Pagination</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
 There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
@@ -303,28 +312,28 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 <pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/v3/images/&lt;asset id&gt;/similar
 </code></pre><p>Your response will look like this:    </p>
 <pre><code>{
-  &quot;result_count&quot;: 973,
-  &quot;images&quot;: [
+    &quot;result_count&quot;: 973,
+    &quot;images&quot;: [
     {
-      &quot;id&quot;: &quot;AA027431&quot;,
-      &quot;asset_family&quot;: &quot;creative&quot;,
-      &quot;caption&quot;: null,
-      &quot;collection_code&quot;: &quot;PDI&quot;,
-      &quot;collection_id&quot;: 2,
-      &quot;collection_name&quot;: &quot;Photodisc&quot;,
-      &quot;display_sizes&quot;: [
+        &quot;id&quot;: &quot;AA027431&quot;,
+        &quot;asset_family&quot;: &quot;creative&quot;,
+        &quot;caption&quot;: null,
+        &quot;collection_code&quot;: &quot;PDI&quot;,
+        &quot;collection_id&quot;: 2,
+        &quot;collection_name&quot;: &quot;Photodisc&quot;,
+        &quot;display_sizes&quot;: [
         {
-          &quot;is_watermarked&quot;: false,
-          &quot;name&quot;: &quot;thumb&quot;,
-          &quot;uri&quot;: &quot;http://delivery.candidate-gettyimages.com/xt/AA027431.jpg?v=1&amp;g=fs1|0|PDI|27|431&amp;s=1&amp;b=RTRE&quot;
+            &quot;is_watermarked&quot;: false,
+            &quot;name&quot;: &quot;thumb&quot;,
+            &quot;uri&quot;: &quot;http://delivery.candidate-gettyimages.com/xt/AA027431.jpg?v=1&amp;g=fs1|0|PDI|27|431&amp;s=1&amp;b=RTRE&quot;
         }
-      ],
-      &quot;license_model&quot;: &quot;royaltyfree&quot;,
-      &quot;max_dimensions&quot;: {
+        ],
+        &quot;license_model&quot;: &quot;royaltyfree&quot;,
+        &quot;max_dimensions&quot;: {
         &quot;height&quot;: 4094,
         &quot;width&quot;: 4094
-      },
-      &quot;title&quot;: &quot;Kitten&quot;
+        },
+        &quot;title&quot;: &quot;Kitten&quot;
     }
     ...
 }
@@ -382,6 +391,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 										Specifies fields to return. Defaults to 'summary_set'.
 										
 										 Possible values: 
+										<span class="label label-default">accessrestriction</span>
 										<span class="label label-default">allowed_use</span>
 										<span class="label label-default">alternative_ids</span>
 										<span class="label label-default">artist</span>

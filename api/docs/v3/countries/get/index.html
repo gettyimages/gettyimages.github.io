@@ -290,8 +290,38 @@
 						<li><a href="/api/docs/v3/countries/get/">Get Country Codes and Names</a></li>
 					</ul>
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Countries/Countries_GetCountries">Experiment with this API</a>
-						<p>GetCountries</p>
-
+						<h1 id="get-countries-list">Get countries list</h1>
+<p>Returns a list of country objects that contains country name, two letter ISO abbreviation and three letter ISO abbreviation.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.
+There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
+<p>Use the following endpoint to retrieve the list of countries used by Getty Images:</p>
+<pre><code>GET https://api.gettyimages.com/v3/countries
+</code></pre><p>Add your API key to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/v3/countries
+</code></pre><p>The response body will look like the following example:</p>
+<pre><code>{
+    &quot;countries&quot;: [{
+        &quot;iso_alpha_2&quot;: &quot;AF&quot;,
+        &quot;iso_alpha_3&quot;: &quot;AFG&quot;,
+        &quot;name&quot;: &quot;Afghanistan&quot;
+    },
+    &lt;all of the other countries&gt;
+    {
+        &quot;iso_alpha_2&quot;: &quot;ZM&quot;,
+        &quot;iso_alpha_3&quot;: &quot;ZMB&quot;,
+        &quot;name&quot;: &quot;Zambia&quot;
+    }]
+}
+</code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
 							<table class="table table-striped">

@@ -290,8 +290,39 @@
 						<li><a href="/api/docs/v3/purchases/../purchased-images/get/">Get Previous Purchases</a></li>
 					</ul>
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Purchases/Purchases_GetPreviousPurchases">Experiment with this API</a>
-						<p>Get Previous Purchases</p>
-
+						<h2 id="get-previous-purchases">Get Previous Purchases</h2>
+<p>This endpoint returns a list of all images purchased on gettyimages.com by the username used for authentication. Use of this endpoint requires configuration changes to your API key. Please contact <a href="mailto:developersupport@gettyimages.com">developersupport@gettyimages.com</a> to learn more.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.
+There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
+<p>Use the following endpoint to return list of your previous purchases:</p>
+<pre><code>GET https://api.gettyimages.com/v3/purchased-images
+</code></pre><p>To include your API token and a Bearer token to the header (example in curl):</p>
+<pre><code>-H &quot;Api-Key: &lt;your api key&gt;&quot;
+-H &quot;Authorization: Bearer &lt;your-token&gt;&quot;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/purchased-images
+</code></pre><p>The response body will look like the following example:</p>
+<pre><code>{
+    &quot;result_count&quot;: 0,
+    &quot;previous_purchases&quot;: [
+    {
+        &quot;date_purchased&quot;: &quot;&quot;,
+        &quot;image_id&quot;: &quot;&quot;,
+        &quot;license_model&quot;: &quot;&quot;,
+        &quot;order_id&quot;: &quot;&quot;,
+        &quot;thumb_uri&quot;: &quot;&quot;
+    }
+    ]
+}
+</code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
 							<table class="table table-striped">

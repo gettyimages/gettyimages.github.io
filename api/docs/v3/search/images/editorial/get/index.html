@@ -292,46 +292,53 @@
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Search/Search_GetEditorialImagesByPhrase">Experiment with this API</a>
 						<h1 id="search-for-editorial-images">Search For Editorial Images</h1>
 <p>Use this endpoint to search our editorial stock photos, illustrations and archival images.  Editorial images represent newsworthy events or illustrate matters of general interest, such as news, sport and entertainment and are generally intended for editorial use.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
 <h2 id="quickstart">Quickstart</h2>
-<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
+<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.
 There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
 <p>Use the following endpoint to search for editorial images:</p>
-<pre><code>GET https://api.gettyimages.com:443/v3/search/images/editorial?phrase=&lt;query term&gt;
+<pre><code>GET https://api.gettyimages.com/v3/search/images/editorial?phrase=&lt;query term&gt;
 </code></pre><p>Add your API key to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
 </code></pre><p>Your request would look like this using curl:</p>
 <pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/v3/search/images/editorial?phrase=&lt;query term&gt;
-</code></pre><p>The response body will look like the following example:    </p>
+</code></pre><p>The response body will look like the following example:</p>
 <pre><code>{
-  &quot;result_count&quot;: 1,
-  &quot;images&quot;: [
+    &quot;result_count&quot;: 1,
+    &quot;images&quot;: [
     {
-      &quot;id&quot;: &quot;&lt;image id&gt;}&quot;,
-      &quot;asset_family&quot;: &quot;editorial&quot;,
-      &quot;caption&quot;: &quot;&lt;image description&gt;&quot;,
-      &quot;collection_code&quot;: &quot;&lt;collection code&gt;&quot;,
-      &quot;collection_id&quot;: &lt;collection id&gt;,
-      &quot;collection_name&quot;: &quot;&lt;collection name&gt;&quot;,
-      &quot;display_sizes&quot;: [
+        &quot;id&quot;: &quot;&lt;image id&gt;}&quot;,
+        &quot;asset_family&quot;: &quot;editorial&quot;,
+        &quot;caption&quot;: &quot;&lt;image description&gt;&quot;,
+        &quot;collection_code&quot;: &quot;&lt;collection code&gt;&quot;,
+        &quot;collection_id&quot;: &lt;collection id&gt;,
+        &quot;collection_name&quot;: &quot;&lt;collection name&gt;&quot;,
+        &quot;display_sizes&quot;: [
         {
-          &quot;is_watermarked&quot;: false,
-          &quot;name&quot;: &quot;thumb&quot;,
-          &quot;uri&quot;: &quot;&lt;display url&gt;&quot;
+            &quot;is_watermarked&quot;: false,
+            &quot;name&quot;: &quot;thumb&quot;,
+            &quot;uri&quot;: &quot;&lt;display url&gt;&quot;
         }
-      ],
-      &quot;license_model&quot;: &quot;rightsmanaged&quot;,
-      &quot;max_dimensions&quot;: {
+        ],
+        &quot;license_model&quot;: &quot;rightsmanaged&quot;,
+        &quot;max_dimensions&quot;: {
         &quot;height&quot;: 2738,
         &quot;width&quot;: 4442
-      },
-      &quot;title&quot;: &quot;&lt;image title&gt;&quot;
+        },
+        &quot;title&quot;: &quot;&lt;image title&gt;&quot;
     }
-  ]
-}    
+    ]
+}
 </code></pre><p>You can show different information in the response by specifying values on the &quot;fields&quot; parameter (see details below).
 You can search with only an API key, and that will give you search results that are equivalent to doing a search on the GettyImages.com site without being logged in (anonymous search).  If you are a Getty Images API customer and would like to ensure that your API searches return only assets that you have a license to use, you need to also include an authorization token in the header of your request.  Please consult our <a href="http://developers.gettyimages.com/en/authorization-faq.html">Authorization FAQ</a> for more information on authorization tokens, and our <a href="https://github.com/gettyimages/gettyimages-api/blob/master/OAuth2Workflow.md">Authorization Workflows</a> for code examples of getting a token.
 To include your API token in the search request, add it to the headers as a Bearer token (example in curl):</p>
-<pre><code>-H &quot;Authorization: Bearer {your-token}&quot;
+<pre><code>-H &quot;Authorization: Bearer &lt;your-token&gt;&quot;
 </code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 

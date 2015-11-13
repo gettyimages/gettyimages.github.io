@@ -292,6 +292,42 @@
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Downloads/Downloads_GetDownloads">Experiment with this API</a>
 						<h1 id="get-previous-downloads">Get Previous Downloads</h1>
 <p>Returns information about a customer&#39;s previously downloaded assets.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#sorting-and-pagination">Sorting and Pagination</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
+There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
+<p>Use the following endpoint to retrieve metadata for multiple images:</p>
+<pre><code>GET https://api.gettyimages.com/v3/downloads
+</code></pre><p>This endpoint requires being a Getty Images customer to limit your results to only assets that you have a license to use, you need to also include an authorization token in the header of your request.  Please consult our <a href="http://developers.gettyimages.com/en/authorization-faq.html">Authorization FAQ</a> for more information on authorization tokens, and our <a href="https://github.com/gettyimages/gettyimages-api/blob/master/OAuth2Workflow.md">Authorization Workflows</a> for code examples of getting a token.
+To include your API token and a Bearer token to the header (example in curl):</p>
+<pre><code>-H &quot;Api-Key: &lt;your api key&gt;&quot;
+-H &quot;Authorization: Bearer &lt;your-token&gt;&quot;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/downloads
+</code></pre><p>Your response will look like this:    </p>
+<pre><code>{
+  &quot;result_count&quot;: 0,
+  &quot;downloads&quot;: [
+    {
+      &quot;date_downloaded&quot;: &quot;&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;product_type&quot;: &quot;&quot;,
+      &quot;thumb_uri&quot;: &quot;&quot;,
+      &quot;download_details&quot;: {
+        &quot;download_notes&quot;: &quot;&quot;,
+        &quot;project_code&quot;: &quot;&quot;
+      }
+    }
+  ]
+}
+</code></pre><p>Your response will return a 200 - When successful.</p>
 
 						<h3 id="request-headers">Request Headers</h3>
 

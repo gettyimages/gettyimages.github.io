@@ -295,72 +295,45 @@
 							</div>
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_GetBoard">Experiment with this API</a>
 						<h1 id="boards-get-board">Boards - Get Board</h1>
-<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to retrieve a Board by a specific id. </p>
+<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to retrieve a Board by a specific id.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
 <h2 id="quickstart">Quickstart</h2>
-<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
-<p>Use the following endpoint to list available boards:</p>
-<pre><code>GET https://api.gettyimages.com/3.0/boards
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.</p>
+<p>Use the following endpoint to retrieve details for a specific board:</p>
+<pre><code>GET https://api.gettyimages.com/v3/boards/&lt;board id&gt;
 </code></pre><p>Add API key and the Resource Owner Grant token to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
 Authorization: Bearer &lt;your secure access token&gt;
 </code></pre><p>Your request would look like this using curl:</p>
-<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/3.0/boards
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/&lt;board id&gt;
 </code></pre><p>Your response will look similar to:</p>
 <pre><code>{  
-   &quot;boards&quot;:[  
-      {  
-         &quot;id&quot;:&quot;&lt;board id&gt;&quot;,
-         &quot;date_created&quot;:&quot;2015-03-06T22:59:25.52Z&quot;,
-         &quot;description&quot;:&quot;Experiment in crowd-sourcing an image board...&quot;,
-         &quot;hero_asset&quot;:{  
-            &quot;id&quot;:&quot;551984113&quot;,
-            &quot;date_added&quot;:&quot;2015-08-24T16:31:18.4274193Z&quot;,
-            &quot;display_sizes&quot;:[  
-               {  
-                  &quot;name&quot;:&quot;thumb&quot;,
-                  &quot;uri&quot;:&quot;&lt;resource uri&gt;&quot;
-               },
-               {  
-                  &quot;name&quot;:&quot;comp&quot;,
-                  &quot;uri&quot;:&quot;&lt;resource uri&gt;&quot;
-               }
-            ],
-            &quot;asset_type&quot;:&quot;image&quot;
-         },
-         &quot;date_last_updated&quot;:&quot;2015-08-24T16:31:18.427Z&quot;,
-         &quot;name&quot;:&quot;Weird or Funny Stock Photos&quot;,
-         &quot;asset_count&quot;:99
-      },
-      ...
-    }
-}
-</code></pre><p>Find the board id then make the call to the Board details endpoint:</p>
-<pre><code>GET https://api.gettyimages.com/3.0/boards/&lt;board id&gt;
-</code></pre><p>Add API key and your Resource Owner Grant token to the request header:</p>
-<pre><code>Api-Key: &lt;your api key&gt;
-Authorization: Bearer &lt;your secure access token&gt;
-</code></pre><p>Your response will look similar to:</p>
-<pre><code>{
-  &quot;id&quot;: &quot;&lt;board id&gt;&quot;,
-  &quot;date_created&quot;: &quot;2015-03-06T22:59:25.52Z&quot;,
-  &quot;description&quot;: &quot;Experiment in crowd-sourcing an image board...&quot;,
-  &quot;assets&quot;: [
-    {
-      &quot;id&quot;: &quot;551984113&quot;,
-      &quot;date_added&quot;: &quot;2015-08-24T16:31:18.4274193Z&quot;,
-      &quot;display_sizes&quot;: [
-        {
-          &quot;name&quot;: &quot;thumb&quot;,
-          &quot;uri&quot;: &quot;&lt;resource uri&gt;&quot;
-        },
-        {
-          &quot;name&quot;: &quot;comp&quot;,
-          &quot;uri&quot;: &quot;&lt;resource uri&gt;&quot;
-        }
-      ],
-      &quot;asset_type&quot;: &quot;image&quot;
-    }
-    ...
+    &quot;id&quot;:&quot;&lt;board id&gt;&quot;,
+    &quot;date_created&quot;:&quot;2015-03-06T22:59:25.52Z&quot;,
+    &quot;description&quot;:&quot;Experiment in crowd-sourcing an image board...&quot;,
+    &quot;hero_asset&quot;:{  
+        &quot;id&quot;:&quot;551984113&quot;,
+        &quot;date_added&quot;:&quot;2015-08-24T16:31:18.4274193Z&quot;,
+        &quot;display_sizes&quot;:[  
+            {  
+                &quot;name&quot;:&quot;thumb&quot;,
+                &quot;uri&quot;:&quot;&lt;resource uri&gt;&quot;
+            },
+            {  
+                &quot;name&quot;:&quot;comp&quot;,
+                &quot;uri&quot;:&quot;&lt;resource uri&gt;&quot;
+            }
+        ],
+        &quot;asset_type&quot;:&quot;image&quot;
+    },
+    &quot;date_last_updated&quot;:&quot;2015-08-24T16:31:18.427Z&quot;,
+    &quot;name&quot;:&quot;Weird or Funny Stock Photos&quot;,
+    &quot;asset_count&quot;:99
 }
 </code></pre>
 						<h3 id="request-headers">Request Headers</h3>

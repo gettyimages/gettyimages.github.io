@@ -292,10 +292,16 @@
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/AssetChanges/AssetChanges_DeleteAssetChanges">Experiment with this API</a>
 						<h1 id="delete-asset-changes">Delete Asset Changes</h1>
 <p>Confirm asset changes acknowledges receipt of asset changes (from the PUT asset changes endpoint).</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#uri-path-parameters">URI Path Parameters</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
 <p>Use the following endpoint to acknowledge asset changes:</p>
-<pre><code>DELETE https://api.gettyimages.com:443/v3/asset-changes/change-sets/&lt;change set id&gt;
+<pre><code>DELETE https://api.gettyimages.com/v3/asset-changes/change-sets/&lt;change set id&gt;
 </code></pre><p>Add your API key and the Resource Owner Grant access token to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
 Authorization: Bearer &lt;your secure access token&gt;

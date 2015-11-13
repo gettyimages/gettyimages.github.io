@@ -294,6 +294,29 @@
 <p>Use this endpoint to generate download URLs and related data for videos you are authorized to download.</p>
 <p>Most product offerings have enforced periodic download limits such as monthly, weekly, and daily. When this operation executes, the count of allowed downloads is decremented by one for the product offering. Once the download limit is reached for a given product offering, no further downloads may be requested for that product offering until the next download period.</p>
 <p>The download limit for a given download period is covered in your product agreement established with Getty Images.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#uri-path-parameters">URI Path Parameters</a></li>
+<li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
+<p>Use the following endpoint for a HTTP status code 303 Redirect to download URI:</p>
+<p><a href="https://api.gettyimages.com/v3/downloads/videos/">https://api.gettyimages.com/v3/downloads/videos/</a><asset id>? auto_download=true</p>
+<p>Use the following endpoint for a response message with the URI to download the largest image available:</p>
+<p><a href="https://api.gettyimages.com/v3/downloads/videos/">https://api.gettyimages.com/v3/downloads/videos/</a><asset id>? auto_download=false</p>
+<p>To include your API token and a Bearer token to the header (example in curl):</p>
+<pre><code>-H &quot;Api-Key: &lt;your api key&gt;&quot;
+-H &quot;Authorization: Bearer &lt;your-token&gt;&quot;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X POST -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/downloads/videos/&lt;asset id&gt;?auto_download=false
+</code></pre><p>Your response will look like this:</p>
+<pre><code>{
+  &quot;uri&quot;: &quot;https://delivery.gettyimages.com/...&quot;
+}
+</code></pre><p>Your response will return a 200 - if successful.</p>
 
 						<h3 id="request-headers">Request Headers</h3>
 

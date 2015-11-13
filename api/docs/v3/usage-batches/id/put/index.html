@@ -292,10 +292,17 @@
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Usage/Usage_Put">Experiment with this API</a>
 						<h1 id="report-usage">Report Usage</h1>
 <p>Use this endpoint to report the usages of a set of assets. The count of assets submitted in a single batch to this endpoint is limited to 1000. Note that all asset Ids specified must be valid or the operation will fail causing no usages to be recorded. In this case, you will need to remove the invalid asset Ids from the query request and re-submit the query.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#uri-path-parameters">URI Path Parameters</a></li>
+<li><a href="#request-body-fields">Request Body Fields</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+</ul>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
 <p>Use the following endpoint to submit usages:</p>
-<pre><code>PUT https://api.gettyimages.com:443/v3/usage-batches/&lt;batchid&gt;
+<pre><code>PUT https://api.gettyimages.com/v3/usage-batches/&lt;batchid&gt;
 </code></pre><p>Add your API key and the Resource Owner Grant access token to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
 Authorization: Bearer &lt;your secure access token&gt;
@@ -308,7 +315,7 @@ Authorization: Bearer &lt;your secure access token&gt;
       &quot;usage_date&quot;: &quot;&lt;date of use&gt;&quot;
     }
   ]
-}&#39; &#39;https://api.gettyimages.com:443/v3/usage-batches/&lt;unique batch id&gt;&#39;
+}&#39; &#39;https://api.gettyimages.com/v3/usage-batches/&lt;unique batch id&gt;&#39;
 </code></pre><p>Note that date of use can be in any unambiguous date format.</p>
 <p>The response body for a success response of 201 will look like the following example:    </p>
 <pre><code>{

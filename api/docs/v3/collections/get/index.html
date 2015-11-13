@@ -290,8 +290,39 @@
 						<li><a href="/api/docs/v3/collections/get/">Get Collections Applicable for Customer</a></li>
 					</ul>
 						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Collections/Collections_GetCollections">Experiment with this API</a>
-						<p>GetCollections</p>
-
+						<h1 id="get-collections">Get Collections</h1>
+<p>Use this endpoint to retrieve collections associated with your Getty Images account. To browse available collections see our <a href="http://www.gettyimages.com/creative-images/collections">Image collections page</a>.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.
+There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
+<p>Use the following endpoint to search for videos:</p>
+<pre><code>GET https://api.gettyimages.com/v3/collections
+</code></pre><p>Add your API key to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/collections
+</code></pre><p>The response body will look like the following example:</p>
+<pre><code>{
+  &quot;collections&quot;: [
+    {
+      &quot;asset_family&quot;: &quot;&quot;,
+      &quot;code&quot;: &quot;&quot;,
+      &quot;id&quot;: 0,
+      &quot;license_model&quot;: &quot;&quot;,
+      &quot;name&quot;: &quot;&quot;,
+      &quot;product_types&quot;: [
+        &quot;&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
 							<table class="table table-striped">

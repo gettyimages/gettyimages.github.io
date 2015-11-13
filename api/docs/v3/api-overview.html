@@ -319,7 +319,7 @@
 <pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800&quot;
 </code></pre><h2 id="authorization">Authorization</h2>
 <p>The Getty Images API allows, and in some cases requires, requests to include an access token to authorize elevated client privileges. Pass the access token via the standard <code>Authorization</code> HTTP header as type <code>Bearer</code>.</p>
-<pre><code>curl -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; -H &quot;Authorization: Bearer {access_token}&quot; https://api.gettyimages.com/v3/downloads/83454811 -d &quot;&#39;&quot; -L -o sample.jpg
+<pre><code>curl -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; https://api.gettyimages.com/v3/downloads/83454811 -d &quot;&#39;&quot; -L -o sample.jpg
 </code></pre><p>Acquire an access token using one of the Getty Images API <a href="oauth2.md#authorization-grant-flows">OAuth2 grants</a>. This example uses the OAuth2 <a href="oauth2.md#client-credentials-flow">client credentials flow</a>.</p>
 <pre><code>curl -d &#39;grant_type=client_credentials&amp;client_id=j878g39yx378pa77djthzzpn&amp;client_secret=hZJS5A3GJpJvcGhaXwev3kwmq3DgtfcQmEuGbGruQBfsz&#39; &quot;https://api.gettyimages.com/oauth2/token&quot;
 
@@ -383,7 +383,7 @@ curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyi
 </code></pre><p>Some fields are in neither <code>summary_set</code> nor <code>detail_set</code> and must be explicitly specified.</p>
 <pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=download_sizes&quot;
 </code></pre><p>Some fields require additional access priviledges and must be explicitly specified. In these cases clients must also provide an <a href="#authorization">access token</a>.</p>
-<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; -H &quot;Authorization: Bearer {access_token}&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=downloads&quot;
+<pre><code>curl -i -H &quot;Api-Key:j878g39yx378pa77djthzzpn&quot; -H &quot;Authorization: Bearer &lt;access_token&gt;&quot; &quot;https://api.gettyimages.com/v3/images/83454800?fields=downloads&quot;
 </code></pre><h4 id="download-sizes">Download Sizes</h4>
 <p>Authorizing download of an image is computationally expensive. Therefore, clients that wish to receive details of available download sizes for images must explicitly specify that they want this information via the <code>fields</code> querystring parameter. The following tables show the available and allowed <code>fields</code> arguments for the endpoints that can return sizes and/or links to the downloadable image.</p>
 <table>
