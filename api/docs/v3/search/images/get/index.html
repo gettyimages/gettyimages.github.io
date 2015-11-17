@@ -298,6 +298,7 @@
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
 <li><a href="#response-status-codes">Response Status Codes</a></li>
+<li><a href="#working-with-sets">Working with Sets</a></li>
 </ul>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.
@@ -360,6 +361,55 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 You can search with only an API key, and that will give you search results that are equivalent to doing a search on the GettyImages.com site without being logged in (anonymous search).  If you are a Getty Images API customer and would like to ensure that your API searches return only assets that you have a license to use, you need to also include an authorization token in the header of your request.  Please consult our <a href="http://developers.gettyimages.com/en/authorization-faq.html">Authorization FAQ</a> for more information on authorization tokens, and our <a href="https://github.com/gettyimages/gettyimages-api/blob/master/OAuth2Workflow.md">Authorization Workflows</a> for code examples of getting a token.
 To include your API token in the search request, add it to the headers as a Bearer token (example in curl):</p>
 <pre><code>-H &quot;Authorization: Bearer &lt;your-token&gt;&quot;
+</code></pre><h2 id="working-with-sets">Working with Sets</h2>
+<p>Sets are used in the <strong>fields</strong> request parameter to receive a suite of metadata fields. The following sets are available:</p>
+<h3 id="summary-set">Summary Set</h3>
+<p>The <strong>summary_set</strong> field represents a small batch of metadata fields that are often used to build search response results. The following fields are provided for every image in your result set when you include <strong>summary_set</strong> in your request.</p>
+<pre><code>&quot;summary_set&quot;: [
+    &quot;asset_family&quot;,
+    &quot;caption&quot;,
+    &quot;collection_id&quot;,
+    &quot;collection_code&quot;,
+    &quot;collection_name&quot;,
+    &quot;license_model&quot;,
+    &quot;max_dimensions&quot;,
+    &quot;thumb&quot;,
+    &quot;title&quot;
+]
+</code></pre><h3 id="detail-set">Detail Set</h3>
+<p>The <strong>detail_set</strong> field represents a large batch of metadata fields that are often used to build a detailed view of images. The following fields are provided for every image in your result set when you include <strong>detail_set</strong> in your request.</p>
+<pre><code>&quot;detail_set&quot;: [
+    &quot;allowed_use&quot;,
+    &quot;artist&quot;,
+    &quot;asset_family&quot;,
+    &quot;call_for_image&quot;,
+    &quot;caption&quot;,
+    &quot;collection_code&quot;,
+    &quot;collection_id&quot;,
+    &quot;collection_name&quot;,
+    &quot;copyright&quot;,
+    &quot;date_created&quot;,
+    &quot;editorial_segments&quot;,
+    &quot;event_ids&quot;,
+    &quot;graphical_style&quot;,
+    &quot;license_model&quot;,
+    &quot;max_dimensions&quot;,
+    &quot;orientation&quot;,
+    &quot;product_types&quot;,
+    &quot;quality_rank&quot;,
+    &quot;referral_destinations&quot;,
+    &quot;title&quot;,
+    &quot;preview&quot;,
+    &quot;thumb&quot;,
+    &quot;comp&quot;
+]
+</code></pre><h3 id="display-set">Display Set</h3>
+<p>The <strong>display_set</strong> field represents the fields that provide you with URLs for the low res files that are most frequently used to build a UI displaying search results. The following fields are provided for every image in your result set when you include <strong>display_set</strong> in your request.</p>
+<pre><code>&quot;display_set&quot;: [
+    &quot;preview&quot;,
+    &quot;comp&quot;,
+    &quot;thumb&quot;
+]
 </code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
