@@ -294,6 +294,7 @@
 <p>This endpoint returns the detailed image metadata for all specified images. Due to a wide variety of available image resolutions, the images are grouped into a handful of size categories for simplicity. </p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#working-with-sets">Working with Sets</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
@@ -331,6 +332,61 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 
     ]
 }
+</code></pre><h2 id="working-with-sets">Working with Sets</h2>
+<p>Sets are used in the <strong>fields</strong> request parameter to receive a suite of metadata fields. The following sets are available:</p>
+<h4 id="summary-set">Summary Set</h4>
+<p>The <strong>summary_set</strong> field represents a small batch of metadata fields that are often used to build search response results. The following fields are provided for every image in your result set when you include <strong>summary_set</strong> in your request.</p>
+<pre><code>&quot;summary_set&quot;: [
+    &quot;artist&quot;,
+    &quot;asset_family&quot;,
+    &quot;caption&quot;,
+    &quot;collection_code&quot;,
+    &quot;collection_id&quot;,
+    &quot;collection_name&quot;,
+    &quot;license_model&quot;,
+    &quot;max_dimensions&quot;,
+    &quot;title&quot;
+]
+</code></pre><h4 id="detail-set">Detail Set</h4>
+<p>The <strong>detail_set</strong> field represents a large batch of metadata fields that are often used to build a detailed view of images. The following fields are provided for every image in your result set when you include <strong>detail_set</strong> in your request.</p>
+<pre><code>&quot;detail_set&quot;: [
+    &quot;allowed_use&quot;,
+    &quot;artist&quot;, 
+    &quot;artist_title&quot;, 
+    &quot;asset_family&quot;,
+    &quot;call_for_image&quot;,
+    &quot;caption&quot;, 
+    &quot;city&quot;,
+    &quot;collection_code&quot;,
+    &quot;collection_id&quot;, 
+    &quot;collection_name&quot;,
+    &quot;color_type&quot;, 
+    &quot;copyright&quot;, 
+    &quot;country&quot;, 
+    &quot;credit_line&quot;, 
+    &quot;date_created&quot;, 
+    &quot;date_submitted&quot;,
+    &quot;download_sizes&quot;, 
+    &quot;editorial_segments&quot;,
+    &quot;event_ids&quot;,
+    &quot;graphical_style&quot;,
+    &quot;license_model&quot;,
+    &quot;max_dimensions&quot;,
+    &quot;orientation&quot;,
+    &quot;prestige&quot;,
+    &quot;product_types&quot;,
+    &quot;quality_rank&quot;,
+    &quot;referral_destinations&quot;,
+    &quot;state_province&quot;, 
+    &quot;title&quot;
+]
+</code></pre><h4 id="display-set">Display Set</h4>
+<p>The <strong>display_set</strong> field represents the fields that provide you with URLs for the low res files that are most frequently used to build a UI displaying search results. The following fields are provided for every image in your result set when you include <strong>display_set</strong> in your request.</p>
+<pre><code>&quot;display_set&quot;: [
+    &quot;comp&quot;,
+    &quot;preview&quot;,
+    &quot;thumb&quot;
+]
 </code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
