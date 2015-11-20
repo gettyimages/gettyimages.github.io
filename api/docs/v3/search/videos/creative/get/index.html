@@ -294,7 +294,7 @@
 <p>Use this endpoint to search premium stock video, from archival film to contemporary 4K and HD footage.</p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
-<li><a href="#working-with-sets">Working with Sets</a></li>
+<li><a href="#working-with-fields-sets">Working with Fields Sets</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
@@ -340,54 +340,90 @@ To include your API token in the search request, add it to the headers as a Bear
 </code></pre><p>Your request would look like this using curl:</p>
 <pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/search/videos/creative?phrase=&lt;query term&gt;
 </code></pre><p>The response body will look similar to the previous response example.        </p>
-<h2 id="working-with-sets">Working with Sets</h2>
-<p>Sets are used in the <strong>fields</strong> request parameter to receive a suite of metadata fields. The following sets are available:</p>
-<h4 id="summary-set">Summary Set</h4>
-<p>The <strong>summary_set</strong> field represents a small batch of metadata fields that are often used to build search response results. The following fields are provided for every video in your result set when you include <strong>summary_set</strong> in your request.</p>
-<pre><code>&quot;summary_set&quot;: [
-    &quot;asset_family&quot;, 
-    &quot;caption&quot;, 
-    &quot;collection_code&quot;,
-    &quot;collection_name&quot;,
-    &quot;license_model&quot;,
-    &quot;title&quot;,
-    &quot;comp&quot;,
-    &quot;preview&quot;,
-    &quot;thumb&quot;
-]
-</code></pre><h4 id="detail-set">Detail Set</h4>
-<p>The <strong>detail_set</strong> field represents a large batch of metadata fields that are often used to build a detailed view of videos. The following fields are provided for every video in your result set when you include <strong>detail_set</strong> in your request.</p>
-<pre><code>&quot;detail_set&quot;: [
-    &quot;allowed_use&quot;,
-    &quot;artist&quot;,
-    &quot;asset_family&quot;, 
-    &quot;caption&quot;, 
-    &quot;clip_length&quot;,
-    &quot;collection_code&quot;,
-    &quot;collection_id&quot;,
-    &quot;collection_name&quot;, 
-    &quot;color_type&quot;,
-    &quot;copyright&quot;,
-    &quot;date_created&quot;,
-    &quot;era&quot;,
-    &quot;license_model&quot;,
-    &quot;mastered_to&quot;,
-    &quot;originally_shot_on&quot;,
-    &quot;product_types&quot;,
-    &quot;shot_speed&quot;,
-    &quot;source&quot;,
-    &quot;title&quot;,
-    &quot;comp&quot;,
-    &quot;preview&quot;,
-    &quot;thumb&quot;
-]
-</code></pre><h4 id="display-set">Display Set</h4>
-<p>The <strong>display_set</strong> field represents the fields that provide you with URLs for the low res files that are most frequently used to build a UI displaying search results. The following fields are provided for every video in your result set when you include <strong>display_set</strong> in your request.</p>
-<pre><code>&quot;display_set&quot;: [
-    &quot;comp&quot;,
-    &quot;preview&quot;,
-    &quot;thumb&quot;
-]
+<h2 id="working-with-fields-sets">Working with Fields Sets</h2>
+<p>Fields sets are used in the <strong>fields</strong> request parameter to receive a suite of metadata fields. The following fields sets are available:</p>
+<h4 id="summary-fields-set">Summary Fields Set</h4>
+<p>The <strong>summary_set</strong> query string parameter fields value represents a small batch of metadata fields that are often used to build search response results. The following fields are provided for every video in your result set when you include <strong>summary_set</strong> in your request.</p>
+<pre><code>{
+    &quot;videos&quot;: 
+    [
+        &quot;asset_family&quot;, 
+        &quot;caption&quot;,
+        &quot;collection_code&quot;,
+        &quot;collection_name&quot;,
+        &quot;display_sizes&quot;:
+        [
+            {
+                &quot;name&quot;: &quot;comp&quot;
+            },
+            {
+                &quot;name&quot;: &quot;preview&quot;
+            },
+            {
+                &quot;name&quot;: &quot;thumb&quot;
+            }
+        ],
+        &quot;license_model&quot;,
+        &quot;title&quot;
+    ]
+}
+</code></pre><h4 id="detail-fields-set">Detail Fields Set</h4>
+<p>The <strong>detail_set</strong> query string parameter fields value represents a large batch of metadata fields that are often used to build a detailed view of videos. The following fields are provided for every video in your result set when you include <strong>detail_set</strong> in your request.</p>
+<pre><code>{
+    &quot;videos&quot;: 
+    [
+        &quot;allowed_use&quot;,
+        &quot;artist&quot;,
+        &quot;asset_family&quot;, 
+        &quot;caption&quot;, 
+        &quot;clip_length&quot;,
+        &quot;collection_code&quot;,
+        &quot;collection_id&quot;,
+        &quot;collection_name&quot;, 
+        &quot;color_type&quot;,
+        &quot;copyright&quot;,
+        &quot;date_created&quot;,
+        &quot;display_sizes&quot;:
+        [
+            {
+                &quot;name&quot;: &quot;comp&quot;
+            },
+            {
+                &quot;name&quot;: &quot;preview&quot;
+            },
+            {
+                &quot;name&quot;: &quot;thumb&quot;
+            }
+        ],
+        &quot;era&quot;,
+        &quot;license_model&quot;,
+        &quot;mastered_to&quot;,
+        &quot;originally_shot_on&quot;,
+        &quot;product_types&quot;,
+        &quot;shot_speed&quot;,
+        &quot;source&quot;,
+        &quot;title&quot;
+    ]
+}
+</code></pre><h4 id="display-fields-set">Display Fields Set</h4>
+<p>The <strong>display_set</strong> query string parameter fields value represents the fields that provide you with URLs for the low resolution files that are most frequently used to build a UI displaying search results. The following fields are provided for every video in your result set when you include <strong>display_set</strong> in your request.</p>
+<pre><code>{
+    &quot;videos&quot;:
+    [
+        &quot;display_sizes&quot;:
+        [
+            {
+                &quot;name&quot;: &quot;comp&quot;
+            },
+            {
+                &quot;name&quot;: &quot;preview&quot;
+            },
+            {
+                &quot;name&quot;: &quot;thumb&quot;
+            }
+        ]
+    ]
+}
 </code></pre>
 						<h3 id="request-headers">Request Headers</h3>
 
