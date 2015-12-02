@@ -1,20 +1,20 @@
 <html>
-	<head>
-		<title>Report Usage of Assets | Getty Images API v3 Documentation</title>
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="/css/slicknav.css">
-	    <link rel="stylesheet" href="/css/docs.css">
-	    <link rel="stylesheet" href="/css/main.css">
-	    <link rel="stylesheet" href="/css/responsive.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="/js/jquery.slicknav.js"></script>
-		<script src="/js/s_code.js"></script>
-		<script src="/js/analytics.js"></script>
-		<script src="/js/docs.js"></script>
-	</head>
-	<body class="home dark-text">
-			
+<head>
+    <title>Report Usage of Assets | Getty Images API v3 Documentation</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+	
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,10 +35,10 @@
     </div>
   </div>
 </header>
-	    <div class="container-fluid">
-			<div class="row-fluid">
-				<div class="col-md-3 left-doc-nav">
-					<ul class="nav nav-pills nav-stacked left-nav">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-3 left-doc-nav">
+            <ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -280,17 +280,19 @@
 	</li>
 </ul>
 
-				</div>
-				<div class="col-md-9 docs-content">
-					<ul class="breadcrumb">
-						<li><a href="/api/">API</a></li>
-						<li><a href="/api/docs/">API Docs</a></li>
-						<li><a href="/api/docs/v3/">v3</a></li>
-						<li><a href="/api/docs/v3/usage/">Usage</a></li>
-						<li><a href="/api/docs/v3/usage/../usage-batches/id/put/">Report Usage of Assets</a></li>
-					</ul>
-						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Usage/Usage_Put">Experiment with this API</a>
-						<h1 id="report-usage">Report Usage</h1>
+        </div>
+        <div class="col-md-9 docs-content">
+                <ul class="breadcrumb">
+                        <li><a href="/api/">API</a></li>
+                        <li><a href="/api/docs/">API Docs</a></li>
+                        <li><a href="/api/docs/v3/">v3</a></li>
+                        <li><a href="/api/docs/v3/usage/">Usage</a></li>
+                        <li><a href="/api/docs/v3/usage/../usage-batches/id/put/">Report Usage of Assets</a></li>
+                </ul>
+                    <a target="_blank" class="btn btn-primary btn-experiment"
+                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Usage/Usage_Put">Experiment
+                        with this API</a>
+                    <h1 id="report-usage">Report Usage</h1>
 <p>Use this endpoint to report the usages of a set of assets. The count of assets submitted in a single batch to this endpoint is limited to 1000. Note that all asset Ids specified must be valid or the operation will fail causing no usages to be recorded. In this case, you will need to remove the invalid asset Ids from the query request and re-submit the query.</p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
@@ -327,100 +329,111 @@ Authorization: Bearer &lt;your secure access token&gt;
   &quot;ErrorMessage&quot;: &quot;Error in the application.&quot;
 }
 </code></pre>
-						<h3 id="request-headers">Request Headers</h3>
+                    <h3 id="request-headers">Request Headers</h3>
 
-							<table class="table table-striped">
-									<tr>
-										<td>Api-Key</td>
-										<td>string</td>
-										<td>
-											Api-Key
-											Required.
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Accept-Language</td>
-										<td>string</td>
-										<td>
-											Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
-											
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Authorization</td>
-										<td>string</td>
-										<td>
-											Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
-											Required.
-											
-										</td>
-									</tr>
-							</table>
-							<h3 id="uri-path-parameters">URI Path Parameters</h3>
+                     
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>Api-Key</td>
+                                    <td>string</td>
+                                    <td>
+                                        Api-Key
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Language</td>
+                                    <td>string</td>
+                                    <td>
+                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Authorization</td>
+                                    <td>string</td>
+                                    <td>
+                                        Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="uri-path-parameters">URI Path Parameters</h3>
 
-							<table class="table table-striped">
-									<tr>
-										<td>id</td>
-										<td>string</td>
-										<td>
-											Specifies a unique Batch Id to identify the report.
-											Required.
-										</td>
-									</tr>
-							</table>
-							<h3 id="request-body-fields">Request Body Fields</h3>
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>id</td>
+                                    <td>string</td>
+                                    <td>
+                                        Specifies a unique Batch Id to identify the report.
+                                        Required.
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="request-body-fields">Request Body Fields</h3>
 
-								<h4>report_usage_batch_request</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">asset_usages</td>
-										<td width="20%">array [asset_usage] </td>
-										<td width="60%">Identifies the list of asset id, usage count and date of usage combinations to record.</td>
-									</tr>
-								</table>
-								<h4>asset_usage</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">asset_id</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the Id of the asset that was used.</td>
-									</tr>
-									<tr>
-										<td width="20%">quantity</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the number of times the asset was used.</td>
-									</tr>
-									<tr>
-										<td width="20%">usage_date</td>
-										<td width="20%">string </td>
-										<td width="60%">Identifies the date the asset was used.</td>
-									</tr>
-								</table>
-							<h3 id="response-body-fields">Response Body Fields</h3>
+                            <h4>report_usage_batch_request</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">asset_usages</td>
+                                        <td width="20%">array 
+                                            [asset_usage
+                                            ] </td>
+                                        <td width="60%">Identifies the list of asset id, usage count and date of usage combinations to record.</td>
+                                    </tr>
+                            </table>
+                            <h4>asset_usage</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">asset_id</td>
+                                        <td width="20%">string </td>
+                                        <td width="60%">Specifies the Id of the asset that was used.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">quantity</td>
+                                        <td width="20%">integer </td>
+                                        <td width="60%">Specifies the number of times the asset was used.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">usage_date</td>
+                                        <td width="20%">string </td>
+                                        <td width="60%">Identifies the date the asset was used.</td>
+                                    </tr>
+                            </table>
+                        <h3 id="response-body-fields">Response Body Fields</h3>
 
-								<h4>report_usage_batch_response</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">invalid_assets</td>
-										<td width="20%">array [string] </td>
-										<td width="60%">Identifies a list of asset ids submitted that did not match known Getty asset ids.</td>
-									</tr>
-									<tr>
-										<td width="20%">total_asset_usages_processed</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the number of asset usage records that were successfully recorded.</td>
-									</tr>
-								</table>
-				</div>
-			</div>
-		</div>
-	   <script type="text/javascript">
-	       $(function () {
-	            $("[data-path='/usage-batches/id/put']").addClass("active").parent().show();
-				$('#menu').slicknav();
-	       })
-	   </script>
-	</body>
+                            <h4>report_usage_batch_response</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">invalid_assets</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Identifies a list of asset ids submitted that did not match known Getty asset ids.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">total_asset_usages_processed</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the number of asset usage records that were successfully recorded.</td>
+                                    </tr>
+                            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("[data-path='/usage-batches/id/put']").addClass("active").parent().show();
+        $('#menu').slicknav();
+    })
+</script>
+</body>
 </html>

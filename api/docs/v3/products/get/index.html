@@ -1,20 +1,20 @@
 <html>
-	<head>
-		<title>Get Products  | Getty Images API v3 Documentation</title>
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="/css/slicknav.css">
-	    <link rel="stylesheet" href="/css/docs.css">
-	    <link rel="stylesheet" href="/css/main.css">
-	    <link rel="stylesheet" href="/css/responsive.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="/js/jquery.slicknav.js"></script>
-		<script src="/js/s_code.js"></script>
-		<script src="/js/analytics.js"></script>
-		<script src="/js/docs.js"></script>
-	</head>
-	<body class="home dark-text">
-			
+<head>
+    <title>Get Products  | Getty Images API v3 Documentation</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+	
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,10 +35,10 @@
     </div>
   </div>
 </header>
-	    <div class="container-fluid">
-			<div class="row-fluid">
-				<div class="col-md-3 left-doc-nav">
-					<ul class="nav nav-pills nav-stacked left-nav">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-3 left-doc-nav">
+            <ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -280,17 +280,19 @@
 	</li>
 </ul>
 
-				</div>
-				<div class="col-md-9 docs-content">
-					<ul class="breadcrumb">
-						<li><a href="/api/">API</a></li>
-						<li><a href="/api/docs/">API Docs</a></li>
-						<li><a href="/api/docs/v3/">v3</a></li>
-						<li><a href="/api/docs/v3/products/">Products</a></li>
-						<li><a href="/api/docs/v3/products/get/">Get Products</a></li>
-					</ul>
-						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Products/Products_GetProducts">Experiment with this API</a>
-						<h2 id="products">Products</h2>
+        </div>
+        <div class="col-md-9 docs-content">
+                <ul class="breadcrumb">
+                        <li><a href="/api/">API</a></li>
+                        <li><a href="/api/docs/">API Docs</a></li>
+                        <li><a href="/api/docs/v3/">v3</a></li>
+                        <li><a href="/api/docs/v3/products/">Products</a></li>
+                        <li><a href="/api/docs/v3/products/get/">Get Products</a></li>
+                </ul>
+                    <a target="_blank" class="btn btn-primary btn-experiment"
+                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Products/Products_GetProducts">Experiment
+                        with this API</a>
+                    <h2 id="products">Products</h2>
 <p>This endpoint returns all products available to the username used during authentication. As such, this endpoint requires the use of a fully authorized access_token. The product data can then be used as search filters, restricting results to images from a specific product.</p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
@@ -334,176 +336,215 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
     ]
 }
 </code></pre>
-						<h3 id="request-headers">Request Headers</h3>
+                    <h3 id="request-headers">Request Headers</h3>
 
-							<table class="table table-striped">
-									<tr>
-										<td>Api-Key</td>
-										<td>string</td>
-										<td>
-											Provide your API key.
-											Required.
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Authorization</td>
-										<td>string</td>
-										<td>
-											Provide access token in the format of 'Bearer: {token}'.
-											Required.
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Accept-Language</td>
-										<td>string</td>
-										<td>
-											Specifies the language of result values.
-											
-											
-										</td>
-									</tr>
-							</table>
-							<h3 id="querystring-parameters">Querystring Parameters</h3>
+                     
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>Api-Key</td>
+                                    <td>string</td>
+                                    <td>
+                                        Provide your API key.
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Authorization</td>
+                                    <td>string</td>
+                                    <td>
+                                        Provide access token in the format of 'Bearer: {token}'.
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Language</td>
+                                    <td>string</td>
+                                    <td>
+                                        Specifies the language of result values.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="querystring-parameters">Querystring Parameters</h3>
 
-							<table class="table table-striped">
-								<tr>
-									<td>fields</td>
-									<td>array</td>
-									<td>
-										Comma separated list of fields. Allows product download requirements to be returned.
-										
-										 Possible values: 
-										<span class="label label-default">download_requirements</span>
-									</td>
-								</tr>
-								<tr>
-									<td>product_status</td>
-									<td>string</td>
-									<td>
-										Filter results based on the product status.  If not set, this filter defaults to Active.
-										
-										 Possible values: 
-										<span class="label label-default">all</span>
-										<span class="label label-default">active</span>
-										<span class="label label-default">inactive</span>
-									</td>
-								</tr>
-							</table>
-							<h3 id="response-body-fields">Response Body Fields</h3>
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>fields</td>
+                                    <td>array</td>
+                                    <td>
+                                        Comma separated list of fields. Allows product download requirements to be returned.
+                                        
+                                         Possible values: 
+                                            <span class="label label-default">download_requirements</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>product_status</td>
+                                    <td>string</td>
+                                    <td>
+                                        Filter results based on the product status.  If not set, this filter defaults to Active.
+                                        
+                                         Possible values: 
+                                            <span class="label label-default">all</span>
+                                            <span class="label label-default">active</span>
+                                            <span class="label label-default">inactive</span>
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="response-body-fields">Response Body Fields</h3>
 
-								<h4>ProductsResult</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">products</td>
-										<td width="20%">array [product] </td>
-										<td width="60%">List of available Getty Images products.</td>
-									</tr>
-								</table>
-								<h4>product</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">application_website</td>
-										<td width="20%">string </td>
-										<td width="60%">URI of application website.</td>
-									</tr>
-									<tr>
-										<td width="20%">download_limit</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the download limit for product or package.</td>
-									</tr>
-									<tr>
-										<td width="20%">download_limit_duration</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the end date of current download limit.</td>
-									</tr>
-									<tr>
-										<td width="20%">download_limit_reset_utc_date</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the date when download limit will reset, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
-									</tr>
-									<tr>
-										<td width="20%">downloads_remaining</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the remaining available downloads.</td>
-									</tr>
-									<tr>
-										<td width="20%">expiration_utc_date</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the expiration date, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
-									</tr>
-									<tr>
-										<td width="20%">id</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the unique identifier for the product.</td>
-									</tr>
-									<tr>
-										<td width="20%">name</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the name of Getty Images product.</td>
-									</tr>
-									<tr>
-										<td width="20%">status</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies if product status is active or inactive.</td>
-									</tr>
-									<tr>
-										<td width="20%">type</td>
-										<td width="20%">string </td>
-										<td width="60%">List of product types available. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription.</td>
-									</tr>
-									<tr>
-										<td width="20%">download_requirements</td>
-										<td width="20%"> </td>
-										<td width="60%">Specifies the download requirements a company can apply on its users.</td>
-									</tr>
-								</table>
-								<h4>download_requirements</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">is_note_required</td>
-										<td width="20%">boolean </td>
-										<td width="60%">Indicates if users must enter a note on download.</td>
-									</tr>
-									<tr>
-										<td width="20%">is_project_code_required</td>
-										<td width="20%">boolean </td>
-										<td width="60%">Indicates if users must enter a product code on download.</td>
-									</tr>
-									<tr>
-										<td width="20%">project_codes</td>
-										<td width="20%">array [string] </td>
-										<td width="60%">Only users who have been set up with a project code by Getty Sales need to use this field.</td>
-									</tr>
-								</table>
-							<h3 id="response-status-codes">Response Status Codes</h3>
+                            <h4>ProductsResult</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">products</td>
+                                        <td width="20%">
+                                            array
+                                                [
 
-							<table class="table table-striped">
-								<tr>
-									<td>400</td>
-									<td>InvalidParameterValue</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>401</td>
-									<td>NoAgreement</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>401</td>
-									<td>AuthorizationTokenRequired</td>
-									<td></td>
-								</tr>
-							</table>
-				</div>
-			</div>
-		</div>
-	   <script type="text/javascript">
-	       $(function () {
-	            $("[data-path='/products/get']").addClass("active").parent().show();
-				$('#menu').slicknav();
-	       })
-	   </script>
-	</body>
+                                                    product
+                                                ]
+                                        </td>
+                                        <td width="60%">List of available Getty Images products.</td>
+                                    </tr>
+                            </table>
+                            <h4>product</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">application_website</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">URI of application website.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">download_limit</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the download limit for product or package.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">download_limit_duration</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the end date of current download limit.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">download_limit_reset_utc_date</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the date when download limit will reset, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">downloads_remaining</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the remaining available downloads.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">expiration_utc_date</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the expiration date, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">id</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the unique identifier for the product.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the name of Getty Images product.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">status</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies if product status is active or inactive.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">List of product types available. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">download_requirements</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%">Specifies the download requirements a company can apply on its users.</td>
+                                    </tr>
+                            </table>
+                            <h4>download_requirements</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">is_note_required</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%">Indicates if users must enter a note on download.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">is_project_code_required</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%">Indicates if users must enter a product code on download.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">project_codes</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Only users who have been set up with a project code by Getty Sales need to use this field.</td>
+                                    </tr>
+                            </table>
+                        <h3 id="response-status-codes">Response Status Codes</h3>
+
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidParameterValue</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>NoAgreement</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>AuthorizationTokenRequired</td>
+                                    <td></td>
+                                </tr>
+                        </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("[data-path='/products/get']").addClass("active").parent().show();
+        $('#menu').slicknav();
+    })
+</script>
+</body>
 </html>

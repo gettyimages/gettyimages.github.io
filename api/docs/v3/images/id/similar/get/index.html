@@ -1,20 +1,20 @@
 <html>
-	<head>
-		<title>Search for Similar Images | Getty Images API v3 Documentation</title>
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="/css/slicknav.css">
-	    <link rel="stylesheet" href="/css/docs.css">
-	    <link rel="stylesheet" href="/css/main.css">
-	    <link rel="stylesheet" href="/css/responsive.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="/js/jquery.slicknav.js"></script>
-		<script src="/js/s_code.js"></script>
-		<script src="/js/analytics.js"></script>
-		<script src="/js/docs.js"></script>
-	</head>
-	<body class="home dark-text">
-			
+<head>
+    <title>Search for Similar Images | Getty Images API v3 Documentation</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+	
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,10 +35,10 @@
     </div>
   </div>
 </header>
-	    <div class="container-fluid">
-			<div class="row-fluid">
-				<div class="col-md-3 left-doc-nav">
-					<ul class="nav nav-pills nav-stacked left-nav">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-3 left-doc-nav">
+            <ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -280,17 +280,19 @@
 	</li>
 </ul>
 
-				</div>
-				<div class="col-md-9 docs-content">
-					<ul class="breadcrumb">
-						<li><a href="/api/">API</a></li>
-						<li><a href="/api/docs/">API Docs</a></li>
-						<li><a href="/api/docs/v3/">v3</a></li>
-						<li><a href="/api/docs/v3/images/">Images Metadata</a></li>
-						<li><a href="/api/docs/v3/images/id/similar/get/">Search for Similar Images</a></li>
-					</ul>
-						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Images/Images_GetSimilarImages">Experiment with this API</a>
-						<h1 id="search-for-similar-images">Search for Similar Images</h1>
+        </div>
+        <div class="col-md-9 docs-content">
+                <ul class="breadcrumb">
+                        <li><a href="/api/">API</a></li>
+                        <li><a href="/api/docs/">API Docs</a></li>
+                        <li><a href="/api/docs/v3/">v3</a></li>
+                        <li><a href="/api/docs/v3/images/">Images Metadata</a></li>
+                        <li><a href="/api/docs/v3/images/id/similar/get/">Search for Similar Images</a></li>
+                </ul>
+                    <a target="_blank" class="btn btn-primary btn-experiment"
+                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Images/Images_GetSimilarImages">Experiment
+                        with this API</a>
+                    <h1 id="search-for-similar-images">Search for Similar Images</h1>
 <p>This endpoint will search our asset database for images similar to the specified asset id. Due to a wide variety of available image resolutions, the images are grouped into a handful of size categories for simplicity. </p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
@@ -420,171 +422,172 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
     ]
 }
 </code></pre>
-						<h3 id="request-headers">Request Headers</h3>
+                    <h3 id="request-headers">Request Headers</h3>
 
-							<table class="table table-striped">
-									<tr>
-										<td>Api-Key</td>
-										<td>string</td>
-										<td>
-											Provide your API key.
-											Required.
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Accept-Language</td>
-										<td>string</td>
-										<td>
-											Specifies the language of result values.
-											
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Authorization</td>
-										<td>string</td>
-										<td>
-											Provide access token in the format of 'Bearer: {token}'.
-											
-											
-										</td>
-									</tr>
-							</table>
-							<h3 id="uri-path-parameters">URI Path Parameters</h3>
+                     
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>Api-Key</td>
+                                    <td>string</td>
+                                    <td>
+                                        Provide your API key.
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Language</td>
+                                    <td>string</td>
+                                    <td>
+                                        Specifies the language of result values.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Authorization</td>
+                                    <td>string</td>
+                                    <td>
+                                        Provide access token in the format of 'Bearer: {token}'.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="uri-path-parameters">URI Path Parameters</h3>
 
-							<table class="table table-striped">
-									<tr>
-										<td>id</td>
-										<td>string</td>
-										<td>
-											Identifies an existing image
-											Required.
-										</td>
-									</tr>
-							</table>
-							<h3 id="querystring-parameters">Querystring Parameters</h3>
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>id</td>
+                                    <td>string</td>
+                                    <td>
+                                        Identifies an existing image
+                                        Required.
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="querystring-parameters">Querystring Parameters</h3>
 
-							<table class="table table-striped">
-								<tr>
-									<td>fields</td>
-									<td>array</td>
-									<td>
-										Specifies fields to return. Defaults to 'summary_set'.
-										
-										 Possible values: 
-										<span class="label label-default">accessrestriction</span>
-										<span class="label label-default">allowed_use</span>
-										<span class="label label-default">alternative_ids</span>
-										<span class="label label-default">artist</span>
-										<span class="label label-default">asset_family</span>
-										<span class="label label-default">call_for_image</span>
-										<span class="label label-default">caption</span>
-										<span class="label label-default">collection_code</span>
-										<span class="label label-default">collection_id</span>
-										<span class="label label-default">collection_name</span>
-										<span class="label label-default">color_type</span>
-										<span class="label label-default">comp</span>
-										<span class="label label-default">copyright</span>
-										<span class="label label-default">date_created</span>
-										<span class="label label-default">detail_set</span>
-										<span class="label label-default">display_set</span>
-										<span class="label label-default">editorial_segments</span>
-										<span class="label label-default">event_ids</span>
-										<span class="label label-default">graphical_style</span>
-										<span class="label label-default">id</span>
-										<span class="label label-default">keywords</span>
-										<span class="label label-default">largest_downloads</span>
-										<span class="label label-default">license_model</span>
-										<span class="label label-default">max_dimensions</span>
-										<span class="label label-default">orientation</span>
-										<span class="label label-default">people</span>
-										<span class="label label-default">prestige</span>
-										<span class="label label-default">preview</span>
-										<span class="label label-default">product_types</span>
-										<span class="label label-default">quality_rank</span>
-										<span class="label label-default">referral_destinations</span>
-										<span class="label label-default">summary_set</span>
-										<span class="label label-default">thumb</span>
-										<span class="label label-default">title</span>
-										<span class="label label-default">uri_oembed</span>
-									</td>
-								</tr>
-							</table>
-							<h3 id="sorting-and-pagination">Sorting and Pagination</h3>
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>fields</td>
+                                    <td>array</td>
+                                    <td>
+                                        Specifies fields to return. Defaults to 'summary_set'.
+                                        
+                                         Possible values: 
+                                            <span class="label label-default">accessrestriction</span>
+                                            <span class="label label-default">allowed_use</span>
+                                            <span class="label label-default">alternative_ids</span>
+                                            <span class="label label-default">artist</span>
+                                            <span class="label label-default">asset_family</span>
+                                            <span class="label label-default">call_for_image</span>
+                                            <span class="label label-default">caption</span>
+                                            <span class="label label-default">collection_code</span>
+                                            <span class="label label-default">collection_id</span>
+                                            <span class="label label-default">collection_name</span>
+                                            <span class="label label-default">color_type</span>
+                                            <span class="label label-default">comp</span>
+                                            <span class="label label-default">copyright</span>
+                                            <span class="label label-default">date_created</span>
+                                            <span class="label label-default">detail_set</span>
+                                            <span class="label label-default">display_set</span>
+                                            <span class="label label-default">editorial_segments</span>
+                                            <span class="label label-default">event_ids</span>
+                                            <span class="label label-default">graphical_style</span>
+                                            <span class="label label-default">id</span>
+                                            <span class="label label-default">keywords</span>
+                                            <span class="label label-default">largest_downloads</span>
+                                            <span class="label label-default">license_model</span>
+                                            <span class="label label-default">max_dimensions</span>
+                                            <span class="label label-default">orientation</span>
+                                            <span class="label label-default">people</span>
+                                            <span class="label label-default">prestige</span>
+                                            <span class="label label-default">preview</span>
+                                            <span class="label label-default">product_types</span>
+                                            <span class="label label-default">quality_rank</span>
+                                            <span class="label label-default">referral_destinations</span>
+                                            <span class="label label-default">summary_set</span>
+                                            <span class="label label-default">thumb</span>
+                                            <span class="label label-default">title</span>
+                                            <span class="label label-default">uri_oembed</span>
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="sorting-and-pagination">Sorting and Pagination</h3>
 
-							<table class="table table-striped">
-								<tr>
-									<td>page</td>
-									<td>integer</td>
-									<td>
-										Identifies page to return. Default is 1.
-										
-										
-									</td>
-								</tr>
-								<tr>
-									<td>page_size</td>
-									<td>integer</td>
-									<td>
-										Specifies page size. Default is 30, maximum page_size is 100.
-										
-										
-									</td>
-								</tr>
-							</table>
-							<h3 id="response-status-codes">Response Status Codes</h3>
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>page</td>
+                                    <td>integer</td>
+                                    <td>
+                                        Identifies page to return. Default is 1.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>page_size</td>
+                                    <td>integer</td>
+                                    <td>
+                                        Specifies page size. Default is 30, maximum page_size is 100.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="response-status-codes">Response Status Codes</h3>
 
-							<table class="table table-striped">
-								<tr>
-									<td>400</td>
-									<td>InvalidParameterValue</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>MalformedRequest</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>InvalidPage</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>InvalidPageSize</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>ImageIdMustBeSpecified</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>401</td>
-									<td>AuthorizationTokenRequired</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>403</td>
-									<td>UnauthorizedDisplaySize</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>404</td>
-									<td>ImageNotFound</td>
-									<td></td>
-								</tr>
-							</table>
-				</div>
-			</div>
-		</div>
-	   <script type="text/javascript">
-	       $(function () {
-	            $("[data-path='/images/id/similar/get']").addClass("active").parent().show();
-				$('#menu').slicknav();
-	       })
-	   </script>
-	</body>
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidParameterValue</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>MalformedRequest</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidPage</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidPageSize</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>ImageIdMustBeSpecified</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>AuthorizationTokenRequired</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>403</td>
+                                    <td>UnauthorizedDisplaySize</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>404</td>
+                                    <td>ImageNotFound</td>
+                                    <td></td>
+                                </tr>
+                        </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("[data-path='/images/id/similar/get']").addClass("active").parent().show();
+        $('#menu').slicknav();
+    })
+</script>
+</body>
 </html>

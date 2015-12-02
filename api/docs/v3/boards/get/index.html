@@ -1,20 +1,20 @@
 <html>
-	<head>
-		<title>Get List of Boards | Getty Images API v3 Documentation</title>
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="/css/slicknav.css">
-	    <link rel="stylesheet" href="/css/docs.css">
-	    <link rel="stylesheet" href="/css/main.css">
-	    <link rel="stylesheet" href="/css/responsive.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="/js/jquery.slicknav.js"></script>
-		<script src="/js/s_code.js"></script>
-		<script src="/js/analytics.js"></script>
-		<script src="/js/docs.js"></script>
-	</head>
-	<body class="home dark-text">
-			
+<head>
+    <title>Get List of Boards | Getty Images API v3 Documentation</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+	
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,10 +35,10 @@
     </div>
   </div>
 </header>
-	    <div class="container-fluid">
-			<div class="row-fluid">
-				<div class="col-md-3 left-doc-nav">
-					<ul class="nav nav-pills nav-stacked left-nav">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-3 left-doc-nav">
+            <ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -280,27 +280,30 @@
 	</li>
 </ul>
 
-				</div>
-				<div class="col-md-9 docs-content">
-					<ul class="breadcrumb">
-						<li><a href="/api/">API</a></li>
-						<li><a href="/api/docs/">API Docs</a></li>
-						<li><a href="/api/docs/v3/">v3</a></li>
-						<li><a href="/api/docs/v3/boards/">Boards</a></li>
-						<li><a href="/api/docs/v3/boards/get">Get List of Boards</a></li>
-					</ul>
-							<div class="alert alert-warning">
-								<img src="/images/icons/alert.png">
-								This endpoint is currently in <strong>BETA</strong>.
-							</div>
-						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_GetAllBoards">Experiment with this API</a>
-						<h1 id="boards-get-all-boards">Boards - Get All Boards</h1>
+        </div>
+        <div class="col-md-9 docs-content">
+                <ul class="breadcrumb">
+                        <li><a href="/api/">API</a></li>
+                        <li><a href="/api/docs/">API Docs</a></li>
+                        <li><a href="/api/docs/v3/">v3</a></li>
+                        <li><a href="/api/docs/v3/boards/">Boards</a></li>
+                        <li><a href="/api/docs/v3/boards/get">Get List of Boards</a></li>
+                </ul>
+                        <div class="alert alert-warning">
+                            <img src="/images/icons/alert.png">
+                            This endpoint is currently in <strong>BETA</strong>.
+                        </div>
+                    <a target="_blank" class="btn btn-primary btn-experiment"
+                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_GetAllBoards">Experiment
+                        with this API</a>
+                    <h1 id="boards-get-all-boards">Boards - Get All Boards</h1>
 <p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to retrieve all Boards available for a user.</p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
 <li><a href="#response-status-codes">Response Status Codes</a></li>
+<li><a href="#hyperlinks">Hyperlinks</a></li>
 </ul>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.</p>
@@ -341,148 +344,200 @@ Authorization: Bearer &lt;your secure access token&gt;
     }
 }
 </code></pre>
-						<h3 id="request-headers">Request Headers</h3>
+                    <h3 id="request-headers">Request Headers</h3>
 
-							<table class="table table-striped">
-									<tr>
-										<td>Api-Key</td>
-										<td>string</td>
-										<td>
-											Api-Key
-											Required.
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Authorization</td>
-										<td>string</td>
-										<td>
-											Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
-											Required.
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Accept-Language</td>
-										<td>string</td>
-										<td>
-											Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
-											
-											
-										</td>
-									</tr>
-							</table>
-							<h3 id="response-body-fields">Response Body Fields</h3>
+                     
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>Api-Key</td>
+                                    <td>string</td>
+                                    <td>
+                                        Api-Key
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Authorization</td>
+                                    <td>string</td>
+                                    <td>
+                                        Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Language</td>
+                                    <td>string</td>
+                                    <td>
+                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="response-body-fields">Response Body Fields</h3>
 
-								<h4>board_list</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">boards</td>
-										<td width="20%">array [board] </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">result_count</td>
-										<td width="20%">integer </td>
-										<td width="60%"></td>
-									</tr>
-								</table>
-								<h4>board</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">id</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">date_created</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">description</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">hero_asset</td>
-										<td width="20%"> </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">date_last_updated</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">name</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">asset_count</td>
-										<td width="20%">integer </td>
-										<td width="60%"></td>
-									</tr>
-								</table>
-								<h4>asset</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">id</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">date_added</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">display_sizes</td>
-										<td width="20%">array [display_size] </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">asset_type</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-								</table>
-								<h4>display_size</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">name</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">uri</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-								</table>
-							<h3 id="response-status-codes">Response Status Codes</h3>
+                            <h4>board_list</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">boards</td>
+                                        <td width="20%">
+                                            array
+                                                [
 
-							<table class="table table-striped">
-								<tr>
-									<td>200</td>
-									<td>success</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>401</td>
-									<td>user_token_required</td>
-									<td></td>
-								</tr>
-							</table>
-				</div>
-			</div>
-		</div>
-	   <script type="text/javascript">
-	       $(function () {
-	            $("[data-path='/boards/get']").addClass("active").parent().show();
-				$('#menu').slicknav();
-	       })
-	   </script>
-	</body>
+                                                    board
+                                                ]
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">result_count</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>board</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">date_created</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">description</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">hero_asset</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">date_last_updated</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">asset_count</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>asset</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">date_added</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">display_sizes</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    display_size
+                                                ]
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">asset_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>display_size</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                        <h3 id="response-status-codes">Response Status Codes</h3>
+
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>200</td>
+                                    <td>success</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>user_token_required</td>
+                                    <td></td>
+                                </tr>
+                        </table>
+                        <h3 id="hyperlinks">Hyperlinks</h3>
+<p>Some response items contain hyperlinks which you can use to take you directly to the next steps in your workflow, when appropriate. The following URIs are provided in the response for this request.</p>
+
+                        <table class="table table-striped">
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">display_size.uri</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            
+                                        </td>
+                                    </tr>
+                        </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("[data-path='/boards/get']").addClass("active").parent().show();
+        $('#menu').slicknav();
+    })
+</script>
+</body>
 </html>

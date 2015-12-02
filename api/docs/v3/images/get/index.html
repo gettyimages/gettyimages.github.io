@@ -1,20 +1,20 @@
 <html>
-	<head>
-		<title>Get Metadata for Multiple Images | Getty Images API v3 Documentation</title>
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="/css/slicknav.css">
-	    <link rel="stylesheet" href="/css/docs.css">
-	    <link rel="stylesheet" href="/css/main.css">
-	    <link rel="stylesheet" href="/css/responsive.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="/js/jquery.slicknav.js"></script>
-		<script src="/js/s_code.js"></script>
-		<script src="/js/analytics.js"></script>
-		<script src="/js/docs.js"></script>
-	</head>
-	<body class="home dark-text">
-			
+<head>
+    <title>Get Metadata for Multiple Images | Getty Images API v3 Documentation</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/slicknav.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/docs.js"></script>
+</head>
+<body class="home dark-text">
+	
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,10 +35,10 @@
     </div>
   </div>
 </header>
-	    <div class="container-fluid">
-			<div class="row-fluid">
-				<div class="col-md-3 left-doc-nav">
-					<ul class="nav nav-pills nav-stacked left-nav">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-3 left-doc-nav">
+            <ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -280,17 +280,19 @@
 	</li>
 </ul>
 
-				</div>
-				<div class="col-md-9 docs-content">
-					<ul class="breadcrumb">
-						<li><a href="/api/">API</a></li>
-						<li><a href="/api/docs/">API Docs</a></li>
-						<li><a href="/api/docs/v3/">v3</a></li>
-						<li><a href="/api/docs/v3/images/">Images Metadata</a></li>
-						<li><a href="/api/docs/v3/images/get/">Get Metadata for Multiple Images </a></li>
-					</ul>
-						<a target="_blank" class="btn btn-primary btn-experiment" href="https://api.gettyimages.com/swagger/ui/index.html#!/Images/Images_GetBatch">Experiment with this API</a>
-						<h1 id="get-metadata-for-multiple-images">Get Metadata for Multiple Images</h1>
+        </div>
+        <div class="col-md-9 docs-content">
+                <ul class="breadcrumb">
+                        <li><a href="/api/">API</a></li>
+                        <li><a href="/api/docs/">API Docs</a></li>
+                        <li><a href="/api/docs/v3/">v3</a></li>
+                        <li><a href="/api/docs/v3/images/">Images Metadata</a></li>
+                        <li><a href="/api/docs/v3/images/get/">Get Metadata for Multiple Images </a></li>
+                </ul>
+                    <a target="_blank" class="btn btn-primary btn-experiment"
+                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Images/Images_GetBatch">Experiment
+                        with this API</a>
+                    <h1 id="get-metadata-for-multiple-images">Get Metadata for Multiple Images</h1>
 <p>This endpoint returns the detailed image metadata for all specified images. Due to a wide variety of available image resolutions, the images are grouped into a handful of size categories for simplicity. </p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
@@ -299,6 +301,7 @@
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
 <li><a href="#response-status-codes">Response Status Codes</a></li>
+<li><a href="#hyperlinks">Hyperlinks</a></li>
 </ul>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
@@ -406,575 +409,843 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
     ]
 }
 </code></pre>
-						<h3 id="request-headers">Request Headers</h3>
+                    <h3 id="request-headers">Request Headers</h3>
 
-							<table class="table table-striped">
-									<tr>
-										<td>Api-Key</td>
-										<td>string</td>
-										<td>
-											Provide your API key.
-											Required.
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Accept-Language</td>
-										<td>string</td>
-										<td>
-											Specifies the language of result values.
-											
-											
-										</td>
-									</tr>
-									<tr>
-										<td>Authorization</td>
-										<td>string</td>
-										<td>
-											Provide access token in the format of 'Bearer: {token}'.
-											
-											
-										</td>
-									</tr>
-							</table>
-							<h3 id="querystring-parameters">Querystring Parameters</h3>
+                     
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>Api-Key</td>
+                                    <td>string</td>
+                                    <td>
+                                        Provide your API key.
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Language</td>
+                                    <td>string</td>
+                                    <td>
+                                        Specifies the language of result values.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Authorization</td>
+                                    <td>string</td>
+                                    <td>
+                                        Provide access token in the format of 'Bearer: {token}'.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="querystring-parameters">Querystring Parameters</h3>
 
-							<table class="table table-striped">
-								<tr>
-									<td>ids</td>
-									<td>array</td>
-									<td>
-										Specifies one or more image ids to return. Use comma delimiter when requesting multiple ids.
-										Required.
-										
-									</td>
-								</tr>
-								<tr>
-									<td>fields</td>
-									<td>array</td>
-									<td>
-										Specifies fields to return. Defaults to 'summary_set'.
-										
-										 Possible values: 
-										<span class="label label-default">allowed_use</span>
-										<span class="label label-default">alternative_ids</span>
-										<span class="label label-default">artist</span>
-										<span class="label label-default">artist_title</span>
-										<span class="label label-default">asset_family</span>
-										<span class="label label-default">call_for_image</span>
-										<span class="label label-default">caption</span>
-										<span class="label label-default">city</span>
-										<span class="label label-default">collection_code</span>
-										<span class="label label-default">collection_id</span>
-										<span class="label label-default">collection_name</span>
-										<span class="label label-default">color_type</span>
-										<span class="label label-default">comp</span>
-										<span class="label label-default">copyright</span>
-										<span class="label label-default">country</span>
-										<span class="label label-default">credit_line</span>
-										<span class="label label-default">date_created</span>
-										<span class="label label-default">date_submitted</span>
-										<span class="label label-default">detail_set</span>
-										<span class="label label-default">display_set</span>
-										<span class="label label-default">download_sizes</span>
-										<span class="label label-default">downloads</span>
-										<span class="label label-default">editorial_segments</span>
-										<span class="label label-default">event_ids</span>
-										<span class="label label-default">graphical_style</span>
-										<span class="label label-default">id</span>
-										<span class="label label-default">keywords</span>
-										<span class="label label-default">largest_downloads</span>
-										<span class="label label-default">license_model</span>
-										<span class="label label-default">links</span>
-										<span class="label label-default">max_dimensions</span>
-										<span class="label label-default">orientation</span>
-										<span class="label label-default">people</span>
-										<span class="label label-default">prestige</span>
-										<span class="label label-default">preview</span>
-										<span class="label label-default">product_types</span>
-										<span class="label label-default">quality_rank</span>
-										<span class="label label-default">referral_destinations</span>
-										<span class="label label-default">state_province</span>
-										<span class="label label-default">summary_set</span>
-										<span class="label label-default">thumb</span>
-										<span class="label label-default">title</span>
-										<span class="label label-default">uri_oembed</span>
-									</td>
-								</tr>
-							</table>
-							<h3 id="response-body-fields">Response Body Fields</h3>
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>ids</td>
+                                    <td>array</td>
+                                    <td>
+                                        Specifies one or more image ids to return. Use comma delimiter when requesting multiple ids.
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>fields</td>
+                                    <td>array</td>
+                                    <td>
+                                        Specifies fields to return. Defaults to 'summary_set'.
+                                        
+                                         Possible values: 
+                                            <span class="label label-default">allowed_use</span>
+                                            <span class="label label-default">alternative_ids</span>
+                                            <span class="label label-default">artist</span>
+                                            <span class="label label-default">artist_title</span>
+                                            <span class="label label-default">asset_family</span>
+                                            <span class="label label-default">call_for_image</span>
+                                            <span class="label label-default">caption</span>
+                                            <span class="label label-default">city</span>
+                                            <span class="label label-default">collection_code</span>
+                                            <span class="label label-default">collection_id</span>
+                                            <span class="label label-default">collection_name</span>
+                                            <span class="label label-default">color_type</span>
+                                            <span class="label label-default">comp</span>
+                                            <span class="label label-default">copyright</span>
+                                            <span class="label label-default">country</span>
+                                            <span class="label label-default">credit_line</span>
+                                            <span class="label label-default">date_created</span>
+                                            <span class="label label-default">date_submitted</span>
+                                            <span class="label label-default">detail_set</span>
+                                            <span class="label label-default">display_set</span>
+                                            <span class="label label-default">download_sizes</span>
+                                            <span class="label label-default">downloads</span>
+                                            <span class="label label-default">editorial_segments</span>
+                                            <span class="label label-default">event_ids</span>
+                                            <span class="label label-default">graphical_style</span>
+                                            <span class="label label-default">id</span>
+                                            <span class="label label-default">keywords</span>
+                                            <span class="label label-default">largest_downloads</span>
+                                            <span class="label label-default">license_model</span>
+                                            <span class="label label-default">links</span>
+                                            <span class="label label-default">max_dimensions</span>
+                                            <span class="label label-default">orientation</span>
+                                            <span class="label label-default">people</span>
+                                            <span class="label label-default">prestige</span>
+                                            <span class="label label-default">preview</span>
+                                            <span class="label label-default">product_types</span>
+                                            <span class="label label-default">quality_rank</span>
+                                            <span class="label label-default">referral_destinations</span>
+                                            <span class="label label-default">state_province</span>
+                                            <span class="label label-default">summary_set</span>
+                                            <span class="label label-default">thumb</span>
+                                            <span class="label label-default">title</span>
+                                            <span class="label label-default">uri_oembed</span>
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="response-body-fields">Response Body Fields</h3>
 
-								<h4>images_detail</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">images</td>
-										<td width="20%">array [image_detail] </td>
-										<td width="60%">List of image identifiers found.</td>
-									</tr>
-									<tr>
-										<td width="20%">images_not_found</td>
-										<td width="20%">array [string] </td>
-										<td width="60%">List of image identifiers not found.</td>
-									</tr>
-								</table>
-								<h4>image_detail</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">allowed_use</td>
-										<td width="20%"> </td>
-										<td width="60%">Specifies how customers are allowed to use the image.</td>
-									</tr>
-									<tr>
-										<td width="20%">alternative_ids</td>
-										<td width="20%">array [KeyValuePair[String,String]] </td>
-										<td width="60%">Lists all of the alternative ids for the asset.</td>
-									</tr>
-									<tr>
-										<td width="20%">artist</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies image creator.</td>
-									</tr>
-									<tr>
-										<td width="20%">artist_title</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the title given by the artist.</td>
-									</tr>
-									<tr>
-										<td width="20%">asset_family</td>
-										<td width="20%">string </td>
-										<td width="60%">Indicates the asset family classification. Possible values are: creative, editorial.</td>
-									</tr>
-									<tr>
-										<td width="20%">call_for_image</td>
-										<td width="20%">boolean </td>
-										<td width="60%">Indicates whether a customer needs to call Getty Images in order to license this image.</td>
-									</tr>
-									<tr>
-										<td width="20%">caption</td>
-										<td width="20%">string </td>
-										<td width="60%">Gives a brief description of the image.</td>
-									</tr>
-									<tr>
-										<td width="20%">city</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the city name.</td>
-									</tr>
-									<tr>
-										<td width="20%">collection_code</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the code of the collection to which the image belongs.</td>
-									</tr>
-									<tr>
-										<td width="20%">collection_id</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the id of the collection to which the image belongs.</td>
-									</tr>
-									<tr>
-										<td width="20%">collection_name</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the name of the collection to which the image belongs.</td>
-									</tr>
-									<tr>
-										<td width="20%">color_type</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies whether the image or video is color or black and white. Possible values are color, black_and_white, and null.</td>
-									</tr>
-									<tr>
-										<td width="20%">copyright</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the copyright of the image.</td>
-									</tr>
-									<tr>
-										<td width="20%">country</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the country where the image was created.</td>
-									</tr>
-									<tr>
-										<td width="20%">credit_line</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the line of copy acknowledging the source or origin of the image.</td>
-									</tr>
-									<tr>
-										<td width="20%">date_created</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the date the image was created, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
-									</tr>
-									<tr>
-										<td width="20%">date_submitted</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the date the image was submitted, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
-									</tr>
-									<tr>
-										<td width="20%">display_sizes</td>
-										<td width="20%">array [display_size] </td>
-										<td width="60%">Lists the display sizes available for this image.</td>
-									</tr>
-									<tr>
-										<td width="20%">download_sizes</td>
-										<td width="20%">array [download_size] </td>
-										<td width="60%">Lists the available download size information.</td>
-									</tr>
-									<tr>
-										<td width="20%">editorial_segments</td>
-										<td width="20%">array [string] </td>
-										<td width="60%">Lists the editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport.</td>
-									</tr>
-									<tr>
-										<td width="20%">event_ids</td>
-										<td width="20%">array [integer] </td>
-										<td width="60%">Lists the events that are relevant for this image.</td>
-									</tr>
-									<tr>
-										<td width="20%">graphical_style</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the graphical style for the image. Possible values are Photography, Fine Art, and Illustration.</td>
-									</tr>
-									<tr>
-										<td width="20%">id</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the unique identifier for the image.</td>
-									</tr>
-									<tr>
-										<td width="20%">keywords</td>
-										<td width="20%">array [keywords] </td>
-										<td width="60%">Lists the keywords that are associated with this image.</td>
-									</tr>
-									<tr>
-										<td width="20%">largest_downloads</td>
-										<td width="20%">array [download_size] </td>
-										<td width="60%">Lists the available largest download sizes.</td>
-									</tr>
-									<tr>
-										<td width="20%">license_model</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the licensing model for the image. Possible values are: royaltyfree, rightsmanaged.</td>
-									</tr>
-									<tr>
-										<td width="20%">links</td>
-										<td width="20%">array [link] </td>
-										<td width="60%">List of links to explore related content, such as similar images and images from the same artist.</td>
-									</tr>
-									<tr>
-										<td width="20%">max_dimensions</td>
-										<td width="20%"> </td>
-										<td width="60%">Specifies the maximum height and width of any size for this image.</td>
-									</tr>
-									<tr>
-										<td width="20%">orientation</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the orientation of the image. Possible values are: Horizontal, PanoramicHorizontal, PanoramicVertical, Square, Vertical, and null.</td>
-									</tr>
-									<tr>
-										<td width="20%">people</td>
-										<td width="20%">array [string] </td>
-										<td width="60%">List of people appearing in the image.</td>
-									</tr>
-									<tr>
-										<td width="20%">prestige</td>
-										<td width="20%">boolean </td>
-										<td width="60%">Specifies the image is in the curated Prestige collection.</td>
-									</tr>
-									<tr>
-										<td width="20%">product_types</td>
-										<td width="20%">array [string] </td>
-										<td width="60%">Lists the product types for the image. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription.</td>
-									</tr>
-									<tr>
-										<td width="20%">quality_rank</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the quality ranking of the image.</td>
-									</tr>
-									<tr>
-										<td width="20%">referral_destinations</td>
-										<td width="20%">array [referral_destination] </td>
-										<td width="60%">Specifies the referral destination for Getty Images assets.</td>
-									</tr>
-									<tr>
-										<td width="20%">state_province</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the state or province where the image was created.</td>
-									</tr>
-									<tr>
-										<td width="20%">title</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the image title.</td>
-									</tr>
-									<tr>
-										<td width="20%">uri_oembed</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the URI that can be used to get oEmbed data for the image, if embeddable.</td>
-									</tr>
-								</table>
-								<h4>allowed_use</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">how_can_i_use_it</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies how the asset can be used.</td>
-									</tr>
-									<tr>
-										<td width="20%">release_info</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the release status.</td>
-									</tr>
-									<tr>
-										<td width="20%">usage_restrictions</td>
-										<td width="20%">array [string] </td>
-										<td width="60%">Specifies the asset usage restriction.</td>
-									</tr>
-								</table>
-								<h4>KeyValuePair[String,String]</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">Key</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-									<tr>
-										<td width="20%">Value</td>
-										<td width="20%">string </td>
-										<td width="60%"></td>
-									</tr>
-								</table>
-								<h4>display_size</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">height</td>
-										<td width="20%">integer </td>
-										<td width="60%">Indicates the image height in pixels.</td>
-									</tr>
-									<tr>
-										<td width="20%">is_watermarked</td>
-										<td width="20%">boolean </td>
-										<td width="60%">Indicates whether the image is watermarked.</td>
-									</tr>
-									<tr>
-										<td width="20%">name</td>
-										<td width="20%">string </td>
-										<td width="60%">Identifies the name of the display size.</td>
-									</tr>
-									<tr>
-										<td width="20%">uri</td>
-										<td width="20%">string </td>
-										<td width="60%">GET this URI to retrieve the display size image.</td>
-									</tr>
-									<tr>
-										<td width="20%">width</td>
-										<td width="20%">integer </td>
-										<td width="60%">Indicates the image width in pixels.</td>
-									</tr>
-								</table>
-								<h4>download_size</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">bytes</td>
-										<td width="20%">integer </td>
-										<td width="60%">Indicates the size in bytes.</td>
-									</tr>
-									<tr>
-										<td width="20%">downloads</td>
-										<td width="20%">array [download] </td>
-										<td width="60%">Lists the sizes available for download.</td>
-									</tr>
-									<tr>
-										<td width="20%">height</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the height in pixels.</td>
-									</tr>
-									<tr>
-										<td width="20%">media_type</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the file type expressed as internet media content type.</td>
-									</tr>
-									<tr>
-										<td width="20%">width</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the width in pixels.</td>
-									</tr>
-								</table>
-								<h4>download</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">product_id</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the instance Id of the product.</td>
-									</tr>
-									<tr>
-										<td width="20%">product_type</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the license agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox.</td>
-									</tr>
-									<tr>
-										<td width="20%">uri</td>
-										<td width="20%">string </td>
-										<td width="60%">POST this URI to download the image.</td>
-									</tr>
-								</table>
-								<h4>keywords</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">keyword_id</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the unique identifier for the keyword.</td>
-									</tr>
-									<tr>
-										<td width="20%">text</td>
-										<td width="20%">string </td>
-										<td width="60%">Provides localized text of the keyword.</td>
-									</tr>
-									<tr>
-										<td width="20%">type</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the keyword type.</td>
-									</tr>
-									<tr>
-										<td width="20%">relevance</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
-									</tr>
-								</table>
-								<h4>download_size</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">bytes</td>
-										<td width="20%">integer </td>
-										<td width="60%">Indicates the size in bytes.</td>
-									</tr>
-									<tr>
-										<td width="20%">downloads</td>
-										<td width="20%">array [download] </td>
-										<td width="60%">Lists the sizes available for download.</td>
-									</tr>
-									<tr>
-										<td width="20%">height</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the height in pixels.</td>
-									</tr>
-									<tr>
-										<td width="20%">media_type</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the file type expressed as internet media content type.</td>
-									</tr>
-									<tr>
-										<td width="20%">width</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the width in pixels.</td>
-									</tr>
-								</table>
-								<h4>download</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">product_id</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the instance Id of the product.</td>
-									</tr>
-									<tr>
-										<td width="20%">product_type</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the license agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox.</td>
-									</tr>
-									<tr>
-										<td width="20%">uri</td>
-										<td width="20%">string </td>
-										<td width="60%">POST this URI to download the image.</td>
-									</tr>
-								</table>
-								<h4>link</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">rel</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the link&#x27;s relationship to the asset.</td>
-									</tr>
-									<tr>
-										<td width="20%">uri</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the resource URI.</td>
-									</tr>
-								</table>
-								<h4>max_dimensions</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">height</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the height in pixels.</td>
-									</tr>
-									<tr>
-										<td width="20%">width</td>
-										<td width="20%">integer </td>
-										<td width="60%">Specifies the width in pixels.</td>
-									</tr>
-								</table>
-								<h4>referral_destination</h4>
-								<table class="table table-striped">
-									<tr>
-										<td width="20%">site_name</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the asset domain name.</td>
-									</tr>
-									<tr>
-										<td width="20%">uri</td>
-										<td width="20%">string </td>
-										<td width="60%">Specifies the resource URI.</td>
-									</tr>
-								</table>
-							<h3 id="response-status-codes">Response Status Codes</h3>
+                            <h4>images_detail</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">images</td>
+                                        <td width="20%">
+                                            array
+                                                [
 
-							<table class="table table-striped">
-								<tr>
-									<td>200</td>
-									<td>Success</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>InvalidParameterValue</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>MalformedRequest</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>InvalidPage</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>InvalidPageSize</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>400</td>
-									<td>ImageIdMustBeSpecified</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>401</td>
-									<td>AuthorizationTokenRequired</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>403</td>
-									<td>UnauthorizedDisplaySize</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>404</td>
-									<td>ImageNotFound</td>
-									<td></td>
-								</tr>
-							</table>
-				</div>
-			</div>
-		</div>
-	   <script type="text/javascript">
-	       $(function () {
-	            $("[data-path='/images/get']").addClass("active").parent().show();
-				$('#menu').slicknav();
-	       })
-	   </script>
-	</body>
+                                                    image_detail
+                                                ]
+                                        </td>
+                                        <td width="60%">List of image identifiers found.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">images_not_found</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">List of image identifiers not found.</td>
+                                    </tr>
+                            </table>
+                            <h4>image_detail</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">allowed_use</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%">Specifies how customers are allowed to use the image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">alternative_ids</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    KeyValuePair[String,String]
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists all of the alternative ids for the asset.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">artist</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies image creator.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">artist_title</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the title given by the artist.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">asset_family</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Indicates the asset family classification. Possible values are: creative, editorial.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">call_for_image</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%">Indicates whether a customer needs to call Getty Images in order to license this image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">caption</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Gives a brief description of the image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">city</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the city name.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">collection_code</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the code of the collection to which the image belongs.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">collection_id</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the id of the collection to which the image belongs.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">collection_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the name of the collection to which the image belongs.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">color_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies whether the image or video is color or black and white. Possible values are color, black_and_white, and null.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">copyright</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the copyright of the image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">country</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the country where the image was created.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">credit_line</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the line of copy acknowledging the source or origin of the image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">date_created</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the date the image was created, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">date_submitted</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the date the image was submitted, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">display_sizes</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    display_size
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the display sizes available for this image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">download_sizes</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    download_size
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the available download size information.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">editorial_segments</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">event_ids</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    integer
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the events that are relevant for this image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">graphical_style</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the graphical style for the image. Possible values are Photography, Fine Art, and Illustration.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the unique identifier for the image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">keywords</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    keywords
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the keywords that are associated with this image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">largest_downloads</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    download_size
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the available largest download sizes.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">license_model</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the licensing model for the image. Possible values are: royaltyfree, rightsmanaged.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">links</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    link
+                                                ]
+                                        </td>
+                                        <td width="60%">List of links to explore related content, such as similar images and images from the same artist.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">max_dimensions</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%">Specifies the maximum height and width of any size for this image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">orientation</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the orientation of the image. Possible values are: Horizontal, PanoramicHorizontal, PanoramicVertical, Square, Vertical, and null.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">people</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">List of people appearing in the image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">prestige</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%">Specifies the image is in the curated Prestige collection.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">product_types</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the product types for the image. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">quality_rank</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the quality ranking of the image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">referral_destinations</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    referral_destination
+                                                ]
+                                        </td>
+                                        <td width="60%">Specifies the referral destination for Getty Images assets.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">state_province</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the state or province where the image was created.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">title</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the image title.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">uri_oembed</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the URI that can be used to get oEmbed data for the image, if embeddable.</td>
+                                    </tr>
+                            </table>
+                            <h4>allowed_use</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">how_can_i_use_it</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies how the asset can be used.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">release_info</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the release status.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">usage_restrictions</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Specifies the asset usage restriction.</td>
+                                    </tr>
+                            </table>
+                            <h4>KeyValuePair[String,String]</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">Key</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">Value</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>display_size</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">height</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Indicates the image height in pixels.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">is_watermarked</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%">Indicates whether the image is watermarked.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Identifies the name of the display size.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">GET this URI to retrieve the display size image.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">width</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Indicates the image width in pixels.</td>
+                                    </tr>
+                            </table>
+                            <h4>download_size</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">bytes</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Indicates the size in bytes.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">downloads</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    download
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the sizes available for download.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">height</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the height in pixels.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">media_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the file type expressed as internet media content type.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">width</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the width in pixels.</td>
+                                    </tr>
+                            </table>
+                            <h4>download</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">product_id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the instance Id of the product.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">product_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the license agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">POST this URI to download the image.</td>
+                                    </tr>
+                            </table>
+                            <h4>keywords</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">keyword_id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the unique identifier for the keyword.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">text</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Provides localized text of the keyword.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the keyword type.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">relevance</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
+                                    </tr>
+                            </table>
+                            <h4>download_size</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">bytes</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Indicates the size in bytes.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">downloads</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    download
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the sizes available for download.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">height</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the height in pixels.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">media_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the file type expressed as internet media content type.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">width</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the width in pixels.</td>
+                                    </tr>
+                            </table>
+                            <h4>download</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">product_id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the instance Id of the product.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">product_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the license agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, sandbox.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">POST this URI to download the image.</td>
+                                    </tr>
+                            </table>
+                            <h4>link</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">rel</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the link&#x27;s relationship to the asset.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the resource URI.</td>
+                                    </tr>
+                            </table>
+                            <h4>max_dimensions</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">height</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the height in pixels.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">width</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the width in pixels.</td>
+                                    </tr>
+                            </table>
+                            <h4>referral_destination</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">site_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the asset domain name.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the resource URI.</td>
+                                    </tr>
+                            </table>
+                        <h3 id="response-status-codes">Response Status Codes</h3>
+
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>200</td>
+                                    <td>Success</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidParameterValue</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>MalformedRequest</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidPage</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidPageSize</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>ImageIdMustBeSpecified</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>AuthorizationTokenRequired</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>403</td>
+                                    <td>UnauthorizedDisplaySize</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>404</td>
+                                    <td>ImageNotFound</td>
+                                    <td></td>
+                                </tr>
+                        </table>
+                        <h3 id="hyperlinks">Hyperlinks</h3>
+<p>Some response items contain hyperlinks which you can use to take you directly to the next steps in your workflow, when appropriate. The following URIs are provided in the response for this request.</p>
+
+                        <table class="table table-striped">
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">display_size.uri</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            GET this URI to retrieve the display size image.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">download.uri</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            POST this URI to download the image.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">download.uri</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            POST this URI to download the image.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">link.uri</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            Specifies the resource URI.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">referral_destination.uri</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            Specifies the resource URI.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">image_detail.uri_oembed</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            Specifies the URI that can be used to get oEmbed data for the image, if embeddable.
+                                        </td>
+                                    </tr>
+                        </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("[data-path='/images/get']").addClass("active").parent().show();
+        $('#menu').slicknav();
+    })
+</script>
+</body>
 </html>
