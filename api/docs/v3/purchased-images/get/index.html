@@ -225,6 +225,12 @@
 	<li class="nav-purchases" data-path="/api/docs/v3/purchases">
 		<a href="/api/docs/v3/purchases">/Purchases</a>
 		<ul style="display: none;">
+			<li data-path="/purchased-assets/get">
+				<span class="label get">GET</span>
+				<a href="/api/docs/v3/purchased-assets/get">
+					/purchased-assets
+				</a>
+			</li>
 			<li data-path="/purchased-images/get">
 				<span class="label get">GET</span>
 				<a href="/api/docs/v3/purchased-images/get">
@@ -402,7 +408,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         <td width="20%">
                                             integer
                                         </td>
-                                        <td width="60%">Specifies the count of matching assets returned.</td>
+                                        <td width="60%">Count of previously purchased images returned.</td>
                                     </tr>
                                     <tr>
                                         <td width="20%">previous_purchases</td>
@@ -413,7 +419,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                                     PreviousPurchase
                                                 ]
                                         </td>
-                                        <td width="60%">Lists the purchased records.</td>
+                                        <td width="60%">List of previously purchased images.</td>
                                     </tr>
                             </table>
                             <h4>PreviousPurchase</h4>
@@ -423,7 +429,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the date the asset was purchased, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
+                                        <td width="60%">Specifies the date the image was downloaded, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
                                     </tr>
                                     <tr>
                                         <td width="20%">image_id</td>
@@ -451,7 +457,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the thumbnail download URI.</td>
+                                        <td width="60%">GET this URI to download the thumbnail.</td>
                                     </tr>
                             </table>
                         <h3 id="hyperlinks">Hyperlinks</h3>
@@ -463,7 +469,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         <td width="20%">PreviousPurchase.thumb_uri</td>
                                         <td width="20%">string</td>
                                         <td width="60%">
-                                            Specifies the thumbnail download URI.
+                                            GET this URI to download the thumbnail.
                                         </td>
                                     </tr>
                         </table>

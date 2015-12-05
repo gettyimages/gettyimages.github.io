@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Search for Similar Images | Getty Images API v3 Documentation</title>
+    <title></title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/docs.css">
@@ -288,143 +288,41 @@
 
         </div>
         <div class="col-md-9 docs-content">
-                <ul class="breadcrumb">
-                        <li><a href="/api/">API</a></li>
-                        <li><a href="/api/docs/">API Docs</a></li>
-                        <li><a href="/api/docs/v3/">v3</a></li>
-                        <li><a href="/api/docs/v3/images/">Images Metadata</a></li>
-                        <li><a href="/api/docs/v3/images/id/similar/get/">Search for Similar Images</a></li>
-                </ul>
                     <a target="_blank" class="btn btn-primary btn-experiment"
-                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Images/Images_GetSimilarImages">Experiment
+                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Purchases/Purchases_GetPreviousAssetPurchases">Experiment
                         with this API</a>
-                    <h1 id="search-for-similar-images">Search for Similar Images</h1>
-<p>This endpoint will search our asset database for images similar to the specified asset id. Due to a wide variety of available image resolutions, the images are grouped into a handful of size categories for simplicity. </p>
+                    <h2 id="get-previously-purchased-assets">Get Previously Purchased Assets</h2>
+<p>This endpoint returns a list of all assets purchased on gettyimages.com by the username used for authentication. Use of this endpoint requires configuration changes to your API key. Please contact <a href="mailto:developersupport@gettyimages.com">developersupport@gettyimages.com</a> to learn more.</p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
-<li><a href="#working-with-fields-sets">Working with Fields Sets</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
-<li><a href="#uri-path-parameters">URI Path Parameters</a></li>
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
-<li><a href="#sorting-and-pagination">Sorting and Pagination</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
 <li><a href="#response-status-codes">Response Status Codes</a></li>
+<li><a href="#hyperlinks">Hyperlinks</a></li>
 </ul>
 <h2 id="quickstart">Quickstart</h2>
-<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
+<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.
 There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
-<p>Use the following endpoint to search for similar images:</p>
-<pre><code>GET https://api.gettyimages.com/v3/images/&lt;asset id&gt;/similar
-</code></pre><p>Add your API key to the request header:</p>
-<pre><code>Api-Key: &lt;your api key&gt;
+<p>Use the following endpoint to return list of your previous purchases:</p>
+<pre><code>GET https://api.gettyimages.com/v3/purchased-assets
+</code></pre><p>To include your API token and a Bearer token to the header (example in curl):</p>
+<pre><code>-H &quot;Api-Key: &lt;your api key&gt;&quot;
+-H &quot;Authorization: Bearer &lt;your-token&gt;&quot;
 </code></pre><p>Your request would look like this using curl:</p>
-<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/v3/images/&lt;asset id&gt;/similar
-</code></pre><p>Your response will look like this:    </p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/purchased-assets
+</code></pre><p>The response body will look like the following example:</p>
 <pre><code>{
-    &quot;result_count&quot;: 973,
-    &quot;images&quot;: [
-    {
-        &quot;id&quot;: &quot;AA027431&quot;,
-        &quot;asset_family&quot;: &quot;creative&quot;,
-        &quot;caption&quot;: null,
-        &quot;collection_code&quot;: &quot;PDI&quot;,
-        &quot;collection_id&quot;: 2,
-        &quot;collection_name&quot;: &quot;Photodisc&quot;,
-        &quot;display_sizes&quot;: [
+    &quot;result_count&quot;: 0,
+    &quot;previous_purchases&quot;: [
         {
-            &quot;is_watermarked&quot;: false,
-            &quot;name&quot;: &quot;thumb&quot;,
-            &quot;uri&quot;: &quot;http://delivery.candidate-gettyimages.com/xt/AA027431.jpg?v=1&amp;g=fs1|0|PDI|27|431&amp;s=1&amp;b=RTRE&quot;
+            &quot;date_purchased&quot;: &quot;&quot;,
+            &quot;asset_id&quot;: &quot;&quot;,
+            &quot;asset_type&quot;: &quot;&quot;,
+            &quot;license_model&quot;: &quot;&quot;,
+            &quot;order_id&quot;: &quot;&quot;,
+            &quot;thumb_uri&quot;: &quot;&quot;
         }
-        ],
-        &quot;license_model&quot;: &quot;royaltyfree&quot;,
-        &quot;max_dimensions&quot;: {
-        &quot;height&quot;: 4094,
-        &quot;width&quot;: 4094
-        },
-        &quot;title&quot;: &quot;Kitten&quot;
-    }
-    ...
-}
-</code></pre><h2 id="working-with-fields-sets">Working with Fields Sets</h2>
-<p>Fields sets are used in the <strong>fields</strong> request parameter to receive a suite of metadata fields. The following fields sets are available:</p>
-<h4 id="summary-fields-set">Summary Fields Set</h4>
-<p>The <strong>summary_set</strong> query string parameter fields value represents a small batch of metadata fields that are often used to build search response results. The following fields are provided for every image in your result set when you include <strong>summary_set</strong> in your request.</p>
-<pre><code>{
-    &quot;images&quot;:
-    [
-        &quot;asset_family&quot;,
-        &quot;caption&quot;,
-        &quot;collection_code&quot;,
-        &quot;collection_id&quot;,
-        &quot;collection_name&quot;,
-        &quot;display_sizes&quot;: 
-        [
-            {
-                &quot;name&quot;: &quot;thumb&quot;
-            }
-        ]
-        &quot;license_model&quot;,
-        &quot;max_dimensions&quot;,
-        &quot;title&quot;
-    ]
-}
-</code></pre><h4 id="detail-fields-set">Detail Fields Set</h4>
-<p>The <strong>detail_set</strong> query string parameter fields value represents a large batch of metadata fields that are often used to build a detailed view of images. The following fields are provided for every image in your result set when you include <strong>detail_set</strong> in your request.</p>
-<pre><code>{
-    &quot;images&quot;:
-    [
-        &quot;allowed_use&quot;,
-        &quot;artist&quot;,
-        &quot;asset_family&quot;,
-        &quot;call_for_image&quot;,
-        &quot;caption&quot;,
-        &quot;collection_code&quot;,
-        &quot;collection_id&quot;,
-        &quot;collection_name&quot;,
-        &quot;copyright&quot;,
-        &quot;date_created&quot;,
-        &quot;display_sizes&quot;: 
-        [
-            {
-                &quot;name&quot;: &quot;comp&quot;
-            },
-            {
-                &quot;name&quot;: &quot;preview&quot;
-            },
-            {
-                &quot;name&quot;: &quot;thumb&quot;
-            }
-        ],
-        &quot;editorial_segments&quot;,
-        &quot;event_ids&quot;,
-        &quot;graphical_style&quot;,
-        &quot;license_model&quot;,
-        &quot;max_dimensions&quot;,
-        &quot;orientation&quot;,
-        &quot;product_types&quot;,
-        &quot;quality_rank&quot;,
-        &quot;referral_destinations&quot;,
-        &quot;title&quot;
-    ]
-}
-</code></pre><h4 id="display-fields-set">Display Fields Set</h4>
-<p>The <strong>display_set</strong> query string parameter fields value represents the fields that provide you with URLs for the low resolution files that are most frequently used to build a UI displaying search results. The following fields are provided for every image in your result set when you include <strong>display_set</strong> in your request.</p>
-<pre><code>{
-    &quot;images&quot;:
-    [
-        &quot;display_sizes&quot;: 
-        [
-            {
-                &quot;name&quot;: &quot;comp&quot;
-            },
-            {
-                &quot;name&quot;: &quot;preview&quot;
-            },
-            {
-                &quot;name&quot;: &quot;thumb&quot;
-            }
-        ]
     ]
 }
 </code></pre>
@@ -442,33 +340,12 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Accept-Language</td>
-                                    <td>string</td>
-                                    <td>
-                                        Specifies the language of result values.
-                                        
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>Authorization</td>
                                     <td>string</td>
                                     <td>
                                         Provide access token in the format of 'Bearer: {token}'.
-                                        
-                                        
-                                    </td>
-                                </tr>
-                        </table>
-                        <h3 id="uri-path-parameters">URI Path Parameters</h3>
-
-                        <table class="table table-striped">
-                                <tr>
-                                    <td>id</td>
-                                    <td>string</td>
-                                    <td>
-                                        Identifies an existing image
                                         Required.
+                                        
                                     </td>
                                 </tr>
                         </table>
@@ -476,47 +353,21 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 
                         <table class="table table-striped">
                                 <tr>
-                                    <td>fields</td>
-                                    <td>array</td>
+                                    <td>date_from</td>
+                                    <td>string</td>
                                     <td>
-                                        Specifies fields to return. Defaults to 'summary_set'.
+                                        If specified, retrieves previous purchases on or after this date. Dates should be submitted in ISO 8601 format (i.e., YYYY-MM-DD).
                                         
-                                         Possible values: 
-                                            <span class="label label-default">accessrestriction</span>
-                                            <span class="label label-default">allowed_use</span>
-                                            <span class="label label-default">alternative_ids</span>
-                                            <span class="label label-default">artist</span>
-                                            <span class="label label-default">asset_family</span>
-                                            <span class="label label-default">call_for_image</span>
-                                            <span class="label label-default">caption</span>
-                                            <span class="label label-default">collection_code</span>
-                                            <span class="label label-default">collection_id</span>
-                                            <span class="label label-default">collection_name</span>
-                                            <span class="label label-default">color_type</span>
-                                            <span class="label label-default">comp</span>
-                                            <span class="label label-default">copyright</span>
-                                            <span class="label label-default">date_created</span>
-                                            <span class="label label-default">detail_set</span>
-                                            <span class="label label-default">display_set</span>
-                                            <span class="label label-default">editorial_segments</span>
-                                            <span class="label label-default">event_ids</span>
-                                            <span class="label label-default">graphical_style</span>
-                                            <span class="label label-default">id</span>
-                                            <span class="label label-default">keywords</span>
-                                            <span class="label label-default">largest_downloads</span>
-                                            <span class="label label-default">license_model</span>
-                                            <span class="label label-default">max_dimensions</span>
-                                            <span class="label label-default">orientation</span>
-                                            <span class="label label-default">people</span>
-                                            <span class="label label-default">prestige</span>
-                                            <span class="label label-default">preview</span>
-                                            <span class="label label-default">product_types</span>
-                                            <span class="label label-default">quality_rank</span>
-                                            <span class="label label-default">referral_destinations</span>
-                                            <span class="label label-default">summary_set</span>
-                                            <span class="label label-default">thumb</span>
-                                            <span class="label label-default">title</span>
-                                            <span class="label label-default">uri_oembed</span>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>date_to</td>
+                                    <td>string</td>
+                                    <td>
+                                        If specified, retrieves previous purchases on or before this date. Dates should be submitted in ISO 8601 format (i.e., YYYY-MM-DD).
+                                        
+                                        
                                     </td>
                                 </tr>
                         </table>
@@ -536,62 +387,99 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                     <td>page_size</td>
                                     <td>integer</td>
                                     <td>
-                                        Specifies page size. Default is 30, maximum page_size is 100.
+                                        Specifies page size. Default is 75, maximum page_size is 100.
                                         
                                         
                                     </td>
                                 </tr>
                         </table>
-                        <h3 id="response-status-codes">Response Status Codes</h3>
+                        <h3 id="response-body-fields">Response Body Fields</h3>
+
+                            <h4>PreviousAssetPurchases</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">result_count</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Count of previously purchased assets returned.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">previous_purchases</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    PreviousAssetPurchase
+                                                ]
+                                        </td>
+                                        <td width="60%">List of previously purchased assets.</td>
+                                    </tr>
+                            </table>
+                            <h4>PreviousAssetPurchase</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">date_purchased</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the date the asset was downloaded, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">asset_id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the unique identifier for the asset.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">asset_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Indicates the asset type classification. Possible values are: image, video.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">license_model</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the licensing model for the asset. Possible values are: royaltyfree, rightsmanaged, rightsready.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">order_id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the purchase order id.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">thumb_uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">GET this URI to download the thumbnail.</td>
+                                    </tr>
+                            </table>
+                        <h3 id="hyperlinks">Hyperlinks</h3>
+<p>Some response items contain hyperlinks which you can use to take you directly to the next steps in your workflow, when appropriate. The following URIs are provided in the response for this request.</p>
 
                         <table class="table table-striped">
-                                <tr>
-                                    <td>400</td>
-                                    <td>InvalidParameterValue</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>400</td>
-                                    <td>MalformedRequest</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>400</td>
-                                    <td>InvalidPage</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>400</td>
-                                    <td>InvalidPageSize</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>400</td>
-                                    <td>ImageIdMustBeSpecified</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>401</td>
-                                    <td>AuthorizationTokenRequired</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>403</td>
-                                    <td>UnauthorizedDisplaySize</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>404</td>
-                                    <td>ImageNotFound</td>
-                                    <td></td>
-                                </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">PreviousAssetPurchase.thumb_uri</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            GET this URI to download the thumbnail.
+                                        </td>
+                                    </tr>
                         </table>
         </div>
     </div>
 </div>
 <script type="text/javascript">
     $(function () {
-        $("[data-path='/images/id/similar/get']").addClass("active").parent().show();
+        $("[data-path='/purchased-assets/get']").addClass("active").parent().show();
         $('#menu').slicknav();
     })
 </script>

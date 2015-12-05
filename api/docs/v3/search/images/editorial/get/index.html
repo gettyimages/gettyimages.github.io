@@ -225,6 +225,12 @@
 	<li class="nav-purchases" data-path="/api/docs/v3/purchases">
 		<a href="/api/docs/v3/purchases">/Purchases</a>
 		<ul style="display: none;">
+			<li data-path="/purchased-assets/get">
+				<span class="label get">GET</span>
+				<a href="/api/docs/v3/purchased-assets/get">
+					/purchased-assets
+				</a>
+			</li>
 			<li data-path="/purchased-images/get">
 				<span class="label get">GET</span>
 				<a href="/api/docs/v3/purchased-images/get">
@@ -1079,7 +1085,7 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the URI that can be used to get oEmbed data for the image, if embeddable.</td>
+                                        <td width="60%">GET this URI to retrieve oEmbed data for the image, if embeddable.</td>
                                     </tr>
                             </table>
                             <h4>allowed_use</h4>
@@ -1237,7 +1243,7 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the resource URI.</td>
+                                        <td width="60%">GET this URI to retrieve appropriate referral destination data.</td>
                                     </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>
@@ -1314,7 +1320,7 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="20%">referral_destination.uri</td>
                                         <td width="20%">string</td>
                                         <td width="60%">
-                                            Specifies the resource URI.
+                                            GET this URI to retrieve appropriate referral destination data.
                                         </td>
                                     </tr>
                                 <h4></h4>
@@ -1322,7 +1328,7 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="20%">editorial_image_search_item.uri_oembed</td>
                                         <td width="20%">string</td>
                                         <td width="60%">
-                                            Specifies the URI that can be used to get oEmbed data for the image, if embeddable.
+                                            GET this URI to retrieve oEmbed data for the image, if embeddable.
                                         </td>
                                     </tr>
                         </table>
