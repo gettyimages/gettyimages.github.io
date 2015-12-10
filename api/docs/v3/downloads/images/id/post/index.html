@@ -305,6 +305,7 @@
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#auto-downloads">Auto Downloads</a></li>
 <li><a href="#uri-path-parameters">URI Path Parameters</a></li>
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
 <li><a href="#request-body-fields">Request Body Fields</a></li>
@@ -312,21 +313,29 @@
 </ul>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
-<p>Use the following endpoint for a HTTP status code 303 Redirect to download URI:</p>
-<p><a href="https://api.gettyimages.com/v3/downloads/images/">https://api.gettyimages.com/v3/downloads/images/</a><asset id>?auto_download=true</p>
-<p>Use the following endpoint for a response message with the URI to download the largest image available:</p>
-<p><a href="https://api.gettyimages.com/v3/downloads/images/">https://api.gettyimages.com/v3/downloads/images/</a><asset id>?auto_download=false</p>
 <p>To include your API token and a Bearer token to the header (example in curl):</p>
 <pre><code>-H &quot;Api-Key: &lt;your api key&gt;&quot;
 -H &quot;Authorization: Bearer &lt;your-token&gt;&quot;
 </code></pre><p>Your request would look like this using curl:</p>
 <pre><code>curl -X POST -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/downloads/images/&lt;asset id&gt;?auto_download=false
-</code></pre><p>Your response will look like this:</p>
-<pre><code>{
-  &quot;uri&quot;: &quot;https://delivery.gettyimages.com/...&quot;
+</code></pre><h2 id="auto-downloads">Auto Downloads</h2>
+<p>The <code>auto_download</code> request query parameter specifies whether to automatically download the image.</p>
+<p>If the <code>auto_download</code> request query parameter is set to <em>true</em>, the API will return an HTTP status code 303 <em>See Other</em>. Your client code will need to process this response and redirect to the URI specified in the <em>Location</em> header to enable you to automatically download the file. The redirection workflow follows the <a href="https://tools.ietf.org/html/rfc7231#section-6.4.4">HTTP 1.1 protocol</a>.</p>
+<p>Client Request:</p>
+<pre><code>https://api.gettyimages.com/v3/downloads/images/&lt;asset_id&gt;?auto_download=true
+</code></pre><p>Server Response:</p>
+<pre><code>HTTP/1.1 303 See Other
+Location: https://delivery.gettyimages.com/...
+</code></pre><p><br /> </p>
+<p>If the <code>auto_download</code> request query parameter is set to false, the API will return a HTTP status code 200, along with the URI in the response body which can be used to download the image. </p>
+<p>Client Request:</p>
+<pre><code>https://api.gettyimages.com/v3/downloads/images/&lt;asset_id&gt;?auto_download=false
+</code></pre><p>Server Response:</p>
+<pre><code>HTTP/1.1 200 OK
+{
+    &quot;uri&quot;: &quot;https://delivery.gettyimages.com/...&quot;
 }
-</code></pre><p>Your response will return a 200 - if successful.</p>
-
+</code></pre>
                     <h3 id="request-headers">Request Headers</h3>
 
                      
