@@ -1,2 +1,2 @@
 # gettyimages.github.io
-Getty Images API Portal 
+Getty Images API Portal

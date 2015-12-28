@@ -492,6 +492,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                             <span class="label label-default">download_sizes</span>
                                             <span class="label label-default">downloads</span>
                                             <span class="label label-default">editorial_segments</span>
+                                            <span class="label label-default">editorial_source</span>
                                             <span class="label label-default">event_ids</span>
                                             <span class="label label-default">graphical_style</span>
                                             <span class="label label-default">id</span>
@@ -699,6 +700,13 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                                 ]
                                         </td>
                                         <td width="60%">Lists the editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">editorial_source</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%">Specifies the editorial source of the image</td>
                                     </tr>
                                     <tr>
                                         <td width="20%">event_ids</td>
@@ -995,6 +1003,23 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                             string
                                         </td>
                                         <td width="60%">POST this URI to download the image.</td>
+                                    </tr>
+                            </table>
+                            <h4>EditorialSource</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">id</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the editorial source id of the image</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the editorial source name of the image</td>
                                     </tr>
                             </table>
                             <h4>keywords</h4>
