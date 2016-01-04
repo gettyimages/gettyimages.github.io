@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>API Documentation | Getty Images API v3 Documentation</title>
+	<title>Error Codes &amp; Responses | Getty Images API v3 Documentation</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/docs.css">
@@ -295,31 +295,157 @@
 				<ul class="breadcrumb">
 					<li><a href="/api/">API</a></li>
 					<li><a href="/api/docs/">API Docs</a></li>
+					<li><a href="/api/docs/v3/">v3</a></li>
+					<li><a href="/api/docs/v3/errorcodesandresponses.html">Error Codes &amp; Responses</a></li>
 				</ul>
 				
-				<h1 id="getty-images-api-documentation">Getty Images API Documentation</h1>
-<p><a class="btn btn-primary btn-experiment" href="/api/docs/v3" style="max-width: 300px;">View the v3 Documentation</a></p>
-<p><a href="/api/docs/v2" target="_blank">Documentation for prior versions</a> is also available.</p>
-<h2 id="quick-links">Quick links</h2>
-<ul>
-<li><a href="/api/docs/v3/api-overview.html">API Overview Information</a></li>
-<li><a href="/api/docs/v3/oauth2.html">OAuth2 Access Tokens</a></li>
-<li><a href="https://api.gettyimages.com/swagger" target="_blank">Interactive Documentation</a></li>
-<li><a href="http://developer.gettyimages.com/forum/topics/124373" target="_blank">Release Notes</a></li>
-<li><a href="/api/docs/v3/sdks.html">Getty Images API SDKs</a></li>
-<li><a href="/api/docs/v3/errorcodesandresponses.html">Error Codes &amp; Responses</a></li>
-</ul>
-<h2 id="example-workflows">Example Workflows</h2>
-<ul>
-<li>OAuth2<ul>
-<li><a href="/api/docs/v3/oauth2workflow.html#resource-owner-flow">Resource Owner</a></li>
-<li><a href="/api/docs/v3/oauth2workflow.html#client-credentials-flow">Client Credential</a></li>
-<li><a href="/api/docs/v3/oauth2implicitgrantworkflow.html">Implicit Grant</a></li>
-</ul>
-</li>
-<li><a href="/api/docs/v3/quickstart.html">Search Quick Start</a></li>
-<li><a href="/api/docs/v3/downloadworkflow.html">Image Download</a></li>
-</ul>
+				<h1 id="error-codes-responses">Error Codes &amp; Responses</h1>
+<p>This page lists errors returned by the Getty Images API, grouped by their HTTP status codes as defined in <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10">RFC 2616</a>.</p>
+<h3 id="successful-redirection-codes">Successful &amp; Redirection Codes</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP Status Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 OK</td>
+<td>Success!</td>
+</tr>
+<tr>
+<td>201 Created</td>
+<td>The request has been fulfilled and resulted in a new resource being created.</td>
+</tr>
+<tr>
+<td>303 SeeOther</td>
+<td>The response to the request can be found under a different URI, located in the <code>Location</code> header of the response. Issue a GET method on that resource to retrieve the response.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error-codes">Error Codes</h3>
+<p>The sample JSON response below demonstrates the structure of how an error is returned:</p>
+<pre><code>{
+  &quot;ErrorCode&quot;: &quot;InvalidRequest&quot;,
+  &quot;ErrorMessage&quot;: &quot;Field: page_size, Message: The value &#39;a&#39; is not valid for Int32.&quot;
+}
+</code></pre><h5 id="400-bad-request">400 Bad Request</h5>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InvalidParameterValue</td>
+<td>The request failed becuase it contained an invalid parameter value.</td>
+</tr>
+<tr>
+<td>InvalidPage</td>
+<td>The <code>page</code> parameter value is invalid.</td>
+</tr>
+<tr>
+<td>InvalidPageSize</td>
+<td>The <code>page_size</code> parameter value is invalid.</td>
+</tr>
+<tr>
+<td>UnknownProviderUri</td>
+<td>The <code>entity_uris</code> parameter value contains a URI that is not a supported provider.</td>
+</tr>
+<tr>
+<td>IncorrectlyFormedUri</td>
+<td>The <code>entity_uris</code> parameter value is invalid.</td>
+</tr>
+<tr>
+<td>MalformedRequest</td>
+<td>The server cannot understand the request due to malformed or illegal syntax. Do not repeat request without modifications.</td>
+</tr>
+<tr>
+<td>ImageIdMustBeSpecified</td>
+<td>The <code>ids</code> or <code>id</code> parameter value is missing in the request. They must be specified in order to get a successful response.</td>
+</tr>
+<tr>
+<td>InvalidRequest</td>
+<td>The request is invalid or improperly formed. Consequently, the server didn&#39;t understand the request.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="403-forbidden">403 Forbidden</h5>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UnauthorizedDisplaySize</td>
+<td>The <code>fields</code> parameter value includes an invalid display size.</td>
+</tr>
+<tr>
+<td>NoAccessToProductType</td>
+<td>The <code>product_types</code> parameter value is invalid. This can occur if a user doesn&#39;t have access to the specified product type.</td>
+</tr>
+<tr>
+<td>Forbidden</td>
+<td>The requested operation is forbidden and cannot be completed.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="404-not-found">404 Not Found</h5>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ImageNotFound</td>
+<td>The ID provided in the request resulted in no images found.</td>
+</tr>
+<tr>
+<td>VideosNotFound</td>
+<td>The ID provided in the request resulted in no videos found.</td>
+</tr>
+<tr>
+<td>FileDownloadSizeNotFound</td>
+<td>The request could not be completed due to invalid download size dimensions</td>
+</tr>
+<tr>
+<td>VideoNotFound</td>
+<td>The requested operation failed because the video associated with the request could not be found.</td>
+</tr>
+<tr>
+<td>EventNotFound</td>
+<td>The requested operation failed because the event associated with the request could not be found.</td>
+</tr>
+<tr>
+<td>BoardNotFound</td>
+<td>The requested operation failed because the board associated with the request could not be found.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="500-internal-server-error">500 Internal Server Error</h5>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SystemError</td>
+<td>The request failed due to an internal server error. Please post to the <a href="http://developer.gettyimages.com/forum">developer forum</a> so that the Getty Images team can investigate.</td>
+</tr>
+</tbody>
+</table>
 
 			</div>
 		</div>
@@ -327,7 +453,7 @@
 	</div>
    <script type="text/javascript">
        $(function () {
-            $("[data-path='/api/docs']").find("ul").show();
+            $("[data-path='/api/docs/v3']").find("ul").show();
 			$('#menu').slicknav();
        })
    </script>
