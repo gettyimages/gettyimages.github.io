@@ -374,7 +374,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>id</td>
                                     <td>string</td>
                                     <td>
-                                        Specifies a unique Batch Id to identify the report.
+                                        Specifies a unique batch transaction id to identify the report.
                                         Required.
                                     </td>
                                 </tr>
@@ -432,6 +432,40 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="60%">Specifies the number of asset usage records that were successfully recorded.</td>
                                     </tr>
                             </table>
+                        <h3 id="response-status-codes">Response Status Codes</h3>
+
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>200</td>
+                                    <td>Success - All usages reported were successfully recorded.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidRequest - The content of the request was invalid. Most commonly this is due to either too many assets specified, no assets or invalid JSON.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidAssets - Invalid assets found in the request.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>AuthorizationTokenRequired - Authorization token was missing or not valid.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>UnauthorizedToReportUsage - User was not authorized to report usages. Contact your Getty Images Account Manager to discuss options for submitting your usage data.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>409</td>
+                                    <td>TransactionIdDuplicated - The id parameter supplied was already used in a previous usage report.</td>
+                                    <td></td>
+                                </tr>
+                        </table>
         </div>
     </div>
 </div>

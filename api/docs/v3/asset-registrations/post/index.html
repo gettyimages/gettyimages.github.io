@@ -364,6 +364,25 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="60%">Specifies the list of asset ids you want to register.</td>
                                     </tr>
                             </table>
+                        <h3 id="response-status-codes">Response Status Codes</h3>
+
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>200</td>
+                                    <td>Success - The assets were successfully registered.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>AuthorizationTokenRequired - Authorization token was missing or not valid.</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>500</td>
+                                    <td>AssetRegistrationFailed - There was a failure when registering assets.</td>
+                                    <td></td>
+                                </tr>
+                        </table>
         </div>
     </div>
 </div>
