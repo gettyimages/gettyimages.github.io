@@ -318,9 +318,8 @@ Authorization: Bearer &lt;your secure access token&gt;
     -H &quot;Api-Key: &lt;your api key&gt;&quot; 
     -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; 
     https://api.gettyimages.com/v3/asset-changes/channels
-
-The response body will look like the following example:
-</code></pre><p>{
+</code></pre><p>The response body will look like the following example:</p>
+<pre><code>{
   &quot;Channels&quot;: [
     {
       &quot;AssetFamily&quot;: &quot;&quot;,
@@ -329,7 +328,8 @@ The response body will look like the following example:
       &quot;StartDate&quot;: &quot;&quot;
     }
   ]
-}```</p>
+}
+</code></pre><p>Only channels that have been queried in the last 60 days will be included in the list of channels.  Partners who have a channel that has been removed should contact their sales representative to be set up again.</p>
 
                     <h3 id="request-headers">Request Headers</h3>
 
