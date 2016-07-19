@@ -1,20 +1,20 @@
 <html>
 <head>
-	<title></title>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <title>Delete Single Board | Getty Images API v3 Documentation</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/docs.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/responsive.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="/js/jquery.slicknav.js"></script>
-	<script src="/js/s_code.js"></script>
-	<script src="/js/analytics.js"></script>	
-	<script src="/js/docs.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/jquery.slicknav.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/docs.js"></script>
 </head>
 <body class="home dark-text">
-		
+	
 <header>
   <div class="site-width">
     <div class="slice group">
@@ -35,13 +35,10 @@
     </div>
   </div>
 </header>
-
-    <div class="container-fluid">
-
-		<div class="row-fluid">
-
-			<div class="col-md-3 left-doc-nav">
-				<ul class="nav nav-pills nav-stacked left-nav">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-3 left-doc-nav">
+            <ul class="nav nav-pills nav-stacked left-nav">
 	<li class="nav-search" data-path="/api/docs/v3/search">
 		<a href="/api/docs/v3/search">/Search</a>
 		<ul style="display: none;">
@@ -313,24 +310,129 @@
 	</li>
 </ul>
 
-			</div>
-		
-			<div class="col-md-9 docs-content category-content">
-				
-				<p>CreateApplicationSession</p>
-<div class="alert alert-warning">
-    Documentation for this endpoint is coming soon.
+        </div>
+        <div class="col-md-9 docs-content">
+                <ul class="breadcrumb">
+                        <li><a href="/api/">API</a></li>
+                        <li><a href="/api/docs/">API Docs</a></li>
+                        <li><a href="/api/docs/v3/">v3</a></li>
+                        <li><a href="/api/docs/v3/boards/">Boards</a></li>
+                        <li><a href="/api/docs/v3/boards/board_id/delete">Delete Single Board</a></li>
+                </ul>
+                        <div class="alert alert-warning">
+                            <img src="/images/icons/alert.png">
+                            This endpoint is currently in <strong>BETA</strong>.
+                        </div>
+                    <a target="_blank" class="btn btn-primary btn-experiment"
+                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_DeleteBoard">Experiment
+                        with this API</a>
+                    <h1 id="boards-delete-board">Boards - Delete Board</h1>
+<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to delete a Board by a specific id.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+<li><a href="#hyperlinks">Hyperlinks</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.</p>
+<p>Use the following endpoint to delete a specific board:</p>
+<pre><code>DELETE https://api.gettyimages.com/v3/boards/&lt;board id&gt;
+</code></pre><p><strong>You can use the <a href="/api/docs/v3/boards/get/#quickstart">Get All Boards Quickstart</a> to get a test <em>board id</em>.</strong></p>
+<p>Add API key and the Resource Owner Grant token to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+Authorization: Bearer &lt;your secure access token&gt;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X DELETE -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/&lt;board id&gt;
+</code></pre><p>Your response will return a 204 - No Content if successful.</p>
+
+                    <h3 id="request-headers">Request Headers</h3>
+
+                     
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>Api-Key</td>
+                                    <td>string</td>
+                                    <td>
+                                        Api-Key
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Authorization</td>
+                                    <td>string</td>
+                                    <td>
+                                        Authorization token required. Used for applying content access restrictions. Use the OAuth2 Resource Owner Grant to auto-populate this value.
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Accept-Language</td>
+                                    <td>string</td>
+                                    <td>
+                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="uri-path-parameters">URI Path Parameters</h3>
+
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>board_id</td>
+                                    <td>string</td>
+                                    <td>
+                                        A board id.
+                                        Required.
+                                    </td>
+                                </tr>
+                        </table>
+                        <h3 id="response-status-codes">Response Status Codes</h3>
+
+                        <table class="table table-striped">
+                                <tr>
+                                    <td>204</td>
+                                    <td>BoardDeleted</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidParameterValue</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>UserTokenRequired</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>401</td>
+                                    <td>Unauthorized</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>404</td>
+                                    <td>BoardNotFound</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>404</td>
+                                    <td>BoardDeleted</td>
+                                    <td></td>
+                                </tr>
+                        </table>
+        </div>
+    </div>
 </div>
-			</div>
-		</div>
-
-	</div>
-   <script type="text/javascript">
-       $(function () {
-            $("[data-path='/api/docs/v2/endpoints/session']").find("ul").show();
-			$('#menu').slicknav();
-       })
-   </script>
+<script type="text/javascript">
+    $(function () {
+        $("[data-path='/boards/board_id/delete']").addClass("active").parent().show();
+        $('#menu').slicknav();
+    })
+</script>
 </body>
-
 </html>

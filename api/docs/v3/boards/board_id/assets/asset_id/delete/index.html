@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Add Asset to Board | Getty Images API v3 Documentation</title>
+    <title>Remove Asset from Board | Getty Images API v3 Documentation</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/docs.css">
@@ -158,10 +158,34 @@
 					/boards
 				</a>
 			</li>
+			<li data-path="/boards/post">
+				<span class="label post">POST</span>
+				<a href="/api/docs/v3/boards/post">
+					/boards
+				</a>
+			</li>
 			<li data-path="/boards/board_id/get">
 				<span class="label get">GET</span>
 				<a href="/api/docs/v3/boards/board_id/get">
 					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/put">
+				<span class="label put">PUT</span>
+				<a href="/api/docs/v3/boards/board_id/put">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/delete">
+				<span class="label delete">DELETE</span>
+				<a href="/api/docs/v3/boards/board_id/delete">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/assets/asset_id/put">
+				<span class="label put">PUT</span>
+				<a href="/api/docs/v3/boards/board_id/assets/asset_id/put">
+					/boards/board_id/assets/asset_id
 				</a>
 			</li>
 			<li data-path="/boards/board_id/assets/asset_id/delete">
@@ -293,7 +317,7 @@
                         <li><a href="/api/docs/">API Docs</a></li>
                         <li><a href="/api/docs/v3/">v3</a></li>
                         <li><a href="/api/docs/v3/boards/">Boards</a></li>
-                        <li><a href="/api/docs/v3/boards/board_id/assets/asset_id/put">Add Asset to Board</a></li>
+                        <li><a href="/api/docs/v3/boards/board_id/assets/asset_id/delete">Remove Asset from Board</a></li>
                 </ul>
                         <div class="alert alert-warning">
                             <img src="/images/icons/alert.png">
@@ -312,14 +336,14 @@
 </ul>
 <h2 id="quickstart">Quickstart</h2>
 <p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
-<p>Use the following endpoint to add an asset to a specific board:</p>
-<pre><code>DELETE https://api.gettyimages.com/v3/boards/&lt;board_id&gt;/assets/&lt;asset id&gt;
-</code></pre><p><strong>You can use the <a href="/api/docs/v3/boards/get/#quickstart">Get All Boards Quickstart</a> to get a test _board<em>id</em> and the <a href="/api/docs/v3/search/images/creative/get/#quickstart">Creative Image Search Quickstart</a> to get an _asset<em>id</em>.</strong></p>
+<p>Use the following endpoint to remove an asset from a specific board:</p>
+<pre><code>DELETE https://api.gettyimages.com/v3/boards/&lt;board id&gt;/assets/&lt;asset id&gt;
+</code></pre><p><strong>You can use the <a href="/api/docs/v3/boards/get/#quickstart">Get All Boards Quickstart</a> to get a test <em>board id</em> and the <a href="/api/docs/v3/search/images/creative/get/#quickstart">Creative Image Search Quickstart</a> to get an <em>asset id</em>.</strong></p>
 <p>Add API key and the Resource Owner Grant token to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
 Authorization: Bearer &lt;your secure access token&gt;
 </code></pre><p>Your request would look like this using curl:</p>
-<pre><code>curl -X PUT -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/&lt;your board id&gt;/assets/&lt;asset id&gt;
+<pre><code>curl -X DELETE -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/&lt;your board id&gt;/assets/&lt;asset id&gt;
 </code></pre><p>Your response will return a 204 - No Content if successful.</p>
 
                     <h3 id="request-headers">Request Headers</h3>
@@ -339,7 +363,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Authorization</td>
                                     <td>string</td>
                                     <td>
-                                        Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
+                                        Authorization token required. Used for applying content access restrictions. Use the OAuth2 Resource Owner Grant to auto-populate this value.
                                         Required.
                                         
                                     </td>
@@ -361,7 +385,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>asset_id</td>
                                     <td>string</td>
                                     <td>
-                                        ID of asset to be removed from the board.
+                                        An asset id.
                                         Required.
                                     </td>
                                 </tr>
@@ -369,7 +393,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>board_id</td>
                                     <td>string</td>
                                     <td>
-                                        ID of the board.
+                                        A board id.
                                         Required.
                                     </td>
                                 </tr>
@@ -379,135 +403,32 @@ Authorization: Bearer &lt;your secure access token&gt;
                         <table class="table table-striped">
                                 <tr>
                                     <td>204</td>
-                                    <td>Asset removed from the board.</td>
+                                    <td>AssetRemovedFromBoard</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidParameterValue</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td>401</td>
-                                    <td>user_token_required</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>401</td>
-                                    <td>Unauthorized</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>404</td>
-                                    <td>Board Not Found</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>404</td>
-                                    <td>Board Deleted</td>
-                                    <td></td>
-                                </tr>
-                        </table>
-                        <div class="alert alert-warning">
-                            <img src="/images/icons/alert.png">
-                            This endpoint is currently in <strong>BETA</strong>.
-                        </div>
-                    <a target="_blank" class="btn btn-primary btn-experiment"
-                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_AddAsset">Experiment
-                        with this API</a>
-                    <h1 id="boards-add-asset-to-board">Boards - Add Asset to Board</h1>
-<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to add an asset to a board.</p>
-<ul>
-<li><a href="#quickstart">Quickstart</a></li>
-<li><a href="#request-headers">Request Headers</a></li>
-<li><a href="#uri-path-parameters">URI Path Parameters</a></li>
-<li><a href="#response-status-codes">Response Status Codes</a></li>
-</ul>
-<h2 id="quickstart">Quickstart</h2>
-<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
-<p>Use the following endpoint to add an asset to a specific board:</p>
-<pre><code>PUT https://api.gettyimages.com/v3/boards/&lt;board_id&gt;/assets/&lt;asset_id&gt;
-</code></pre><p><strong>You can use the <a href="/api/docs/v3/boards/get/#quickstart">Get All Boards Quickstart</a> to get a test _board<em>id</em> and the <a href="/api/docs/v3/search/images/creative/get/#quickstart">Creative Image Search Quickstart</a> to get an _asset<em>id</em>.</strong></p>
-<p>Add API key and the Resource Owner Grant token to the request header:</p>
-<pre><code>Api-Key: &lt;your api key&gt;
-Authorization: Bearer &lt;your secure access token&gt;
-</code></pre><p>Your request would look like this using curl:</p>
-<pre><code>curl -X PUT -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/&lt;your board id&gt;/assets/&lt;your asset id&gt;
-</code></pre><p>Your response will return a 201 - Created if successful.</p>
-
-                    <h3 id="request-headers">Request Headers</h3>
-
-                     
-                        <table class="table table-striped">
-                                <tr>
-                                    <td>Api-Key</td>
-                                    <td>string</td>
-                                    <td>
-                                        Api-Key
-                                        Required.
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Authorization</td>
-                                    <td>string</td>
-                                    <td>
-                                        Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
-                                        Required.
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Accept-Language</td>
-                                    <td>string</td>
-                                    <td>
-                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
-                                        
-                                        
-                                    </td>
-                                </tr>
-                        </table>
-                        <h3 id="uri-path-parameters">URI Path Parameters</h3>
-
-                        <table class="table table-striped">
-                                <tr>
-                                    <td>asset_id</td>
-                                    <td>string</td>
-                                    <td>
-                                        Id of the asset to add. If it is already in the board's asset collection, no action taken.
-                                        Required.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>board_id</td>
-                                    <td>string</td>
-                                    <td>
-                                        Id of board to add asset to.
-                                        Required.
-                                    </td>
-                                </tr>
-                        </table>
-                        <h3 id="response-status-codes">Response Status Codes</h3>
-
-                        <table class="table table-striped">
-                                <tr>
-                                    <td>201</td>
-                                    <td>Created</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>401</td>
-                                    <td>user_token_required</td>
+                                    <td>UserTokenRequired</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td>401</td>
                                     <td>Unauthorized</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>403</td>
-                                    <td>asset not found</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td>404</td>
                                     <td>BoardNotFound</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>404</td>
+                                    <td>BoardDeleted</td>
                                     <td></td>
                                 </tr>
                         </table>

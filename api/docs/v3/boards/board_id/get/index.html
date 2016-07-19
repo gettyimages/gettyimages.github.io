@@ -158,10 +158,34 @@
 					/boards
 				</a>
 			</li>
+			<li data-path="/boards/post">
+				<span class="label post">POST</span>
+				<a href="/api/docs/v3/boards/post">
+					/boards
+				</a>
+			</li>
 			<li data-path="/boards/board_id/get">
 				<span class="label get">GET</span>
 				<a href="/api/docs/v3/boards/board_id/get">
 					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/put">
+				<span class="label put">PUT</span>
+				<a href="/api/docs/v3/boards/board_id/put">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/delete">
+				<span class="label delete">DELETE</span>
+				<a href="/api/docs/v3/boards/board_id/delete">
+					/boards/board_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/assets/asset_id/put">
+				<span class="label put">PUT</span>
+				<a href="/api/docs/v3/boards/board_id/assets/asset_id/put">
+					/boards/board_id/assets/asset_id
 				</a>
 			</li>
 			<li data-path="/boards/board_id/assets/asset_id/delete">
@@ -362,7 +386,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Authorization</td>
                                     <td>string</td>
                                     <td>
-                                        Authorization token required. Used for applying content access restrictions. Use one of the OAuth2 grants to auto-populate this value.
+                                        Authorization token required. Used for applying content access restrictions. Use the OAuth2 Resource Owner Grant to auto-populate this value.
                                         Required.
                                         
                                     </td>
@@ -384,7 +408,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>board_id</td>
                                     <td>string</td>
                                     <td>
-                                        Id of board to get details and assets for.
+                                        A board id.
                                         Required.
                                     </td>
                                 </tr>
@@ -401,16 +425,9 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="60%"></td>
                                     </tr>
                                     <tr>
-                                        <td width="20%">date_created</td>
+                                        <td width="20%">asset_count</td>
                                         <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">description</td>
-                                        <td width="20%">
-                                            string
+                                            integer
                                         </td>
                                         <td width="60%"></td>
                                     </tr>
@@ -426,7 +443,21 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="60%"></td>
                                     </tr>
                                     <tr>
+                                        <td width="20%">date_created</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
                                         <td width="20%">date_last_updated</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">description</td>
                                         <td width="20%">
                                             string
                                         </td>
@@ -439,18 +470,18 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         </td>
                                         <td width="60%"></td>
                                     </tr>
-                                    <tr>
-                                        <td width="20%">asset_count</td>
-                                        <td width="20%">
-                                            integer
-                                        </td>
-                                        <td width="60%"></td>
-                                    </tr>
                             </table>
                             <h4>asset</h4>
                             <table class="table table-striped">
                                     <tr>
                                         <td width="20%">id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">asset_type</td>
                                         <td width="20%">
                                             string
                                         </td>
@@ -471,13 +502,6 @@ Authorization: Bearer &lt;your secure access token&gt;
 
                                                     display_size
                                                 ]
-                                        </td>
-                                        <td width="60%"></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">asset_type</td>
-                                        <td width="20%">
-                                            string
                                         </td>
                                         <td width="60%"></td>
                                     </tr>
@@ -508,8 +532,13 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td></td>
                                 </tr>
                                 <tr>
+                                    <td>400</td>
+                                    <td>InvalidParameterValue</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td>401</td>
-                                    <td>user_token_required</td>
+                                    <td>UserTokenRequired</td>
                                     <td></td>
                                 </tr>
                                 <tr>
