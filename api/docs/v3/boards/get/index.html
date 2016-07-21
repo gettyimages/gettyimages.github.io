@@ -422,7 +422,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>page_size</td>
                                     <td>integer</td>
                                     <td>
-                                        Request number of boards to return in each page.
+                                        Request number of boards to return in each page. (default is 30)
                                         
                                         
                                     </td>
@@ -565,17 +565,17 @@ Authorization: Bearer &lt;your secure access token&gt;
                                 </tr>
                                 <tr>
                                     <td>400</td>
-                                    <td>InvalidPage</td>
+                                    <td>InvalidParameterValue</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidPageNumber</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td>400</td>
                                     <td>InvalidPageSize</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>400</td>
-                                    <td>InvalidParameterValue</td>
                                     <td></td>
                                 </tr>
                                 <tr>
