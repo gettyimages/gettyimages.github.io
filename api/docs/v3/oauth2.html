@@ -436,9 +436,9 @@
 <li><p>The API verifies the client and user credentials and then redirects to the client application with a long-lived access token.</p>
 </li>
 </ol>
-<p>#####Example request:</p>
+<h5 id="example-request-">Example request:</h5>
 <pre><code>    GET https://api.gettyimages.com/oauth2/auth/?response_type=token&amp;client_id=s6BhdRkqt3&amp;state=xyz&amp;redirect_uri=https%3A%2F%2Fclient%2Eexample%2Ecom%2Fcb HTTP/1.1
-</code></pre><p>#####Example response:</p>
+</code></pre><h5 id="example-response-">Example response:</h5>
 <pre><code>    HTTP/1.1 302 Found
     Location: https://client.example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA&amp;state=xyz&amp;token_type=bearer
 </code></pre><h4 id="token-expiration-and-revocation">Token Expiration and Revocation</h4>
@@ -451,7 +451,7 @@
 <ol>
 <li><p>Client application calls the token endpoint and includes the following information in the request:</p>
 <ul>
-<li>grant type of &quot;password&quot;</li>
+<li>grant type of <em>password</em></li>
 <li>username</li>
 <li>password</li>
 <li>client ID / API key</li>
@@ -463,22 +463,17 @@
 <li>access token</li>
 <li>refresh token</li>
 <li>expiration value (in seconds)</li>
-<li>token type of &quot;bearer&quot;</li>
+<li>token type of <em>Bearer</em></li>
 </ul>
 </li>
 </ol>
-<p>Notes:</p>
-<ul>
-<li>The access token is good for 30 minutes</li>
-<li>The refresh token is good for one year and can be used to retrieve another 30-minute access token by calling the token endpoint with a grant type of &#39;refresh_token&#39;.</li>
-</ul>
-<p>#####Example request:</p>
+<h5 id="example-request-">Example request:</h5>
 <pre><code>    POST /token HTTPS/1.1
     Host: api.gettyimages.com/oauth2/token/
     Content-Type: application/x-www-form-urlencoded
 
     client_id=TestClientId&amp;client_secret=TestSecret&amp;grant_type=password&amp;username=johndoe&amp;password=A3ddj3w
-</code></pre><p>#####Example response:</p>
+</code></pre><h5 id="example-response-">Example response:</h5>
 <pre><code>    HTTPS/1.1 200 OK
     Content-Type: application/json;charset=UTF-8
     Cache-Control: no-store
@@ -490,14 +485,14 @@
             &quot;expires_in&quot;:1800,
             &quot;refresh_token&quot;:&quot;tGzv3JOkF0XG5Qx2TlKWIA&quot;
     }
-</code></pre><p>#####Example refresh request:</p>
+</code></pre><h5 id="example-refresh-request-">Example refresh request:</h5>
 <pre><code>    POST /token HTTPS/1.1
     Host: api.gettyimages.com/oauth2/token/
     Content-Type: application/x-www-form-urlencoded
 
     grant_type=refresh_token&amp;client_id=TestClientId&amp;client_secret=TestSecret&amp;refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 </code></pre><h4 id="token-expiration-and-revocation">Token Expiration and Revocation</h4>
-<p>The resource owner flow grants a 30-minute access token. If the client application needs to access content for the user longer that 30 minutes, it can use the refresh token to get a new access token that will also be valid for 30 minutes. The refresh token is valid for one year and can be used as many times as needed within that one year to get a new access token. The refresh token cannot be used for API access.</p>
+<p>The resource owner flow grants an access token which is good for at most 30 minutes. Be sure to check the <code>expires_in</code> property of the response to determine when the access token actually expires. If the client application needs to access content for the user longer that 30 minutes, it can use the refresh token to get a new access token that will also be valid for 30 minutes. The refresh token is valid for one year and can be used as many times as needed within that one year to get a new access token. The refresh token cannot be used for API access.</p>
 <p>Refresh tokens can be revoked when the user changes their password. Revoked tokens cannot be used for any API access.</p>
 <h3 id="client-credentials-flow">Client Credentials Flow</h3>
 <h4 id="summary">Summary</h4>
@@ -505,7 +500,7 @@
 <ol>
 <li><p>Client application calls the token endpoint with the following information in the request:</p>
 <ul>
-<li>grant type of &quot;client_credentials&quot;</li>
+<li>grant type of <em>client_credentials</em></li>
 <li>client ID / API key</li>
 <li>client secret</li>
 </ul>
@@ -514,18 +509,17 @@
 <ul>
 <li>access token</li>
 <li>expiration value (in seconds)</li>
-<li>token type of &#39;bearer&#39;</li>
+<li>token type of <em>Bearer</em></li>
 </ul>
 </li>
 </ol>
-<p>Note: The access token is good for 30 minutes</p>
-<p>#####Example request:</p>
+<h5 id="example-request-">Example request:</h5>
 <pre><code>    POST /token HTTPS/1.1
     Host: api.gettyimages.com/oauth2/token/
     Content-Type: application/x-www-form-urlencoded
 
     client_id=TestClientId&amp;client_secret=TestSecret&amp;grant_type=client_credentials
-</code></pre><p>#####Example response:</p>
+</code></pre><h5 id="example-response-">Example response:</h5>
 <pre><code>    HTTPS/1.1 200 OK
     Content-Type: application/json;charset=UTF-8
     Cache-Control: no-store
@@ -537,7 +531,7 @@
             &quot;expires_in&quot;:1800,
     }
 </code></pre><h4 id="token-expiration-and-revocation">Token Expiration and Revocation</h4>
-<p>The client credential flow grants a 30 minute access token.  Once the token has expired, a call for a new access token is required.</p>
+<p>The client credentials flow grants an access token which is good for at most 30 minutes. Be sure to check the <code>expires_in</code> property of the response to determine when the access token actually expires.  Once the access token has expired, a call for a new access token is required.</p>
 <h2 id="references">References</h2>
 <p>OAuth2 Specification - <a href="http://tools.ietf.org/html/rfc6749">http://tools.ietf.org/html/rfc6749</a></p>
 
