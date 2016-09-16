@@ -335,30 +335,32 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 </code></pre><p>Your request would look like this using curl:</p>
 <pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/products
 </code></pre><p>The response body will look like the following example:</p>
-<pre><code>{
+<pre><code class="lang-json">{
     &quot;products&quot;: [
-    {
-        &quot;application_website&quot;: &quot;&quot;,
-        &quot;download_limit&quot;: 0,
-        &quot;download_limit_duration&quot;: &quot;&quot;,
-        &quot;download_limit_reset_utc_date&quot;: &quot;&quot;,
-        &quot;downloads_remaining&quot;: 0,
-        &quot;expiration_utc_date&quot;: &quot;&quot;,
-        &quot;id&quot;: 0,
-        &quot;name&quot;: &quot;&quot;,
-        &quot;status&quot;: &quot;&quot;,
-        &quot;type&quot;: &quot;&quot;,
-        &quot;download_requirements&quot;: {
-        &quot;is_note_required&quot;: false,
-        &quot;is_project_code_required&quot;: false,
-        &quot;project_codes&quot;: [
-            &quot;&quot;
-        ]
+        {
+            &quot;application_website&quot;: &quot;&quot;,
+            &quot;credits_remaining&quot;: 0,
+            &quot;download_limit&quot;: 0,
+            &quot;download_limit_duration&quot;: &quot;&quot;,
+            &quot;download_limit_reset_utc_date&quot;: &quot;&quot;,
+            &quot;downloads_remaining&quot;: 0,
+            &quot;expiration_utc_date&quot;: &quot;&quot;,
+            &quot;id&quot;: 0,
+            &quot;name&quot;: &quot;&quot;,
+            &quot;status&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;&quot;,
+            &quot;download_requirements&quot;: {
+                &quot;is_note_required&quot;: false,
+                &quot;is_project_code_required&quot;: false,
+                &quot;project_codes&quot;: [
+                    &quot;&quot;
+                ]
+            }
         }
-    }
     ]
 }
 </code></pre>
+
                     <h3 id="request-headers">Request Headers</h3>
 
                      
@@ -431,6 +433,13 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         <td width="60%">URI of application website.</td>
                                     </tr>
                                     <tr>
+                                        <td width="20%">credits_remaining</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Specifies the remaining credit pack limit</td>
+                                    </tr>
+                                    <tr>
                                         <td width="20%">download_limit</td>
                                         <td width="20%">
                                             integer
@@ -491,7 +500,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">List of product types available. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription.</td>
+                                        <td width="60%">List of product types available. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, creditpack.</td>
                                     </tr>
                                     <tr>
                                         <td width="20%">download_requirements</td>
