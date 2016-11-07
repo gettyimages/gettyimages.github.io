@@ -338,7 +338,7 @@ To include your API token and a Bearer token to the header (example in curl):</p
 </code></pre><p>Your request would look like this using curl:</p>
 <pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/downloads
 </code></pre><p>Your response will look like this:    </p>
-<pre><code>{
+<pre><code class="lang-json">{
   &quot;result_count&quot;: 0,
   &quot;downloads&quot;: [
     {
@@ -346,6 +346,7 @@ To include your API token and a Bearer token to the header (example in curl):</p
       &quot;id&quot;: &quot;&quot;,
       &quot;product_type&quot;: &quot;&quot;,
       &quot;thumb_uri&quot;: &quot;&quot;,
+      &quot;agreement_name&quot;: &quot;&quot;,
       &quot;download_details&quot;: {
         &quot;download_notes&quot;: &quot;&quot;,
         &quot;project_code&quot;: &quot;&quot;
@@ -353,7 +354,8 @@ To include your API token and a Bearer token to the header (example in curl):</p
     }
   ]
 }
-</code></pre><p>Your response will return a 200 - When successful.</p>
+</code></pre>
+<p>Your response will return a 200 - When successful.</p>
 
                     <h3 id="request-headers">Request Headers</h3>
 
