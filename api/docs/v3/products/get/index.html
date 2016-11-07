@@ -509,6 +509,20 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         </td>
                                         <td width="60%">Specifies the download requirements a company can apply on its users.</td>
                                     </tr>
+                                    <tr>
+                                        <td width="20%">overage</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%">Describes the current state of the download overage provision on a Premium Access agreement</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">agreement_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the customer-defined name of the Premium Access agreement</td>
+                                    </tr>
                             </table>
                             <h4>download_requirements</h4>
                             <table class="table table-striped">
@@ -536,6 +550,37 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                                 ]
                                         </td>
                                         <td width="60%">Only users who have been set up with a project code by Getty Sales need to use this field.</td>
+                                    </tr>
+                            </table>
+                            <h4>overage</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">limit</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Maximum count of download overages allowed on a Premium Access agreement</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">remaining</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Count of remaining download overages available on a Premium Access agreement</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">count</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Count of download overages used to date on a Premium Access agreement</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">overages_reached</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%">Specifies whether the download limit has been reached and download overages are being used on a Premium Access agreement</td>
                                     </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>

@@ -882,11 +882,32 @@ To include your API token in the search request, add it to the headers as a Bear
                             <h4>download</h4>
                             <table class="table table-striped">
                                     <tr>
+                                        <td width="20%">product_id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the instance Id of the product.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">product_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the license agreement applied to this download. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, creditpack, sandbox.</td>
+                                    </tr>
+                                    <tr>
                                         <td width="20%">uri</td>
                                         <td width="20%">
                                             string
                                         </td>
                                         <td width="60%">POST this URI to download the video.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">agreement_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the customer-defined name of the Premium Access agreement</td>
                                     </tr>
                             </table>
                             <h4>keywords</h4>

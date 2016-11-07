@@ -493,6 +493,13 @@ To include your API token and a Bearer token to the header (example in curl):</p
                                         <td width="60%">GET this URI to download the thumbnail.</td>
                                     </tr>
                                     <tr>
+                                        <td width="20%">agreement_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the customer-defined name of the Premium Access agreement</td>
+                                    </tr>
+                                    <tr>
                                         <td width="20%">download_details</td>
                                         <td width="20%">
                                             
@@ -500,7 +507,7 @@ To include your API token and a Bearer token to the header (example in curl):</p
                                         <td width="60%">Customer stored details associated with this download.</td>
                                     </tr>
                             </table>
-                            <h4>DownloadData</h4>
+                            <h4>DownloadDetails</h4>
                             <table class="table table-striped">
                                     <tr>
                                         <td width="20%">download_notes</td>
@@ -523,6 +530,16 @@ To include your API token and a Bearer token to the header (example in curl):</p
                                 <tr>
                                     <td>200</td>
                                     <td>OK</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>Bad request</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td>InvalidRequest</td>
                                     <td></td>
                                 </tr>
                                 <tr>
