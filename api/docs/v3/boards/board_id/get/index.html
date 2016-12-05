@@ -194,6 +194,18 @@
 					/boards/board_id/assets/asset_id
 				</a>
 			</li>
+			<li data-path="/boards/board_id/comments/post">
+				<span class="label post">POST</span>
+				<a href="/api/docs/v3/boards/board_id/comments/post">
+					/boards/board_id/comments
+				</a>
+			</li>
+			<li data-path="/boards/board_id/comments/comment_id/delete">
+				<span class="label delete">DELETE</span>
+				<a href="/api/docs/v3/boards/board_id/comments/comment_id/delete">
+					/boards/board_id/comments/comment_id
+				</a>
+			</li>
 		</ul>
 	</li>
 	<li class="nav-collections" data-path="/api/docs/v3/collections">
@@ -470,6 +482,17 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         </td>
                                         <td width="60%"></td>
                                     </tr>
+                                    <tr>
+                                        <td width="20%">comments</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    comment
+                                                ]
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
                             </table>
                             <h4>asset</h4>
                             <table class="table table-striped">
@@ -517,6 +540,68 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     </tr>
                                     <tr>
                                         <td width="20%">uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>comment</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">can_remove</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">created_by</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">date_created</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">text</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>collaborator</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">id</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">first_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">last_name</td>
                                         <td width="20%">
                                             string
                                         </td>

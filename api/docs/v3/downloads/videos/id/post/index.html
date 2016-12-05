@@ -194,6 +194,18 @@
 					/boards/board_id/assets/asset_id
 				</a>
 			</li>
+			<li data-path="/boards/board_id/comments/post">
+				<span class="label post">POST</span>
+				<a href="/api/docs/v3/boards/board_id/comments/post">
+					/boards/board_id/comments
+				</a>
+			</li>
+			<li data-path="/boards/board_id/comments/comment_id/delete">
+				<span class="label delete">DELETE</span>
+				<a href="/api/docs/v3/boards/board_id/comments/comment_id/delete">
+					/boards/board_id/comments/comment_id
+				</a>
+			</li>
 		</ul>
 	</li>
 	<li class="nav-collections" data-path="/api/docs/v3/collections">
@@ -402,6 +414,15 @@ Location: https://delivery.gettyimages.com/...
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>product_id</td>
+                                    <td>integer</td>
+                                    <td>
+                                        Identifier of the instance for the selected product offering type.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>size</td>
                                     <td>string</td>
                                     <td>
@@ -425,6 +446,11 @@ Location: https://delivery.gettyimages.com/...
                                     <td></td>
                                 </tr>
                                 <tr>
+                                    <td>400</td>
+                                    <td>ProductIdNotSpecified</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td>401</td>
                                     <td>AuthorizationTokenRequired</td>
                                     <td></td>
@@ -445,8 +471,18 @@ Location: https://delivery.gettyimages.com/...
                                     <td></td>
                                 </tr>
                                 <tr>
+                                    <td>401</td>
+                                    <td>ProductIdNotAvailableForUser</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td>404</td>
                                     <td>VideoNotFound</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>404</td>
+                                    <td>FileDownloadSizeNotFound</td>
                                     <td></td>
                                 </tr>
                         </table>

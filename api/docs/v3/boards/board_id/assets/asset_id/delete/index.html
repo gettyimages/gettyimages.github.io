@@ -194,6 +194,18 @@
 					/boards/board_id/assets/asset_id
 				</a>
 			</li>
+			<li data-path="/boards/board_id/comments/post">
+				<span class="label post">POST</span>
+				<a href="/api/docs/v3/boards/board_id/comments/post">
+					/boards/board_id/comments
+				</a>
+			</li>
+			<li data-path="/boards/board_id/comments/comment_id/delete">
+				<span class="label delete">DELETE</span>
+				<a href="/api/docs/v3/boards/board_id/comments/comment_id/delete">
+					/boards/board_id/comments/comment_id
+				</a>
+			</li>
 		</ul>
 	</li>
 	<li class="nav-collections" data-path="/api/docs/v3/collections">
@@ -429,6 +441,11 @@ Authorization: Bearer &lt;your secure access token&gt;
                                 <tr>
                                     <td>404</td>
                                     <td>BoardNotFound</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>404</td>
+                                    <td>AssetNotFound</td>
                                     <td></td>
                                 </tr>
                         </table>
