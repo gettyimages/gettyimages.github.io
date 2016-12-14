@@ -185,6 +185,18 @@
 					/boards/board_id
 				</a>
 			</li>
+			<li data-path="/boards/board_id/assets/put">
+				<span class="label put">PUT</span>
+				<a href="/api/docs/v3/boards/board_id/assets/put">
+					/boards/board_id/assets
+				</a>
+			</li>
+			<li data-path="/boards/board_id/assets/delete">
+				<span class="label delete">DELETE</span>
+				<a href="/api/docs/v3/boards/board_id/assets/delete">
+					/boards/board_id/assets
+				</a>
+			</li>
 			<li data-path="/boards/board_id/assets/asset_id/put">
 				<span class="label put">PUT</span>
 				<a href="/api/docs/v3/boards/board_id/assets/asset_id/put">
@@ -195,6 +207,12 @@
 				<span class="label delete">DELETE</span>
 				<a href="/api/docs/v3/boards/board_id/assets/asset_id/delete">
 					/boards/board_id/assets/asset_id
+				</a>
+			</li>
+			<li data-path="/boards/board_id/comments/get">
+				<span class="label get">GET</span>
+				<a href="/api/docs/v3/boards/board_id/comments/get">
+					/boards/board_id/comments
 				</a>
 			</li>
 			<li data-path="/boards/board_id/comments/post">
@@ -353,7 +371,12 @@
 <tr>
 <td>POST</td>
 <td><a href="/api/docs/v3/boards/post/">/boards</a></td>
-<td>Create new Board</td>
+<td>Create New Board</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><a href="/api/docs/v3/boards/board_id/delete/">/boards/board_id</a></td>
+<td>Delete Board</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -367,8 +390,18 @@
 </tr>
 <tr>
 <td>DELETE</td>
-<td><a href="/api/docs/v3/boards/board_id/delete/">/boards/board_id</a></td>
-<td>Delete Board</td>
+<td><a href="/api/docs/v3/boards/board_id/assets/delete/">/boards/board_id/assets</a></td>
+<td>Remove Assets</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td><a href="/api/docs/v3/boards/board_id/assets/put/">/boards/board_id/assets</a></td>
+<td>Add Assets</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><a href="/api/docs/v3/boards/board_id/assets/asset_id/delete/">/boards/board_id/assets/asset_id</a></td>
+<td>Remove Asset</td>
 </tr>
 <tr>
 <td>PUT</td>
@@ -376,9 +409,19 @@
 <td>Add Asset</td>
 </tr>
 <tr>
+<td>GET</td>
+<td><a href="/api/docs/v3/boards/board_id/comments/get/">/boards/board_id/comments</a></td>
+<td>Get Comments</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><a href="/api/docs/v3/boards/board_id/comments/post/">/boards/board_id/comments</a></td>
+<td>Add Comment</td>
+</tr>
+<tr>
 <td>DELETE</td>
-<td><a href="/api/docs/v3/boards/board_id/assets/asset_id/delete/">/boards/board_id/assets/asset_id</a></td>
-<td>Remove Asset</td>
+<td><a href="/api/docs/v3/boards/board_id/comments/comment_id/delete/">/boards/board_id/comments/comment_id</a></td>
+<td>Delete Comment</td>
 </tr>
 </tbody>
 </table>

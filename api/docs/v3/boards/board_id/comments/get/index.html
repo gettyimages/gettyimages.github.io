@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title></title>
+    <title>Get Comments for Board | Getty Images API v3 Documentation</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/slicknav.css">
     <link rel="stylesheet" href="/css/docs.css">
@@ -342,50 +342,54 @@
 
         </div>
         <div class="col-md-9 docs-content">
+                <ul class="breadcrumb">
+                        <li><a href="/api/">API</a></li>
+                        <li><a href="/api/docs/">API Docs</a></li>
+                        <li><a href="/api/docs/v3/">v3</a></li>
+                        <li><a href="/api/docs/v3/boards/">Boards</a></li>
+                        <li><a href="/api/docs/v3/boards/board_id/comments/get">Get Comments for Board</a></li>
+                </ul>
+                        <div class="alert alert-warning">
+                            <img src="/images/icons/alert.png">
+                            This endpoint is currently in <strong>BETA</strong>.
+                        </div>
                     <a target="_blank" class="btn btn-primary btn-experiment"
-                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Events/Events_Get">Experiment
+                       href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_GetComments">Experiment
                         with this API</a>
-                    <h1 id="get-metadata-for-single-event">Get Metadata for Single Event</h1>
-<p>This endpoint returns the detailed event metadata for a specified event. Getty Images news, sports and entertainment photographers and videographers cover editorially relevant events occurring around the world.  All images or video clips produced in association with an event, are assigned the same EventID. EventIDs are part of the meta-data returned in SearchForImages Results. Only content produced under a Getty Images brand name (Getty Images News, Getty Images Sports, Getty Images Entertainment, Film Magic, Wire Image) will be consistently assigned an EventID. The Event framework may also be used to group similar content, such as &quot;Hats from the Royal Wedding&quot; or &quot;Odd-ballOffbeat images of the week&quot;. </p>
+                    <h1 id="boards-get-comments">Boards - Get Comments</h1>
+<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to retrieve all comments for a specific board.</p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
-<li><a href="#querystring-parameters">Querystring Parameters</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
 <li><a href="#response-status-codes">Response Status Codes</a></li>
 <li><a href="#hyperlinks">Hyperlinks</a></li>
 </ul>
 <h2 id="quickstart">Quickstart</h2>
-<p>You&#39;ll need an API key and access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. 
-There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popular programming languages to help you get started.</p>
-<p>Use the following endpoint to retrieve metadata for multiple events:</p>
-<pre><code>GET https://api.gettyimages.com/v3/events/&lt; event id&gt;
-</code></pre><p>Add your API key to the request header:</p>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.</p>
+<p>Use the following endpoint to list comments for a board:</p>
+<pre><code>GET https://api.gettyimages.com/v3/boards/{board_id}/comments
+</code></pre><p>Add API key and the Resource Owner Grant token to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
+Authorization: Bearer &lt;your secure access token&gt;
 </code></pre><p>Your request would look like this using curl:</p>
-<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; https://api.gettyimages.com/v3/events/&lt;event id&gt;
-</code></pre><p>Your response will look like this:    </p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/{board_id}/comments
+</code></pre><p>Your response will look similar to:</p>
 <pre><code>{
-        &quot;child_event_count&quot;: 0,
-        &quot;editorial_segments&quot;: [&quot;&quot;],
-        &quot;hero_image&quot;: {
-            &quot;id&quot;: &quot;&quot;,
-            &quot;display_sizes&quot;: [{
-                &quot;name&quot;: &quot;&quot;,
-                &quot;is_watermarked&quot;: false,
-                &quot;uri&quot;: &quot;&quot;
-            }]
-        },
-        &quot;id&quot;: 0,
-        &quot;image_count&quot;: 0,
-        &quot;location&quot;: {
-            &quot;city&quot;: &quot;&quot;,
-            &quot;country&quot;: &quot;&quot;,
-            &quot;state_province&quot;: &quot;&quot;,
-            &quot;venue&quot;: &quot;&quot;
-        },
-        &quot;name&quot;: &quot;&quot;,
-        &quot;start_date&quot;: &quot;&quot;
+  &quot;comments&quot;: [
+    {
+      &quot;created_by&quot;: {
+        &quot;first_name&quot;: &quot;&quot;,
+        &quot;last_name&quot;: &quot;&quot;
+      },
+      &quot;date_created&quot;: &quot;&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;permissions&quot;: {
+        &quot;delete_comment&quot;: false
+      },
+      &quot;text&quot;: &quot;Some comment&quot;
+    }
+  ]
 }
 </code></pre>
                     <h3 id="request-headers">Request Headers</h3>
@@ -396,7 +400,16 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                     <td>Api-Key</td>
                                     <td>string</td>
                                     <td>
-                                        Provide your API key.
+                                        Api-Key
+                                        Required.
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Authorization</td>
+                                    <td>string</td>
+                                    <td>
+                                        Authorization token required. Used for applying content access restrictions. Use the OAuth2 Resource Owner Grant to auto-populate this value.
                                         Required.
                                         
                                     </td>
@@ -405,16 +418,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                     <td>Accept-Language</td>
                                     <td>string</td>
                                     <td>
-                                        Specifies the language of result values.
-                                        
-                                        
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Authorization</td>
-                                    <td>string</td>
-                                    <td>
-                                        Provide access token in the format of 'Bearer {token}'.
+                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
                                         
                                         
                                     </td>
@@ -424,175 +428,93 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
 
                         <table class="table table-striped">
                                 <tr>
-                                    <td>id</td>
-                                    <td>integer</td>
+                                    <td>board_id</td>
+                                    <td>string</td>
                                     <td>
-                                        An event id.
+                                        Specifies the Id of the board to retrieve comments from.
                                         Required.
-                                    </td>
-                                </tr>
-                        </table>
-                        <h3 id="querystring-parameters">Querystring Parameters</h3>
-
-                        <table class="table table-striped">
-                                <tr>
-                                    <td>fields</td>
-                                    <td>array</td>
-                                    <td>
-                                        A comma separated list of fields to return in the response.
-                                        
-                                         Possible values: 
-                                            <span class="label label-default">id</span>
-                                            <span class="label label-default">child_event_count</span>
-                                            <span class="label label-default">editorial_segments</span>
-                                            <span class="label label-default">hero_image</span>
-                                            <span class="label label-default">image_count</span>
-                                            <span class="label label-default">location</span>
-                                            <span class="label label-default">name</span>
-                                            <span class="label label-default">start_date</span>
-                                            <span class="label label-default">type</span>
                                     </td>
                                 </tr>
                         </table>
                         <h3 id="response-body-fields">Response Body Fields</h3>
 
-                            <h4>event</h4>
+                            <h4>comment_list</h4>
                             <table class="table table-striped">
                                     <tr>
-                                        <td width="20%">child_event_count</td>
-                                        <td width="20%">
-                                            integer
-                                        </td>
-                                        <td width="60%">Specifies the count of children events associated with this event.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">editorial_segments</td>
+                                        <td width="20%">comments</td>
                                         <td width="20%">
                                             array
                                                 [
-                                                    string
 
+                                                    comment
                                                 ]
                                         </td>
-                                        <td width="60%">Lists the editorial segments for this asset. Possible values are archival, entertainment, news, publicity, royalty, sport.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">hero_image</td>
-                                        <td width="20%">
-                                            
-                                        </td>
-                                        <td width="60%">Spcifies the image that best captures the event.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">id</td>
-                                        <td width="20%">
-                                            integer
-                                        </td>
-                                        <td width="60%">Specifies the unique identifier for the event.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">image_count</td>
-                                        <td width="20%">
-                                            integer
-                                        </td>
-                                        <td width="60%">Specifies the count of images associated with event.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">location</td>
-                                        <td width="20%">
-                                            
-                                        </td>
-                                        <td width="60%">Specifies the location where the event took place.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">name</td>
-                                        <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%">Specifies the name of the event.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">start_date</td>
-                                        <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%">Specifies the start date of event, in ISO 8601 format (e.g., 1999-12-31T00:00:00-00:00).</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
-                            <h4>hero_image</h4>
+                            <h4>comment</h4>
                             <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">created_by</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">date_created</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
                                     <tr>
                                         <td width="20%">id</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the image id of the image that best captures the associated group of images.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
-                                        <td width="20%">display_sizes</td>
+                                        <td width="20%">permissions</td>
                                         <td width="20%">
-                                            array
-                                                [
-
-                                                    hero_display_size
-                                                ]
+                                            
                                         </td>
-                                        <td width="60%">Lists the display sizes available for this image.</td>
+                                        <td width="60%"></td>
                                     </tr>
-                            </table>
-                            <h4>hero_display_size</h4>
-                            <table class="table table-striped">
                                     <tr>
-                                        <td width="20%">name</td>
+                                        <td width="20%">text</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the name of the display size.</td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>collaborator</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">first_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
-                                        <td width="20%">is_watermarked</td>
+                                        <td width="20%">last_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>comment_permissions</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">delete_comment</td>
                                         <td width="20%">
                                             boolean
                                         </td>
-                                        <td width="60%">Specifies whether the image is watermarked.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">uri</td>
-                                        <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%">GET this URI to retrieve the display size image.</td>
-                                    </tr>
-                            </table>
-                            <h4>location</h4>
-                            <table class="table table-striped">
-                                    <tr>
-                                        <td width="20%">city</td>
-                                        <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%">Specifies the city where the event took place.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">country</td>
-                                        <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%">Specifies the country where the event took place.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">state_province</td>
-                                        <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%">Specifies the state or province where the event took place.</td>
-                                    </tr>
-                                    <tr>
-                                        <td width="20%">venue</td>
-                                        <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%">Specifies the venue where the event took place.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>
@@ -609,8 +531,8 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>400</td>
-                                    <td>MalformedRequest</td>
+                                    <td>401</td>
+                                    <td>UserTokenRequired</td>
                                     <td></td>
                                 </tr>
                                 <tr>
@@ -620,29 +542,16 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                 </tr>
                                 <tr>
                                     <td>404</td>
-                                    <td>EventNotFound</td>
+                                    <td>BoardNotFound</td>
                                     <td></td>
                                 </tr>
-                        </table>
-                        <h3 id="hyperlinks">Hyperlinks</h3>
-<p>Some response items contain hyperlinks which you can use to take you directly to the next steps in your workflow, when appropriate. The following URIs are provided in the response for this request.</p>
-
-                        <table class="table table-striped">
-                                <h4></h4>
-                                    <tr>
-                                        <td width="20%">hero_display_size.uri</td>
-                                        <td width="20%">string</td>
-                                        <td width="60%">
-                                            GET this URI to retrieve the display size image.
-                                        </td>
-                                    </tr>
                         </table>
         </div>
     </div>
 </div>
 <script type="text/javascript">
     $(function () {
-        $("[data-path='/events/id/get']").addClass("active").parent().show();
+        $("[data-path='/boards/board_id/comments/get']").addClass("active").parent().show();
         $('#menu').slicknav();
     })
 </script>
