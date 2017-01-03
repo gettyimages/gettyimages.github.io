@@ -357,7 +357,8 @@
                        href="https://api.gettyimages.com/swagger/ui/index.html#!/Boards/Boards_AddComment">Experiment
                         with this API</a>
                     <h1 id="boards-add-comment-to-board">Boards - Add Comment to Board</h1>
-<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to add a comment to a board.</p>
+<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>.
+Use this endpoint to add a comment to a board.</p>
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
@@ -368,12 +369,12 @@
 <p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
 <p>Use the following endpoint to add a comment to a specific board:</p>
 <pre><code>POST /3.0/boards/{board_id}/comments
-</code></pre><p><strong>You can use the <a href="/api/docs/v3/boards/get/#quickstart">Get All Boards Quickstart</a> to get a test _board<em>id</em> and the <a href="/api/docs/v3/search/images/creative/get/#quickstart">Creative Image Search Quickstart</a> to get an _asset<em>id</em>.</strong></p>
+</code></pre><p><strong>You can use the <a href="/api/docs/v3/boards/get/#quickstart">Get All Boards Quickstart</a> to get a test <em>board id</em>.</strong></p>
 <p>Add API key and the Resource Owner Grant token to the request header:</p>
 <pre><code>Api-Key: &lt;your api key&gt;
 Authorization: Bearer &lt;your secure access token&gt;
 </code></pre><p>Your request would look like this using curl:</p>
-<pre><code>curl -X PUT -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/{board_id}/comments
+<pre><code>curl -X POST -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/{board_id}/comments
 </code></pre><p>Your response will return a 201 - Created if successful.</p>
 
                     <h3 id="request-headers">Request Headers</h3>

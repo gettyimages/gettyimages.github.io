@@ -514,6 +514,13 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         </td>
                                         <td width="60%"></td>
                                     </tr>
+                                    <tr>
+                                        <td width="20%">links</td>
+                                        <td width="20%">
+                                            
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
                             </table>
                             <h4>asset</h4>
                             <table class="table table-striped">
@@ -570,11 +577,63 @@ Authorization: Bearer &lt;your secure access token&gt;
                             <h4>board_permissions</h4>
                             <table class="table table-striped">
                                     <tr>
-                                        <td width="20%">add_comments</td>
+                                        <td width="20%">can_delete_board</td>
                                         <td width="20%">
                                             boolean
                                         </td>
                                         <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">can_invite_to_board</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">can_update_title</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">can_update_description</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">can_add_assets</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">can_remove_assets</td>
+                                        <td width="20%">
+                                            boolean
+                                        </td>
+                                        <td width="60%"></td>
+                                    </tr>
+                            </table>
+                            <h4>links</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">invitation</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies a URL to invite people to collaborate on a board</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">share</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies a URL to share a read-only board</td>
                                     </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>
