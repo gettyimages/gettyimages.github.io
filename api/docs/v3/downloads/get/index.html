@@ -414,6 +414,15 @@ To include your API token and a Bearer token to the header (example in curl):</p
 
                         <table class="table table-striped">
                                 <tr>
+                                    <td>company_downloads</td>
+                                    <td>boolean</td>
+                                    <td>
+                                        If specified, returns the list of previously downloaded images for all users in your company. Your account must be enabled for this functionality. Contact your Getty Images account rep for more information. Default is false.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>date_from</td>
                                     <td>string</td>
                                     <td>
@@ -592,6 +601,11 @@ To include your API token and a Bearer token to the header (example in curl):</p
                                 <tr>
                                     <td>403</td>
                                     <td>Forbidden</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>403</td>
+                                    <td>InsufficientPermissions</td>
                                     <td></td>
                                 </tr>
                         </table>
