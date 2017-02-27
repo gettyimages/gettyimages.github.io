@@ -412,7 +412,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Api-Key</td>
                                     <td>string</td>
                                     <td>
-                                        Provide your API key.
+                                        Api-Key
                                         Required.
                                         
                                     </td>
@@ -421,7 +421,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Authorization</td>
                                     <td>string</td>
                                     <td>
-                                        Provide access token in the format of 'Bearer {token}'.
+                                        Authorization token required. Used for applying content access restrictions. Use the OAuth2 Resource Owner Grant to auto-populate this value.
                                         Required.
                                         
                                     </td>
@@ -430,7 +430,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Accept-Language</td>
                                     <td>string</td>
                                     <td>
-                                        Provide a header to specify the language of result values.
+                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
                                         
                                         
                                     </td>
@@ -443,7 +443,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>board_relationship</td>
                                     <td>string</td>
                                     <td>
-                                        Search for boards the user owns or has been invited to as an editor.
+                                        Search for boards the user has been invited to as an editor or owns
                                         
                                          Possible values: 
                                             <span class="label label-default">owned</span>
@@ -467,7 +467,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>page_size</td>
                                     <td>integer</td>
                                     <td>
-                                        Request number of boards to return in each page. (default is 30).
+                                        Request number of boards to return in each page. (default is 30)
                                         
                                         
                                     </td>
@@ -486,14 +486,14 @@ Authorization: Bearer &lt;your secure access token&gt;
                                                     board
                                                 ]
                                         </td>
-                                        <td width="60%">Lists boards that the collaborator participates in</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">board_count</td>
                                         <td width="20%">
                                             integer
                                         </td>
-                                        <td width="60%">Specifies the total count of boards that the collaborator participates in</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                             <h4>board</h4>
@@ -503,56 +503,56 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies a unique identifier for the board.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">asset_count</td>
                                         <td width="20%">
                                             integer
                                         </td>
-                                        <td width="60%">Specifies the total count of assets associated with the board.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">date_created</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the date that the board was created.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">date_last_updated</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the date that the board was last updated.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">description</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the description of the board.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">hero_asset</td>
                                         <td width="20%">
                                             
                                         </td>
-                                        <td width="60%">Specifies the asset on a board that is used to represent the overall board.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">name</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the name of the board.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">board_relationship</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Indicates whether the user owns the board or has been invited to it as an editor. Possible values are: owned, invited.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                             <h4>asset</h4>
@@ -562,21 +562,21 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies a unique identifier for the asset.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">asset_type</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Indicates the asset type. Possible values are: image, video.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">date_added</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the date that the asset was added to the board.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">display_sizes</td>
@@ -587,7 +587,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                                     display_size
                                                 ]
                                         </td>
-                                        <td width="60%">Lists the display sizes available for the asset.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                             <h4>display_size</h4>
@@ -597,14 +597,14 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the name of the display size.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">uri</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">GET this URI to retrieve the display size image.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>
@@ -632,12 +632,12 @@ Authorization: Bearer &lt;your secure access token&gt;
                                 </tr>
                                 <tr>
                                     <td>401</td>
-                                    <td>Unauthorized</td>
+                                    <td>UserTokenRequired</td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>403</td>
-                                    <td>SecureTokenRequired</td>
+                                    <td>401</td>
+                                    <td>Unauthorized</td>
                                     <td></td>
                                 </tr>
                         </table>
@@ -650,7 +650,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">display_size.uri</td>
                                         <td width="20%">string</td>
                                         <td width="60%">
-                                            GET this URI to retrieve the display size image.
+                                            
                                         </td>
                                     </tr>
                         </table>

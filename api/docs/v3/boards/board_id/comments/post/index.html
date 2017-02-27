@@ -385,7 +385,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Api-Key</td>
                                     <td>string</td>
                                     <td>
-                                        Provide your API key.
+                                        Api-Key
                                         Required.
                                         
                                     </td>
@@ -394,7 +394,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Authorization</td>
                                     <td>string</td>
                                     <td>
-                                        Provide access token in the format of 'Bearer {token}'.
+                                        Authorization token required. Used for applying content access restrictions. Use the OAuth2 Resource Owner Grant to auto-populate this value.
                                         Required.
                                         
                                     </td>
@@ -403,7 +403,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Accept-Language</td>
                                     <td>string</td>
                                     <td>
-                                        Provide a header to specify the language of result values.
+                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
                                         
                                         
                                     </td>
@@ -416,7 +416,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>board_id</td>
                                     <td>string</td>
                                     <td>
-                                        Specify the board to add a comment to.
+                                        Specifies the Id of the board to add the comment to.
                                         Required.
                                     </td>
                                 </tr>
@@ -429,18 +429,6 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">text</td>
                                         <td width="20%">string </td>
                                         <td width="60%"></td>
-                                    </tr>
-                            </table>
-                        <h3 id="response-body-fields">Response Body Fields</h3>
-
-                            <h4>comment_created</h4>
-                            <table class="table table-striped">
-                                    <tr>
-                                        <td width="20%">id</td>
-                                        <td width="20%">
-                                            string
-                                        </td>
-                                        <td width="60%">Specifies a unique identifier of the comment.</td>
                                     </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>
@@ -458,12 +446,12 @@ Authorization: Bearer &lt;your secure access token&gt;
                                 </tr>
                                 <tr>
                                     <td>401</td>
-                                    <td>Unauthorized</td>
+                                    <td>UserTokenRequired</td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>403</td>
-                                    <td>SecureTokenRequired</td>
+                                    <td>401</td>
+                                    <td>Unauthorized</td>
                                     <td></td>
                                 </tr>
                                 <tr>

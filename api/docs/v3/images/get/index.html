@@ -352,6 +352,7 @@
 <li><a href="#working-with-fields-sets">Working with Fields Sets</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#request-usage-considerations">Request Usage Considerations</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
 <li><a href="#response-status-codes">Response Status Codes</a></li>
 <li><a href="#hyperlinks">Hyperlinks</a></li>
@@ -461,7 +462,11 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
         ]
     ]
 }
-</code></pre>
+</code></pre><h2 id="request-usage-considerations">Request Usage Considerations</h2>
+<ul>
+<li>Specifying the &quot;entity_details&quot; response field can have significant performance implications. The field should be used only when necessary.</li>
+</ul>
+
                     <h3 id="request-headers">Request Headers</h3>
 
                      
@@ -538,6 +543,7 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                             <span class="label label-default">downloads</span>
                                             <span class="label label-default">editorial_segments</span>
                                             <span class="label label-default">editorial_source</span>
+                                            <span class="label label-default">entity_details</span>
                                             <span class="label label-default">event_ids</span>
                                             <span class="label label-default">graphical_style</span>
                                             <span class="label label-default">id</span>
@@ -1118,6 +1124,28 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         </td>
                                         <td width="60%">Specifies the relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
                                     </tr>
+                                    <tr>
+                                        <td width="20%">entity_uris</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the URIs where detailed information can be found for a specific person.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">entity_types</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the person types for a specific person. E.g., &#x27;Musician&#x27;, &#x27;Politician&#x27;.</td>
+                                    </tr>
                             </table>
                             <h4>download_size</h4>
                             <table class="table table-striped">
@@ -1322,6 +1350,14 @@ There are several <a href="/api/docs/v3/sdks.html">SDKs</a> available for popula
                                         <td width="20%">string</td>
                                         <td width="60%">
                                             POST this URI to download the image.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">keywords.entity_uris</td>
+                                        <td width="20%">array</td>
+                                        <td width="60%">
+                                            Lists the URIs where detailed information can be found for a specific person.
                                         </td>
                                     </tr>
                                 <h4></h4>

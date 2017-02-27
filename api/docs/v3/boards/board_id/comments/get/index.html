@@ -400,7 +400,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Api-Key</td>
                                     <td>string</td>
                                     <td>
-                                        Provide your API key.
+                                        Api-Key
                                         Required.
                                         
                                     </td>
@@ -409,7 +409,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Authorization</td>
                                     <td>string</td>
                                     <td>
-                                        Provide access token in the format of 'Bearer {token}'.
+                                        Authorization token required. Used for applying content access restrictions. Use the OAuth2 Resource Owner Grant to auto-populate this value.
                                         Required.
                                         
                                     </td>
@@ -418,7 +418,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Accept-Language</td>
                                     <td>string</td>
                                     <td>
-                                        Provide a header to specify the language of result values.
+                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
                                         
                                         
                                     </td>
@@ -431,7 +431,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>board_id</td>
                                     <td>string</td>
                                     <td>
-                                        Specify the board to retrieve comments from.
+                                        Specifies the Id of the board to retrieve comments from.
                                         Required.
                                     </td>
                                 </tr>
@@ -449,14 +449,14 @@ Authorization: Bearer &lt;your secure access token&gt;
                                                     comment
                                                 ]
                                         </td>
-                                        <td width="60%">Lists comments on the board.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">permissions</td>
                                         <td width="20%">
                                             
                                         </td>
-                                        <td width="60%">Specifies the allowed actions for the collaborator at the comment list level.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                             <h4>comment</h4>
@@ -466,35 +466,35 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">
                                             
                                         </td>
-                                        <td width="60%">Specifies the collaborator who created the comment.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">date_created</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the date that the comment was created.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">id</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies a unique identifier for the comment.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">permissions</td>
                                         <td width="20%">
                                             
                                         </td>
-                                        <td width="60%">Specifies the allowed actions for the collaborator for a comment.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">text</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the text of the comment.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                             <h4>collaborator</h4>
@@ -504,14 +504,14 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the first name of a collaborator.</td>
+                                        <td width="60%"></td>
                                     </tr>
                                     <tr>
                                         <td width="20%">last_name</td>
                                         <td width="20%">
                                             string
                                         </td>
-                                        <td width="60%">Specifies the last name of a collaborator.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                             <h4>comment_permissions</h4>
@@ -521,7 +521,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">
                                             boolean
                                         </td>
-                                        <td width="60%">Specifies whether the collaborator is allowed to delete the comment.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                             <h4>board_comment_permissions</h4>
@@ -531,7 +531,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                         <td width="20%">
                                             boolean
                                         </td>
-                                        <td width="60%">Specifies whether the collaborator is allowed to add a comment to the comments list.</td>
+                                        <td width="60%"></td>
                                     </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>
@@ -549,12 +549,12 @@ Authorization: Bearer &lt;your secure access token&gt;
                                 </tr>
                                 <tr>
                                     <td>401</td>
-                                    <td>Unauthorized</td>
+                                    <td>UserTokenRequired</td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>403</td>
-                                    <td>SecureTokenRequired</td>
+                                    <td>401</td>
+                                    <td>Unauthorized</td>
                                     <td></td>
                                 </tr>
                                 <tr>

@@ -970,6 +970,28 @@ To include your API token in the search request, add it to the headers as a Bear
                                         </td>
                                         <td width="60%">Specifies the relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
                                     </tr>
+                                    <tr>
+                                        <td width="20%">entity_uris</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the URIs where detailed information can be found for a specific person.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">entity_types</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the person types for a specific person. E.g., &#x27;Musician&#x27;, &#x27;Politician&#x27;.</td>
+                                    </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>
 
@@ -1028,6 +1050,14 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="20%">string</td>
                                         <td width="60%">
                                             POST this URI to download the video.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">keywords.entity_uris</td>
+                                        <td width="20%">array</td>
+                                        <td width="60%">
+                                            Lists the URIs where detailed information can be found for a specific person.
                                         </td>
                                     </tr>
                         </table>

@@ -352,6 +352,7 @@
 <li><a href="#working-with-fields-sets">Working with Fields Sets</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#request-usage-considerations">Request Usage Considerations</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
 <li><a href="#response-status-codes">Response Status Codes</a></li>
 <li><a href="#hyperlinks">Hyperlinks</a></li>
@@ -477,7 +478,11 @@ To include your API token in the search request, add it to the headers as a Bear
         ]
     ]
 }
-</code></pre>
+</code></pre><h2 id="request-usage-considerations">Request Usage Considerations</h2>
+<ul>
+<li>Specifying the &quot;entity_details&quot; response field can have significant performance implications. The field should be used only when necessary.</li>
+</ul>
+
                     <h3 id="request-headers">Request Headers</h3>
 
                      
@@ -741,6 +746,7 @@ To include your API token in the search request, add it to the headers as a Bear
                                             <span class="label label-default">display_set</span>
                                             <span class="label label-default">editorial_segments</span>
                                             <span class="label label-default">editorial_source</span>
+                                            <span class="label label-default">entity_details</span>
                                             <span class="label label-default">event_ids</span>
                                             <span class="label label-default">graphical_style</span>
                                             <span class="label label-default">id</span>
@@ -787,6 +793,15 @@ To include your API token in the search request, add it to the headers as a Bear
                                     <td>array</td>
                                     <td>
                                         Return only images tagged with specific keyword(s). Specify using a comma-separated list of keyword Ids. If keyword Ids and phrase are both specified, only those images matching the query phrase which also contain the requested keyword(s) are returned.
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>minimum_quality_rank</td>
+                                    <td>integer</td>
+                                    <td>
+                                        Filter search results based on minimum quality ranking. Possible values 1, 2, 3 with 1 being best.
                                         
                                         
                                     </td>
@@ -1283,6 +1298,28 @@ To include your API token in the search request, add it to the headers as a Bear
                                         </td>
                                         <td width="60%">Specifies the relevancy of the keyword to the asset. 0-5 or null, 5 being most relevant.</td>
                                     </tr>
+                                    <tr>
+                                        <td width="20%">entity_uris</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the URIs where detailed information can be found for a specific person.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">entity_types</td>
+                                        <td width="20%">
+                                            array
+                                                [
+                                                    string
+
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the person types for a specific person. E.g., &#x27;Musician&#x27;, &#x27;Politician&#x27;.</td>
+                                    </tr>
                             </table>
                             <h4>download</h4>
                             <table class="table table-striped">
@@ -1393,6 +1430,11 @@ To include your API token in the search request, add it to the headers as a Bear
                                     <td></td>
                                 </tr>
                                 <tr>
+                                    <td>400</td>
+                                    <td>MinimumQualityRankOutOfRange</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td>401</td>
                                     <td>AuthorizationTokenRequired</td>
                                     <td></td>
@@ -1423,6 +1465,14 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="20%">string</td>
                                         <td width="60%">
                                             GET this URI to retrieve the display size image.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">keywords.entity_uris</td>
+                                        <td width="20%">array</td>
+                                        <td width="60%">
+                                            Lists the URIs where detailed information can be found for a specific person.
                                         </td>
                                     </tr>
                                 <h4></h4>
