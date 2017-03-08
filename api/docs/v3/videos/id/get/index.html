@@ -352,6 +352,7 @@
 <li><a href="#working-with-fields-sets">Working with Fields Sets</a></li>
 <li><a href="#request-headers">Request Headers</a></li>
 <li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#request-usage-considerations">Request Usage Considerations</a></li>
 <li><a href="#response-body-fields">Response Body Fields</a></li>
 <li><a href="#response-status-codes">Response Status Codes</a></li>
 <li><a href="#hyperlinks">Hyperlinks</a></li>
@@ -478,7 +479,11 @@ To include your API token in the search request, add it to the headers as a Bear
         ]
     ]
 }
-</code></pre>
+</code></pre><h2 id="request-usage-considerations">Request Usage Considerations</h2>
+<ul>
+<li>Specifying the &quot;entity_details&quot; response field can have significant performance implications. The field should be used only when necessary.</li>
+</ul>
+
                     <h3 id="request-headers">Request Headers</h3>
 
                      
@@ -552,6 +557,7 @@ To include your API token in the search request, add it to the headers as a Bear
                                             <span class="label label-default">downloads</span>
                                             <span class="label label-default">era</span>
                                             <span class="label label-default">editorial_segments</span>
+                                            <span class="label label-default">entity_details</span>
                                             <span class="label label-default">keywords</span>
                                             <span class="label label-default">license_model</span>
                                             <span class="label label-default">mastered_to</span>
