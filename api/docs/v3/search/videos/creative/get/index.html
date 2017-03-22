@@ -925,6 +925,17 @@ To include your API token in the search request, add it to the headers as a Bear
                                         </td>
                                         <td width="60%">Specifies the title given by the artist.</td>
                                     </tr>
+                                    <tr>
+                                        <td width="20%">istock_licenses</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    istock_license
+                                                ]
+                                        </td>
+                                        <td width="60%">Contains the cost in iStock credits for all available license types.</td>
+                                    </tr>
                             </table>
                             <h4>allowed_use</h4>
                             <table class="table table-striped">
@@ -1060,6 +1071,23 @@ To include your API token in the search request, add it to the headers as a Bear
                                             string
                                         </td>
                                         <td width="60%">Specifies the customer-defined name of the Premium Access agreement</td>
+                                    </tr>
+                            </table>
+                            <h4>istock_license</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">license_type</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">name of the license_type</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">credits</td>
+                                        <td width="20%">
+                                            integer
+                                        </td>
+                                        <td width="60%">Cost in iStock Credits</td>
                                     </tr>
                             </table>
                         <h3 id="response-status-codes">Response Status Codes</h3>

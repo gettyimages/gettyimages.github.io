@@ -384,7 +384,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Api-Key</td>
                                     <td>string</td>
                                     <td>
-                                        Api-Key
+                                        Provide your API key.
                                         Required.
                                         
                                     </td>
@@ -393,7 +393,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Authorization</td>
                                     <td>string</td>
                                     <td>
-                                        Authorization token required. Used for applying content access restrictions. Use the OAuth2 Resource Owner Grant to auto-populate this value.
+                                        Provide access token in the format of 'Bearer {token}'.
                                         Required.
                                         
                                     </td>
@@ -402,7 +402,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>Accept-Language</td>
                                     <td>string</td>
                                     <td>
-                                        Accept-Language parameter optional. Used to restrict the set of natural languages that are preferred as a response to the request.
+                                        Provide a header to specify the language of result values.
                                         
                                         
                                     </td>
@@ -415,7 +415,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>asset_id</td>
                                     <td>string</td>
                                     <td>
-                                        An asset ID. If it is already in the board's asset collection, no action is taken.
+                                        Specify the asset to add to the board. If it is already in the board's asset collection, no action is taken.
                                         Required.
                                     </td>
                                 </tr>
@@ -423,7 +423,7 @@ Authorization: Bearer &lt;your secure access token&gt;
                                     <td>board_id</td>
                                     <td>string</td>
                                     <td>
-                                        A board ID.
+                                        Specify the board to add an asset to.
                                         Required.
                                     </td>
                                 </tr>
@@ -443,12 +443,12 @@ Authorization: Bearer &lt;your secure access token&gt;
                                 </tr>
                                 <tr>
                                     <td>401</td>
-                                    <td>UserTokenRequired</td>
+                                    <td>Unauthorized</td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>401</td>
-                                    <td>Unauthorized</td>
+                                    <td>403</td>
+                                    <td>SecureTokenRequired</td>
                                     <td></td>
                                 </tr>
                                 <tr>
