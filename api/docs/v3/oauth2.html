@@ -472,7 +472,7 @@
 <pre><code>    HTTP/1.1 302 Found
     Location: https://client.example.com/cb#access_token=2YotnFZFEjr1zCsicMWpAA&amp;state=xyz&amp;token_type=bearer
 </code></pre><h4 id="token-expiration-and-revocation">Token Expiration and Revocation</h4>
-<p>Some resources accept longer-lived access tokens, depending on the sensitivity of the resource. For instance, search functionality accepts long-lived tokens (i.e., one year), whereas download functionality is protected by a shorter access token lifetime (i.e., one week).</p>
+<p>Some resources accept longer-lived access tokens, depending on the sensitivity of the resource. For instance, search functionality accepts long-lived tokens (i.e., one year), whereas download functionality is protected by a shorter access token lifetime (i.e., 30 days).</p>
 <p>Once an access token is no longer valid (has expired) for a given resource, a new access token must be retrieved to access that resource. The Implicit Grant flow does not support access token refresh. New access tokens must be retrieved via the Implicit Grant flow.</p>
 <p>Access tokens can also be revoked when the user changes their password. Revoked tokens cannot be used for any API access.</p>
 <h3 id="resource-owner-flow">Resource Owner Flow</h3>
