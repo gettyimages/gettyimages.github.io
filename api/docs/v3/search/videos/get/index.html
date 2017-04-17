@@ -643,6 +643,7 @@ To include your API token in the search request, add it to the headers as a Bear
                                             <span class="label label-default">originally_shot_on</span>
                                             <span class="label label-default">preview</span>
                                             <span class="label label-default">product_types</span>
+                                            <span class="label label-default">referral_destinations</span>
                                             <span class="label label-default">shot_speed</span>
                                             <span class="label label-default">source</span>
                                             <span class="label label-default">summary_set</span>
@@ -934,6 +935,17 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="60%">Lists the product types for the video. Possible values are: premiumaccess, easyaccess, editorialsubscription, imagepack, royaltyfreesubscription, creditpack.</td>
                                     </tr>
                                     <tr>
+                                        <td width="20%">referral_destinations</td>
+                                        <td width="20%">
+                                            array
+                                                [
+
+                                                    referral_destination
+                                                ]
+                                        </td>
+                                        <td width="60%">Lists the referral destinations for Getty Images assets.</td>
+                                    </tr>
+                                    <tr>
                                         <td width="20%">shot_speed</td>
                                         <td width="20%">
                                             string
@@ -1102,6 +1114,23 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="60%">Specifies the customer-defined name of the Premium Access agreement</td>
                                     </tr>
                             </table>
+                            <h4>referral_destination</h4>
+                            <table class="table table-striped">
+                                    <tr>
+                                        <td width="20%">site_name</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">Specifies the asset domain name.</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">uri</td>
+                                        <td width="20%">
+                                            string
+                                        </td>
+                                        <td width="60%">GET this URI to retrieve appropriate referral destination data.</td>
+                                    </tr>
+                            </table>
                             <h4>istock_license</h4>
                             <table class="table table-striped">
                                     <tr>
@@ -1204,6 +1233,14 @@ To include your API token in the search request, add it to the headers as a Bear
                                         <td width="20%">string</td>
                                         <td width="60%">
                                             POST this URI to download the asset.
+                                        </td>
+                                    </tr>
+                                <h4></h4>
+                                    <tr>
+                                        <td width="20%">referral_destination.uri</td>
+                                        <td width="20%">string</td>
+                                        <td width="60%">
+                                            GET this URI to retrieve appropriate referral destination data.
                                         </td>
                                     </tr>
                         </table>
