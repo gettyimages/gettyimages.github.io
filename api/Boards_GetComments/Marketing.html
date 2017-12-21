@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>Getty Images API</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+</head>
+
+<body class="home dark-text">
+    <header>
+        <div class="site-width">
+            <div class="slice group">
+                <div class="col length-4-of-4 logo">
+                    <a href="/en/">
+                        <img src="/images/getty-api-logo.jpg" alt="Getty Images API">
+                    </a>
+                    <ul class="nav-items site-nav-desktop">
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href="/api/">Docs</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href="http://developer.gettyimages.com/forum">Forum</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href="https://developer.gettyimages.com/apps/mykeys">Sign In</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }'
+                                href="/en/getting-started.html">Getting Started</a>
+                        </li>
+                    </ul>
+                    <ul id=menu class=site-nav-mobile>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href="/api/">Docs</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }'
+                                class=no-border href=/en/getting-started.html>Getting Started</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+
+        <div class="row-fluid">
+            <div class="col-md-9 docs-content category-content">
+                
+            <h1 id="boards-get-comments">Boards - Get Comments</h1>
+<p>Boards are where you collect, curate, collaborate on and manage photo and video assets in one place. More information on the <a href="http://www.gettyimages.com/boards/faq">Boards FAQ</a>. Use this endpoint to retrieve all comments for a specific board.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#response-body-fields">Response Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+<li><a href="#hyperlinks">Hyperlinks</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key.</p>
+<p>Use the following endpoint to list comments for a board:</p>
+<pre><code>GET https://api.gettyimages.com/v3/boards/{board_id}/comments
+</code></pre><p>Add API key and the Resource Owner Grant token to the request header:</p>
+<pre><code>Api-Key: &lt;your api key&gt;
+Authorization: Bearer &lt;your secure access token&gt;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X GET -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;secure access token&gt;&quot; https://api.gettyimages.com/v3/boards/{board_id}/comments
+</code></pre><p>Your response will look similar to:</p>
+<pre><code>{
+  &quot;comments&quot;: [
+    {
+      &quot;created_by&quot;: {
+        &quot;first_name&quot;: &quot;&quot;,
+        &quot;last_name&quot;: &quot;&quot;
+      },
+      &quot;date_created&quot;: &quot;&quot;,
+      &quot;id&quot;: &quot;&quot;,
+      &quot;permissions&quot;: {
+        &quot;delete_comment&quot;: false
+      },
+      &quot;text&quot;: &quot;Some comment&quot;
+    }
+  ]
+}
+</code></pre></div>
+</div>
+
+</div>
+</body>
+
+</html>

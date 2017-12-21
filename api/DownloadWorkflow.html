@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>Getty Images API</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+</head>
+
+<body class="home dark-text">
+    <header>
+        <div class="site-width">
+            <div class="slice group">
+                <div class="col length-4-of-4 logo">
+                    <a href="/en/">
+                        <img src="/images/getty-api-logo.jpg" alt="Getty Images API">
+                    </a>
+                    <ul class="nav-items site-nav-desktop">
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href="/api/">Docs</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href="http://developer.gettyimages.com/forum">Forum</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href="https://developer.gettyimages.com/apps/mykeys">Sign In</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }'
+                                href="/en/getting-started.html">Getting Started</a>
+                        </li>
+                    </ul>
+                    <ul id=menu class=site-nav-mobile>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href="/api/">Docs</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }'
+                                class=no-border href=/en/getting-started.html>Getting Started</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+
+        <div class="row-fluid">
+            <div class="col-md-9 docs-content category-content">
+                
+            <h1 id="downloading-image-by-asset-id-found-in-search-results">Downloading Image by Asset Id found in Search Results</h1>
+<h2 id="sections">Sections</h2>
+<ol>
+<li><a href="#workflow-steps">cURL based example</a></li>
+<li><a href="#postman-collections">Postman collections</a></li>
+</ol>
+<h2 id="workflow-steps">Workflow Steps</h2>
+<ol>
+<li><a href="#get-access-token">Get an access token from Getty Images OAuth endpoint</a></li>
+<li><a href="#search-for-images-w-largest-downloads-field-specified">Use access token to search for images with largest download returned</a></li>
+<li><a href="#download-the-image-using-its-asset-id-and-product-type">Download an image from the results</a></li>
+</ol>
+<h3 id="get-access-token">Get Access Token</h3>
+<p>In order to get download links from search you will need to use a <a href="oauth2.html#resource-owner-flow">Resource Owner Request</a> as used in the example below</p>
+<p>Alternatively, a token retrieved via a <a href="oauth2.html#client-credentials-flow">Client Credentials Request</a> with a Sandboxed Api-Key, will also allow for downloading of a static image for testing purposes. NOTE: This static test image is not the actual asset image.</p>
+<h4 id="request">Request</h4>
+<pre><code class="lang-sh">curl -X POST -H &quot;Content-Type: application/x-www-form-urlencoded&quot; -d &#39;grant_type=password&amp;client_id=exampleApiKey&amp;client_secret=exampleSecret&amp;username=someUsername&amp;password=WithSomePassword&#39; https://api.gettyimages.com/oauth2/token
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="lang-json">{
+    &quot;access_token&quot;: &quot;123456&quot;,
+    &quot;token_type&quot;: &quot;Bearer&quot;,
+    &quot;expires_in&quot;: &quot;1800&quot;
+}
+</code></pre>
+<h3 id="search-for-images-with-largest-downloads-field-specified">Search For Images with Largest Downloads field specified</h3>
+<h4 id="request">Request</h4>
+<pre><code>curl -X GET -H &quot;Authorization: Bearer 123456&quot; -H &quot;Api-Key: exampleApiKey&quot;  https://api.gettyimages.com/v3/search/images?phrase=Kitties&amp;fields=largest_downloads
+</code></pre><h4 id="response">Response</h4>
+<pre><code class="lang-json">{
+    &quot;result_count&quot;: 3662,
+    &quot;images&quot;: [{
+    &quot;id&quot;: &quot;83454804&quot;,
+    &quot;largest_downloads&quot;: [{
+        &quot;product_type&quot;: &quot;easyaccess&quot;,
+        &quot;uri&quot;: &quot;https://api.gettyimages.com/v3/downloads/images/83454804&quot;
+        }]
+    },{
+    &quot;id&quot;: &quot;103131833&quot;,
+    &quot;largest_downloads&quot;: [{
+        &quot;product_type&quot;: &quot;editorialsubscription&quot;,
+        &quot;uri&quot;: &quot;https://api.gettyimages.com/v3/downloads/images/103131833&quot;
+        }]
+    }]
+    }
+}
+</code></pre>
+<h3 id="download-the-image-using-its-asset-id-and-product-type">Download the image using its asset id and product type</h3>
+<p>The largest_downloads array for each image in the response above gives a URI to be used to download the image, as well as the product  for which you are authorized to download.  To download the image file, create a POST request to the URI and indicate the product_type as a query string parameter as in the example below.  The default response to that request is to return the URI where you can download the actual image.  If you also set an auto_download parameter to �true�, this will execute a 302 redirect which automatically downloads the image file.</p>
+<h4 id="request">Request</h4>
+<pre><code class="lang-sh">curl -X POST -H &quot;Api-Key: exampleApiKey&quot; -H &quot;Authorization: Bearer 123456&quot; -d &#39;&#39; https://api.gettyimages.com/v3/downloads/images/83454804?auto_download=false&amp;product_type=easyaccess
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="lang-json">{
+    &quot;uri&quot;: &quot;https://delivery.gettyimages.com/xa/83454804.jpg?.....&quot;
+}
+</code></pre>
+</div>
+</div>
+
+</div>
+</body>
+
+</html>

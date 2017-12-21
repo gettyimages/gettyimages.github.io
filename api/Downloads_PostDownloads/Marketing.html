@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>Getty Images API</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/docs.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/s_code.js"></script>
+    <script src="/js/analytics.js"></script>
+</head>
+
+<body class="home dark-text">
+    <header>
+        <div class="site-width">
+            <div class="slice group">
+                <div class="col length-4-of-4 logo">
+                    <a href="/en/">
+                        <img src="/images/getty-api-logo.jpg" alt="Getty Images API">
+                    </a>
+                    <ul class="nav-items site-nav-desktop">
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href="/api/">Docs</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href="http://developer.gettyimages.com/forum">Forum</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href="https://developer.gettyimages.com/apps/mykeys">Sign In</a>
+                        </li>
+                        <li class=nav-item>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }'
+                                href="/en/getting-started.html">Getting Started</a>
+                        </li>
+                    </ul>
+                    <ul id=menu class=site-nav-mobile>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href="/api/">Docs</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Sign In</a>
+                        </li>
+                        <li>
+                            <a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }'
+                                class=no-border href=/en/getting-started.html>Getting Started</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+
+        <div class="row-fluid">
+            <div class="col-md-9 docs-content category-content">
+                
+            <h1 id="download-an-image">Download an Image</h1>
+<p>Use this endpoint to generate download URLs and related data for images you are authorized to download.</p>
+<p>Most product offerings have enforced periodic download limits such as monthly, weekly, and daily. When this operation executes, the count of allowed downloads is decremented by one for the product offering. Once the download limit is reached for a given product offering, no further downloads may be requested for that product offering until the next download period.</p>
+<p>The download limit for a given download period is covered in your product agreement established with Getty Images.</p>
+<ul>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#request-headers">Request Headers</a></li>
+<li><a href="#auto-downloads">Auto Downloads</a></li>
+<li><a href="#uri-path-parameters">URI Path Parameters</a></li>
+<li><a href="#querystring-parameters">Querystring Parameters</a></li>
+<li><a href="#request-body-fields">Request Body Fields</a></li>
+<li><a href="#response-status-codes">Response Status Codes</a></li>
+</ul>
+<h2 id="quickstart">Quickstart</h2>
+<p>You&#39;ll need an API key and a <a href="http://developers.gettyimages.com/en/authorization-faq.html">Resource Owner Grant or Implicit Grant</a> access token to use this resource. Please see our <a href="http://developers.gettyimages.com/en/getting-started.html">Getting Started</a> page for more information on how to sign up for an API key. </p>
+<p>To include your API token and a Bearer token to the header (example in curl):</p>
+<pre><code>-H &quot;Api-Key: &lt;your api key&gt;&quot;
+-H &quot;Authorization: Bearer &lt;your-token&gt;&quot;
+</code></pre><p>Your request would look like this using curl:</p>
+<pre><code>curl -X POST -H &quot;Api-Key: &lt;your api key&gt;&quot; -H &quot;Authorization: Bearer &lt;your-token&gt;&quot; https://api.gettyimages.com/v3/downloads/images/&lt;asset id&gt;?auto_download=false
+</code></pre><h2 id="auto-downloads">Auto Downloads</h2>
+<p>The <code>auto_download</code> request query parameter specifies whether to automatically download the image.</p>
+<p>If the <code>auto_download</code> request query parameter is set to <em>true</em>, the API will return an HTTP status code 303 <em>See Other</em>. Your client code will need to process this response and redirect to the URI specified in the <em>Location</em> header to enable you to automatically download the file. The redirection workflow follows the <a href="https://tools.ietf.org/html/rfc7231#section-6.4.4">HTTP 1.1 protocol</a>.</p>
+<p>Client Request:</p>
+<pre><code>https://api.gettyimages.com/v3/downloads/images/&lt;asset_id&gt;?auto_download=true
+</code></pre><p>Server Response:</p>
+<pre><code>HTTP/1.1 303 See Other
+Location: https://delivery.gettyimages.com/...
+</code></pre><p><br /> </p>
+<p>If the <code>auto_download</code> request query parameter is set to false, the API will return a HTTP status code 200, along with the URI in the response body which can be used to download the image. </p>
+<p>Client Request:</p>
+<pre><code>https://api.gettyimages.com/v3/downloads/images/&lt;asset_id&gt;?auto_download=false
+</code></pre><p>Server Response:</p>
+<pre><code>HTTP/1.1 200 OK
+{
+    &quot;uri&quot;: &quot;https://delivery.gettyimages.com/...&quot;
+}
+</code></pre></div>
+</div>
+
+</div>
+</body>
+
+</html>
