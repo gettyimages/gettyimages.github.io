@@ -60,7 +60,90 @@
         <div class="row-fluid">
             <div class="col-md-9 docs-content category-content">
                 
-            <h1 id="error-codes-responses">Error Codes &amp; Responses</h1>
+            <style>
+    .cookie-alert {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: #0e1114;
+        max-width: 300px;
+        z-index: 200;
+        padding: 1rem;
+        margin: 1rem;
+        border: solid 1px white;
+        text-align: left !important;
+    }
+
+    .cookie-alert p a {
+        color: #e6e6e6;
+    }
+
+    p a {
+        text-decoration: underline;
+    }
+
+    .cookie-alert .close-icon {
+        background-image: url('/images/icons/x.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+    }
+
+    .cookie-alert span {
+        color: #fff;
+    }
+
+    .cookie-alert p {
+        color: #fff;
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+</style>
+
+<div class="cookie-alert">
+    <div class="close-icon"></div>
+    <span>This site uses cookies.</span>
+    <p>
+        By proceeding, you are agreeing to our
+        <a href="https://www.gettyimages.com/company/privacy-policy" target="_blank">Privacy Policy</a>, including the use of cookies and other tracking technologies.
+    </p>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var cookies = document.cookie.split(';')
+            .map(function (x) {
+                return x.trim().split('=');
+            })
+            .reduce(function (a, b) {
+                a[b[0]] = b[1];
+                return a;
+            }, {});
+
+        console.log(cookies);
+        if (cookies.agreesToCookies === 'true') {
+            $('.cookie-alert').hide();
+        } else {
+            $('.cookie-alert').show();
+        }
+
+        $('.cookie-alert .close-icon').click(function () {
+            let expirationDate = new Date();
+            expirationDate.setFullYear(expirationDate.getFullYear() + 5);
+            document.cookie = `agreesToCookies=true; expires=${expirationDate.toGMTString()}; path=/`;
+            $('.cookie-alert').hide();
+        });
+    });
+</script><h1 id="error-codes-responses">Error Codes &amp; Responses</h1>
 <p>This page lists errors returned by the Getty Images API, grouped by their HTTP status codes as defined in <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10">RFC 2616</a>.</p>
 <h3 id="successful-redirection-codes">Successful &amp; Redirection Codes</h3>
 <table>

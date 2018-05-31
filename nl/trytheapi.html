@@ -1,4 +1,73 @@
-<!DOCTYPE html><html><head><title>Probeer de Getty Images-API</title><script src=http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script><script src=/js/s_code.js></script><script src=/js/analytics.js></script><script src=/js/angular.min.js></script><script src=/js/spin.min.js></script><script src=/js/angular-spinner.min.js></script><script src=/js/api.js></script><link href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" rel=stylesheet type=text/css><link rel=stylesheet href=/css/main.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/slicknav.css><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/responsive.css><link rel="shortcut icon" href=/images/favicon.gif type=image/gif><meta name=viewport content="width=device-width, initial-scale=1"></head><body class="home dark-text" ng-app=api><header><div class=site-width><div class="slice group"><div class="col length-4-of-4 logo"><a href="/nl/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a><ul class="nav-items site-nav-desktop"><li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=../api>Documenten</a></li><li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li><li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Aanmelden</a></li><li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=../nl/getting-started.html>Aan de slag</a></li></ul><ul id=menu class=site-nav-mobile><li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=../api>Documenten</a></li><li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li><li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Aanmelden</a></li><li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=../nl/getting-started.html>Aan de slag</a></li></ul></div></div></div></header><div class="slice group"><section class="site-width-alt search-hero"><h2 class=search-heading>Test ons API-zoekeindpunt.</h2><h3>Voer simpelweg een trefwoord of uitdrukking in en klik op Zoeken.</h3><p>Opmerking: Door deze zoektest te gebruiken, verklaart u de <a class=light href=terms.html>API- gebruiksvoorwaarden</a> te hebben gelezen en hiermee in te stemmen.</p></section><section class=site-width-alt><search-demo></search-demo></section><section class="call-to-action site-width-alt"><div class="col length-2-of-4 min-200"><h4>Klaar om nog meer eindpunten te testen? Registreer voor een API-code en ga er meteen mee aan de slag.</h4><a omniture='{ "fields": { "events":"event5", "prop5":"Get Started", "eVar5": "Get Started" }, "parameter": "BodyLink" }' class=btn-full-width href=getting-started.html>Aan de slag</a></div><div class="col length-2-of-4 min-200"><h4>Wilt u toegang tot extra content? Neem nu contact met ons op om onze licentievoorwaarden te bespreken.</h4><a omniture='{ "fields": { "events":"event5", "prop5":"Contact us", "eVar5": "Contact us" }, "parameter": "BodyLink" }' class=btn-full-width href=https://developer.gettyimages.com/contact>Neem contact met ons op</a></div></section></div><footer><div class=site-width><div class="col length-1-of-5 footer-media-middle"><a href="http://www.gettyimages.com/"><img src=/images/getty-logo.jpg width=125 height=27></a></div><div class="col length-1-of-5 footer-media-middle"><span class=footer-links><a href=terms.html>Gebruiksvoorwaarden</a></span></div><div class="col length-1-of-5 footer-media-middle"><span class=footer-links><a href=http://www.gettyimages.com/company/privacy-policy>Privacybeleid</a></span></div></div><div class=site-width><div class="col length-1-of-5 footer-media-middle"><span class=copyright>&copy; Copyright 2015 Alle rechten voorbehouden</span></div><div class="col length-1-of-5 footer-media-middle twitter-link"><a href=https://twitter.com/gettyimagesapi><img src=/images/social/twitter.png alt=Twitter height=40 width=40></a></div></div></footer></body><script src=/js/jquery.slicknav.js></script><script type=text/javascript>
+<!DOCTYPE html><html><head><title>Probeer de Getty Images-API</title><script src=http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script><script src=/js/s_code.js></script><script src=/js/analytics.js></script><script src=/js/angular.min.js></script><script src=/js/spin.min.js></script><script src=/js/angular-spinner.min.js></script><script src=/js/api.js></script><link href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" rel=stylesheet type=text/css><link rel=stylesheet href=/css/main.css><link rel=stylesheet href=/css/search.css><link rel=stylesheet href=/css/slicknav.css><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/responsive.css><link rel="shortcut icon" href=/images/favicon.gif type=image/gif><meta name=viewport content="width=device-width, initial-scale=1"></head><body class="home dark-text" ng-app=api><header><div class=site-width><div class="slice group"><div class="col length-4-of-4 logo"><a href="/nl/"><img src=/images/getty-api-logo.jpg alt="Getty Images API"></a><ul class="nav-items site-nav-desktop"><li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=../api>Documenten</a></li><li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li><li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Aanmelden</a></li><li class=nav-item><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' href=../nl/getting-started.html>Aan de slag</a></li></ul><ul id=menu class=site-nav-mobile><li><a omniture='{ "fields": { "events":"event1", "prop3":"Docs", "eVar3": "Docs" }, "parameter": "HeaderLink" }' href=../api>Documenten</a></li><li><a omniture='{ "fields": { "events":"event1", "prop3":"Forum", "eVar3": "Forum" }, "parameter": "HeaderLink" }' href=http://developer.gettyimages.com/forum>Forum</a></li><li><a omniture='{ "fields": { "events":"event1", "prop3":"Sign In", "eVar3": "Sign In" }, "parameter": "HeaderLink" }' href=https://developer.gettyimages.com/apps/mykeys>Aanmelden</a></li><li><a omniture='{ "fields": { "events":"event1", "prop3":"Getting Started", "eVar3": "Getting Started" }, "parameter": "HeaderLink" }' class=no-border href=../nl/getting-started.html>Aan de slag</a></li></ul></div></div></div></header><div class="slice group"><section class="site-width-alt search-hero"><h2 class=search-heading>Test ons API-zoekeindpunt.</h2><h3>Voer simpelweg een trefwoord of uitdrukking in en klik op Zoeken.</h3><p>Opmerking: Door deze zoektest te gebruiken, verklaart u de <a class=light href=terms.html>API- gebruiksvoorwaarden</a> te hebben gelezen en hiermee in te stemmen.</p></section><section class=site-width-alt><search-demo></search-demo></section><section class="call-to-action site-width-alt"><div class="col length-2-of-4 min-200"><h4>Klaar om nog meer eindpunten te testen? Registreer voor een API-code en ga er meteen mee aan de slag.</h4><a omniture='{ "fields": { "events":"event5", "prop5":"Get Started", "eVar5": "Get Started" }, "parameter": "BodyLink" }' class=btn-full-width href=getting-started.html>Aan de slag</a></div><div class="col length-2-of-4 min-200"><h4>Wilt u toegang tot extra content? Neem nu contact met ons op om onze licentievoorwaarden te bespreken.</h4><a omniture='{ "fields": { "events":"event5", "prop5":"Contact us", "eVar5": "Contact us" }, "parameter": "BodyLink" }' class=btn-full-width href=https://developer.gettyimages.com/contact>Neem contact met ons op</a></div></section></div><footer><div class=site-width><div class="col length-1-of-5 footer-media-middle"><a href="http://www.gettyimages.com/"><img src=/images/getty-logo.jpg width=125 height=27></a></div><div class="col length-1-of-5 footer-media-middle"><span class=footer-links><a href=terms.html>Gebruiksvoorwaarden</a></span></div><div class="col length-1-of-5 footer-media-middle"><span class=footer-links><a href=http://www.gettyimages.com/company/privacy-policy>Privacybeleid</a></span></div></div><div class=site-width><div class="col length-1-of-5 footer-media-middle"><span class=copyright>&copy; Copyright 2015 Alle rechten voorbehouden</span></div><div class="col length-1-of-5 footer-media-middle twitter-link"><a href=https://twitter.com/gettyimagesapi><img src=/images/social/twitter.png alt=Twitter height=40 width=40></a></div></div><style>
+    .cookie-alert {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: #0e1114;
+        max-width: 300px;
+        z-index: 200;
+        padding: 1rem;
+        margin: 1rem;
+        border: solid 1px white;
+        text-align: left !important;
+    }
+
+    .cookie-alert p a {
+        color: #e6e6e6;
+    }
+
+    p a {
+        text-decoration: underline;
+    }
+
+    .cookie-alert .close-icon {
+        background-image: url('/images/icons/x.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+    }
+
+    .cookie-alert span {
+        color: #fff;
+    }
+
+    .cookie-alert p {
+        color: #fff;
+    }
+</style><div class=cookie-alert><div class=close-icon></div><span>Deze website gebruikt cookies.</span><p>Door verder te gaan, stemt u in met ons <a href=https://www.gettyimages.com/company/privacy-policy target=_blank>Privacybeleid</a>, inclusief het gebruik van cookies en andere trackingtechnologieë</p></div><script type=text/javascript>
+    $(document).ready(function () {
+        var cookies = document.cookie.split(';')
+            .map(function (x) {
+                return x.trim().split('=');
+            })
+            .reduce(function (a, b) {
+                a[b[0]] = b[1];
+                return a;
+            }, {});
+
+        console.log(cookies);
+        if (cookies.agreesToCookies === 'true') {
+            $('.cookie-alert').hide();
+        }
+        else {
+            $('.cookie-alert').show();
+        }
+
+        $('.cookie-alert .close-icon').click(function () {
+            let expirationDate = new Date();
+            expirationDate.setFullYear(expirationDate.getFullYear() + 5);
+            document.cookie = `agreesToCookies=true; expires=${expirationDate.toGMTString()}; path=/`;
+            $('.cookie-alert').hide();
+        });
+    });
+
+</script></footer></body><script src=/js/jquery.slicknav.js></script><script type=text/javascript>
 $(document).ready(function(){
 	$('#menu').slicknav();
 });
